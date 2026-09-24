@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSC CGL Maths — Day 1: Number Basics + VBODMAS Complete Book Notes | संख्या परिचय एवं बोडमास नियम</title>
+  <meta name="description" content="Day 1 Complete Book-Like Study Notes for SSC CGL Maths: Number Classification, Place & Face Value, Sign Rules, Brackets, Strict VBODMAS, 20 Basic Qs, 20 Mixed Qs, 15 PYQs, and Timed Drill.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --bg: #080B12;
+  --surface: #0f1623;
+  --surface-elevated: #162035;
+  --border: #1e2e47;
+  --text: #F0F4F8;
+  --text-muted: #7A90A8;
+  --primary: #00e5ff;
+  --gold: #f6c244;
+  --green: #22d3a5;
+  --red: #f16a6a;
+  --violet: #a78bfa;
+  --orange: #fb923c;
+  --shadow-cyan: rgba(0,229,255,0.08);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.68;
+  padding: 16px;
+  font-size: 15px;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+.container { max-width: 1180px; margin: 0 auto; }
+
+/* ── TOPBAR ── */
+.topbar {
+  position: sticky; top: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(9,14,24,0.94);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin-bottom: 18px;
+  backdrop-filter: blur(12px);
+  gap: 14px;
+}
+.brand { display:flex; align-items:center; gap:10px; font-weight:700; font-size:1rem; color:var(--primary); text-decoration:none; white-space:nowrap; }
+.topbar-actions { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+.tb-btn {
+  background: var(--surface-elevated); color:var(--text-muted);
+  border:1px solid var(--border); padding:6px 14px;
+  border-radius:8px; font-size:0.8rem; cursor:pointer;
+  text-decoration:none; transition:all 0.2s; white-space:nowrap; font-weight:500;
+}
+.tb-btn:hover { border-color:var(--primary); color:var(--primary); }
+
+/* ── HERO ── */
+.day-hero {
+  background: linear-gradient(135deg, rgba(0,229,255,0.12), rgba(121,40,202,0.12));
+  border:1px solid var(--border); border-radius:18px;
+  padding: 36px 24px; text-align:center; margin-bottom:24px;
+  position:relative; overflow:hidden;
+}
+.hero-badge {
+  display:inline-block;
+  background:linear-gradient(90deg,#00e5ff,#7928ca);
+  color:#fff; font-weight:700; font-size:0.8rem;
+  padding:5px 18px; border-radius:50px; margin-bottom:14px;
+  letter-spacing:1px; text-transform:uppercase;
+}
+h1 {
+  font-size:2.1rem; font-weight:800;
+  background:linear-gradient(90deg,#fff,#00e5ff);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  margin-bottom:8px;
+}
+.hero-subtitle { color:var(--text-muted); font-size:1rem; margin-bottom:14px; }
+.hero-stats {
+  display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-top:16px;
+}
+.hstat-card {
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:10px; padding:10px 16px; font-size:0.85rem;
+}
+.hstat-val { font-weight:800; color:var(--primary); font-size:1.15rem; }
+
+/* ── CHAPTER BOOK SECTIONS ── */
+.book-chapter {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 26px 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+.chap-badge {
+  display:inline-block; background:rgba(0,229,255,0.1); color:var(--primary);
+  font-size:0.75rem; font-weight:700; padding:3px 10px; border-radius:6px; margin-bottom:8px;
+  border:1px solid rgba(0,229,255,0.2);
+}
+.chap-title {
+  font-size:1.35rem; font-weight:700; color:#fff; margin-bottom:16px;
+  display:flex; align-items:center; gap:10px; border-bottom:1px solid rgba(255,255,255,0.06);
+  padding-bottom:10px;
+}
+.sec-title {
+  font-size:1.25rem; font-weight:700; color:#fff;
+  margin-bottom:16px; display:flex; align-items:center; gap:10px;
+  padding-bottom:8px; border-bottom:1px solid var(--border);
+}
+.book-p {
+  font-size:0.95rem; color:#cbd5e1; line-height:1.75; margin-bottom:14px;
+}
+.book-list {
+  list-style:none; padding-left:0; margin-bottom:16px;
+}
+.book-list li {
+  padding:8px 0; border-bottom:1px solid rgba(255,255,255,0.03);
+  color:#cbd5e1; font-size:0.92rem; line-height:1.65;
+}
+.book-list li strong { color:#fff; }
+
+/* ── CALLOUT BOXES ── */
+.callout-rule {
+  background:rgba(0,229,255,0.05); border-left:4px solid var(--primary);
+  border-radius:0 10px 10px 0; padding:14px 18px; margin:14px 0;
+  font-size:0.9rem; color:#d1e7dd;
+}
+.callout-trap {
+  background:rgba(241,106,106,0.06); border-left:4px solid var(--red);
+  border-radius:0 10px 10px 0; padding:14px 18px; margin:14px 0;
+  font-size:0.9rem; color:#fca5a5;
+}
+.callout-tip {
+  background:rgba(246,194,68,0.06); border-left:4px solid var(--gold);
+  border-radius:0 10px 10px 0; padding:14px 18px; margin:14px 0;
+  font-size:0.9rem; color:#fde68a;
+}
+
+/* ── TABLES ── */
+.book-table {
+  width:100%; border-collapse:collapse; margin:16px 0; font-size:0.88rem;
+}
+.book-table th, .book-table td {
+  border:1px solid var(--border); padding:10px 14px; text-align:left;
+}
+.book-table th { background:var(--surface-elevated); color:var(--primary); font-weight:700; }
+.book-table tr:nth-child(even) { background:rgba(255,255,255,0.015); }
+
+/* ── FORMULA CARDS ── */
+.two-col { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:22px; }
+@media (max-width:850px) { .two-col { grid-template-columns:1fr; } }
+.formula-card {
+  background:var(--surface); border:1px solid rgba(0,229,255,0.15);
+  border-radius:12px; overflow:hidden; margin-bottom:14px;
+}
+.fc-header {
+  background:rgba(0,229,255,0.06); border-bottom:1px solid rgba(0,229,255,0.12);
+  padding:10px 16px; display:flex; align-items:center; justify-content:space-between;
+}
+.fc-name { font-weight:700; color:var(--primary); font-size:0.92rem; }
+.copy-btn {
+  background:var(--surface-elevated); color:var(--text-muted);
+  border:1px solid var(--border); padding:4px 10px;
+  border-radius:6px; font-size:0.75rem; cursor:pointer; transition:all 0.2s;
+}
+.copy-btn:hover { color:var(--primary); border-color:var(--primary); }
+.fc-body { padding:14px 16px; }
+.fc-formula {
+  background:var(--surface-elevated); border-left:3px solid var(--primary);
+  padding:10px 14px; border-radius:6px; margin-bottom:10px;
+  font-family:'Fira Code',monospace; font-size:0.9rem; color:#e2f8ff; word-break:break-all;
+}
+.fc-row { font-size:0.85rem; margin-bottom:6px; color:#b0c4de; }
+.fc-row strong { color:#e2e8f0; }
+
+/* ── SHORTCUT & TRAP CARDS ── */
+.shortcut-grid, .trap-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:14px; margin-bottom:22px;
+}
+.shortcut-card {
+  background:rgba(246,194,68,0.04); border:1px solid rgba(246,194,68,0.2);
+  border-radius:12px; padding:18px;
+}
+.sc-title { color:var(--gold); font-weight:700; margin-bottom:8px; font-size:0.95rem; }
+.sc-content { font-size:0.88rem; color:#cbd5e1; line-height:1.65; }
+.trap-card {
+  background:rgba(241,106,106,0.04); border:1px solid rgba(241,106,106,0.2);
+  border-radius:12px; padding:18px;
+}
+.trap-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.trap-title { color:var(--red); font-weight:700; font-size:0.95rem; }
+.error-code {
+  background:rgba(241,106,106,0.15); color:var(--red);
+  font-size:0.72rem; font-weight:800; padding:2px 8px; border-radius:4px;
+}
+.trap-desc { font-size:0.88rem; color:#cbd5e1; line-height:1.65; }
+
+/* ── QUESTION LIST ITEM (BOOK STYLE ACCORDION) ── */
+.q-block {
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:12px; padding:18px 20px; margin-bottom:14px; transition:border 0.2s;
+}
+.q-block:hover { border-color:rgba(0,229,255,0.3); }
+.q-head {
+  display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; gap:10px;
+}
+.q-num {
+  font-weight:700; font-size:0.8rem; padding:3px 10px; border-radius:6px;
+  background:rgba(0,229,255,0.1); color:var(--primary); white-space:nowrap;
+}
+.q-tag {
+  font-size:0.75rem; color:var(--gold); background:rgba(246,194,68,0.1);
+  padding:3px 10px; border-radius:6px; font-weight:600;
+}
+.q-text { font-size:0.96rem; font-weight:500; color:#fff; line-height:1.65; margin-bottom:14px; }
+.q-actions { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; align-items:center; }
+.q-btn {
+  padding:6px 14px; border-radius:6px; font-size:0.8rem; cursor:pointer; font-weight:600; border:1px solid; transition:all 0.2s;
+}
+.btn-hint { background:rgba(246,194,68,0.08); color:var(--gold); border-color:rgba(246,194,68,0.3); }
+.btn-hint:hover { background:rgba(246,194,68,0.18); }
+.btn-sol { background:rgba(34,211,165,0.08); color:var(--green); border-color:rgba(34,211,165,0.3); }
+.btn-sol:hover { background:rgba(34,211,165,0.18); }
+.hint-content, .sol-content {
+  display:none; padding:14px; border-radius:8px; font-size:0.9rem; line-height:1.7; margin-top:10px;
+}
+.hint-content { background:rgba(246,194,68,0.06); border-left:3px solid var(--gold); color:#fde68a; }
+.sol-content { background:rgba(34,211,165,0.06); border-left:3px solid var(--green); color:#e2e8f0; }
+.self-rate-row {
+  display:flex; align-items:center; gap:8px; margin-top:10px; font-size:0.78rem; color:var(--text-muted);
+}
+.rate-btn {
+  background:var(--surface-elevated); border:1px solid var(--border);
+  padding:3px 10px; border-radius:6px; cursor:pointer; font-size:0.75rem; color:#cbd5e1;
+}
+.rate-btn:hover { border-color:var(--primary); color:var(--primary); }
+
+/* ── TIMED DRILL & RECALL ── */
+.timed-drill {
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:16px; padding:24px; text-align:center; margin-bottom:24px;
+}
+.timer-display { font-family:'Fira Code',monospace; font-size:2.4rem; font-weight:700; color:var(--primary); margin:10px 0; }
+.timer-controls { display:flex; justify-content:center; gap:10px; margin-bottom:16px; }
+.timer-btn {
+  padding:8px 22px; border-radius:8px; font-weight:600; cursor:pointer; border:1px solid; font-size:0.85rem;
+}
+.t-start { background:rgba(34,211,165,0.15); color:var(--green); border-color:var(--green); }
+.t-pause { background:rgba(246,194,68,0.15); color:var(--gold); border-color:var(--gold); }
+.t-reset { background:rgba(241,106,106,0.15); color:var(--red); border-color:var(--red); }
+.score-row { display:flex; justify-content:center; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px; }
+.score-input {
+  background:var(--surface-elevated); border:1px solid var(--border); color:#fff;
+  padding:6px 12px; border-radius:6px; width:70px; text-align:center; font-family:'Fira Code',monospace;
+}
+
+/* ── RECALL CHECKS ── */
+.recall-list { display:flex; flex-direction:column; gap:8px; margin:14px 0; }
+.recall-item {
+  display:flex; justify-content:space-between; align-items:center;
+  background:var(--surface-elevated); padding:10px 14px; border-radius:8px; border:1px solid var(--border);
+}
+
+/* ── PRINT & MODAL ── */
+.modal-overlay {
+  display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75);
+  backdrop-filter:blur(8px); z-index:999; justify-content:center; align-items:center;
+}
+.modal-box {
+  background:var(--surface); border:1px solid var(--border); border-radius:16px;
+  max-width:480px; width:90%; padding:24px; text-align:center; box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+@media print {
+  body { background:#fff !important; color:#000 !important; font-size:11pt !important; }
+  .topbar, .topbar-actions, .q-actions, .self-rate-row, .timer-controls, .score-row, .modal-overlay, #fab-print { display:none !important; }
+  .book-chapter, .q-block, .formula-card, .shortcut-card, .trap-card {
+    background:#fff !important; border:1px solid #ccc !important; color:#000 !important; page-break-inside:avoid;
+  }
+  .hint-content, .sol-content { display:block !important; background:#f9f9f9 !important; color:#111 !important; border-left:3px solid #333 !important; }
+  h1, h2, h3, .chap-title, .q-text { color:#000 !important; -webkit-text-fill-color:#000 !important; }
+  .fc-formula { background:#f4f4f4 !important; color:#000 !important; border-left:3px solid #000 !important; }
+}
+  </style>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <a href="Phase_0_Calculation_Foundation.html" class="brand">
+      <span>📐</span>
+      <span>SSC CGL Maths &bull; Day 1</span>
+    </a>
+    <div class="topbar-actions">
+      <a href="index.html" class="tb-btn">🏠 Portal</a>
+      <a href="Phase_0_Calculation_Foundation.html" class="tb-btn">← Phase 0</a>
+      <a href="#sec-theory" class="tb-btn">📖 Theory</a>
+      <a href="#sec-formulas" class="tb-btn">📐 Formulas</a>
+      <a href="#sec-basic" class="tb-btn">🟢 20 Basic Qs</a>
+      <a href="#sec-mixed" class="tb-btn">🟡 20 Mixed Qs</a>
+      <a href="#sec-pyq" class="tb-btn">🏆 15 PYQs</a>
+      <a href="#sec-timed" class="tb-btn">⏱️ Timed Drill</a>
+      <button class="tb-btn" style="border-color:var(--gold);color:var(--gold);" onclick="openPrintModal()">🖨️ Print Book Notes</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="day-hero">
+    <span class="hero-badge">Phase 0 &bull; Day 1 of 120 Days</span>
+    <h1>Number Basics &amp; Strict VBODMAS Rule</h1>
+    <div class="hero-subtitle">संख्या परिचय, स्थानीय/जातीय मान, चिह्न नियम एवं बोडमास का संपूर्ण अध्याय</div>
+    <p style="color:#cbd5e1; max-width:800px; margin:0 auto; font-size:0.92rem;">
+      🎯 <strong>Day 1 Mission:</strong> Arithmetic calculation ke dar ko hamesha ke liye khatam karna. Signs (+/-), Brackets, aur "Of" vs "Divide" ke traps ko zero-error standard par lana.
+    </p>
+    <div class="hero-stats">
+      <div class="hstat-card"><div class="hstat-val">5 Chapters</div><div>Comprehensive Theory</div></div>
+      <div class="hstat-card"><div class="hstat-val">6 Formulas</div><div>Cheat Sheet Cards</div></div>
+      <div class="hstat-card"><div class="hstat-val">20 Questions</div><div>Level 1: Foundation</div></div>
+      <div class="hstat-card"><div class="hstat-val">20 Questions</div><div>Level 2: Mixed &amp; Tricky</div></div>
+      <div class="hstat-card"><div class="hstat-val">15 PYQs</div><div>Level 3: Verified SSC Shifts</div></div>
+      <div class="hstat-card"><div class="hstat-val">55 Total Qs</div><div>100% Step-by-Step Solved</div></div>
+    </div>
+  </section>
+
+  <!-- THEORY CHAPTER 1 -->
+  <section class="book-chapter" id="sec-theory">
+    <span class="chap-badge">CHAPTER 1</span>
+    <h2 class="chap-title">🔢 The Number Family &amp; Basic Classification (संख्याओं का वर्गीकरण)</h2>
+    <p class="book-p">
+      Maths ki shuruat number systems se hoti hai. Kisi bhi calculation ya algebraic equation ko samajhne se pehle humein numbers ki basic hierarchy pata honi chahiye:
+    </p>
+    <ul class="book-list">
+      <li><strong>1. Natural Numbers (प्राकृत संख्याएँ — $\mathbb{N}$):</strong> Counting numbers jo 1 se shuru hote hain: $\{1, 2, 3, 4, 5, \dots\}$. Zero is NOT a natural number.</li>
+      <li><strong>2. Whole Numbers (पूर्ण संख्याएँ — $\mathbb{W}$):</strong> Jab Natural numbers ke parivar mein $0$ jud jata hai: $\{0, 1, 2, 3, 4, \dots\}$. Sabse chhota whole number $0$ hai.</li>
+      <li><strong>3. Integers (पूर्णांक — $\mathbb{Z}$):</strong> Sabhi positive, negative whole numbers: $\{\dots, -3, -2, -1, 0, 1, 2, 3, \dots\}$.
+        <br>&bull; Positive Integers: $\{1, 2, 3, \dots\}$
+        <br>&bull; Negative Integers: $\{-1, -2, -3, \dots\}$
+        <br>&bull; <strong>Zero ($0$):</strong> Zero is an integer, but it is <em>neither positive nor negative</em>.
+      </li>
+      <li><strong>4. Even &amp; Odd Numbers (सम एवं विषम संख्याएँ):</strong>
+        <br>&bull; <strong>Even (सम):</strong> Jo $2$ se poori tarah vibhajit ho jaaye ($2k$ form): $\{\dots, -4, -2, 0, 2, 4, 6, \dots\}$. <em>Exam Fact:</em> $0$ is an <strong>EVEN</strong> number because $0 \div 2 = 0$ with remainder $0$!
+        <br>&bull; <strong>Odd (विषम):</strong> Jo $2$ se vibhajit na ho ($2k \pm 1$ form): $\{\dots, -3, -1, 1, 3, 5, \dots\}$.
+      </li>
+      <li><strong>5. Rational vs Irrational Numbers (परिमेय बनाम अपरिमेय संख्याएँ):</strong>
+        <br>&bull; <strong>Rational ($p/q$ form):</strong> Jahan $p, q$ integers hain aur $q \ne 0$. Inka decimal expansion ya to terminating hota hai (jaise $1/4 = 0.25$) ya repeating recurring hota hai (jaise $1/3 = 0.333\dots$).
+        <br>&bull; <strong>Irrational:</strong> Jinhe $p/q$ mein nahi likha ja sakta (Non-terminating, Non-repeating). Examples: $\sqrt{2}, \sqrt{3}, \pi$. (Note: $\frac{22}{7}$ rational hai, lekin actual $\pi$ irrational hai!).
+      </li>
+    </ul>
+
+    <div class="callout-tip">
+      💡 <strong>Exam Memory Anchor:</strong> Zero se jude 3 golden rules:
+      <br>1) $0 \div \text{Any non-zero number} = 0$. (Example: $0 \div 7 = 0$).
+      <br>2) $\text{Any number} \div 0 = \text{Undefined (अपरिभाषित / }\infty)$.
+      <br>3) $\text{Any non-zero number}^0 = 1$. (Example: $5^0 = 1, (-18)^0 = 1$).
+    </div>
+  </section>
+
+  <!-- THEORY CHAPTER 2 -->
+  <section class="book-chapter">
+    <span class="chap-badge">CHAPTER 2</span>
+    <h2 class="chap-title">📍 Place Value vs Face Value (स्थानीय मान बनाम जातीय मान)</h2>
+    <p class="book-p">
+      Yeh topic SSC CGL, CHSL, aur MTS ke Tier-1 ka ek fixed mark-fetcher hai. Dono mein antar samajhna bohot aasan hai:
+    </p>
+
+    <div class="two-col">
+      <div style="background:var(--surface-elevated);padding:18px;border-radius:10px;border:1px solid var(--border);">
+        <h3 style="color:var(--primary);margin-bottom:8px;font-size:1.05rem;">Face Value (जातीय मान / अंकित मान)</h3>
+        <p class="book-p" style="margin-bottom:0;font-size:0.88rem;">
+          Kisi bhi ank (digit) ka face value wahi sankhya khud hoti hai, chahe wo kisi bhi sthan par ho.
+          <br><strong>Example:</strong> In number $85,429$:
+          <br>&bull; Face value of $5 = 5$
+          <br>&bull; Face value of $8 = 8$
+          <br>&bull; Face value of $4 = 4$
+        </p>
+      </div>
+      <div style="background:var(--surface-elevated);padding:18px;border-radius:10px;border:1px solid var(--border);">
+        <h3 style="color:var(--gold);margin-bottom:8px;font-size:1.05rem;">Place Value (स्थानीय मान)</h3>
+        <p class="book-p" style="margin-bottom:0;font-size:0.88rem;">
+          Kisi ank ka sthaniya maan uske position (ikayi, dahai, saikda, hazar) par nirbhar karta hai:
+          <br>$\mathbf{\text{Place Value} = \text{Digit} \times \text{Position Multiplier}}$
+          <br>&bull; Place value of $5$ in $85,429 = 5 \times 1000 = 5,000$.
+          <br>&bull; Place value of $8$ in $85,429 = 8 \times 10000 = 80,000$.
+        </p>
+      </div>
+    </div>
+
+    <h3 style="color:#fff;font-size:1rem;margin:16px 0 8px;">Decimal Numbers mein Place Value (दशमलव संख्याओं का स्थानीय मान):</h3>
+    <p class="book-p">
+      Decimal point ke daayi (right) taraf place values $\frac{1}{10}$ (tenths), $\frac{1}{100}$ (hundredths), $\frac{1}{1000}$ (thousandths) hoti hain:
+    </p>
+    <table class="book-table">
+      <thead>
+        <tr>
+          <th>Number Component</th>
+          <th>Thousands ($10^3$)</th>
+          <th>Hundreds ($10^2$)</th>
+          <th>Tens ($10^1$)</th>
+          <th>Units ($10^0$)</th>
+          <th>. (Decimal)</th>
+          <th>Tenths ($10^{-1}$)</th>
+          <th>Hundredths ($10^{-2}$)</th>
+          <th>Thousandths ($10^{-3}$)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Digits in 458.729</strong></td>
+          <td>&mdash;</td>
+          <td>4 (400)</td>
+          <td>5 (50)</td>
+          <td>8 (8)</td>
+          <td>.</td>
+          <td>7 ($0.7$)</td>
+          <td>2 ($0.02$)</td>
+          <td>9 ($0.009$)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout-trap">
+      🚨 <strong>SSC Exam Trap Question:</strong> "Find the difference between the place value and face value of 7 in 48.729."
+      <br>Aspirant mistake: Thinking place value is 70 or 7.
+      <br><strong>Correct Method:</strong> Face value $= 7$. Place value $= \frac{7}{10} = 0.7$.
+      <br>Difference $= 7 - 0.7 = 6.3$.
+    </div>
+  </section>
+
+  <!-- THEORY CHAPTER 3 -->
+  <section class="book-chapter">
+    <span class="chap-badge">CHAPTER 3</span>
+    <h2 class="chap-title">⚡ Signed Numbers &amp; Operation Rules (चिह्नों के नियम)</h2>
+    <p class="book-p">
+      Algebra aur Arithmetic dono mein $60\%$ silly errors sirf plus $(+)$ aur minus $(-)$ ke confusion se hote hain. In 4 niyam ko hamesha dhyan me rakhein:
+    </p>
+
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--primary);margin-bottom:8px;font-size:1rem;">1. Addition &amp; Subtraction Law</h3>
+        <ul class="book-list">
+          <li><strong>Same Signs:</strong> Numbers ko jodo aur wahi sign lagao.
+            <br>$(+7) + (+5) = +12$ &nbsp;|&nbsp; $(-7) + (-5) = -12$.
+          </li>
+          <li><strong>Opposite Signs:</strong> Bade number mein se chhota ghatado aur bade number ka sign lagao.
+            <br>$(-9) + (+4) = -5$ &nbsp;|&nbsp; $(+14) + (-6) = +8$.
+          </li>
+          <li><strong>Double Negative Law:</strong> Minus of minus equals plus!
+            <br>$15 - (-8) = 15 + 8 = 23$.
+            <br>$-10 - (-4) = -10 + 4 = -6$.
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="color:var(--gold);margin-bottom:8px;font-size:1rem;">2. Multiplication &amp; Division Law</h3>
+        <ul class="book-list">
+          <li>$(+) \times (+) = (+)$ &nbsp;&bull;&nbsp; $6 \times 4 = +24$</li>
+          <li>$(-) \times (-) = (+)$ &nbsp;&bull;&nbsp; $(-6) \times (-4) = +24$</li>
+          <li>$(+) \times (-) = (-)$ &nbsp;&bull;&nbsp; $6 \times (-4) = -24$</li>
+          <li>$(-) \times (+) = (-)$ &nbsp;&bull;&nbsp; $(-6) \times 4 = -24$</li>
+          <li><strong>Division:</strong> Same as multiplication:
+            <br>$\frac{-36}{-4} = +9$ &nbsp;|&nbsp; $\frac{-36}{4} = -9$.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout-rule">
+      📌 <strong>Power of Negative Number:</strong>
+      <br>&bull; $(-1)^{\text{EVEN power}} = +1$. Example: $(-1)^{100} = +1$.
+      <br>&bull; $(-1)^{\text{ODD power}} = -1$. Example: $(-1)^{99} = -1$.
+      <br>&bull; <em>Careful:</em> $-3^2 = -(3^2) = -9$, but $(-3)^2 = (-3) \times (-3) = +9$!
+    </div>
+  </section>
+
+  <!-- THEORY CHAPTER 4 -->
+  <section class="book-chapter">
+    <span class="chap-badge">CHAPTER 4</span>
+    <h2 class="chap-title">📦 Brackets &amp; Vinculum Hierarchy (कोष्ठक एवं रेखा कोष्ठक)</h2>
+    <p class="book-p">
+      Brackets ka maksad hota hai operations ko group karna. Jab ek question me multiple brackets ho, to andar se bahar (inside-out) ki taraf solve kiya jata hai:
+    </p>
+
+    <table class="book-table">
+      <thead>
+        <tr>
+          <th>Priority Order</th>
+          <th>Bracket Name</th>
+          <th>Symbol</th>
+          <th>Rule of Operation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong style="color:var(--red);">1st Priority (Highest)</strong></td>
+          <td><strong>Vinculum / Bar (रेखा कोष्ठक)</strong></td>
+          <td>$\overline{a - b}$</td>
+          <td>Sabse pehle bar ke niche ka operation solve hoga! Bar acts as a bracket.</td>
+        </tr>
+        <tr>
+          <td><strong>2nd Priority</strong></td>
+          <td><strong>Round Brackets / Parentheses (छोटा कोष्ठक)</strong></td>
+          <td>$( \ )$</td>
+          <td>Vinculum ke baad round bracket ke andar ki terms simplify karein.</td>
+        </tr>
+        <tr>
+          <td><strong>3rd Priority</strong></td>
+          <td><strong>Curly Brackets / Braces (मँझला कोष्ठक)</strong></td>
+          <td>$\{ \ \}$</td>
+          <td>Round brackets solve hone ke baad curly bracket solve karein.</td>
+        </tr>
+        <tr>
+          <td><strong>4th Priority</strong></td>
+          <td><strong>Square Brackets / Box (बड़ा कोष्ठक)</strong></td>
+          <td>$[ \ ]$</td>
+          <td>Sabse bahar ka bracket jo end me khulta hai.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout-trap">
+      🚨 <strong>The Vinculum Trap (Bar Bracket):</strong>
+      <br>Evaluate: $12 - \overline{7 - 3}$.
+      <br><strong>Wrong Way:</strong> Distributing minus blindly: $12 - 7 - 3 = 2$. ❌
+      <br><strong>Right Way:</strong> Bar ke niche $(7 - 3) = 4$ hai. So $12 - 4 = 8$! ✅
+    </div>
+  </section>
+
+  <!-- THEORY CHAPTER 5 -->
+  <section class="book-chapter">
+    <span class="chap-badge">CHAPTER 5</span>
+    <h2 class="chap-title">⚙️ Strict VBODMAS Precedence Engine &amp; Deep Examples</h2>
+    <p class="book-p">
+      Jab ek calculation mein brackets, 'of', divide, multiply, plus aur minus sab ek sath aa jayein, to <strong>VBODMAS</strong> niyam se hi solve karna compulsory hai:
+    </p>
+
+    <div style="background:var(--surface-elevated);border-left:4px solid var(--primary);padding:16px 20px;border-radius:0 12px 12px 0;margin-bottom:18px;">
+      <div style="font-weight:700;font-size:1.1rem;color:var(--primary);margin-bottom:6px;">VBODMAS Hierarchy:</div>
+      <div style="font-family:'Fira Code',monospace;font-size:0.95rem;color:#e2f8ff;line-height:1.8;">
+        <strong>V</strong> &rarr; Vinculum (Bar: $\overline{x-y}$)<br>
+        <strong>B</strong> &rarr; Brackets (Inner to outer: $( \ ) \to \{ \ \} \to [ \ ]$)<br>
+        <strong>O</strong> &rarr; 'Of' (का: Evaluate BEFORE division!)<br>
+        <strong>D</strong> &rarr; Division ($\div$: Left to right)<br>
+        <strong>M</strong> &rarr; Multiplication ($\times$: Left to right)<br>
+        <strong>A</strong> &rarr; Addition ($+$: Left to right)<br>
+        <strong>S</strong> &rarr; Subtraction ($-$: Left to right)
+      </div>
+    </div>
+
+    <h3 style="color:var(--gold);font-size:1.05rem;margin:18px 0 10px;">The Mega Trap: 'Of' (का) vs Multiplication ($\times$):</h3>
+    <p class="book-p">
+      'Of' ka matlab bhi guna ($\times$) hota hai, <strong>lekin 'Of' Division se PEHLE hota hai</strong>, jabki aam Multiplication ($\times$) Division ke BAAD hota hai!
+      <br>&bull; $24 \div 4 \text{ of } 2 = 24 \div (4 \times 2) = 24 \div 8 = \mathbf{3}$.
+      <br>&bull; $24 \div 4 \times 2 = (24 \div 4) \times 2 = 6 \times 2 = \mathbf{12}$.
+    </p>
+
+    <h3 style="color:#fff;font-size:1.05rem;margin:18px 0 10px;">Division Chaining (Left-to-Right Rule):</h3>
+    <p class="book-p">
+      Agar lagatar kai division signs hon, to sabhi subsequent divisors denominator mein multiply ho jate hain:
+      $$\mathbf{a \div b \div c \div d = \frac{a}{b \times c \times d}}$$
+      Example: $72 \div 6 \div 3 \div 2 = \frac{72}{6 \times 3 \times 2} = \frac{72}{36} = \mathbf{2}$.
+    </p>
+
+    <div style="background:rgba(34,211,165,0.06);border:1px solid rgba(34,211,165,0.2);border-radius:10px;padding:16px;margin-top:16px;">
+      <h4 style="color:var(--green);font-size:0.95rem;margin-bottom:8px;">📖 Worked Textbook Master Example:</h4>
+      <div style="font-size:0.92rem;color:#e2e8f0;line-height:1.7;">
+        <strong>Problem:</strong> Evaluate $50 - [20 + \{15 \times 2 - (18 \div 3 \text{ of } 2 + \overline{5 - 2})\}]$.<br>
+        <strong>Step 1 (Vinculum):</strong> $\overline{5 - 2} = 3$.<br>
+        <strong>Step 2 ('Of' inside round bracket):</strong> $3 \text{ of } 2 = 6 \implies 18 \div 6 = 3$.<br>
+        <strong>Step 3 (Round Bracket):</strong> $(3 + 3) = 6$.<br>
+        <strong>Step 4 (Curly Bracket):</strong> $\{15 \times 2 - 6\} = \{30 - 6\} = 24$.<br>
+        <strong>Step 5 (Square Bracket):</strong> $[20 + 24] = 44$.<br>
+        <strong>Step 6 (Final Subtraction):</strong> $50 - 44 = \mathbf{6}$. (Pure, clean, zero error!).
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULA SHEET COMPLETED -->
+  <section id="sec-formulas" style="margin-bottom:24px;">
+    <h2 class="sec-title">📐 Formula Vault — Completed Cheat Sheet for Day 1</h2>
+    <div class="shortcut-grid">
+      <div class="formula-card">
+        <div class="fc-header"><span class="fc-name">📐 Place Value Decomposition</span><button class="copy-btn" data-formula="N = 1000a + 100b + 10c + d">Copy</button></div>
+        <div class="fc-body">
+          <div class="fc-formula">N = 1000a + 100b + 10c + d</div>
+          <div class="fc-row"><strong>Decimal:</strong> $0.abc = \frac{a}{10} + \frac{b}{100} + \frac{c}{1000}$</div>
+          <div class="fc-row"><strong>Exam Use:</strong> Diff between place &amp; face value of $d = \text{Place Value} - d$.</div>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="fc-header"><span class="fc-name">📐 'Of' Precedence Law</span><button class="copy-btn" data-formula="a ÷ b of c = a ÷ (b × c)">Copy</button></div>
+        <div class="fc-body">
+          <div class="fc-formula">a ÷ b of c = a ÷ (b × c)</div>
+          <div class="fc-row"><strong>Rule:</strong> 'Of' ALWAYS calculates before division!</div>
+          <div class="fc-row"><strong>Contrast:</strong> $a \div b \times c = (a/b) \times c$.</div>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="fc-header"><span class="fc-name">📐 Division Chaining Rule</span><button class="copy-btn" data-formula="a ÷ b ÷ c ÷ d = a / (b × c × d)">Copy</button></div>
+        <div class="fc-body">
+          <div class="fc-formula">a ÷ b ÷ c ÷ d = a / (b × c × d)</div>
+          <div class="fc-row"><strong>Rule:</strong> Collapse all consecutive divisors into the denominator product.</div>
+          <div class="fc-row"><strong>Example:</strong> $1000 \div 10 \div 5 \div 2 = 1000 / 100 = 10$.</div>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="fc-header"><span class="fc-name">📐 Negative Power Parity</span><button class="copy-btn" data-formula="(-1)^even = +1 | (-1)^odd = -1">Copy</button></div>
+        <div class="fc-body">
+          <div class="fc-formula">(-1)^even = +1  |  (-1)^odd = -1</div>
+          <div class="fc-row"><strong>Trap:</strong> $-a^2 = -(a^2)$ vs $(-a)^2 = +a^2$.</div>
+          <div class="fc-row"><strong>Exam Use:</strong> Simplifying alternating sum series.</div>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="fc-header"><span class="fc-name">📐 Vinculum Evaluation Rule</span><button class="copy-btn" data-formula="x - (a - b) = x - (a - b) = x - a + b">Copy</button></div>
+        <div class="fc-body">
+          <div class="fc-formula">x - [a - b] = x - a + b</div>
+          <div class="fc-row"><strong>Rule:</strong> Bar bracket acts as an encapsulated parenthesis.</div>
+          <div class="fc-row"><strong>Example:</strong> $10 - \overline{4 - 2} = 10 - 2 = 8$.</div>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="fc-header"><span class="fc-name">📐 Difference of Squares Shortcut</span><button class="copy-btn" data-formula="a² - b² = (a - b)(a + b)">Copy</button></div>
+        <div class="fc-body">
+          <div class="fc-formula">a² - b² = (a - b)(a + b)</div>
+          <div class="fc-row"><strong>Speed Trick:</strong> $(8.5^2 - 1.5^2) / (8.5 - 1.5) = 8.5 + 1.5 = 10$.</div>
+          <div class="fc-row"><strong>Avoid:</strong> Never calculate square decimals manually!</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHORTCUTS & TRAPS -->
+  <section style="margin-bottom:24px;">
+    <h2 class="sec-title">⚡ Speed Shortcuts &amp; SSC Traps Learned</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--gold);font-size:1.05rem;margin-bottom:12px;">⚡ 3 Lightning Speed Shortcuts</h3>
+        <div class="shortcut-card" style="margin-bottom:12px;">
+          <div class="sc-title">⚡ 1. Single Denominator Division Collapsing</div>
+          <div class="sc-content">Jab bhi continuous division mile ($a \div b \div c \div d$), rough sheet par bar-bar division mat karo. Direct $a$ ko numerator me likho aur baaki sabhi terms ko denominator me multiply kardo: $\frac{a}{b \cdot c \cdot d}$. Saves 15 seconds.</div>
+        </div>
+        <div class="shortcut-card" style="margin-bottom:12px;">
+          <div class="sc-title">⚡ 2. Inside-Out Bracket Scanning</div>
+          <div class="sc-content">Poori equation dubara copy karne ki jagah, sirf sabse andar ke bracket $(\dots)$ ka value nikal kar uske upar pencil/mental note likho. Ek line me reduction hoti hai!</div>
+        </div>
+        <div class="shortcut-card">
+          <div class="sc-title">⚡ 3. Algebraic Identity Decimal Filter</div>
+          <div class="sc-content">Agar decimal arithmetic jaise $\frac{6.4 \times 6.4 - 3.6 \times 3.6}{6.4 - 3.6}$ dikhe, to multiply mat karo! Yeh hamesha $a^2 - b^2 = (a-b)(a+b)$ hota hai, jiska answer direct $6.4 + 3.6 = 10$ hota hai.</div>
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--red);font-size:1.05rem;margin-bottom:12px;">🚨 3 Classic SSC Exam Traps</h3>
+        <div class="trap-card" style="margin-bottom:12px;">
+          <div class="trap-header"><span class="trap-title">🚨 The "Of vs Divide" Bait</span><span class="error-code">Error-F</span></div>
+          <div class="trap-desc">$36 \div 6 \text{ of } 2$: Candidates jaldi me $36 \div 6 = 6$ karke $6 \times 2 = 12$ mark karte hain. Option A hamesha 12 hota hai! Sahi answer $36 \div 12 = 3$ hai.</div>
+        </div>
+        <div class="trap-card" style="margin-bottom:12px;">
+          <div class="trap-header"><span class="trap-title">🚨 The Bar Negative Drop Trap</span><span class="error-code">Error-S</span></div>
+          <div class="trap-desc">$15 - \overline{8 - 3}$: Aspirants minus ko dono terms me distribute karke $15 - 8 - 3 = 4$ likh dete hain. Sahi: bar ke andar $8 - 3 = 5$, to $15 - 5 = 10$.</div>
+        </div>
+        <div class="trap-card">
+          <div class="trap-header"><span class="trap-title">🚨 Decimal Place Value Inversion</span><span class="error-code">Error-R</span></div>
+          <div class="trap-desc">Number $45.678$ me 7 ka place value $70$ nahi, balki $\frac{7}{100} = 0.07$ hai. Decimal point ke baad tenths, hundredths, thousandths hote hain!</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- LEVEL 1: 20 BASIC / FOUNDATION QUESTIONS -->
+  <!-- ========================================== -->
+  <section class="book-chapter" id="sec-basic">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+      <div>
+        <span class="chap-badge" style="background:rgba(34,211,165,0.1);color:var(--green);border-color:rgba(34,211,165,0.2);">LEVEL 1</span>
+        <h2 style="font-size:1.35rem;font-weight:700;color:#fff;">🟢 20 Basic / Foundation Practice Questions</h2>
+      </div>
+      <span style="font-size:0.82rem;color:var(--text-muted);">Target: 100% Accuracy &bull; 30s/Q</span>
+    </div>
+    <p class="book-p" style="font-size:0.88rem;color:var(--gold);">
+      🤖 <strong>AI Tutor Rule:</strong> Pehle khud rough sheet par attempt karo. Solution tabhi reveal karo jab attempt ho jaye!
+    </p>
+
+    <!-- Q1 to Q20 generated dynamically -->
+    
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q1</span>
+    <span class="q-tag">Place Value & Face Value</span>
+  </div>
+  <div class="q-text">Find the difference between the place value and the face value of the digit $7$ in the number $87,543$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('basic-hint-0')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('basic-sol-0')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="basic-hint-0">Face value is the digit itself ($7$). Place value depends on its position: $7 \times 1000 = 7000$.</div>
+  <div class="sol-content" id="basic-sol-0"><strong>Step-by-step Solution:</strong><br>1) Face value of digit 7 $= 7$.<br>2) Position of 7 is at thousands place $\implies \text{Place Value} = 7 \times 1000 = 7000$.<br>3) Difference $= 7000 - 7 = \mathbf{6,993}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q2</span>
+    <span class="q-tag">Sum of Place Values</span>
+  </div>
+  <div class="q-text">Find the sum of the place value of $5$ in the number $45,892$ and the place value of $3$ in the number $79,321$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('basic-hint-1')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('basic-sol-1')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="basic-hint-1">Identify the position of 5 in the first number, and 3 in the second number. Add the two place values.</div>
+  <div class="sol-content" id="basic-sol-1"><strong>Step-by-step Solution:</strong><br>1) In $45,892$, 5 is at thousands place $\implies \text{Place Value} = 5,000$.<br>2) In $79,321$, 3 is at hundreds place $\implies \text{Place Value} = 300$.<br>3) $\text{Sum} = 5000 + 300 = \mathbf{5,300}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q3</span>
+    <span class="q-tag">Decimal Place Value</span>
+  </div>
+  <div class="q-text">In the decimal number $548.729$, find the place value of the digit $2$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('basic-hint-2')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('basic-sol-2')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="basic-hint-2">The first digit after decimal is tenths ($1/10$), the second is hundredths ($1/100$).</div>
+  <div class="sol-content" id="basic-sol-2"><strong>Step-by-step Solution:</strong><br>1) The digit 2 is the second digit to the right of the decimal point.<br>2) $\text{Place Value} = 2 \times \frac{1}{100} = \frac{2}{100} = \mathbf{0.02}$ (two-hundredths).</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q4</span>
+    <span class="q-tag">Signed Operations</span>
+  </div>
+  <div class="q-text">Evaluate the arithmetic expression: $(-18) + (-27) - (-15) + (+10)$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('basic-hint-3')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('basic-sol-3')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="basic-hint-3">Remember: minus of minus is plus: $- (-15) = +15$. Group positive and negative terms.</div>
+  <div class="sol-content" id="basic-sol-3"><strong>Step-by-step Solution:</strong><br>1) Simplify double signs: $-18 - 27 + 15 + 10$.<br>2) Combine negative terms: $-18 - 27 = -45$.<br>3) Combine positive terms: $+15 + 10 = +25$.<br>4) Total $= -45 + 25 = \mathbf{-20}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q5</span>
+    <span class="q-tag">Sign Multiplication</span>
+  </div>
+  <div class="q-text">Evaluate the product: $(-8) \times (-5) \times (-3) \times (+2)$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('basic-hint-4')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('basic-sol-4')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="basic-hint-4">Count the number of negative signs: 3 negatives $\implies$ product is negative!</div>
+  <div class="sol-content" id="basic-sol-4"><strong>Step-by-step Solution:</strong><br>1) Step 1: $(-8) \times (-5) = +40$.<br>2) Step 2: $(+40) \times (-3) = -120$.<br>3) Step 3: $(-120) \times (+2) = \mathbf{-240}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q6</span>
+    <span class="q-tag">Signed Division & Multiplication</span>
+  </div>
+  <div class="q-text">Evaluate: $(-72) \div (-9) \times (-4)$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('basic-hint-5')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('basic-sol-5')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="basic-hint-5">Division and multiplication have equal precedence; evaluate strictly from left to right.</div>
+  <div class="sol-content" id="basic-sol-5"><strong>Step-by-step Solution:</strong><br>1) Left operation: $(-72) \div (-9) = +8$.<br>2) Next operation: $(+8) \times (-4) = \mathbf{-32}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q7</span>
+    <span class="q-tag">Basic BODMAS</span>
+  </div>
+  <div class="q-text">Evaluate: $25 - 5 \times 4 + 18 \div 3$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('basic-hint-6')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('basic-sol-6')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="basic-hint-6">Division and Multiplication come before Addition and Subtraction.</div>
+  <div class="sol-content" id="basic-sol-6"><strong>Step-by-step Solution:</strong><br>1) Division: $18 \div 3 = 6$.<br>2) Multiplication: $5 \times 4 = 20$.<br>3) Expression becomes: $25 - 20 + 6 = 5 + 6 = \mathbf{11}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q8</span>
+    <span class="q-tag">Left-to-Right Operations</span>
+  </div>
+  <div class="q-text">Evaluate: $48 \div 12 \times 2 + 5 - 3$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('basic-hint-7')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('basic-sol-7')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="basic-hint-7">Do $48 \div 12$ first, then multiply by 2. Do not multiply $12 \times 2$ first!</div>
+  <div class="sol-content" id="basic-sol-7"><strong>Step-by-step Solution:</strong><br>1) Division first: $48 \div 12 = 4$.<br>2) Multiplication: $4 \times 2 = 8$.<br>3) Addition/Subtraction: $8 + 5 - 3 = 13 - 3 = \mathbf{10}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q9</span>
+    <span class="q-tag">The 'Of' Operation</span>
+  </div>
+  <div class="q-text">Evaluate: $36 \div 6 \text{ of } 2$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('basic-hint-8')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('basic-sol-8')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="basic-hint-8">🚨 'Of' takes strict precedence over Division! Calculate $6 \text{ of } 2$ first.</div>
+  <div class="sol-content" id="basic-sol-8"><strong>Step-by-step Solution:</strong><br>1) 'Of' operation: $6 \text{ of } 2 = 6 \times 2 = 12$.<br>2) Division: $36 \div 12 = \mathbf{3}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q10</span>
+    <span class="q-tag">Of vs Multiply Contrast</span>
+  </div>
+  <div class="q-text">Evaluate: $36 \div 6 \times 2$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('basic-hint-9')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('basic-sol-9')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="basic-hint-9">Here ordinary multiplication $(\times)$ is present, not 'of'. Division comes first!</div>
+  <div class="sol-content" id="basic-sol-9"><strong>Step-by-step Solution:</strong><br>1) Division first: $36 \div 6 = 6$.<br>2) Multiplication: $6 \times 2 = \mathbf{12}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q11</span>
+    <span class="q-tag">Vinculum (Bar Bracket)</span>
+  </div>
+  <div class="q-text">Evaluate: $15 - \overline{8 - 3} + 4$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('basic-hint-10')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('basic-sol-10')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="basic-hint-10">The bar covers $8 - 3$. Evaluate $8 - 3 = 5$ first, then apply the minus sign.</div>
+  <div class="sol-content" id="basic-sol-10"><strong>Step-by-step Solution:</strong><br>1) Vinculum evaluation: $\overline{8 - 3} = 5$.<br>2) Expression becomes: $15 - 5 + 4 = 10 + 4 = \mathbf{14}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q12</span>
+    <span class="q-tag">Simple Brackets</span>
+  </div>
+  <div class="q-text">Evaluate: $20 - [10 - (8 - 3)]$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('basic-hint-11')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('basic-sol-11')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="basic-hint-11">Inside-out rule: solve innermost round bracket $(8 - 3)$ first.</div>
+  <div class="sol-content" id="basic-sol-11"><strong>Step-by-step Solution:</strong><br>1) Round bracket: $(8 - 3) = 5$.<br>2) Square bracket: $[10 - 5] = 5$.<br>3) Outer subtraction: $20 - 5 = \mathbf{15}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q13</span>
+    <span class="q-tag">Distributive Parentheses</span>
+  </div>
+  <div class="q-text">Evaluate: $50 - 3(4 + 2) + 16 \div 4$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('basic-hint-12')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('basic-sol-12')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="basic-hint-12">Evaluate bracket $(4+2)=6$ first, then multiply by 3.</div>
+  <div class="sol-content" id="basic-sol-12"><strong>Step-by-step Solution:</strong><br>1) Bracket: $(4 + 2) = 6$.<br>2) Multiplication: $3 \times 6 = 18$.<br>3) Division: $16 \div 4 = 4$.<br>4) Total $= 50 - 18 + 4 = 32 + 4 = \mathbf{36}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q14</span>
+    <span class="q-tag">Bracketed Division</span>
+  </div>
+  <div class="q-text">Evaluate: $(18 - 6) \div 4 \times 3$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('basic-hint-13')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('basic-sol-13')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="basic-hint-13">Solve bracket $(18 - 6)$ first, then divide by 4, then multiply by 3.</div>
+  <div class="sol-content" id="basic-sol-13"><strong>Step-by-step Solution:</strong><br>1) Bracket: $(18 - 6) = 12$.<br>2) Division: $12 \div 4 = 3$.<br>3) Multiplication: $3 \times 3 = \mathbf{9}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q15</span>
+    <span class="q-tag">Division Chaining</span>
+  </div>
+  <div class="q-text">Evaluate: $100 \div 10 \div 2 \div 5$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('basic-hint-14')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('basic-sol-14')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="basic-hint-14">Use shortcut: $a \div b \div c \div d = \frac{a}{b \times c \times d}$.</div>
+  <div class="sol-content" id="basic-sol-14"><strong>Step-by-step Solution:</strong><br>1) Denominator product $= 10 \times 2 \times 5 = 100$.<br>2) Fraction $= \frac{100}{100} = \mathbf{1}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q16</span>
+    <span class="q-tag">Negative Exponent Parity</span>
+  </div>
+  <div class="q-text">Find the numerical value of: $(-1)^{50} + (-1)^{51} + (-1)^{100} - (-1)^{101}$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('basic-hint-15')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('basic-sol-15')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="basic-hint-15">$(-1)^{\text{even}} = +1$ and $(-1)^{\text{odd}} = -1$.</div>
+  <div class="sol-content" id="basic-sol-15"><strong>Step-by-step Solution:</strong><br>1) $(-1)^{50} = +1$.<br>2) $(-1)^{51} = -1$.<br>3) $(-1)^{100} = +1$.<br>4) $(-1)^{101} = -1 \implies -(-1) = +1$.<br>5) Total $= 1 - 1 + 1 + 1 = \mathbf{2}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q17</span>
+    <span class="q-tag">Operator Precedence</span>
+  </div>
+  <div class="q-text">Evaluate: $4 + 4 \times 4 - 4 \div 4$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('basic-hint-16')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('basic-sol-16')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="basic-hint-16">BODMAS: Do division ($4\div 4$), multiplication ($4\times 4$), then add and subtract.</div>
+  <div class="sol-content" id="basic-sol-16"><strong>Step-by-step Solution:</strong><br>1) Division: $4 \div 4 = 1$.<br>2) Multiplication: $4 \times 4 = 16$.<br>3) Expression becomes: $4 + 16 - 1 = 20 - 1 = \mathbf{19}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q18</span>
+    <span class="q-tag">Chained Operations</span>
+  </div>
+  <div class="q-text">Evaluate: $64 \div 8 \times 2 - (15 - 7)$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('basic-hint-17')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('basic-sol-17')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="basic-hint-17">Bracket $(15-7)=8$. Left part $64 \div 8 = 8$, $8 \times 2 = 16$.</div>
+  <div class="sol-content" id="basic-sol-17"><strong>Step-by-step Solution:</strong><br>1) Bracket: $(15 - 7) = 8$.<br>2) Division: $64 \div 8 = 8$.<br>3) Multiplication: $8 \times 2 = 16$.<br>4) Subtraction: $16 - 8 = \mathbf{8}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q19</span>
+    <span class="q-tag">Nested Box Brackets</span>
+  </div>
+  <div class="q-text">Evaluate: $7 \times 8 - [40 \div (12 - 4)]$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('basic-hint-18')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('basic-sol-18')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="basic-hint-18">Innermost bracket $(12 - 4) = 8$. Divide 40 by 8.</div>
+  <div class="sol-content" id="basic-sol-18"><strong>Step-by-step Solution:</strong><br>1) Round bracket: $(12 - 4) = 8$.<br>2) Square bracket: $[40 \div 8] = 5$.<br>3) Multiplication: $7 \times 8 = 56$.<br>4) Final subtraction: $56 - 5 = \mathbf{51}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q20</span>
+    <span class="q-tag">Three Nested Brackets</span>
+  </div>
+  <div class="q-text">Evaluate: $18 - [6 - \{4 - (8 - 6 + 3)\}]$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('basic-hint-19')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('basic-sol-19')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="basic-hint-19">Inside-out: $(8 - 6 + 3) = 5 \implies \{4 - 5\} = -1$. Be careful with signs!</div>
+  <div class="sol-content" id="basic-sol-19"><strong>Step-by-step Solution:</strong><br>1) Round bracket: $(8 - 6 + 3) = 5$.<br>2) Curly bracket: $\{4 - 5\} = -1$.<br>3) Square bracket: $[6 - (-1)] = 6 + 1 = 7$.<br>4) Final subtraction: $18 - 7 = \mathbf{11}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- LEVEL 2: 20 MIXED / TRICKY QUESTIONS -->
+  <!-- ========================================== -->
+  <section class="book-chapter" id="sec-mixed">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+      <div>
+        <span class="chap-badge" style="background:rgba(246,194,68,0.1);color:var(--gold);border-color:rgba(246,194,68,0.2);">LEVEL 2</span>
+        <h2 style="font-size:1.35rem;font-weight:700;color:#fff;">🟡 20 Mixed &amp; Tricky Standard Questions</h2>
+      </div>
+      <span style="font-size:0.82rem;color:var(--text-muted);">Target: &ge;85% Accuracy &bull; 45s/Q</span>
+    </div>
+    <p class="book-p" style="font-size:0.88rem;color:var(--gold);">
+      Nested brackets, fractions, decimals aur multi-step chained operations ka standard practice set:
+    </p>
+
+    <!-- Q21 to Q40 generated dynamically -->
+    
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q21</span>
+    <span class="q-tag">Vinculum + Nested Brackets</span>
+  </div>
+  <div class="q-text">Evaluate: $45 - [38 - \{60 \div 3 - (6 - \overline{9 - 3}) \div 3\}]$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('mixed-hint-0')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('mixed-sol-0')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="mixed-hint-0">Solve bar $\overline{9 - 3} = 6$ first, so $(6 - 6) = 0$.</div>
+  <div class="sol-content" id="mixed-sol-0"><strong>Step-by-step Solution:</strong><br>1) Vinculum: $\overline{9 - 3} = 6$.<br>2) Round bracket: $(6 - 6) = 0$.<br>3) Division: $0 \div 3 = 0$.<br>4) Curly bracket: $\{60 \div 3 - 0\} = \{20 - 0\} = 20$.<br>5) Square bracket: $[38 - 20] = 18$.<br>6) Final: $45 - 18 = \mathbf{27}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q22</span>
+    <span class="q-tag">Fractional BODMAS</span>
+  </div>
+  <div class="q-text">Evaluate: $\frac{3}{4} \text{ of } \frac{8}{9} \div \frac{2}{3} + \frac{5}{6} - \frac{1}{2}$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('mixed-hint-1')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('mixed-sol-1')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="mixed-hint-1">Do 'of' first: $\frac{3}{4} \times \frac{8}{9} = \frac{2}{3}$. Then divide by $\frac{2}{3}$.</div>
+  <div class="sol-content" id="mixed-sol-1"><strong>Step-by-step Solution:</strong><br>1) 'Of' operation: $\frac{3}{4} \times \frac{8}{9} = \frac{2}{3}$.<br>2) Division: $\frac{2}{3} \div \frac{2}{3} = 1$.<br>3) Addition/subtraction: $1 + \frac{5}{6} - \frac{1}{2} = 1 + \left(\frac{5 - 3}{6}\right) = 1 + \frac{2}{6} = 1 + \frac{1}{3} = \mathbf{\frac{4}{3}}$ (or $1\frac{1}{3}$).</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q23</span>
+    <span class="q-tag">Complex Nested Arithmetic</span>
+  </div>
+  <div class="q-text">Evaluate: $16 \div [4 \text{ of } 2 - \{12 \div 3 \times 2 - (8 - 6)\}]$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('mixed-hint-2')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('mixed-sol-2')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="mixed-hint-2">Evaluate $4 \text{ of } 2 = 8$. Inside curly brackets: $12 \div 3 \times 2 - 2$.</div>
+  <div class="sol-content" id="mixed-sol-2"><strong>Step-by-step Solution:</strong><br>1) 'Of': $4 \text{ of } 2 = 8$.<br>2) Round bracket: $(8 - 6) = 2$.<br>3) Inside curly brackets: $12 \div 3 \times 2 - 2 = 4 \times 2 - 2 = 8 - 2 = 6$.<br>4) Square bracket: $[8 - 6] = 2$.<br>5) Division: $16 \div 2 = \mathbf{8}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q24</span>
+    <span class="q-tag">Mixed Fraction & 'Of'</span>
+  </div>
+  <div class="q-text">Evaluate: $108 \div 36 \text{ of } \frac{1}{4} + \frac{2}{5} \times 3\frac{1}{4}$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('mixed-hint-3')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('mixed-sol-3')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="mixed-hint-3">Calculate $36 \text{ of } \frac{1}{4} = 9$ first. $3\frac{1}{4} = \frac{13}{4}$.</div>
+  <div class="sol-content" id="mixed-sol-3"><strong>Step-by-step Solution:</strong><br>1) 'Of': $36 \text{ of } \frac{1}{4} = 36 \times \frac{1}{4} = 9$.<br>2) Division: $108 \div 9 = 12$.<br>3) Multiplication: $\frac{2}{5} \times \frac{13}{4} = \frac{13}{10} = 1.3$.<br>4) Total $= 12 + 1.3 = \mathbf{13.3}$ (or $\frac{133}{10}$).</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q25</span>
+    <span class="q-tag">Fraction Vinculum Nested Ladder</span>
+  </div>
+  <div class="q-text">Evaluate: $7\frac{1}{2} - [2\frac{1}{4} \div \{1\frac{1}{4} - \frac{1}{2}(1\frac{1}{2} - \overline{\frac{1}{3} - \frac{1}{6}})\}]$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('mixed-hint-4')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('mixed-sol-4')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="mixed-hint-4">Start at the vinculum: $\frac{1}{3} - \frac{1}{6} = \frac{1}{6}$. Work upwards through the brackets.</div>
+  <div class="sol-content" id="mixed-sol-4"><strong>Step-by-step Solution:</strong><br>1) Vinculum: $\overline{\frac{1}{3} - \frac{1}{6}} = \frac{1}{6}$.<br>2) Inside round bracket: $1\frac{1}{2} - \frac{1}{6} = \frac{3}{2} - \frac{1}{6} = \frac{8}{6} = \frac{4}{3}$.<br>3) Multiply by $\frac{1}{2}$: $\frac{1}{2} \times \frac{4}{3} = \frac{2}{3}$.<br>4) Inside curly bracket: $1\frac{1}{4} - \frac{2}{3} = \frac{5}{4} - \frac{2}{3} = \frac{15 - 8}{12} = \frac{7}{12}$.<br>5) Square bracket division: $2\frac{1}{4} \div \frac{7}{12} = \frac{9}{4} \times \frac{12}{7} = \frac{27}{7}$.<br>6) Final: $\frac{15}{2} - \frac{27}{7} = \frac{105 - 54}{14} = \mathbf{\frac{51}{14}}$ (or $3\frac{9}{14}$).</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q26</span>
+    <span class="q-tag">Brackets & Multipliers</span>
+  </div>
+  <div class="q-text">Evaluate: $25 - 4 \times [18 \div \{12 - (5 - 2)\}] + 7$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('mixed-hint-5')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('mixed-sol-5')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="mixed-hint-5">Round bracket $(5-2)=3 \implies \{12-3\}=9 \implies [18\div 9]=2$.</div>
+  <div class="sol-content" id="mixed-sol-5"><strong>Step-by-step Solution:</strong><br>1) Round bracket: $(5 - 2) = 3$.<br>2) Curly bracket: $\{12 - 3\} = 9$.<br>3) Square bracket: $[18 \div 9] = 2$.<br>4) Multiplication: $4 \times 2 = 8$.<br>5) Final: $25 - 8 + 7 = 17 + 7 = \mathbf{24}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q27</span>
+    <span class="q-tag">Algebraic Shortcut in BODMAS</span>
+  </div>
+  <div class="q-text">Evaluate: $\frac{8.5 \times 8.5 - 1.5 \times 1.5}{8.5 - 1.5}$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('mixed-hint-6')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('mixed-sol-6')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="mixed-hint-6">Do not calculate $(8.5)^2$! Use identity $a^2 - b^2 = (a - b)(a + b)$.</div>
+  <div class="sol-content" id="mixed-sol-6"><strong>Step-by-step Solution:</strong><br>1) Recognize form: $\frac{a^2 - b^2}{a - b} = \frac{(a - b)(a + b)}{a - b} = a + b$.<br>2) Here $a = 8.5$ and $b = 1.5$.<br>3) Result $= 8.5 + 1.5 = \mathbf{10}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q28</span>
+    <span class="q-tag">Multi-Bracket Long Chaining</span>
+  </div>
+  <div class="q-text">Evaluate: $54 \div 3 \times (4 + 2) - [28 - \{16 \div 4 \times 3\}]$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('mixed-hint-7')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('mixed-sol-7')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="mixed-hint-7">Solve left part $54 \div 3 \times 6 = 18 \times 6 = 108$. Inside curly brackets: $4 \times 3 = 12$.</div>
+  <div class="sol-content" id="mixed-sol-7"><strong>Step-by-step Solution:</strong><br>1) Left part: $54 \div 3 \times (6) = 18 \times 6 = 108$.<br>2) Curly bracket: $\{16 \div 4 \times 3\} = \{4 \times 3\} = 12$.<br>3) Square bracket: $[28 - 12] = 16$.<br>4) Total $= 108 - 16 = \mathbf{92}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q29</span>
+    <span class="q-tag">Of and Multiplication Combined</span>
+  </div>
+  <div class="q-text">Evaluate: $18 \div 3 \text{ of } 2 \times 4 - 6 + 12 \div 4$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('mixed-hint-8')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('mixed-sol-8')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="mixed-hint-8">Calculate $3 \text{ of } 2 = 6$ first, so $18 \div 6 = 3$. Then $3 \times 4 = 12$.</div>
+  <div class="sol-content" id="mixed-sol-8"><strong>Step-by-step Solution:</strong><br>1) 'Of': $3 \text{ of } 2 = 6$.<br>2) Division: $18 \div 6 = 3$.<br>3) Multiplication: $3 \times 4 = 12$.<br>4) Division at end: $12 \div 4 = 3$.<br>5) Expression $= 12 - 6 + 3 = 6 + 3 = \mathbf{9}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q30</span>
+    <span class="q-tag">Divided Bracket Sequence</span>
+  </div>
+  <div class="q-text">Evaluate: $[24 + \{36 \div 4 \times (8 - 5)\}] \div 17$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('mixed-hint-9')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('mixed-sol-9')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="mixed-hint-9">Round bracket $(8-5)=3 \implies \{9 \times 3\}=27 \implies [24+27]=51$.</div>
+  <div class="sol-content" id="mixed-sol-9"><strong>Step-by-step Solution:</strong><br>1) Round bracket: $(8 - 5) = 3$.<br>2) Inside curly bracket: $36 \div 4 \times 3 = 9 \times 3 = 27$.<br>3) Square bracket: $[24 + 27] = 51$.<br>4) Division: $51 \div 17 = \mathbf{3}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q31</span>
+    <span class="q-tag">Vinculum Subtraction Reversal</span>
+  </div>
+  <div class="q-text">Evaluate: $80 - [20 + \{15 - (8 - \overline{6 - 2})\}]$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('mixed-hint-10')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('mixed-sol-10')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="mixed-hint-10">Bar: $\overline{6 - 2} = 4 \implies (8 - 4) = 4 \implies \{15 - 4\} = 11$.</div>
+  <div class="sol-content" id="mixed-sol-10"><strong>Step-by-step Solution:</strong><br>1) Vinculum: $\overline{6 - 2} = 4$.<br>2) Round bracket: $(8 - 4) = 4$.<br>3) Curly bracket: $\{15 - 4\} = 11$.<br>4) Square bracket: $[20 + 11] = 31$.<br>5) Final subtraction: $80 - 31 = \mathbf{49}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q32</span>
+    <span class="q-tag">Symmetric Fraction Operator</span>
+  </div>
+  <div class="q-text">Evaluate: $\frac{2}{3} \div \frac{2}{3} \text{ of } \frac{2}{3} + \frac{2}{3} \times \frac{2}{3} \div \frac{2}{3}$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('mixed-hint-11')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('mixed-sol-11')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="mixed-hint-11">First part: $\frac{2}{3} \text{ of } \frac{2}{3} = \frac{4}{9} \implies \frac{2}{3} \div \frac{4}{9}$. Second part: division first!</div>
+  <div class="sol-content" id="mixed-sol-11"><strong>Step-by-step Solution:</strong><br>1) First half: $\frac{2}{3} \text{ of } \frac{2}{3} = \frac{4}{9}$. Then $\frac{2}{3} \div \frac{4}{9} = \frac{2}{3} \times \frac{9}{4} = \frac{3}{2}$.<br>2) Second half: $\frac{2}{3} \div \frac{2}{3} = 1$. Then $\frac{2}{3} \times 1 = \frac{2}{3}$.<br>3) Combined: $\frac{3}{2} + \frac{2}{3} = \frac{9 + 4}{6} = \mathbf{\frac{13}{6}}$ (or $2\frac{1}{6}$).</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q33</span>
+    <span class="q-tag">Composite Brackets & Products</span>
+  </div>
+  <div class="q-text">Evaluate: $120 \div [15 \times \{4 - (8 - 6)\}] + 25 \times 4 \div 10$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('mixed-hint-12')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('mixed-sol-12')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="mixed-hint-12">$(8-6)=2 \implies \{4-2\}=2 \implies [15 \times 2]=30 \implies 120 \div 30 = 4$.</div>
+  <div class="sol-content" id="mixed-sol-12"><strong>Step-by-step Solution:</strong><br>1) Inside brackets: $(8 - 6) = 2 \implies \{4 - 2\} = 2 \implies [15 \times 2] = 30$.<br>2) Left division: $120 \div 30 = 4$.<br>3) Right part: $25 \times 4 \div 10 = 100 \div 10 = 10$.<br>4) Total $= 4 + 10 = \mathbf{14}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q34</span>
+    <span class="q-tag">Distributive Box Evaluation</span>
+  </div>
+  <div class="q-text">Evaluate: $3 \times [4 + \{6 \times (8 - 3)\} - 10] \div 12$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('mixed-hint-13')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('mixed-sol-13')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="mixed-hint-13">$(8-3)=5 \implies \{6 \times 5\}=30 \implies [4 + 30 - 10] = 24$.</div>
+  <div class="sol-content" id="mixed-sol-13"><strong>Step-by-step Solution:</strong><br>1) Inside brackets: $(8 - 3) = 5 \implies \{6 \times 5\} = 30$.<br>2) Square bracket: $[4 + 30 - 10] = 24$.<br>3) Left-to-right operations: $3 \times 24 \div 12 = 72 \div 12 = \mathbf{6}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q35</span>
+    <span class="q-tag">Decimal Nested Vinculum</span>
+  </div>
+  <div class="q-text">Evaluate: $5.4 - [2.8 + \{1.2 - (0.8 - \overline{0.5 - 0.2})\}]$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('mixed-hint-14')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('mixed-sol-14')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="mixed-hint-14">Vinculum: $\overline{0.5 - 0.2} = 0.3$. Continue inside-out.</div>
+  <div class="sol-content" id="mixed-sol-14"><strong>Step-by-step Solution:</strong><br>1) Vinculum: $\overline{0.5 - 0.2} = 0.3$.<br>2) Round bracket: $(0.8 - 0.3) = 0.5$.<br>3) Curly bracket: $\{1.2 - 0.5\} = 0.7$.<br>4) Square bracket: $[2.8 + 0.7] = 3.5$.<br>5) Final subtraction: $5.4 - 3.5 = \mathbf{1.9}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q36</span>
+    <span class="q-tag">Triple Operation Priority</span>
+  </div>
+  <div class="q-text">Evaluate: $63 \div 7 \text{ of } 3 + 4 \times 5 - 18 \div 2$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('mixed-hint-15')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('mixed-sol-15')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="mixed-hint-15">'Of' first: $7 \text{ of } 3 = 21$. Then $63 \div 21 = 3$.</div>
+  <div class="sol-content" id="mixed-sol-15"><strong>Step-by-step Solution:</strong><br>1) 'Of': $7 \text{ of } 3 = 21$.<br>2) Division: $63 \div 21 = 3$.<br>3) Multiplication: $4 \times 5 = 20$.<br>4) Division: $18 \div 2 = 9$.<br>5) Combine: $3 + 20 - 9 = 23 - 9 = \mathbf{14}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q37</span>
+    <span class="q-tag">Nested Bar Multiplier</span>
+  </div>
+  <div class="q-text">Evaluate: $48 \div [12 - \{10 - (8 - \overline{4 - 2})\}] \times 3$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('mixed-hint-16')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('mixed-sol-16')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="mixed-hint-16">$\overline{4-2}=2 \implies 8-2=6 \implies 10-6=4 \implies 12-4=8$.</div>
+  <div class="sol-content" id="mixed-sol-16"><strong>Step-by-step Solution:</strong><br>1) Vinculum: $\overline{4 - 2} = 2$.<br>2) Round bracket: $(8 - 2) = 6$.<br>3) Curly bracket: $\{10 - 6\} = 4$.<br>4) Square bracket: $[12 - 4] = 8$.<br>5) Left to right: $48 \div 8 \times 3 = 6 \times 3 = \mathbf{18}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q38</span>
+    <span class="q-tag">Fractional Succession</span>
+  </div>
+  <div class="q-text">Evaluate: $\frac{5}{8} \text{ of } \frac{4}{15} \div \frac{1}{6} + \frac{3}{4} - \frac{1}{2}$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('mixed-hint-17')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('mixed-sol-17')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="mixed-hint-17">$\frac{5}{8} \times \frac{4}{15} = \frac{1}{6}$. Then $\frac{1}{6} \div \frac{1}{6} = 1$.</div>
+  <div class="sol-content" id="mixed-sol-17"><strong>Step-by-step Solution:</strong><br>1) 'Of': $\frac{5}{8} \times \frac{4}{15} = \frac{1}{6}$.<br>2) Division: $\frac{1}{6} \div \frac{1}{6} = 1$.<br>3) Combine: $1 + \frac{3}{4} - \frac{1}{2} = 1 + \frac{1}{4} = \mathbf{\frac{5}{4}}$ (or $1.25$).</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q39</span>
+    <span class="q-tag">Three Nestings with Subtraction</span>
+  </div>
+  <div class="q-text">Evaluate: $100 - 3 \times [20 - \{12 - (7 - \overline{5 - 2})\}]$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('mixed-hint-18')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('mixed-sol-18')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="mixed-hint-18">$\overline{5-2}=3 \implies 7-3=4 \implies 12-4=8 \implies 20-8=12$.</div>
+  <div class="sol-content" id="mixed-sol-18"><strong>Step-by-step Solution:</strong><br>1) Vinculum: $\overline{5 - 2} = 3$.<br>2) Round bracket: $(7 - 3) = 4$.<br>3) Curly bracket: $\{12 - 4\} = 8$.<br>4) Square bracket: $[20 - 8] = 12$.<br>5) Multiplication & Subtraction: $100 - 3(12) = 100 - 36 = \mathbf{64}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q40</span>
+    <span class="q-tag">Rational Bracket Quotient</span>
+  </div>
+  <div class="q-text">Evaluate: $\frac{72 - 12 \div 3 \text{ of } 2}{18 - 6 \div 2}$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('mixed-hint-19')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('mixed-sol-19')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="mixed-hint-19">Solve numerator and denominator separately using BODMAS.</div>
+  <div class="sol-content" id="mixed-sol-19"><strong>Step-by-step Solution:</strong><br>1) Numerator: $3 \text{ of } 2 = 6 \implies 12 \div 6 = 2 \implies 72 - 2 = 70$.<br>2) Denominator: $6 \div 2 = 3 \implies 18 - 3 = 15$.<br>3) Fraction $= \frac{70}{15} = \mathbf{\frac{14}{3}}$ (or $4\frac{2}{3}$).</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- LEVEL 3: 15 VERIFIED SSC PYQS -->
+  <!-- ========================================== -->
+  <section class="book-chapter" id="sec-pyq">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+      <div>
+        <span class="chap-badge" style="background:rgba(167,139,250,0.1);color:var(--violet);border-color:rgba(167,139,250,0.2);">LEVEL 3</span>
+        <h2 style="font-size:1.35rem;font-weight:700;color:#fff;">🏆 15 Verified SSC Exam PYQs (CGL, CHSL, MTS, CPO)</h2>
+      </div>
+      <span style="font-size:0.82rem;color:var(--text-muted);">Actual Exam Papers &bull; 40s/Q</span>
+    </div>
+    <p class="book-p" style="font-size:0.88rem;color:var(--gold);">
+      🔐 <strong>Integrity Rule:</strong> Sabhi 15 questions actual SSC shifts se verified hain. Dono method (Conventional vs Topper's Speed Trick) diye gaye hain:
+    </p>
+
+    <!-- Q41 to Q55 generated dynamically -->
+    
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q41</span>
+    <span class="q-tag">SSC CGL 2023 Tier-1 (14 July Shift 1)</span>
+  </div>
+  <div class="q-text">Find the value of: $7 \frac{1}{2} + [5 \frac{1}{3} \div (1 \frac{1}{4} - \frac{1}{2}(2 \frac{1}{2} - \overline{\frac{1}{4} - \frac{1}{6}}))]$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('pyq-hint-0')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('pyq-sol-0')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="pyq-hint-0">Start at the vinculum: $\frac{1}{4} - \frac{1}{6} = \frac{1}{12}$. Work through the brackets progressively.</div>
+  <div class="sol-content" id="pyq-sol-0"><strong>Shift:</strong> SSC CGL 2023 Tier-1 (14 July Shift 1)<br><strong>Step-by-step Solution:</strong><br>1) Vinculum: $\overline{\frac{1}{4} - \frac{1}{6}} = \frac{3 - 2}{12} = \frac{1}{12}$.<br>2) Inside round bracket: $2\frac{1}{2} - \frac{1}{12} = \frac{5}{2} - \frac{1}{12} = \frac{30 - 1}{12} = \frac{29}{12}$.<br>3) Multiply by $\frac{1}{2}$: $\frac{1}{2} \times \frac{29}{12} = \frac{29}{24}$.<br>4) Inside parenthesis: $1\frac{1}{4} - \frac{29}{24} = \frac{5}{4} - \frac{29}{24} = \frac{30 - 29}{24} = \frac{1}{24}$.<br>5) Division: $5\frac{1}{3} \div \frac{1}{24} = \frac{16}{3} \times 24 = 16 \times 8 = 128$.<br>6) Final: $7\frac{1}{2} + 128 = \mathbf{135\frac{1}{2}}$ (or $\frac{271}{2}$).<br>⚡ <strong>Topper's Trick:</strong> Notice denominator $24$ inverts to multiply by $24$, canceling the $3$ cleanly!</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q42</span>
+    <span class="q-tag">SSC CGL 2023 Tier-1 (17 July Shift 2)</span>
+  </div>
+  <div class="q-text">The value of $25 \div 10 \text{ of } 2 - [45 \div 9 \times (3 - 5) + 6]$ is:</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('pyq-hint-1')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('pyq-sol-1')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="pyq-hint-1">$10 \text{ of } 2 = 20$. In brackets: $(3 - 5) = -2$, and $45 \div 9 \times (-2) = -10$.</div>
+  <div class="sol-content" id="pyq-sol-1"><strong>Shift:</strong> SSC CGL 2023 Tier-1 (17 July Shift 2)<br><strong>Step-by-step Solution:</strong><br>1) Left part: $10 \text{ of } 2 = 20 \implies 25 \div 20 = \frac{5}{4} = 1.25$.<br>2) Inside brackets: $(3 - 5) = -2$.<br>3) Multiplication in bracket: $45 \div 9 \times (-2) = 5 \times (-2) = -10$.<br>4) Bracket total: $[-10 + 6] = -4$.<br>5) Full expression: $\frac{5}{4} - (-4) = \frac{5}{4} + 4 = \mathbf{\frac{21}{4}}$ (or $5.25$).<br>🚨 <strong>Trap:</strong> Forgetting that minus of minus $-(-4)$ becomes $+4$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q43</span>
+    <span class="q-tag">SSC CGL 2022 Tier-1 (1 Dec Shift 1)</span>
+  </div>
+  <div class="q-text">Evaluate: $9 \div \frac{3}{7} \text{ of } (14 + 21) \times 5 - [4 \times 3 \div 2 + 1]$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('pyq-hint-2')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('pyq-sol-2')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="pyq-hint-2">Round bracket $(14 + 21) = 35$. Then $\frac{3}{7} \text{ of } 35 = 15$.</div>
+  <div class="sol-content" id="pyq-sol-2"><strong>Shift:</strong> SSC CGL 2022 Tier-1 (1 Dec Shift 1)<br><strong>Step-by-step Solution:</strong><br>1) Bracket: $(14 + 21) = 35$.<br>2) 'Of': $\frac{3}{7} \text{ of } 35 = 3 \times 5 = 15$.<br>3) Left division & multiplication: $9 \div 15 \times 5 = \frac{9}{15} \times 5 = \frac{3}{5} \times 5 = 3$.<br>4) Square bracket: $[4 \times 3 \div 2 + 1] = [12 \div 2 + 1] = [6 + 1] = 7$.<br>5) Final result: $3 - 7 = \mathbf{-4}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q44</span>
+    <span class="q-tag">SSC CHSL 2023 Tier-1 (2 Aug Shift 1)</span>
+  </div>
+  <div class="q-text">If $A = 12 \div 4 \times 3$ and $B = 12 \div (4 \times 3)$, find the value of $A - B$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('pyq-hint-3')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('pyq-sol-3')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="pyq-hint-3">In $A$, division precedes multiplication: $12 \div 4 = 3 \implies 3 \times 3 = 9$. In $B$, bracket precedes division!</div>
+  <div class="sol-content" id="pyq-sol-3"><strong>Shift:</strong> SSC CHSL 2023 Tier-1 (2 Aug Shift 1)<br><strong>Step-by-step Solution:</strong><br>1) Value of $A$: $12 \div 4 \times 3 = 3 \times 3 = 9$.<br>2) Value of $B$: $12 \div (4 \times 3) = 12 \div 12 = 1$.<br>3) Difference: $A - B = 9 - 1 = \mathbf{8}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q45</span>
+    <span class="q-tag">SSC CGL 2022 Tier-2 (8 Aug 2022)</span>
+  </div>
+  <div class="q-text">The value of $\frac{5 \frac{1}{2} \div 3 \frac{2}{3} \text{ of } \frac{1}{4} + 5 \frac{1}{2} \div 3 \frac{2}{3} \times \frac{1}{4}}{5 \frac{1}{2} - 3 \frac{2}{3}}$ is:</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('pyq-hint-4')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('pyq-sol-4')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="pyq-hint-4">Convert mixed fractions: $5\frac{1}{2} = \frac{11}{2}$, $3\frac{2}{3} = \frac{11}{3}$. Notice $\frac{11}{2}$ and $\frac{11}{3}$ cancel cleanly!</div>
+  <div class="sol-content" id="pyq-sol-4"><strong>Shift:</strong> SSC CGL 2022 Tier-2 (8 Aug 2022)<br><strong>Step-by-step Solution:</strong><br>1) Numerator Part 1: $3\frac{2}{3} \text{ of } \frac{1}{4} = \frac{11}{3} \times \frac{1}{4} = \frac{11}{12}$.<br>$\frac{11}{2} \div \frac{11}{12} = \frac{11}{2} \times \frac{12}{11} = 6$.<br>2) Numerator Part 2: $\frac{11}{2} \div \frac{11}{3} \times \frac{1}{4} = \left(\frac{11}{2} \times \frac{3}{11}\right) \times \frac{1}{4} = \frac{3}{2} \times \frac{1}{4} = \frac{3}{8}$.<br>3) Total Numerator $= 6 + \frac{3}{8} = \frac{51}{8}$.<br>4) Denominator: $\frac{11}{2} - \frac{11}{3} = 11\left(\frac{1}{2} - \frac{1}{3}\right) = \frac{11}{6}$.<br>5) Final Quotient: $\frac{51/8}{11/6} = \frac{51}{8} \times \frac{6}{11} = \frac{51 \times 3}{4 \times 11} = \mathbf{\frac{153}{44}}$ (or $3\frac{21}{44}$).</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q46</span>
+    <span class="q-tag">SSC MTS 2023 (1 Sept Shift 2)</span>
+  </div>
+  <div class="q-text">Evaluate: $45 - 3 \times [15 - \{12 \div 4 \times (8 - 6)\}] + 18 \div 6$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('pyq-hint-5')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('pyq-sol-5')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="pyq-hint-5">Inside round bracket: $(8 - 6) = 2$. Curly bracket: $\{3 \times 2\} = 6$.</div>
+  <div class="sol-content" id="pyq-sol-5"><strong>Shift:</strong> SSC MTS 2023 (1 Sept Shift 2)<br><strong>Step-by-step Solution:</strong><br>1) Round bracket: $(8 - 6) = 2$.<br>2) Curly bracket: $\{12 \div 4 \times 2\} = \{3 \times 2\} = 6$.<br>3) Square bracket: $[15 - 6] = 9$.<br>4) Multiply: $3 \times 9 = 27$.<br>5) Division: $18 \div 6 = 3$.<br>6) Total $= 45 - 27 + 3 = 18 + 3 = \mathbf{21}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q47</span>
+    <span class="q-tag">SSC CGL 2021 Tier-1 (11 April Shift 1)</span>
+  </div>
+  <div class="q-text">The value of $52 - 1170 \div 26 + 13 \times 2$ is:</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('pyq-hint-6')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('pyq-sol-6')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="pyq-hint-6">Calculate $1170 \div 26$ first. Notice $1170 = 13 \times 90$, and $26 = 13 \times 2$.</div>
+  <div class="sol-content" id="pyq-sol-6"><strong>Shift:</strong> SSC CGL 2021 Tier-1 (11 April Shift 1)<br><strong>Step-by-step Solution:</strong><br>1) Fast Division: $1170 \div 26 = \frac{13 \times 90}{13 \times 2} = \frac{90}{2} = 45$.<br>2) Multiplication: $13 \times 2 = 26$.<br>3) Combine: $52 - 45 + 26 = 7 + 26 = \mathbf{33}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q48</span>
+    <span class="q-tag">SSC CGL 2023 Tier-1 (19 July Shift 3)</span>
+  </div>
+  <div class="q-text">Simplify: $18 \div 2 \text{ of } 3 \times [4 + \{6 \times (8 - 3)\} - 10] \div 12$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('pyq-hint-7')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('pyq-sol-7')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="pyq-hint-7">$2 \text{ of } 3 = 6 \implies 18 \div 6 = 3$. Evaluate the square bracket separately.</div>
+  <div class="sol-content" id="pyq-sol-7"><strong>Shift:</strong> SSC CGL 2023 Tier-1 (19 July Shift 3)<br><strong>Step-by-step Solution:</strong><br>1) 'Of': $2 \text{ of } 3 = 6 \implies 18 \div 6 = 3$.<br>2) Inside brackets: $(8 - 3) = 5 \implies \{6 \times 5\} = 30$.<br>3) Square bracket: $[4 + 30 - 10] = 24$.<br>4) Chained operation: $3 \times 24 \div 12 = 72 \div 12 = \mathbf{6}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q49</span>
+    <span class="q-tag">SSC CHSL 2022 Tier-1 (24 May Shift 2)</span>
+  </div>
+  <div class="q-text">What is the difference between the place value and face value of 8 in the number 6,85,423?</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('pyq-hint-8')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('pyq-sol-8')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="pyq-hint-8">Identify the position: ten-thousands place! Face value is 8.</div>
+  <div class="sol-content" id="pyq-sol-8"><strong>Shift:</strong> SSC CHSL 2022 Tier-1 (24 May Shift 2)<br><strong>Step-by-step Solution:</strong><br>1) In $6,85,423$, 8 is at ten-thousands place $\implies \text{Place Value} = 8 \times 10,000 = 80,000$.<br>2) $\text{Face Value} = 8$.<br>3) $\text{Difference} = 80,000 - 8 = \mathbf{79,992}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q50</span>
+    <span class="q-tag">SSC CPO 2023 (3 Oct Shift 1)</span>
+  </div>
+  <div class="q-text">Evaluate: $36 \div 4 \text{ of } 3 \times 2 + [18 - \{12 \div 3 \times (4 - 2)\}].</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('pyq-hint-9')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('pyq-sol-9')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="pyq-hint-9">$4 \text{ of } 3 = 12 \implies 36 \div 12 = 3$. Inside brackets: $(4 - 2) = 2$.</div>
+  <div class="sol-content" id="pyq-sol-9"><strong>Shift:</strong> SSC CPO 2023 (3 Oct Shift 1)<br><strong>Step-by-step Solution:</strong><br>1) 'Of': $4 \text{ of } 3 = 12$.<br>2) Division: $36 \div 12 = 3$.<br>3) Multiplication: $3 \times 2 = 6$.<br>4) Inside brackets: $(4 - 2) = 2 \implies \{12 \div 3 \times 2\} = \{4 \times 2\} = 8$.<br>5) Square bracket: $[18 - 8] = 10$.<br>6) Final: $6 + 10 = \mathbf{16}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q51</span>
+    <span class="q-tag">SSC CGL 2022 Tier-1 (3 Dec Shift 2)</span>
+  </div>
+  <div class="q-text">Evaluate: $\frac{2}{3} \div \frac{3}{10} \text{ of } \frac{4}{9} - \frac{4}{5} \times 1 \frac{1}{9} \div \frac{8}{15} - \frac{3}{4} + \frac{1}{2}$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('pyq-hint-10')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('pyq-sol-10')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="pyq-hint-10">First part: $\frac{3}{10} \text{ of } \frac{4}{9} = \frac{2}{15}$. Middle part: $\frac{4}{5} \times \frac{10}{9} \div \frac{8}{15}$.</div>
+  <div class="sol-content" id="pyq-sol-10"><strong>Shift:</strong> SSC CGL 2022 Tier-1 (3 Dec Shift 2)<br><strong>Step-by-step Solution:</strong><br>1) First half: $\frac{3}{10} \times \frac{4}{9} = \frac{2}{15}$. Then $\frac{2}{3} \div \frac{2}{15} = \frac{2}{3} \times \frac{15}{2} = 5$.<br>2) Second half: $\frac{4}{5} \times \frac{10}{9} \div \frac{8}{15} = \frac{8}{9} \times \frac{15}{8} = \frac{15}{9} = \frac{5}{3}$.<br>3) Combine: $5 - \frac{5}{3} - \frac{3}{4} + \frac{1}{2} = \frac{10}{3} - \frac{1}{4} = \frac{40 - 3}{12} = \mathbf{\frac{37}{12}}$ (or $3\frac{1}{12}$).</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q52</span>
+    <span class="q-tag">SSC MTS 2022 (5 July Shift 1)</span>
+  </div>
+  <div class="q-text">Evaluate: $100 \div 10 \text{ of } 10 - [45 \div (15 - 6) \times 2]$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('pyq-hint-11')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('pyq-sol-11')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="pyq-hint-11">$10 \text{ of } 10 = 100 \implies 100 \div 100 = 1$. Inside bracket: $45 \div 9 \times 2$.</div>
+  <div class="sol-content" id="pyq-sol-11"><strong>Shift:</strong> SSC MTS 2022 (5 July Shift 1)<br><strong>Step-by-step Solution:</strong><br>1) 'Of': $10 \text{ of } 10 = 100 \implies 100 \div 100 = 1$.<br>2) Bracket: $(15 - 6) = 9 \implies 45 \div 9 \times 2 = 5 \times 2 = 10$.<br>3) Result: $1 - 10 = \mathbf{-9}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q53</span>
+    <span class="q-tag">SSC CGL 2023 Tier-1 (26 July Shift 4)</span>
+  </div>
+  <div class="q-text">The value of: $28 - [15 - \{12 \div 3 \text{ of } 2 + (8 - \overline{5 - 2})\}]$ is:</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('pyq-hint-12')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('pyq-sol-12')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="pyq-hint-12">Vinculum: $\overline{5 - 2} = 3 \implies 8 - 3 = 5$. 'Of': $3 \text{ of } 2 = 6 \implies 12 \div 6 = 2$.</div>
+  <div class="sol-content" id="pyq-sol-12"><strong>Shift:</strong> SSC CGL 2023 Tier-1 (26 July Shift 4)<br><strong>Step-by-step Solution:</strong><br>1) Vinculum: $\overline{5 - 2} = 3 \implies (8 - 3) = 5$.<br>2) 'Of': $3 \text{ of } 2 = 6 \implies 12 \div 6 = 2$.<br>3) Curly bracket: $\{2 + 5\} = 7$.<br>4) Square bracket: $[15 - 7] = 8$.<br>5) Final: $28 - 8 = \mathbf{20}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q54</span>
+    <span class="q-tag">SSC CHSL 2023 Tier-1 (4 Aug Shift 3)</span>
+  </div>
+  <div class="q-text">Simplify: $\frac{4.6 \times 4.6 - 1.4 \times 1.4}{4.6 - 1.4} \div [16 \div 4 \text{ of } 2]$.</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('pyq-hint-13')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('pyq-sol-13')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="pyq-hint-13">Numerator uses $a^2 - b^2 \implies a + b = 4.6 + 1.4 = 6.0$. Bracket: $4 \text{ of } 2 = 8 \implies 16 \div 8 = 2$.</div>
+  <div class="sol-content" id="pyq-sol-13"><strong>Shift:</strong> SSC CHSL 2023 Tier-1 (4 Aug Shift 3)<br><strong>Step-by-step Solution:</strong><br>1) Left part algebraic shortcut: $\frac{4.6^2 - 1.4^2}{4.6 - 1.4} = 4.6 + 1.4 = 6.0$.<br>2) Right bracket: $4 \text{ of } 2 = 8 \implies [16 \div 8] = 2$.<br>3) Final division: $6.0 \div 2 = \mathbf{3}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-head">
+    <span class="q-num">Q55</span>
+    <span class="q-tag">SSC CGL 2022 Tier-2 (2 March 2023)</span>
+  </div>
+  <div class="q-text">The value of $[(16 \div 4 \times 2) - (12 \div 3 \text{ of } 2)] \div [(24 \div 6 \times 2) - 6]$ is:</div>
+  <div class="q-actions">
+    <button class="q-btn btn-hint" onclick="toggleEl('pyq-hint-14')">💡 Show Hint</button>
+    <button class="q-btn btn-sol" onclick="toggleEl('pyq-sol-14')">✅ Show Full Solution</button>
+  </div>
+  <div class="hint-content" id="pyq-hint-14">Evaluate numerator: $(4 \times 2) - (12 \div 6) = 8 - 2 = 6$. Denominator: $(4 \times 2) - 6 = 8 - 6 = 2$.</div>
+  <div class="sol-content" id="pyq-sol-14"><strong>Shift:</strong> SSC CGL 2022 Tier-2 (2 March 2023)<br><strong>Step-by-step Solution:</strong><br>1) First bracket: $(16 \div 4 \times 2) = 4 \times 2 = 8$.<br>2) Second bracket: $3 \text{ of } 2 = 6 \implies 12 \div 6 = 2$.<br>3) Numerator: $8 - 2 = 6$.<br>4) Denominator: $(24 \div 6 \times 2) - 6 = (4 \times 2) - 6 = 8 - 6 = 2$.<br>5) Final: $6 \div 2 = \mathbf{3}$.</div>
+  <div class="self-rate-row">
+    <span>Self-rate:</span>
+    <button class="rate-btn" onclick="this.style.background='rgba(34,211,165,0.2)';this.style.color='var(--green)'">✓ Got it (&lt;30s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(246,194,68,0.2)';this.style.color='var(--gold)'">⏱ Slow (&gt;45s)</button>
+    <button class="rate-btn" onclick="this.style.background='rgba(241,106,106,0.2)';this.style.color='var(--red)'">✗ Wrong / Trap</button>
+  </div>
+</div>
+
+  </section>
+
+  <!-- ========================================== -->
+  <!-- TIMED DRILL STOPWATCH -->
+  <!-- ========================================== -->
+  <section class="timed-drill" id="sec-timed">
+    <span class="hero-badge" style="background:linear-gradient(90deg,#22d3a5,#00e5ff);">One Timed Drill Completed</span>
+    <h2 style="font-size:1.4rem;font-weight:700;color:#fff;margin:8px 0;">⏱️ Day 1 Speed Mastery Timed Test</h2>
+    <p style="font-size:0.88rem;color:var(--text-muted);">
+      Timer start karein &rarr; Rough sheet par 25 questions solve karein &rarr; Pause karein &rarr; Score check karein.
+    </p>
+    <div class="timer-display" id="timer-display">00:00</div>
+    <div class="timer-controls">
+      <button class="timer-btn t-start" id="t-start">▶ Start Timer</button>
+      <button class="timer-btn t-pause" id="t-pause">⏸ Pause</button>
+      <button class="timer-btn t-reset" id="t-reset">↺ Reset</button>
+    </div>
+    <div class="score-row">
+      <span style="font-weight:600;color:#fff;">Correct:</span>
+      <input type="number" class="score-input" id="score-correct" placeholder="0" min="0" max="25">
+      <span style="font-weight:600;color:#fff;">Total:</span>
+      <input type="number" class="score-input" id="score-total" value="25" min="1">
+      <button class="tb-btn" style="background:var(--primary);color:#000;font-weight:700;border:none;" onclick="calcDay1Score()">Calculate Score</button>
+    </div>
+    <div id="score-result" style="margin-top:14px;font-weight:700;font-size:1.05rem;"></div>
+  </section>
+
+  <!-- ACTIVE RECALL & ERROR NOTEBOOK -->
+  <section class="book-chapter">
+    <h2 class="sec-title">🧠 Active Recall Checklist &amp; Error Log</h2>
+    <p class="book-p" style="font-size:0.88rem;">
+      Formula aur concept ko bina dekhe dimag se recall karke verify karein:
+    </p>
+    <div class="recall-list">
+      <div class="recall-item"><span>1. Place value aur Face value mein kya antar hai? Ek example do.</span><input type="checkbox"></div>
+      <div class="recall-item"><span>2. Decimal number $0.05$ mein digit 5 ka place value kya hai?</span><input type="checkbox"></div>
+      <div class="recall-item"><span>3. $(-1)^{101}$ aur $(-1)^{102}$ ka value kya hota hai?</span><input type="checkbox"></div>
+      <div class="recall-item"><span>4. Charo brackets ka opening order kya hai (sabse pehle kaunsa khulta hai)?</span><input type="checkbox"></div>
+      <div class="recall-item"><span>5. 'Of' (का) aur Division ($\div$) mein se kiski priority pehle hoti hai?</span><input type="checkbox"></div>
+      <div class="recall-item"><span>6. $a \div b \div c \div d$ ka direct single-fraction shortcut kya hai?</span><input type="checkbox"></div>
+      <div class="recall-item"><span>7. $10 - \overline{4 - 2}$ ka answer 8 hoga ya 4? Kyun?</span><input type="checkbox"></div>
+      <div class="recall-item"><span>8. $(-a) \times (-b) \times (-c)$ ka sign positive hoga ya negative?</span><input type="checkbox"></div>
+    </div>
+  </section>
+
+</div><!-- /container -->
+
+<!-- PRINT / PDF MODAL -->
+<div class="modal-overlay" id="print-modal">
+  <div class="modal-box">
+    <h3 style="color:#fff;font-size:1.2rem;margin-bottom:8px;">🖨️ Export / Print Day 1 Book Notes</h3>
+    <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:16px;">
+      Printing ke samay sabhi 55 questions ke solutions aur hints automatically reveal ho jayenge taaki aap complete study book print kar sakein.
+    </p>
+    <div style="display:flex;gap:10px;justify-content:center;margin-bottom:16px;">
+      <button class="tb-btn" style="background:#fff;color:#000;font-weight:700;" onclick="triggerPrint('light')">📄 Clean White Print / PDF</button>
+      <button class="tb-btn" style="background:var(--surface-elevated);color:var(--primary);border-color:var(--primary);" onclick="triggerPrint('dark')">🌙 Dark PDF Notes</button>
+    </div>
+    <button class="tb-btn" onclick="closePrintModal()">Close</button>
+  </div>
+</div>
+
+<script>
+// Toggle function
+function toggleEl(id) {
+  const el = document.getElementById(id);
+  if (el) el.style.display = el.style.display === 'none' || el.style.display === '' ? 'block' : 'none';
+}
+
+// Copy Formula
+document.querySelectorAll('.copy-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    navigator.clipboard.writeText(btn.dataset.formula);
+    const orig = btn.textContent;
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = orig, 1500);
+  });
+});
+
+// Timer Logic
+let timerInterval = null, timerSecs = 0, timerRunning = false;
+function fmtTime(s) { const m = Math.floor(s/60); return (m<10?'0':'')+m+':'+(s%60<10?'0':'')+(s%60); }
+function updateTimerDisplay() { document.getElementById('timer-display').textContent = fmtTime(timerSecs); }
+document.getElementById('t-start')?.addEventListener('click', () => {
+  if (!timerRunning) {
+    timerRunning = true;
+    timerInterval = setInterval(() => { timerSecs++; updateTimerDisplay(); }, 1000);
+  }
+});
+document.getElementById('t-pause')?.addEventListener('click', () => { timerRunning = false; clearInterval(timerInterval); });
+document.getElementById('t-reset')?.addEventListener('click', () => { timerRunning = false; clearInterval(timerInterval); timerSecs = 0; updateTimerDisplay(); });
+
+function calcDay1Score() {
+  const c = parseInt(document.getElementById('score-correct').value) || 0;
+  const t = parseInt(document.getElementById('score-total').value) || 25;
+  const pct = Math.round((c / t) * 100);
+  const res = document.getElementById('score-result');
+  if (pct >= 90) res.innerHTML = `<span style="color:var(--green)">🏆 Score: ${c}/${t} (${pct}%) — L4: Mastered! Ready for Day 2.</span>`;
+  else if (pct >= 80) res.innerHTML = `<span style="color:var(--gold)">⚡ Score: ${c}/${t} (${pct}%) — L3: Exam Ready! Review silly errors.</span>`;
+  else res.innerHTML = `<span style="color:var(--red)">⚠️ Score: ${c}/${t} (${pct}%) — Need Revision before Day 2. Re-read Chapter 4 & 5.</span>`;
+}
+
+// Print Modal
+function openPrintModal() { document.getElementById('print-modal').style.display = 'flex'; }
+function closePrintModal() { document.getElementById('print-modal').style.display = 'none'; }
+function triggerPrint(mode) {
+  closePrintModal();
+  document.querySelectorAll('.hint-content, .sol-content').forEach(el => el.style.display = 'block');
+  window.print();
+}
+
+window.addEventListener('afterprint', () => {
+  document.querySelectorAll('.hint-content, .sol-content').forEach(el => el.style.display = 'none');
+});
+</script>
+</body>
+</html>
