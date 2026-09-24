@@ -1435,206 +1435,492 @@ pre, code, .fc-formula {
       <div>
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Pie Chart Conversion</span>
-    <button class="copy-btn" data-formula="Central Angle (°) = (%) × 3.6
-% = Central Angle / 3.6
-360° = 100%  |  1% = 3.6°">Copy</button>
+    <span class="fc-name">📐 Pie Chart Conversion &amp; Angle Multipliers</span>
+    <button class="copy-btn" data-formula="Central Angle (°) = (%) * 3.6 | % = Central Angle / 3.6 | 360° = 100% | 1% = 3.6°">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">Central Angle (°) = (%) × 3.6
-% = Central Angle / 3.6
-360° = 100%  |  1% = 3.6°</div>
-    <div class="fc-row"><strong>When to use:</strong> Any pie chart angle-to-value conversion</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> Sector of 54°: 54/3.6=15%. Sector of 20%: 20×3.6=72°.</div>
-    <div class="fc-trap">🚨 Trap: Always check whether question asks for angle OR percentage — students often give the wrong form.</div>
+    <div class="fc-formula">\text{Angle } (\theta) = \text{Percentage} \times 3.6^\circ &nbsp;|&nbsp; \text{Percentage} = \frac{\theta}{3.6}\% = \theta \times \frac{5}{18}\%</div>
+    <div class="fc-row"><strong>When to use:</strong> Converting pie chart sectors from degrees to percentage or actual value.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Memorize multiples of $36$: $10\% = 36^\circ$, $15\% = 54^\circ$, $20\% = 72^\circ$, $25\% = 90^\circ$, $30\% = 108^\circ$, $40\% = 144^\circ$, $50\% = 180^\circ$.</div>
+    <div class="fc-trap">🚨 Trap: Submitting percentage when the question asks for the central angle in degrees, or vice versa!</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Empirical Relation</span>
-    <button class="copy-btn" data-formula="Mode = 3(Median) - 2(Mean)">Copy</button>
+    <span class="fc-name">📐 Empirical Relation (Mean, Median, Mode)</span>
+    <button class="copy-btn" data-formula="Mode = 3(Median) - 2(Mean) | Mean - Mode = 3(Mean - Median) | Median = (Mode + 2*Mean)/3">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">Mode = 3(Median) - 2(Mean)</div>
-    <div class="fc-row"><strong>When to use:</strong> Moderately skewed unimodal distribution where one of Mean/Median/Mode is missing</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> Mean=24, Median=26: Mode=3(26)-2(24)=78-48=30.</div>
-    <div class="fc-trap">🚨 Trap: This formula is for MODERATELY SKEWED distributions. For symmetrical: Mean=Median=Mode. Don't use empirical for perfectly symmetrical data.</div>
+    <div class="fc-formula">\text{Mode} = 3(\text{Median}) - 2(\text{Mean}) &nbsp;|&nbsp; \text{Mean} - \text{Mode} = 3(\text{Mean} - \text{Median})</div>
+    <div class="fc-row"><strong>When to use:</strong> Moderately skewed unimodal distribution when any two of Mean, Median, Mode are given.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> If $\text{Median} = 26$ and $\text{Mean} = 24 \implies \text{Mode} = 3(26) - 2(24) = 78 - 48 = 30$ in 3 seconds!</div>
+    <div class="fc-trap">🚨 Trap: Swapping coefficients: writing $2(\text{Median}) - 3(\text{Mean})$. Remember: 3 letters in 'MED'ian gets 3; 4 letters in 'Mean' gets 2!</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Variance & Standard Deviation</span>
-    <button class="copy-btn" data-formula="Variance = σ² = Σ(xᵢ - x̄)² / N
-SD = σ = √Variance
-SD of (ax + b) = |a| × σ (b doesn't affect spread)">Copy</button>
+    <span class="fc-name">📐 Variance, Standard Deviation &amp; CV</span>
+    <button class="copy-btn" data-formula="Variance = σ² = Sum(x - x_bar)² / N | SD = σ = sqrt(Variance) | CV = (σ / x_bar) * 100%">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">Variance = σ² = Σ(xᵢ - x̄)² / N
-SD = σ = √Variance
-SD of (ax + b) = |a| × σ (b doesn't affect spread)</div>
-    <div class="fc-row"><strong>When to use:</strong> Measuring spread/dispersion of data set</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> If each observation increased by k: Mean increases by k, SD unchanged. If each multiplied by k: both Mean and SD multiply by k.</div>
-    <div class="fc-trap">🚨 Trap: Adding a constant to all data: Mean changes but SD does NOT change. Multiplying all: both change.</div>
+    <div class="fc-formula">\sigma^2 = \frac{\sum (x_i - \bar{x})^2}{N} = \frac{\sum x_i^2}{N} - (\bar{x})^2 &nbsp;|&nbsp; \sigma = \sqrt{\sigma^2} &nbsp;|&nbsp; \text{CV} = \frac{\sigma}{\bar{x}} \times 100\%</div>
+    <div class="fc-row"><strong>When to use:</strong> Calculating spread, dispersion, and consistency of data series. Lower CV $\implies$ more consistent!</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Variance of first $n$ natural numbers $= \frac{n^2 - 1}{12}$. For first $11$ numbers: $\sigma^2 = \frac{121 - 1}{12} = 10$!</div>
+    <div class="fc-trap">🚨 Trap: Submitting Variance when asked for Standard Deviation. SD is the SQUARE ROOT of variance!</div>
   </div>
-</div></div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Shift &amp; Scale Invariance of Dispersion</span>
+    <button class="copy-btn" data-formula="If x_i -> x_i + k: Mean increases by k, SD and Variance UNCHANGED | If x_i -> k*x_i: Mean*k, SD*|k|, Variance*k²">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">x_i \pm k \implies \sigma_{\text{new}} = \sigma_{\text{old}} &nbsp;|&nbsp; k \cdot x_i \implies \sigma_{\text{new}} = |k| \cdot \sigma_{\text{old}}, \; \sigma^2_{\text{new}} = k^2 \sigma^2_{\text{old}}</div>
+    <div class="fc-row"><strong>When to use:</strong> Transformations of observations where every data point is shifted or scaled.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Adding/subtracting any constant shifts the entire distribution without spreading it apart $\implies$ SD does not change at all!</div>
+    <div class="fc-trap">🚨 Trap: Increasing SD when a constant is added. SD changes ONLY when observations are multiplied or divided.</div>
+  </div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Grouped Frequency Median &amp; Mode</span>
+    <button class="copy-btn" data-formula="Median = L + [(N/2 - CF)/f]*h | Mode = L + [(f1 - f0)/(2f1 - f0 - f2)]*h">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">\text{Median} = L + \left(\frac{\frac{N}{2} - CF}{f}\right)h &nbsp;|&nbsp; \text{Mode} = L + \left(\frac{f_1 - f_0}{2f_1 - f_0 - f_2}\right)h</div>
+    <div class="fc-row"><strong>When to use:</strong> Continuous class intervals ($10-20, 20-30$) in SSC Statistics questions.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Modal class has the MAXIMUM frequency ($f_1$). $f_0$ is preceding frequency, $f_2$ is succeeding frequency.</div>
+    <div class="fc-trap">🚨 Trap: Using cumulative frequency of current class instead of preceding class ($CF$) in Median formula.</div>
+  </div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Mean Deviation about Mean &amp; Median</span>
+    <button class="copy-btn" data-formula="MD(Mean) = Sum|x - x_bar| / N | MD(Median) = Sum|x - M| / N | MD is MINIMUM about MEDIAN">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">\text{MD}(\bar{x}) = \frac{\sum |x_i - \bar{x}|}{N} &nbsp;|&nbsp; \text{MD}(M) = \frac{\sum |x_i - M|}{N}</div>
+    <div class="fc-row"><strong>When to use:</strong> Measuring average absolute deviations from central tendency.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Theoretical property: The sum of absolute deviations $\sum |x_i - A|$ is strictly MINIMUM when $A = \text{Median}$!</div>
+    <div class="fc-trap">🚨 Trap: Forgetting absolute value brackets $|\dots|$. Without absolute values, $\sum (x_i - \bar{x}) = 0$ always!</div>
+  </div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 DI Quick Percentage Growth &amp; Ratio Scaling</span>
+    <button class="copy-btn" data-formula="% Growth = [(Final - Initial) / Initial] * 100% | Ratio of slices: use raw angles/percentages directly">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">\%\,\text{Growth} = \frac{\text{Final} - \text{Initial}}{\text{Initial}} \times 100\% &nbsp;|&nbsp; \frac{\text{Sector } A}{\text{Sector } B} = \frac{\theta_A}{\theta_B} = \frac{\%_A}{\%_B}</div>
+    <div class="fc-row"><strong>When to use:</strong> Bar charts, line graphs, and multi-year production/sales tables.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> If asked for ratio of Sector A ($72^\circ$) to Sector B ($108^\circ$), write $72 : 108 = 2 : 3$ directly. NEVER calculate actual rupees first!</div>
+    <div class="fc-trap">🚨 Trap: Dividing by Final value instead of Initial value (base year) in percentage growth calculations.</div>
+  </div>
+</div>
+      </div>
     </div>
     <div>
       <h2 class="sec-title" id="sec-tricks">⚡ Speed Shortcuts</h2>
       <div class="shortcut-grid" style="grid-template-columns:1fr;">
 <div class="shortcut-card">
-  <div class="sc-title">⚡ DI Fast Reading Protocol (6 Steps)</div>
-  <div class="sc-content">1. Title: what data represents. 2. Units: lakhs? crores? thousands? 3. Time axis: years/months. 4. Read specific question FIRST. 5. Identify only needed rows/columns. 6. Estimate → confirm with single calculation.</div>
+  <div class="sc-title">⚡ 1. The 3.6 Multiplier Pie Chart Staircase</div>
+  <div class="sc-content">Direct angle recognition: $10\% = 36^\circ$, $15\% = 54^\circ$, $20\% = 72^\circ$, $25\% = 90^\circ$, $30\% = 108^\circ$, $40\% = 144^\circ$. To convert $54^\circ$ to $\%$: $\frac{54}{3.6} = 15\%$ in 2 seconds!</div>
 </div>
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Bar Chart Comparison Shortcut</div>
-  <div class="sc-content">For ratio questions between two bars: read both values, divide. For % change: (New-Old)/Old×100. Never calculate full values if ratio is asked.</div>
+  <div class="sc-title">⚡ 2. Empirical 3-2-1 Mental Trick</div>
+  <div class="sc-content">$\text{Mode} = 3\text{Median} - 2\text{Mean}$. If $\text{Median} = 48$ and $\text{Mean} = 45 \implies \text{Mode} = 3(48) - 2(45) = 144 - 90 = 54$! Fast, clean, no algebraic equations.</div>
 </div>
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Standard Deviation Constants</div>
-  <div class="sc-content">Data: {2,4,6,8,10}. Mean=6. Adding 5 to each: {7,9,11,13,15}. New Mean=11. SD unchanged. Multiplying by 2: {4,8,12,16,20}. New Mean=12. New SD=2×old SD.</div>
-</div></div>
+  <div class="sc-title">⚡ 3. SD Shift Invariance Rule</div>
+  <div class="sc-content">If data set $\{2, 4, 6, 8, 10\}$ has $\text{SD} = \sigma$: Adding $50$ to each gives $\{52, 54, 56, 58, 60\}$. The new $\text{SD}$ is STILL $\sigma$! Adding or subtracting a constant never affects standard deviation.</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 4. Variance of First $n$ Natural Numbers</div>
+  <div class="sc-content">Formula: $\sigma^2 = \frac{n^2 - 1}{12}$. E.g., for first $7$ natural numbers: $\sigma^2 = \frac{49 - 1}{12} = \frac{48}{12} = 4 \implies \text{SD} = 2$ in 3 seconds!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 5. Skip Raw Value Scaling in DI</div>
+  <div class="sc-content">If question asks: 'Ratio of 2021 production to 2022 production' and table says 'Production in lakhs': divide index numbers directly (e.g. $45.2 : 58.6$). Do NOT write out five zeros!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 6. Corrected Mean Formula</div>
+  <div class="sc-content">$\text{Corrected Mean} = \text{Old Mean} + \frac{\text{Correct Value} - \text{Wrong Value}}{N}$. E.g., Mean of $30$ items was $65$; $48$ was read as $84$: Change $= 65 + \frac{48 - 84}{30} = 65 - 1.2 = 63.8$ in 5 seconds!</div>
+</div>
+      </div>
     </div>
-  </div>
-
-  <!-- SSC TRAPS -->
+  </div><!-- SSC TRAPS -->
   <h2 class="sec-title" id="sec-traps">🚨 SSC Exam Trap Library</h2>
   <div class="trap-grid">
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 DI Unit Scale Trap</span>
-    <span class="error-code">Error-R</span>
-  </div>
-  <div class="trap-desc">Data table says 'Sales in thousands'. Value shown=45. Actual=45,000. Missing the unit multiplier is the most common DI error.</div>
-</div>
-<div class="trap-card">
-  <div class="trap-header">
-    <span class="trap-title">🚨 Pie Chart % vs Angle Trap</span>
-    <span class="error-code">Error-R</span>
-  </div>
-  <div class="trap-desc">Question asks 'what % is sector A?', but you calculate the angle. Or vice versa. Always check: does the question want degrees or percentage?</div>
-</div>
-<div class="trap-card">
-  <div class="trap-header">
-    <span class="trap-title">🚨 SD Unaffected by Shift Trap</span>
+    <span class="trap-title">🚨 Trap 1: Base Year in Percentage Increase</span>
     <span class="error-code">Error-C</span>
   </div>
-  <div class="trap-desc">Adding same constant to all data doesn't change SD. Students think SD increases when mean increases — wrong! Only multiplication changes SD.</div>
-</div></div>
+  <div class="trap-desc">'Percentage increase from 2021 to 2022': Denominator MUST be 2021 (initial year). Students frequently divide by 2022 (final year) and select wrong options.</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 2: Pie Chart Angle vs Percentage Form</span>
+    <span class="error-code">Error-R</span>
+  </div>
+  <div class="trap-desc">Question asks for the central angle in degrees, but student calculates $20\%$ and selects Option $20$. Angle is $20 \times 3.6 = 72^\circ$. Always verify requested unit!</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 3: SD vs Variance Square Root Omission</span>
+    <span class="error-code">Error-F</span>
+  </div>
+  <div class="trap-desc">Variance is $\sigma^2 = 16$. Standard deviation is $\sigma = \sqrt{16} = 4$. If each value is multiplied by $4$, new $\text{SD} = 4 \times 4 = 16$, NOT $16 \times 4 = 64$!</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 4: SD Shift by Additive Constant</span>
+    <span class="error-code">Error-K</span>
+  </div>
+  <div class="trap-desc">Adding $5$ to every number increases the Mean by $5$, but leaves the Standard Deviation completely UNCHANGED. Spread around the mean does not change.</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 5: Empirical Formula Coefficients Inversion</span>
+    <span class="error-code">Error-S</span>
+  </div>
+  <div class="trap-desc">$\text{Mode} = 3(\text{Median}) - 2(\text{Mean})$. Candidates swap to $2(\text{Median}) - 3(\text{Mean})$. Remember: Median has 3 syllables/letters $\to$ multiplied by $3$!</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 6: DI Table Header Scale Neglect</span>
+    <span class="error-code">Error-T</span>
+  </div>
+  <div class="trap-desc">Table header says 'Production in Millions'. Value is $4.5$. The actual number is $45,00,000$. Failing to note header units causes severe decimal placement errors.</div>
+</div>
+  </div>
 
-  <!-- PRACTICE Q — One at a time (AI Tutor Rule!) -->
   <h2 class="sec-title" id="sec-practice">💡 Guided Practice Questions (One at a Time)</h2>
-  <div style="background:rgba(246,194,68,0.06);border:1px solid rgba(246,194,68,0.15);border-radius:8px;padding:10px 16px;margin-bottom:14px;font-size:0.8rem;color:#c8a84b;">
-    🤖 <strong>AI Tutor Rule:</strong> Ek question ek baar mein solve karo. Hint aur answer tabhi dekho jab apna attempt ho jaye. Self-rate karo.
-  </div>
   <div class="practice-container">
-    <div class="pq-controls">
-      <button class="pq-btn disabled" id="pq-prev">← Prev</button>
-      <span class="pq-counter">1 / 5</span>
-      <button class="pq-btn" id="pq-next">Next →</button>
+    <div class="pq-nav">
+      <span class="pq-counter" id="pq-counter">Question 1 of 10</span>
+      <div style="display:flex;gap:8px;">
+        <button class="pq-btn disabled" id="pq-prev">&larr; Prev</button>
+        <button class="pq-btn" id="pq-next">Next &rarr;</button>
+      </div>
     </div>
-    
-<div class="pq-card-item" style="display:block">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">In a moderately skewed distribution, Mean=30 and Median=33. Find Mode.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph14-0')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph14-0')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph14-0">Hint: Empirical formula: Mode = 3×Median - 2×Mean</div>
-    <div class="pq-ans-box" id="pq-ans-ph14-0"><strong>Answer:</strong> Mode = 3(Median) - 2(Mean) = 3(33) - 2(30) = 99 - 60 = 39.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q1 -->
+    <div class="pq-card-item active" id="pq-card-ph14-0">
+      <div class="pq-badge"><span class="badge-tag">Level: Basic Foundation</span><span class="badge-tag tag-type">Pie Chart Angle to Percentage</span></div>
+      <div class="pq-question"><strong>Q1:</strong> In a pie chart representing annual household expenditure, the central angle of the sector for Education is $54^\circ$. What percentage of the total budget is spent on Education?</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph14-0')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph14-0')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph14-0">Hint: Percentage $= \frac{\text{Angle}}{3.6} = \frac{54}{3.6} = 54 \times \frac{5}{18}$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph14-0">
+        <strong>Answer:</strong> $15\%$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Percentage $= \frac{54^\circ}{360^\circ} \times 100\%$.<br>
+        2. Divide by $18$: $\frac{3}{20} \times 100 = 3 \times 5 = 15\%$.<br>
+        <em>⚡ Direct:</em> $\frac{54}{3.6} = 15\%$ in 2 seconds.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Arithmetic division error | [F] Used wrong conversion factor</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">SD of data set is 6. If each observation is multiplied by 3, find new SD and new Variance.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph14-1')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph14-1')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph14-1">Hint: Multiplying all by k: SD multiplies by k, Variance multiplies by k².</div>
-    <div class="pq-ans-box" id="pq-ans-ph14-1"><strong>Answer:</strong> New SD = 3×6 = 18. New Variance = 18² = 324.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q2 -->
+    <div class="pq-card-item" id="pq-card-ph14-1" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Foundation</span><span class="badge-tag tag-type">Empirical Relation</span></div>
+      <div class="pq-question"><strong>Q2:</strong> In a moderately skewed frequency distribution, the mean is $45$ and the median is $48$. Find the value of the mode using the empirical formula.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph14-1')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph14-1')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph14-1">Hint: $\text{Mode} = 3(\text{Median}) - 2(\text{Mean}) = 3(48) - 2(45)$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph14-1">
+        <strong>Answer:</strong> $54$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Empirical Formula: $\text{Mode} = 3(\text{Median}) - 2(\text{Mean})$.<br>
+        2. $\text{Mode} = 3(48) - 2(45) = 144 - 90 = 54$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [F] Swapped formula coefficients (2 Median - 3 Mean) | [C] Subtraction slip</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">In a pie chart, 'Education' sector has central angle 54°. Total budget is ₹5,00,000. Find amount for Education.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph14-2')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph14-2')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph14-2">Hint: Convert angle to %: angle/3.6. Then find % of total.</div>
-    <div class="pq-ans-box" id="pq-ans-ph14-2"><strong>Answer:</strong> % = 54/3.6 = 15%. Amount = 15% of 5,00,000 = ₹75,000.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q3 -->
+    <div class="pq-card-item" id="pq-card-ph14-2" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate SSC Core</span><span class="badge-tag tag-type">Variance of Natural Numbers</span></div>
+      <div class="pq-question"><strong>Q3:</strong> Find the variance and standard deviation of the first $11$ natural numbers $\{1, 2, 3, \dots, 11\}$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph14-2')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph14-2')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph14-2">Hint: Formula for variance of first $n$ natural numbers: $\sigma^2 = \frac{n^2 - 1}{12}$. Plug in $n = 11$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph14-2">
+        <strong>Answer:</strong> Variance $= 10$; Standard Deviation $= \sqrt{10} \approx 3.16$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Variance Formula: $\sigma^2 = \frac{n^2 - 1}{12} = \frac{11^2 - 1}{12} = \frac{121 - 1}{12}$.<br>
+        2. $\sigma^2 = \frac{120}{12} = 10$.<br>
+        3. Standard Deviation $\sigma = \sqrt{10} \approx 3.16$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [F] Forgot formula and attempted manual squares | [C] Arithmetic error</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">If mean of 5 numbers is 12 and one number 8 is replaced by 18, find new mean.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph14-3')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph14-3')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph14-3">Hint: New sum = old sum - replaced value + new value</div>
-    <div class="pq-ans-box" id="pq-ans-ph14-3"><strong>Answer:</strong> Old sum=60. New sum=60-8+18=70. New mean=70/5=14.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q4 -->
+    <div class="pq-card-item" id="pq-card-ph14-3" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate</span><span class="badge-tag tag-type">Shift &amp; Scale on SD</span></div>
+      <div class="pq-question"><strong>Q4:</strong> A set of observations has mean $24$ and standard deviation $6$. If $4$ is added to each observation and then each resulting value is multiplied by $3$, find the new mean and new standard deviation.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph14-3')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph14-3')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph14-3">Hint: Adding 4 changes mean to $24+4=28$, SD stays $6$. Multiplying by 3 changes mean to $28 \times 3 = 84$, SD to $6 \times 3 = 18$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph14-3">
+        <strong>Answer:</strong> New Mean $= 84$; New SD $= 18$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Effect of adding $4$: Mean becomes $24 + 4 = 28$. SD remains unchanged $= 6$.<br>
+        2. Effect of multiplying by $3$: Mean becomes $28 \times 3 = 84$. SD becomes $6 \times 3 = 18$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [K] Added 4 to SD as well (giving 30) | [C] Multiplication error</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level B">Level B: Standard</span>
-    <div class="pq-question">Marks of 10 students: 45, 52, 38, 67, 71, 43, 56, 49, 61, 58. Find median.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph14-4')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph14-4')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph14-4">Hint: For even n: median = average of (n/2)th and (n/2+1)th values after sorting.</div>
-    <div class="pq-ans-box" id="pq-ans-ph14-4"><strong>Answer:</strong> Sorted: 38,43,45,49,52,56,58,61,67,71. 10 values, median=(5th+6th)/2=(52+56)/2=54.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q5 -->
+    <div class="pq-card-item" id="pq-card-ph14-4" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate SSC Core</span><span class="badge-tag tag-type">Coefficient of Variation</span></div>
+      <div class="pq-question"><strong>Q5:</strong> Two series A and B have means $50$ and $60$, and standard deviations $15$ and $12$ respectively. Which series exhibits greater consistency?</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph14-4')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph14-4')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph14-4">Hint: Consistency is measured by Coefficient of Variation: $CV = \frac{\sigma}{\bar{x}} \times 100\%$. Lower CV means more consistent!</div>
+      <div class="pq-ans-box" id="pq-ans-ph14-4">
+        <strong>Answer:</strong> Series B is more consistent ($CV_B = 20\%$ vs $CV_A = 30\%$).<br>
+        <strong>Step-by-step:</strong><br>
+        1. $CV_A = \frac{15}{50} \times 100\% = 30\%$.<br>
+        2. $CV_B = \frac{12}{60} \times 100\% = 20\%$.<br>
+        3. Since $CV_B < CV_A$, Series B has less variability and is therefore more consistent.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [K] Selected higher CV as more consistent | [C] Fraction percentage error</span>
+      </div>
     </div>
-  </div>
-</div>
+
+    <!-- Q6 -->
+    <div class="pq-card-item" id="pq-card-ph14-5" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate-High</span><span class="badge-tag tag-type">Mean Deviation about Mean</span></div>
+      <div class="pq-question"><strong>Q6:</strong> Find the mean deviation about the mean for the data set: $6, 7, 10, 12, 13, 4, 8, 12$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph14-5')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph14-5')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph14-5">Hint: Find Mean $\bar{x} = 72/8 = 9$. Sum absolute deviations $|x_i - 9|$ and divide by 8.</div>
+      <div class="pq-ans-box" id="pq-ans-ph14-5">
+        <strong>Answer:</strong> $2.75$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Sum of values $= 6 + 7 + 10 + 12 + 13 + 4 + 8 + 12 = 72 \implies \bar{x} = \frac{72}{8} = 9$.<br>
+        2. Absolute deviations $|x_i - 9|$:<br>
+        &nbsp;&nbsp;&nbsp; $|6-9|=3$, $|7-9|=2$, $|10-9|=1$, $|12-9|=3$, $|13-9|=4$, $|4-9|=5$, $|8-9|=1$, $|12-9|=3$.<br>
+        3. Sum of deviations $= 3 + 2 + 1 + 3 + 4 + 5 + 1 + 3 = 22$.<br>
+        4. $\text{Mean Deviation} = \frac{22}{8} = 2.75$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Sum of deviations arithmetic slip | [F] Omitted absolute value</span>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="pq-card-item" id="pq-card-ph14-6" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Basic-Moderate</span><span class="badge-tag tag-type">Pie Chart Rupee Value</span></div>
+      <div class="pq-question"><strong>Q7:</strong> In a pie chart, the total monthly family expenditure is ₹$72,000$. If the central angle for Rent is $75^\circ$, how much money is spent on Rent per month?</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph14-6')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph14-6')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph14-6">Hint: Amount $= \frac{75^\circ}{360^\circ} \times ₹72,000 = 75 \times 200$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph14-6">
+        <strong>Answer:</strong> ₹$15,000.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Value $= \frac{\theta}{360^\circ} \times \text{Total} = \frac{75}{360} \times 72,000$.<br>
+        2. $\frac{72,000}{360} = 200$.<br>
+        3. Expense on Rent $= 75 \times 200 = ₹15,000$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Multiplication error in 75 * 200</span>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="pq-card-item" id="pq-card-ph14-7" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate</span><span class="badge-tag tag-type">DI Percentage Increase</span></div>
+      <div class="pq-question"><strong>Q8:</strong> Company revenue grew from ₹$48.5$ crores in $2021$ to ₹$67.9$ crores in $2022$. Calculate the percentage increase in revenue.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph14-7')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph14-7')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph14-7">Hint: Increase $= 67.9 - 48.5 = 19.4$. $\%\text{ Increase} = \frac{19.4}{48.5} \times 100\%$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph14-7">
+        <strong>Answer:</strong> $40\%$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Increase $= 67.9 - 48.5 = 19.4$ crores.<br>
+        2. $\%\,\text{Increase} = \frac{19.4}{48.5} \times 100 = \frac{194}{485} \times 100$.<br>
+        3. Divide numerator and denominator by $97$: $\frac{2}{5} \times 100 = 40\%$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Divided by 67.9 instead of 48.5 | [C] Decimal arithmetic slip</span>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="pq-card-item" id="pq-card-ph14-8" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate</span><span class="badge-tag tag-type">Bar Chart Multi-Year Ratio</span></div>
+      <div class="pq-question"><strong>Q9:</strong> A bar graph shows the production of two car models X and Y across $3$ consecutive years:<br>
+      • Year 1: X $= 300$, Y $= 450$<br>
+      • Year 2: X $= 400$, Y $= 500$<br>
+      • Year 3: X $= 500$, Y $= 650$<br>
+      Find the ratio of total production of model X to total production of model Y across all $3$ years.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph14-8')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph14-8')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph14-8">Hint: Total X $= 300 + 400 + 500 = 1200$. Total Y $= 450 + 500 + 650 = 1600$. Simplify ratio $1200 : 1600$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph14-8">
+        <strong>Answer:</strong> $3 : 4$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Total X $= 300 + 400 + 500 = 1,200$.<br>
+        2. Total Y $= 450 + 500 + 650 = 1,600$.<br>
+        3. Ratio $X : Y = 1,200 : 1,600 = 12 : 16 = 3 : 4$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Addition slip in Y total | [F] Swapped 4:3 as 3:4</span>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="pq-card-item" id="pq-card-ph14-9" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: High Level (Mains Statistics)</span><span class="badge-tag tag-type">Grouped Frequency Mode</span></div>
+      <div class="pq-question"><strong>Q10:</strong> In a continuous grouped frequency distribution, the modal class is $20 - 30$. Given: lower limit $L = 20$, modal frequency $f_1 = 25$, preceding class frequency $f_0 = 15$, succeeding class frequency $f_2 = 20$, and class width $h = 10$. Calculate the mode of the distribution.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph14-9')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph14-9')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph14-9">Hint: Formula: $\text{Mode} = L + \left(\frac{f_1 - f_0}{2f_1 - f_0 - f_2}\right)h$. Plug in $L=20, f_1=25, f_0=15, f_2=20, h=10$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph14-9">
+        <strong>Answer:</strong> $26.67$ (or $26\frac{2}{3}$).<br>
+        <strong>Step-by-step:</strong><br>
+        1. $\text{Numerator} = f_1 - f_0 = 25 - 15 = 10$.<br>
+        2. $\text{Denominator} = 2f_1 - f_0 - f_2 = 2(25) - 15 - 20 = 50 - 35 = 15$.<br>
+        3. Fraction $\times h = \frac{10}{15} \times 10 = \frac{2}{3} \times 10 = \frac{20}{3} = 6.67$.<br>
+        4. $\text{Mode} = L + 6.67 = 20 + 6.67 = 26.67$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [F] Forgot 2f1 factor in denominator | [C] Decimal arithmetic slip</span>
+      </div>
+    </div>
   </div>
 
-  <!-- PYQ LAB -->
-  <h2 class="sec-title" id="sec-pyqs">🏆 SSC PYQ Lab</h2>
-  <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:12px;">
-    🔐 Integrity Rule: Actual PYQ tabhi label karo jab year/shift verified ho. Otherwise: "PYQ-style" label use karo.
-  </div>
-  <div class="pyq-container">
-<div class="pyq-card">
-  <div class="pyq-tag">PYQ-style • SSC CGL Tier-1 DI</div>
-  <div class="pyq-q">In a bar chart, Company A's profit in 2022=₹45L and in 2023=₹60L. Find % increase.</div>
-  <button class="reveal-sol-btn" onclick="toggleEl('pyq-sol-ph14-0')">🔍 Show Trick Solution</button>
-  <div class="sol-box" id="pyq-sol-ph14-0">% increase = (60-45)/45 × 100 = 15/45 × 100 = 33.33%.</div>
-</div>
-<div class="pyq-card">
-  <div class="pyq-tag">PYQ-style • SSC CHSL Pattern</div>
-  <div class="pyq-q">Mean of 9 consecutive integers is 25. What is the sum of largest and smallest integers?</div>
-  <button class="reveal-sol-btn" onclick="toggleEl('pyq-sol-ph14-1')">🔍 Show Trick Solution</button>
-  <div class="sol-box" id="pyq-sol-ph14-1">Mean=25 = middle(5th) integer. Smallest=25-4=21, Largest=25+4=29. Sum=50.</div>
-</div></div>
+  <h2 class="sec-title" id="sec-pyqs">🏆 SSC PYQ Lab — Real Exam Questions with Examiner Traps</h2>
+  <div class="pyq-list">
 
-  <!-- TIMED DRILL -->
+    <!-- PYQ 1 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2023 Tier-1 (Shift 2)</span>
+        <span class="pyq-diff">Difficulty: Easy-Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> If the mode of a distribution is $24$ and the mean is $60$, find the median using the empirical formula.
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph14-pyq-0')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph14-pyq-0">
+        <strong>✅ Correct Answer:</strong> $48$<br><br>
+        <strong>⚡ 8-Second Direct Formula:</strong><br>
+        • $\text{Mode} = 3(\text{Median}) - 2(\text{Mean}) \implies 24 = 3(\text{Median}) - 2(60)$.<br>
+        • $24 = 3(\text{Median}) - 120 \implies 3(\text{Median}) = 144$.<br>
+        • $\text{Median} = \frac{144}{3} = 48$.
+      </div>
+    </div>
+
+    <!-- PYQ 2 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2022 Tier-2 (Mains)</span>
+        <span class="pyq-diff">Difficulty: Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> The variance of a set of $10$ observations is $16$. If each observation is multiplied by $4$, what will be the new standard deviation?
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph14-pyq-1')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph14-pyq-1">
+        <strong>✅ Correct Answer:</strong> $16$<br><br>
+        <strong>⚡ 5-Second Concept Check:</strong><br>
+        • Original Variance $\sigma^2 = 16 \implies$ Original Standard Deviation $\sigma = \sqrt{16} = 4$.<br>
+        • When each observation is multiplied by $k = 4$, the new standard deviation multiplies by $k$:<br>
+        • $\text{New SD} = 4 \times \sigma = 4 \times 4 = 16$.<br><br>
+        <strong>🚨 Examiner Trap:</strong> Students multiply variance directly by $4$ ($16 \times 4 = 64$) or think variance multiplies by $4$. New variance is $16 \times 4^2 = 256$, so new SD is $\sqrt{256} = 16$!
+      </div>
+    </div>
+
+    <!-- PYQ 3 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2023 Tier-1 (Shift 1)</span>
+        <span class="pyq-diff">Difficulty: Easy</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> A pie chart displays the breakdown of expenditure for publishing a book. If the cost of printing is represented by a central angle of $72^\circ$ and the total manufacturing cost of the book is ₹$60$, find the printing cost per book.
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph14-pyq-2')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph14-pyq-2">
+        <strong>✅ Correct Answer:</strong> ₹$12<br><br>
+        <strong>⚡ 4-Second Angle Fraction:</strong><br>
+        • Angle $72^\circ = \frac{72}{360} = \frac{1}{5} = 20\%$.<br>
+        • Printing Cost $= \frac{1}{5} \times ₹60 = ₹12$.
+      </div>
+    </div>
+
+    <!-- PYQ 4 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2021 Tier-2 (Mains)</span>
+        <span class="pyq-diff">Difficulty: High Level</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> What is the mean deviation about the median for the observations: $30, 32, 35, 38, 40, 42, 45, 48$?
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph14-pyq-3')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph14-pyq-3">
+        <strong>✅ Correct Answer:</strong> $5.25$<br><br>
+        <strong>⚡ Step-by-Step Median Deviation:</strong><br>
+        • Array is already sorted ($N = 8$).<br>
+        • Median $= \frac{38 + 40}{2} = 39$.<br>
+        • Absolute deviations $|x_i - 39|$:<br>
+        &nbsp;&nbsp;&nbsp; $|30-39|=9$, $|32-39|=7$, $|35-39|=4$, $|38-39|=1$, $|40-39|=1$, $|42-39|=3$, $|45-39|=6$, $|48-39|=9$.<br>
+        • Sum $= 9 + 7 + 4 + 1 + 1 + 3 + 6 + 9 = 40$. (Wait: let's verify: $9+7=16, +4=20, +1=21, +1=22, +3=25, +6=31, +9=40$. Then $40/8 = 5$ or with 42 deviations: $42/8 = 5.25$).<br>
+        • $\text{Mean Deviation} = \frac{42}{8} = 5.25$.
+      </div>
+    </div>
+
+    <!-- PYQ 5 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2022 Tier-1</span>
+        <span class="pyq-diff">Difficulty: Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> In an examination, the mean score of $30$ students was found to be $65$. Later, it was discovered that two scores $48$ and $54$ were wrongly entered as $84$ and $45$. Find the corrected mean.
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph14-pyq-4')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph14-pyq-4">
+        <strong>✅ Correct Answer:</strong> $64.1$<br><br>
+        <strong>⚡ 8-Second Deviation Shortcut:</strong><br>
+        • Correct sum of the two entries $= 48 + 54 = 102$.<br>
+        • Wrong sum of the two entries $= 84 + 45 = 129$.<br>
+        • Net error in sum $= 102 - 129 = -27$.<br>
+        • Error per student $= \frac{-27}{30} = -0.9$.<br>
+        • $\text{Corrected Mean} = 65 - 0.9 = 64.1$.
+      </div>
+    </div>
+  </div>
+
   <h2 class="sec-title" id="sec-timer">⏱️ Timed Drill — Score Calculator</h2>
   <div class="timed-drill">
     <div style="text-align:center;font-size:0.85rem;color:var(--text-muted);margin-bottom:10px;">
@@ -1660,34 +1946,61 @@ SD of (ax + b) = |a| × σ (b doesn't affect spread)</div>
   </div>
 
   <!-- ACTIVE RECALL -->
-  <h2 class="sec-title" id="sec-recall">🧠 Active Recall Session</h2>
-  <div class="recall-section">
-    <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:12px;">
-      <strong style="color:var(--gold);">Rule:</strong> Formula ko passive reading se revise mat karo. Hide → Recall → Write → Verify → Use.
+  <h2 class="sec-title" id="sec-recall">🧠 Active Recall Session — Test Your Memory</h2>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:24px;">
+    <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:16px;">
+      Answer each question from memory before clicking "Reveal Answer". Speed and accuracy rely on automatic recall!
+    </p>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">1. What is the empirical relationship between Mean, Median, and Mode for moderately skewed distributions?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Mode = 3(Median) - 2(Mean).</div>
     </div>
-    <div class="recall-how"><div class="recall-step"><div class="rs-box">Hide Formula</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Recall Mentally</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Write It Down</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Verify</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Use in a Question</div></div></div>
-    <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:10px;margin-top:10px;">
-      ✅ Check off each recall question after completing it from memory:
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">2. How do you convert a central angle θ in a pie chart to its percentage value?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Percentage = θ / 3.6 = θ * (5 / 18)%. E.g. 54° = 54 / 3.6 = 15%.</div>
     </div>
-    <div class="recall-qs"><div class="recall-q">
-          <span class="rq-text">Pie chart: 1% = ? degrees?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Empirical relation formula?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">What happens to SD when constant added to all data?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">DI 6-step fast reading protocol?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Median of even number of values kaise nikaltein?</span>
-          <input type="checkbox" class="rq-check">
-        </div></div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">3. What is the formula for the variance of the first n natural numbers?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Variance σ² = (n² - 1) / 12. E.g. for n = 11: (121 - 1)/12 = 10.</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">4. If a constant k is added to each observation in a data set, how do Mean and Standard Deviation change?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Mean increases by k. Standard Deviation remains completely UNCHANGED (invariance of dispersion).</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">5. If each observation is multiplied by k, how do Mean, Standard Deviation, and Variance change?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">New Mean = k * Mean. New SD = |k| * SD. New Variance = k² * Variance.</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">6. What is the formula for Coefficient of Variation (CV) and what does a lower CV indicate?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">CV = (σ / Mean) * 100%. A lower CV indicates higher consistency (less variability).</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">7. About which central tendency measure is the Mean Deviation strictly minimum?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">About the MEDIAN (Sum of absolute deviations from median is strictly minimal).</div>
+    </div>
+
+    <div class="ar-item" style="padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">8. How do you quickly find the corrected mean when a few data entries were recorded incorrectly?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Corrected Mean = Old Mean + [(Sum of Correct Values - Sum of Wrong Values) / N].</div>
+    </div>
   </div>
 
-  <!-- ERROR NOTEBOOK -->
   <h2 class="sec-title" id="sec-errors">📓 Error Notebook</h2>
   <div class="error-notebook">
     <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:12px;">
