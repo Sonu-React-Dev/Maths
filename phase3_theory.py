@@ -18,8 +18,11 @@ def get_theory_chapters():
     </div>
 
     <!-- Module 1 -->
-    <div style="margin-bottom:28px;">
-      <span class="chap-badge">MODULE 1</span>
+    <div class="topic-anchor-block" id="topic-1-combining" style="margin-bottom:28px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <span class="chap-badge">MODULE 1 • TOPIC 1</span>
+        <a href="#sec-topics" style="font-size:0.75rem;color:var(--primary);text-decoration:none;">↑ Topic Directory</a>
+      </div>
       <h3 class="chap-title">1. Ratio Fundamentals, Simplification &amp; Combining Methods</h3>
       <p class="book-p">
         <strong>अनुपात (Ratio)</strong> दो या दो से अधिक सजातीय (same unit) राशियों की भाग द्वारा तुलना है। अनुपात $a : b = \frac{a}{b}$ की कोई इकाई (dimension) नहीं होती।
@@ -74,11 +77,19 @@ def get_theory_chapters():
           </tbody>
         </table>
       </div>
+      <div style="text-align:right;margin-top:12px;">
+        <a href="#sec-topics" class="tb-btn" style="font-size:0.72rem;">↑ All Topics</a>
+        <a href="#topic-2-proportions" class="tb-btn" style="font-size:0.72rem;color:var(--primary);">Next: Proportions &rarr;</a>
+        <a href="#sec-basic" onclick="filterQs('combining')" class="tb-btn" style="font-size:0.72rem;color:var(--green);border-color:rgba(34,211,165,0.3);">Practice Combining Qs &rarr;</a>
+      </div>
     </div>
 
     <!-- Module 2 -->
-    <div style="margin-bottom:28px;">
-      <span class="chap-badge">MODULE 2</span>
+    <div class="topic-anchor-block" id="topic-2-proportions" style="margin-bottom:28px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <span class="chap-badge">MODULE 2 • TOPIC 2</span>
+        <a href="#sec-topics" style="font-size:0.75rem;color:var(--primary);text-decoration:none;">↑ Topic Directory</a>
+      </div>
       <h3 class="chap-title">2. Proportions &amp; Componendo &amp; Dividendo (C&amp;D)</h3>
       <p class="book-p">
         जब दो अनुपात आपस में बराबर हों, तो वे <strong>समानुपात (Proportion)</strong> में कहलाते हैं।
@@ -135,11 +146,19 @@ def get_theory_chapters():
         यदि $\frac{\sqrt{x + 5} + \sqrt{x - 5}}{\sqrt{x + 5} - \sqrt{x - 5}} = \frac{3}{1}$ दिया हो:<br>
         C&amp;D लगाने पर: $\frac{2\sqrt{x + 5}}{2\sqrt{x - 5}} = \frac{3 + 1}{3 - 1} = \frac{4}{2} = 2 \implies \sqrt{\frac{x+5}{x-5}} = 2 \implies \frac{x+5}{x-5} = 4 \implies x+5 = 4x - 20 \implies 3x = 25 \implies \mathbf{x = 25/3}$!
       </div>
+      <div style="text-align:right;margin-top:12px;">
+        <a href="#topic-1-combining" class="tb-btn" style="font-size:0.72rem;">&larr; Prev Topic</a>
+        <a href="#topic-3-types" class="tb-btn" style="font-size:0.72rem;color:var(--primary);">Next: Types of Ratios &rarr;</a>
+        <a href="#sec-basic" onclick="filterQs('proportions')" class="tb-btn" style="font-size:0.72rem;color:var(--green);border-color:rgba(34,211,165,0.3);">Practice Proportions Qs &rarr;</a>
+      </div>
     </div>
 
     <!-- Module 3 -->
-    <div style="margin-bottom:28px;">
-      <span class="chap-badge">MODULE 3</span>
+    <div class="topic-anchor-block" id="topic-3-types" style="margin-bottom:28px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <span class="chap-badge">MODULE 3 • TOPIC 3</span>
+        <a href="#sec-topics" style="font-size:0.75rem;color:var(--primary);text-decoration:none;">↑ Topic Directory</a>
+      </div>
       <h3 class="chap-title">3. Types of Ratios (Duplicate, Triplicate, Compound &amp; Inverse)</h3>
       <p class="book-p">
         SSC परीक्षाओं में प्रत्यक्ष शब्दावली आधारित प्रश्न पूछे जाते हैं। प्रत्येक प्रकार का स्पष्ट गणितीय अर्थ यहाँ दिया गया है:
@@ -195,11 +214,19 @@ def get_theory_chapters():
           </tbody>
         </table>
       </div>
+      <div style="text-align:right;margin-top:12px;">
+        <a href="#topic-2-proportions" class="tb-btn" style="font-size:0.72rem;">&larr; Prev Topic</a>
+        <a href="#topic-4-proportionals" class="tb-btn" style="font-size:0.72rem;color:var(--primary);">Next: Mean/3rd/4th &rarr;</a>
+        <a href="#sec-basic" onclick="filterQs('types')" class="tb-btn" style="font-size:0.72rem;color:var(--green);border-color:rgba(34,211,165,0.3);">Practice Types Qs &rarr;</a>
+      </div>
     </div>
 
     <!-- Module 4 -->
-    <div style="margin-bottom:28px;">
-      <span class="chap-badge">MODULE 4</span>
+    <div class="topic-anchor-block" id="topic-4-proportionals" style="margin-bottom:28px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <span class="chap-badge">MODULE 4 • TOPIC 4</span>
+        <a href="#sec-topics" style="font-size:0.75rem;color:var(--primary);text-decoration:none;">↑ Topic Directory</a>
+      </div>
       <h3 class="chap-title">4. Mean, Third &amp; Fourth Proportional &amp; The Number $x$ Model</h3>
       <p class="book-p">
         समानुपाती पदों (Proportionals) की गणना SSC CGL Tier-1 और Tier-2 के सबसे पसंदीदा 100% गारंटीड प्रश्नों में से एक है।
@@ -243,14 +270,22 @@ def get_theory_chapters():
         संख्याओं $a, b, c, d$ में से क्या संख्या $x$ घटाई या जोड़ी जाए ताकि प्राप्त संख्याएँ समानुपाती हो जाएँ?
         $$\frac{a - x}{b - x} = \frac{c - x}{d - x}$$
         <strong>⚡ 10-Second Topper Direct Formula:</strong>
-        $$\mathbf{x = \frac{ad - bc}{(a + d) - (b + c)}}$$
+        $$\mathbf{x = \frac{|ad - bc|}{(a + d) - (b + c)}}$$
         (चिह्न निरपेक्ष मान लें यदि धनात्मक संख्या पूछी जाए)।
+      </div>
+      <div style="text-align:right;margin-top:12px;">
+        <a href="#topic-3-types" class="tb-btn" style="font-size:0.72rem;">&larr; Prev Topic</a>
+        <a href="#topic-5-income-ages" class="tb-btn" style="font-size:0.72rem;color:var(--primary);">Next: Income & Ages &rarr;</a>
+        <a href="#sec-basic" onclick="filterQs('proportionals')" class="tb-btn" style="font-size:0.72rem;color:var(--green);border-color:rgba(34,211,165,0.3);">Practice Proportionals Qs &rarr;</a>
       </div>
     </div>
 
     <!-- Module 5 -->
-    <div style="margin-bottom:28px;">
-      <span class="chap-badge">MODULE 5</span>
+    <div class="topic-anchor-block" id="topic-5-income-ages" style="margin-bottom:28px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <span class="chap-badge">MODULE 5 • TOPIC 5</span>
+        <a href="#sec-topics" style="font-size:0.75rem;color:var(--primary);text-decoration:none;">↑ Topic Directory</a>
+      </div>
       <h3 class="chap-title">5. Cross-Multiplication Method &amp; Age Invariance Problems</h3>
       <p class="book-p">
         जब दो व्यक्तियों की प्रारंभिक अनुपात, व्यय या समय के बाद का अनुपात, और निश्चित अंतर दिया हो, तो <strong>वज्र-गुणन विधि (Cross-Multiplication Method)</strong> बिना किसी $x$ और $y$ के 15 सेकंड में उत्तर निकालती है।
@@ -269,11 +304,19 @@ def get_theory_chapters():
         दो व्यक्तियों की आयु का अंतर समय के साथ कभी नहीं बदलता! $5$ वर्ष पहले, वर्तमान में, और $10$ वर्ष बाद—अंतर सदैव समान रहता है।<br>
         <strong>नियम:</strong> दोनों अनुपातों के अंतर को समान (Equalize the gap) करके सीधे यूनिट मान ज्ञात करें।
       </div>
+      <div style="text-align:right;margin-top:12px;">
+        <a href="#topic-4-proportionals" class="tb-btn" style="font-size:0.72rem;">&larr; Prev Topic</a>
+        <a href="#topic-6-coins" class="tb-btn" style="font-size:0.72rem;color:var(--primary);">Next: Coins & Errors &rarr;</a>
+        <a href="#sec-basic" onclick="filterQs('income-ages')" class="tb-btn" style="font-size:0.72rem;color:var(--green);border-color:rgba(34,211,165,0.3);">Practice Income & Ages Qs &rarr;</a>
+      </div>
     </div>
 
     <!-- Module 6 -->
-    <div>
-      <span class="chap-badge">MODULE 6</span>
+    <div class="topic-anchor-block" id="topic-6-coins">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <span class="chap-badge">MODULE 6 • TOPIC 6</span>
+        <a href="#sec-topics" style="font-size:0.75rem;color:var(--primary);text-decoration:none;">↑ Topic Directory</a>
+      </div>
       <h3 class="chap-title">6. Coin Box Problems &amp; Distribution Mistakes</h3>
       <p class="book-p">
         सिक्कों के प्रश्नों में केवल एक मूल सिद्धांत होता है:
@@ -305,6 +348,11 @@ def get_theory_chapters():
         &bull; सही अनुपात $= \text{LCM}(2,3,4) = 12 \implies 6 : 4 : 3$ (कुल 13 यूनिट)।<br>
         &bull; गलत अनुपात $= 2 : 3 : 4$ (कुल 9 यूनिट)।<br>
         &bull; दोनों स्थितियों में कुल राशि समान रखने के लिए 13 और 9 का ल.स. 117 मानकर आसानी से अंतर निकालें!
+      </div>
+      <div style="text-align:right;margin-top:12px;">
+        <a href="#topic-5-income-ages" class="tb-btn" style="font-size:0.72rem;">&larr; Prev Topic</a>
+        <a href="#sec-formulas" class="tb-btn" style="font-size:0.72rem;color:var(--gold);">Next: Formula Vault &rarr;</a>
+        <a href="#sec-basic" onclick="filterQs('coins-distribution')" class="tb-btn" style="font-size:0.72rem;color:var(--green);border-color:rgba(34,211,165,0.3);">Practice Coins Qs &rarr;</a>
       </div>
     </div>
   </section>

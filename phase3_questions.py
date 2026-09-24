@@ -24,8 +24,19 @@ def get_basic_questions():
       🤖 <strong>AI Tutor Rule:</strong> Pehle khud rough sheet par attempt karein. Solution tabhi reveal karein jab attempt ho jaye!
     </p>
 
+    <div class="topic-filter-bar">
+      <span class="filter-label">🏷️ Filter by Topic:</span>
+      <button class="q-filter-chip active" onclick="filterQs('all', this)">All Topics (20 Qs)</button>
+      <button class="q-filter-chip" onclick="filterQs('combining', this)">1. Combining &amp; Basics</button>
+      <button class="q-filter-chip" onclick="filterQs('proportions', this)">2. Proportions &amp; C&amp;D</button>
+      <button class="q-filter-chip" onclick="filterQs('types', this)">3. Types of Ratios</button>
+      <button class="q-filter-chip" onclick="filterQs('proportionals', this)">4. Mean/3rd/4th &amp; x</button>
+      <button class="q-filter-chip" onclick="filterQs('income-ages', this)">5. Income &amp; Ages</button>
+      <button class="q-filter-chip" onclick="filterQs('coins-distribution', this)">6. Coins &amp; Errors</button>
+    </div>
+
     <!-- Q1 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="combining">
       <div class="q-head"><span class="q-num">Q1</span><span class="q-tag">Fractional Ratio Simplification</span></div>
       <div class="q-text">Simplify the ratio $\frac{1}{3} : \frac{1}{4} : \frac{1}{6}$ into simplest whole numbers.</div>
       <div class="q-actions">
@@ -47,7 +58,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q2 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="combining">
       <div class="q-head"><span class="q-num">Q2</span><span class="q-tag">Combining Two Ratios</span></div>
       <div class="q-text">If $A : B = 3 : 4$ and $B : C = 8 : 9$, find $A : B : C$ and $A : C$.</div>
       <div class="q-actions">
@@ -70,7 +81,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q3 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="proportionals">
       <div class="q-head"><span class="q-num">Q3</span><span class="q-tag">Mean Proportional</span></div>
       <div class="q-text">Find the mean proportional between $0.08$ and $0.18$.</div>
       <div class="q-actions">
@@ -91,7 +102,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q4 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="proportionals">
       <div class="q-head"><span class="q-num">Q4</span><span class="q-tag">Third Proportional</span></div>
       <div class="q-text">Find the third proportional to $16$ and $24$.</div>
       <div class="q-actions">
@@ -112,7 +123,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q5 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="proportionals">
       <div class="q-head"><span class="q-num">Q5</span><span class="q-tag">Fourth Proportional</span></div>
       <div class="q-text">Find the fourth proportional to $4, 9,$ and $12$.</div>
       <div class="q-actions">
@@ -133,7 +144,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q6 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="types">
       <div class="q-head"><span class="q-num">Q6</span><span class="q-tag">Duplicate &amp; Sub-duplicate</span></div>
       <div class="q-text">Find the duplicate ratio of $3 : 5$ and the sub-duplicate ratio of $81 : 121$.</div>
       <div class="q-actions">
@@ -155,7 +166,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q7 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="types">
       <div class="q-head"><span class="q-num">Q7</span><span class="q-tag">Triplicate &amp; Sub-triplicate</span></div>
       <div class="q-text">Find the triplicate ratio of $2 : 3$ and the sub-triplicate ratio of $64 : 343$.</div>
       <div class="q-actions">
@@ -177,7 +188,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q8 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="types">
       <div class="q-head"><span class="q-num">Q8</span><span class="q-tag">Compound Ratio</span></div>
       <div class="q-text">Find the compound ratio of $2 : 3, 6 : 7,$ and $14 : 15$.</div>
       <div class="q-actions">
@@ -198,7 +209,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q9 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="combining">
       <div class="q-head"><span class="q-num">Q9</span><span class="q-tag">Linear Equation Coefficient Ratio</span></div>
       <div class="q-text">If $2A = 3B = 4C$, find $A : B : C$.</div>
       <div class="q-actions">
@@ -220,7 +231,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q10 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="combining">
       <div class="q-head"><span class="q-num">Q10</span><span class="q-tag">Ratio Expression Substitution</span></div>
       <div class="q-text">If $x : y = 3 : 5$, find the value of $\frac{3x + 4y}{5x + 2y}$.</div>
       <div class="q-actions">
@@ -241,7 +252,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q11 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="combining">
       <div class="q-head"><span class="q-num">Q11</span><span class="q-tag">4-Term Ratio Combining</span></div>
       <div class="q-text">If $A : B = 1 : 2$, $B : C = 3 : 4$, and $C : D = 2 : 3$, find $A : B : C : D$.</div>
       <div class="q-actions">
@@ -266,7 +277,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q12 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="coins-distribution">
       <div class="q-head"><span class="q-num">Q12</span><span class="q-tag">Dividing Amount in Ratio</span></div>
       <div class="q-text">Divide ₹$1,260$ among $A, B,$ and $C$ in the ratio $2 : 3 : 4$. Find the share of each.</div>
       <div class="q-actions">
@@ -290,7 +301,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q13 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-ages">
       <div class="q-head"><span class="q-num">Q13</span><span class="q-tag">Basic Age Ratio</span></div>
       <div class="q-text">The ratio of the present ages of Ram and Shyam is $4 : 5$. Five years hence, the ratio of their ages will become $5 : 6$. Find their present ages.</div>
       <div class="q-actions">
@@ -313,7 +324,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q14 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="coins-distribution">
       <div class="q-head"><span class="q-num">Q14</span><span class="q-tag">Coin Box Basic</span></div>
       <div class="q-text">A bag contains ₹1, 50-paise, and 25-paise coins in the ratio $3 : 4 : 5$. If the total amount in the bag is ₹$125$, find the number of 50-paise coins.</div>
       <div class="q-actions">
@@ -336,7 +347,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q15 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="combining">
       <div class="q-head"><span class="q-num">Q15</span><span class="q-tag">Number Added to Terms</span></div>
       <div class="q-text">What number must be added to each term of the ratio $7 : 11$ so that it becomes $3 : 4$?</div>
       <div class="q-actions">
@@ -358,7 +369,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q16 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-ages">
       <div class="q-head"><span class="q-num">Q16</span><span class="q-tag">Income and Expenditure Equation</span></div>
       <div class="q-text">The ratio of incomes of A and B is $5 : 4$ and the ratio of their expenditures is $3 : 2$. If each saves ₹$1,600$, find the income of A.</div>
       <div class="q-actions">
@@ -380,7 +391,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q17 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="proportions">
       <div class="q-head"><span class="q-num">Q17</span><span class="q-tag">Proportion Equality</span></div>
       <div class="q-text">Find $x$ if $x : 18 :: 14 : 21$.</div>
       <div class="q-actions">
@@ -401,7 +412,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q18 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="types">
       <div class="q-head"><span class="q-num">Q18</span><span class="q-tag">Ratio of Squares vs Square of Ratio</span></div>
       <div class="q-text">If $(a + b) : (a - b) = 5 : 3$, find the ratio $(a^2 + b^2) : (a^2 - b^2)$.</div>
       <div class="q-actions">
@@ -423,7 +434,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q19 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="types">
       <div class="q-head"><span class="q-num">Q19</span><span class="q-tag">Reciprocal Ratio of Three Terms</span></div>
       <div class="q-text">Find the reciprocal ratio of $3 : 4 : 5$.</div>
       <div class="q-actions">
@@ -444,7 +455,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q20 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="combining">
       <div class="q-head"><span class="q-num">Q20</span><span class="q-tag">Ratio Continuity</span></div>
       <div class="q-text">If $a : b = c : d = e : f = 1 : 2$, find the value of $\frac{3a + 5c + 7e}{3b + 5d + 7f}$.</div>
       <div class="q-actions">
@@ -484,8 +495,19 @@ def get_mixed_questions():
       🤖 <strong>AI Tutor Rule:</strong> Pehle independent attempt karein. Cross-multiplication aur C&amp;D method ka prayog karein!
     </p>
 
+    <div class="topic-filter-bar">
+      <span class="filter-label">🏷️ Filter Mixed Qs by Topic:</span>
+      <button class="q-filter-chip active" onclick="filterQs('all', this)">All Mixed (20 Qs)</button>
+      <button class="q-filter-chip" onclick="filterQs('combining', this)">1. Combining &amp; Mixtures</button>
+      <button class="q-filter-chip" onclick="filterQs('proportions', this)">2. Proportions &amp; C&amp;D</button>
+      <button class="q-filter-chip" onclick="filterQs('types', this)">3. Types &amp; Powers</button>
+      <button class="q-filter-chip" onclick="filterQs('proportionals', this)">4. Mean/3rd/4th &amp; x</button>
+      <button class="q-filter-chip" onclick="filterQs('income-ages', this)">5. Income &amp; Ages (Ladder)</button>
+      <button class="q-filter-chip" onclick="filterQs('coins-distribution', this)">6. Coins &amp; Error Models</button>
+    </div>
+
     <!-- Q21 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="proportionals">
       <div class="q-head"><span class="q-num">Q21</span><span class="q-tag">Number x Subtracted Formula</span></div>
       <div class="q-text">What number must be subtracted from each of $21, 38, 55,$ and $106$ so that the remainders are in proportion?</div>
       <div class="q-actions">
@@ -512,7 +534,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q22 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-ages">
       <div class="q-head"><span class="q-num">Q22</span><span class="q-tag">Income Cross-Multiplication (Different Savings)</span></div>
       <div class="q-text">The ratio of the incomes of A and B is $5 : 3$, and the ratio of their expenditures is $9 : 5$. If A saves ₹$2,600$ and B saves ₹$1,800$, find the income of each.</div>
       <div class="q-actions">
@@ -537,7 +559,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q23 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-ages">
       <div class="q-head"><span class="q-num">Q23</span><span class="q-tag">Age Ratio Gap Balancing</span></div>
       <div class="q-text">Four years ago, the ratio of the ages of A and B was $2 : 3$, and four years hence, it will be $5 : 7$. Find their present ages.</div>
       <div class="q-actions">
@@ -563,7 +585,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q24 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="coins-distribution">
       <div class="q-head"><span class="q-num">Q24</span><span class="q-tag">Coin Box with 3 Denominations</span></div>
       <div class="q-text">A box contains ₹$420$ in coins of ₹$1$, $50$ paise, and $20$ paise. The ratio of their values is $10 : 8 : 3$. Find the total number of coins in the box.</div>
       <div class="q-actions">
@@ -588,7 +610,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q25 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="coins-distribution">
       <div class="q-head"><span class="q-num">Q25</span><span class="q-tag">Distribution Error Model</span></div>
       <div class="q-text">A sum of ₹$1,170$ was to be divided among A, B, and C in the ratio $\frac{1}{2} : \frac{1}{3} : \frac{1}{4}$, but by mistake it was divided in the ratio $2 : 3 : 4$. Who gained the most and by how much?</div>
       <div class="q-actions">
@@ -619,7 +641,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q26 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="proportions">
       <div class="q-head"><span class="q-num">Q26</span><span class="q-tag">Surds Equation via C&amp;D</span></div>
       <div class="q-text">If $\frac{\sqrt{x + 2} + \sqrt{x - 3}}{\sqrt{x + 2} - \sqrt{x - 3}} = \frac{5}{1}$, find the value of $x$.</div>
       <div class="q-actions">
@@ -644,7 +666,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q27 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="proportionals">
       <div class="q-head"><span class="q-num">Q27</span><span class="q-tag">Mean Proportional of Surds</span></div>
       <div class="q-text">Find the mean proportional between $(3 + \sqrt{2})$ and $(12 - \sqrt{32})$.</div>
       <div class="q-actions">
@@ -667,7 +689,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q28 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="combining">
       <div class="q-head"><span class="q-num">Q28</span><span class="q-tag">Two Ratio Mixtures Invariance</span></div>
       <div class="q-text">Two vessels contain milk and water in the ratio $7 : 5$ and $7 : 9$ respectively. If equal quantities are taken from both vessels and mixed together, find the ratio of milk to water in the new mixture.</div>
       <div class="q-actions">
@@ -691,7 +713,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q29 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="combining">
       <div class="q-head"><span class="q-num">Q29</span><span class="q-tag">Ratio Scaling with Powers</span></div>
       <div class="q-text">If $x : y : z = 1 : 2 : 3$, find the value of $\sqrt{\frac{x^2 + y^2 + z^2}{x^2 + y^2}}$.</div>
       <div class="q-actions">
@@ -714,7 +736,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q30 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="types">
       <div class="q-head"><span class="q-num">Q30</span><span class="q-tag">Compound Ratio Inversion</span></div>
       <div class="q-text">If $a : b = 2 : 3, b : c = 4 : 5,$ and $c : d = 6 : 7$, find the compound ratio of duplicate of $a:b$ and sub-duplicate of $c:d$.</div>
       <div class="q-actions">
@@ -737,7 +759,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q31 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="proportionals">
       <div class="q-head"><span class="q-num">Q31</span><span class="q-tag">Diamond Weight Breakdown</span></div>
       <div class="q-text">The price of a diamond varies directly as the square of its weight. A diamond broke into three pieces with weights in the ratio $1 : 2 : 3$. If the loss incurred due to breakage is ₹$44,000$, find the original price of the diamond.</div>
       <div class="q-actions">
@@ -763,7 +785,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q32 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="proportions">
       <div class="q-head"><span class="q-num">Q32</span><span class="q-tag">Inverse Proportionality with Constant</span></div>
       <div class="q-text">A varies inversely as the square of B. When $B = 3$, $A = 16$. Find the value of $A$ when $B = 6$.</div>
       <div class="q-actions">
@@ -785,7 +807,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q33 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="combining">
       <div class="q-head"><span class="q-num">Q33</span><span class="q-tag">Students Addition/Removal in Classes</span></div>
       <div class="q-text">The number of students in three classes are in the ratio $2 : 3 : 5$. If $20$ students are increased in each class, the ratio becomes $4 : 5 : 7$. Find the total number of students in the three classes before the increase.</div>
       <div class="q-actions">
@@ -809,7 +831,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q34 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="types">
       <div class="q-head"><span class="q-num">Q34</span><span class="q-tag">Compound Ratio Application</span></div>
       <div class="q-text">If $\frac{x}{y} = \frac{3}{4}$, find the value of $\frac{7x + 3y}{7x - 3y}$.</div>
       <div class="q-actions">
@@ -830,7 +852,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q35 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="proportionals">
       <div class="q-head"><span class="q-num">Q35</span><span class="q-tag">Third Proportional of Algebraic Terms</span></div>
       <div class="q-text">Find the third proportional to $(x - y)$ and $(x^2 - y^2)$.</div>
       <div class="q-actions">
@@ -851,7 +873,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q36 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-ages">
       <div class="q-head"><span class="q-num">Q36</span><span class="q-tag">Age Ratio Complex Shift</span></div>
       <div class="q-text">Ten years ago, a father's age was $4$ times his son's age. Ten years hence, the father's age will be twice that of the son. Find the father's present age.</div>
       <div class="q-actions">
@@ -877,7 +899,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q37 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="coins-distribution">
       <div class="q-head"><span class="q-num">Q37</span><span class="q-tag">Coins Ratio Transformation</span></div>
       <div class="q-text">A purse contains ₹$216$ in coins of ₹$1$, $50$ paise, and $25$ paise in the ratio $2 : 3 : 4$. Find the number of 50-paise coins.</div>
       <div class="q-actions">
@@ -900,7 +922,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q38 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="combining">
       <div class="q-head"><span class="q-num">Q38</span><span class="q-tag">Three Vessels Mixing Ratio</span></div>
       <div class="q-text">Three glasses of equal volume contain mixture of acid and water in the ratios $2 : 1, 3 : 2,$ and $5 : 3$. If the contents of all three are poured into a large vessel, find the ratio of acid to water in the resulting mixture.</div>
       <div class="q-actions">
@@ -926,7 +948,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q39 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-ages">
       <div class="q-head"><span class="q-num">Q39</span><span class="q-tag">Income Ratio Variation</span></div>
       <div class="q-text">In a factory, the number of employees is reduced in the ratio $9 : 8$ and their individual wages are increased in the ratio $14 : 15$. Find the ratio in which the total wage bill of the factory decreased.</div>
       <div class="q-actions">
@@ -949,7 +971,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q40 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="proportions">
       <div class="q-head"><span class="q-num">Q40</span><span class="q-tag">Four Quantities In Proportion Test</span></div>
       <div class="q-text">If $p, q, r, s$ are in continued proportion, show that $(p^2 + q^2)(q^2 + r^2) = (pq + qr)^2$.</div>
       <div class="q-actions">
@@ -991,8 +1013,18 @@ def get_pyq_lab():
       🔐 <strong>AI Tutor Integrity Rule:</strong> Har question ka exact exam shift tag diya gaya hai. Pehle solve karein fir shortcut dekhein.
     </p>
 
+    <div class="topic-filter-bar">
+      <span class="filter-label">🏷️ Filter PYQs by Topic:</span>
+      <button class="q-filter-chip active" onclick="filterQs('all', this)">All Real PYQs (15)</button>
+      <button class="q-filter-chip" onclick="filterQs('combining', this)">1. Combining</button>
+      <button class="q-filter-chip" onclick="filterQs('proportions', this)">2. Proportions &amp; C&amp;D</button>
+      <button class="q-filter-chip" onclick="filterQs('proportionals', this)">4. Mean/3rd/4th &amp; x</button>
+      <button class="q-filter-chip" onclick="filterQs('income-ages', this)">5. Income &amp; Ages</button>
+      <button class="q-filter-chip" onclick="filterQs('coins-distribution', this)">6. Coins &amp; Errors</button>
+    </div>
+
     <!-- PYQ 1 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="proportionals">
       <div class="pyq-tag">SSC CGL 2023 Tier-1 • 14 July Shift-2</div>
       <div class="pyq-q"><strong>Q41:</strong> Find the mean proportional between $14.4$ and $3.6$.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p3-p-sol-41')">🔍 Show Topper Shortcut</button>
@@ -1003,7 +1035,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 2 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="proportionals">
       <div class="pyq-tag">SSC CGL 2022 Tier-2 (Mains) • 03 March 2023</div>
       <div class="pyq-q"><strong>Q42:</strong> What is the ratio of the third proportional to $0.4$ and $0.8$ to the mean proportional between $13.5$ and $0.24$?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p3-p-sol-42')">🔍 Show Topper Shortcut</button>
@@ -1016,7 +1048,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 3 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="proportionals">
       <div class="pyq-tag">SSC CGL 2023 Tier-1 • 19 July Shift-1</div>
       <div class="pyq-q"><strong>Q43:</strong> What number must be subtracted from each of $19, 28, 55,$ and $91$ so that the remaining numbers are proportional?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p3-p-sol-43')">🔍 Show Topper Shortcut</button>
@@ -1032,7 +1064,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 4 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="combining">
       <div class="pyq-tag">SSC CGL 2022 Tier-1 • 02 Dec Shift-1</div>
       <div class="pyq-q"><strong>Q44:</strong> If $A : B = 5 : 8$ and $B : C = 18 : 25$, then find the ratio of $A : C$.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p3-p-sol-44')">🔍 Show Topper Shortcut</button>
@@ -1043,7 +1075,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 5 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="income-ages">
       <div class="pyq-tag">SSC CGL 2023 Tier-2 (Mains) • 26 Oct 2023</div>
       <div class="pyq-q"><strong>Q45:</strong> If $x$ is the fourth proportional to $12, 16, 6$ and $y$ is the third proportional to $4, 6$, then find the value of $(2x + y)$.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p3-p-sol-45')">🔍 Show Topper Shortcut</button>
@@ -1056,7 +1088,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 6 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="proportionals">
       <div class="pyq-tag">SSC CHSL 2023 Tier-1 • 03 Aug Shift-1</div>
       <div class="pyq-q"><strong>Q46:</strong> A sum of ₹$6,300$ is divided among A, B, and C such that A's share : B's share $= 2 : 3$ and B's share : C's share $= 4 : 5$. Find the share of B.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p3-p-sol-46')">🔍 Show Topper Shortcut</button>
@@ -1070,7 +1102,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 7 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="income-ages">
       <div class="pyq-tag">SSC CPO 2023 • 05 Oct Shift-1</div>
       <div class="pyq-q"><strong>Q47:</strong> The ratio of present ages of two persons A and B is $3 : 4$. After 12 years, the ratio of their ages will be $5 : 6$. What is the present age of A?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p3-p-sol-47')">🔍 Show Topper Shortcut</button>
@@ -1083,7 +1115,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 8 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="coins-distribution">
       <div class="pyq-tag">SSC CGL 2022 Tier-1 • 07 Dec Shift-2</div>
       <div class="pyq-q"><strong>Q48:</strong> A bag contains ₹$510$ in the form of ₹$1$, ₹$2$, and ₹$5$ coins in the ratio $3 : 4 : 5$. Find the number of ₹$2$ coins.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p3-p-sol-48')">🔍 Show Topper Shortcut</button>
@@ -1097,7 +1129,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 9 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="combining">
       <div class="pyq-tag">SSC CGL 2021 Tier-2 (Mains) • 29 Jan 2022</div>
       <div class="pyq-q"><strong>Q49:</strong> If $(a + b) : \sqrt{ab} = 4 : 1$, where $a > b > 0$, find the ratio $a : b$.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p3-p-sol-49')">🔍 Show Topper Shortcut</button>
@@ -1112,7 +1144,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 10 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="proportions">
       <div class="pyq-tag">SSC CHSL 2022 Tier-1 • 30 May Shift-2</div>
       <div class="pyq-q"><strong>Q50:</strong> The ratio of two numbers is $3 : 5$. If $6$ is added to both, the ratio becomes $2 : 3$. Find the two numbers.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p3-p-sol-50')">🔍 Show Topper Shortcut</button>
@@ -1126,7 +1158,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 11 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="proportionals">
       <div class="pyq-tag">SSC CGL 2023 Tier-1 • 24 July Shift-4</div>
       <div class="pyq-q"><strong>Q51:</strong> If $2A = 3B$ and $4B = 5C$, then find the ratio of $A : C$.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p3-p-sol-51')">🔍 Show Topper Shortcut</button>
@@ -1138,7 +1170,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 12 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="coins-distribution">
       <div class="pyq-tag">SSC CPO 2022 • 11 Nov Shift-3</div>
       <div class="pyq-q"><strong>Q52:</strong> If $a, b, c$ are in continued proportion, then what is the value of $\frac{a^2 + b^2}{b^2 + c^2}$?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p3-p-sol-52')">🔍 Show Topper Shortcut</button>
@@ -1150,7 +1182,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 13 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="types">
       <div class="pyq-tag">SSC CGL 2021 Tier-1 • 23 Aug Shift-1</div>
       <div class="pyq-q"><strong>Q53:</strong> When $x$ is subtracted from each of $24, 40, 33,$ and $57$, the numbers obtained in this order are in proportion. What is the mean proportional between $(5x + 12)$ and $(4x + 15)$?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p3-p-sol-53')">🔍 Show Topper Shortcut</button>
@@ -1164,7 +1196,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 14 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="income-ages">
       <div class="pyq-tag">SSC CHSL 2023 Tier-1 • 08 Aug Shift-2</div>
       <div class="pyq-q"><strong>Q54:</strong> In an office, the ratio of the number of male officers to female officers is $4 : 5$. If $50$ female officers join the office, the ratio becomes $4 : 7$. Find the number of male officers.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p3-p-sol-44')">🔍 Show Topper Shortcut</button>
@@ -1178,7 +1210,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 15 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="proportions">
       <div class="pyq-tag">SSC CGL 2023 Tier-2 (Mains) • 26 Oct 2023</div>
       <div class="pyq-q"><strong>Q55:</strong> If $(3x + 2y) : (5x + 7y) = 5 : 9$, then find the ratio of $x : y$.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p3-p-sol-55')">🔍 Show Topper Shortcut</button>
