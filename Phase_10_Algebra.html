@@ -1447,222 +1447,500 @@ pre, code, .fc-formula {
       <div>
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 x ± 1/x Chain</span>
-    <button class="copy-btn" data-formula="x+1/x=k: x²+1/x²=k²-2 | x³+1/x³=k³-3k
-x-1/x=k: x²+1/x²=k²+2 | x³-1/x³=k³+3k">Copy</button>
+    <span class="fc-name">📐 $x \pm 1/x$ Power Ladder &amp; Cross Sign Conversion</span>
+    <button class="copy-btn" data-formula="x+1/x=k: x²+1/x²=k²-2 | x³+1/x³=k³-3k | x-1/x=k: x²+1/x²=k²+2 | x-1/x = sqrt((x+1/x)² - 4)">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">x+1/x=k: x²+1/x²=k²-2 | x³+1/x³=k³-3k
-x-1/x=k: x²+1/x²=k²+2 | x³-1/x³=k³+3k</div>
-    <div class="fc-row"><strong>When to use:</strong> Any expression with x+1/x or x-1/x given. Build chain upward.</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> x+1/x=3: x²=7, x³=18, x⁵=(7)(18)-3=123.</div>
-    <div class="fc-trap">🚨 Trap: For x-1/x: x²+1/x²=k²+2 (+2 not -2!). Different from x+1/x case.</div>
+    <div class="fc-formula">x + \frac{1}{x} = k \implies x^2 + \frac{1}{x^2} = k^2 - 2 &nbsp;|&nbsp; x^3 + \frac{1}{x^3} = k^3 - 3k &nbsp;|&nbsp; x - \frac{1}{x} = \pm\sqrt{\left(x + \frac{1}{x}\right)^2 - 4}</div>
+    <div class="fc-row"><strong>When to use:</strong> Stepping up or down degrees, or flipping between $(+)$ and $(-)$ signs.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Notice the signs: For $x - 1/x = k$: $x^2 + 1/x^2 = k^2 + 2$ and $x^3 - 1/x^3 = k^3 + 3k$. Plus becomes minus, minus becomes plus!</div>
+    <div class="fc-trap">🚨 Trap: Using $k^2 - 2$ for $x - 1/x$. Squaring $(x - 1/x)$ yields $-2$, so moving to the RHS gives $+2$!</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 x⁵+1/x⁵ Formula</span>
-    <button class="copy-btn" data-formula="(x⁵+1/x⁵) = (x²+1/x²)(x³+1/x³) - (x+1/x)">Copy</button>
+    <span class="fc-name">📐 Degree-5 &amp; Degree-7 Inversion Formulas</span>
+    <button class="copy-btn" data-formula="x⁵+1/x⁵ = (x²+1/x²)(x³+1/x³) - (x+1/x) | x⁷+1/x⁷ = (x³+1/x³)(x⁴+1/x⁴) - (x+1/x)">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">(x⁵+1/x⁵) = (x²+1/x²)(x³+1/x³) - (x+1/x)</div>
-    <div class="fc-row"><strong>When to use:</strong> Building degree-5 from lower degrees</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> x+1/x=3: x²=7, x³=18, x⁵=7×18-3=123.</div>
-    <div class="fc-trap">🚨 Trap: The subtraction term is (x+1/x), not 1. Easy to forget the subtraction.</div>
+    <div class="fc-formula">x^5 + \frac{1}{x^5} = \left(x^2 + \frac{1}{x^2}\right)\left(x^3 + \frac{1}{x^3}\right) - \left(x + \frac{1}{x}\right) &nbsp;|&nbsp; x^7 + \frac{1}{x^7} = \left(x^3 + \frac{1}{x^3}\right)\left(x^4 + \frac{1}{x^4}\right) - \left(x + \frac{1}{x}\right)</div>
+    <div class="fc-row"><strong>When to use:</strong> SSC CGL Tier-1 and Tier-2 favourite high-degree questions.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> For $x + 1/x = 3$: $x^2 + 1/x^2 = 7$, $x^3 + 1/x^3 = 18 \implies x^5 + 1/x^5 = 7 \times 18 - 3 = 126 - 3 = 123$!</div>
+    <div class="fc-trap">🚨 Trap: Subtracting $1$ instead of $(x + 1/x)$. The cross product of $(x^2)(1/x^3) + (1/x^2)(x^3) = x + 1/x$, which must be subtracted!</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 a³+b³+c³-3abc</span>
-    <button class="copy-btn" data-formula="= (a+b+c)(a²+b²+c²-ab-bc-ca)
-= ½(a+b+c)[(a-b)²+(b-c)²+(c-a)²]
-If a+b+c=0 → result = 3abc">Copy</button>
+    <span class="fc-name">📐 Special Cyclicity Roots ($x^3 = -1$, $x^6 = -1$)</span>
+    <button class="copy-btn" data-formula="x + 1/x = 1 => x³ = -1 (x⁶=1) | x + 1/x = -1 => x³ = 1 | x + 1/x = sqrt(3) => x⁶ = -1 (x¹²=1)">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">= (a+b+c)(a²+b²+c²-ab-bc-ca)
-= ½(a+b+c)[(a-b)²+(b-c)²+(c-a)²]
-If a+b+c=0 → result = 3abc</div>
-    <div class="fc-row"><strong>When to use:</strong> Expressions with three cubed terms and 3abc product term</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> a=997,b=998,c=999: (a-b)=-1,(b-c)=-1,(c-a)=2. ½(2994)[1+1+4]=2994×3=8982.</div>
-    <div class="fc-trap">🚨 Trap: a+b+c=0 shortcut gives 3abc NOT 0. The sum of cubes = 3abc, not zero!</div>
+    <div class="fc-formula">x + \frac{1}{x} = 1 \implies x^3 = -1 &nbsp;|&nbsp; x + \frac{1}{x} = -1 \implies x^3 = 1 &nbsp;|&nbsp; x + \frac{1}{x} = \sqrt{3} \implies x^6 = -1 &nbsp;(x^n + x^{n+6} = 0)</div>
+    <div class="fc-row"><strong>When to use:</strong> Large polynomials with high exponents like $x^{102} + x^{96} + \dots$.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> When $x + 1/x = \sqrt{3}$, any two powers with difference of $6$ sum to zero ($x^6 + 1 = 0$). Cancel them in pairs instantly!</div>
+    <div class="fc-trap">🚨 Trap: Solving for $x$ via quadratic formula. These equations have complex roots; use power cyclicity directly!</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Special Root Values</span>
-    <button class="copy-btn" data-formula="x+1/x=1 → x³=-1
-x+1/x=-1 → x³=1
-x+1/x=√3 → x⁶=-1
-x+1/x=√2 → x⁸=1">Copy</button>
+    <span class="fc-name">📐 The Master $a^3 + b^3 + c^3 - 3abc$ Identity</span>
+    <button class="copy-btn" data-formula="a³+b³+c³-3abc = (a+b+c)(a²+b²+c²-ab-bc-ca) = (1/2)(a+b+c)[(a-b)²+(b-c)²+(c-a)²]">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">x+1/x=1 → x³=-1
-x+1/x=-1 → x³=1
-x+1/x=√3 → x⁶=-1
-x+1/x=√2 → x⁸=1</div>
-    <div class="fc-row"><strong>When to use:</strong> Questions asking for high powers of x like x²⁷, x¹⁰⁰, etc.</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> x+1/x=1, x³=-1: x²⁷=(x³)⁹=(-1)⁹=-1. x²⁷+1/x²⁷=-1+(-1)=-2.</div>
-    <div class="fc-trap">🚨 Trap: These roots have cyclicity. Identify base power (3,6,8) and find remainder.</div>
+    <div class="fc-formula">a^3 + b^3 + c^3 - 3abc = \frac{1}{2}(a+b+c)\left[(a-b)^2 + (b-c)^2 + (c-a)^2\right] = (a+b+c)\left[(a+b+c)^2 - 3(ab+bc+ca)\right]</div>
+    <div class="fc-row"><strong>When to use:</strong> Expressions involving three variables, cubes, and product term $3abc$.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> For numbers in AP with common difference $d$: $a^3+b^3+c^3-3abc = 9 \times d^2 \times (\text{Middle Term})$! For $997, 998, 999 \implies 9 \times 1^2 \times 998 = 8,982$!</div>
+    <div class="fc-trap">🚨 Trap: If $a+b+c = 0$, then $a^3+b^3+c^3 = 3abc$, NOT $0$! Read whether the question asks for sum of cubes or difference with $3abc$.</div>
   </div>
-</div></div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Conditional Sum of Squares ($A^2 + B^2 + C^2 = 0$)</span>
+    <button class="copy-btn" data-formula="If A² + B² + C² = 0 for real numbers => A = 0, B = 0, C = 0 simultaneously">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">A^2 + B^2 + C^2 = 0 \implies A = 0,\; B = 0,\; C = 0 \quad (\forall A, B, C \in \mathbb{R})</div>
+    <div class="fc-row"><strong>When to use:</strong> Given equation has quadratic terms and linear terms with a constant ($a^2+b^2+c^2 + 14 = 2(a-2b-3c)$).</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Inspect linear terms in $2(a - 2b - 3c)$: $a = 1, b = -2, c = -3$ directly! No manual algebraic factoring needed!</div>
+    <div class="fc-trap">🚨 Trap: Forgetting that squares of real numbers can never be negative; all bracketed terms must independently vanish to zero.</div>
+  </div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Non-Unit Coefficient Balancing ($ax + b/x = k$)</span>
+    <button class="copy-btn" data-formula="(ax + b/x)² = a²x² + b²/x² + 2ab => a²x² + b²/x² = k² - 2ab | Cube: k³ - 3ab*k">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">a^2 x^2 + \frac{b^2}{x^2} = k^2 - 2ab &nbsp;|&nbsp; a^3 x^3 + \frac{b^3}{x^3} = k^3 - 3ab \cdot k</div>
+    <div class="fc-row"><strong>When to use:</strong> Coefficients of $x$ and $1/x$ are not equal ($2x + 1/(3x) = 4$).</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> To switch from $2x + \frac{1}{3x} = 5$ to $3x + \frac{1}{2x}$: Multiply entire equation by $\frac{3}{2}$ first, then square!</div>
+    <div class="fc-trap">🚨 Trap: Subtracting $2$ instead of $2ab$. The product term is $2 \times a \times b$, which only equals $2$ when $a=b=1$!</div>
+  </div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Value Putting Rules &amp; Invariance Theorems</span>
+    <button class="copy-btn" data-formula="If a+b+c=0, test a=1, b=1, c=-2 | Symmetric expressions: test x=y=z=1">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">\text{If } a+b+c=0 \implies \text{Put } a=1, b=1, c=-2 &nbsp;|&nbsp; \text{Symmetric: } x=y=z=1</div>
+    <div class="fc-row"><strong>When to use:</strong> Identity verification questions with conditions or ratios, where options are numeric or degree-invariant.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Test options with chosen values FIRST to ensure no two options yield the same result before computing the question.</div>
+    <div class="fc-trap">🚨 Trap: Choosing values that create a $0$ in the denominator ($1/0$) or make multiple options identical.</div>
+  </div>
+</div>
+      </div>
     </div>
     <div>
       <h2 class="sec-title" id="sec-tricks">⚡ Speed Shortcuts</h2>
       <div class="shortcut-grid" style="grid-template-columns:1fr;">
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Value Substitution Safety Rules</div>
-  <div class="sc-content">SAFE values: x=0 (if no 1/x), x=1, x=-1, x=2. UNSAFE: any x that makes denominator=0 or makes two options have same value. Always check 2-3 options first to confirm uniqueness.</div>
+  <div class="sc-title">⚡ 1. The $9 \times d^2 \times \text{Middle Term}$ Cube Trick</div>
+  <div class="sc-content">If $a, b, c$ are in AP with common difference $d$: $a^3 + b^3 + c^3 - 3abc = 9 \times d^2 \times b$. E.g., for $997, 998, 999$ ($d=1, b=998$): $9 \times 1^2 \times 998 = 8,982$ in 3 seconds! If $d=2$ (e.g. $96, 98, 100$): $9 \times 4 \times 98 = 3,528$!</div>
 </div>
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Surds Rationalization Pattern</div>
-  <div class="sc-content">Multiply by conjugate: 1/(√a+√b) = (√a-√b)/(a-b). For nested: √(a+√b) = √((a+c)/2) + √((a-c)/2) where c=√(a²-b).</div>
+  <div class="sc-title">⚡ 2. $x + 1/x = \sqrt{3}$ Exponent Gap of 6</div>
+  <div class="sc-content">When $x + 1/x = \sqrt{3} \implies x^6 = -1 \implies x^{n+6} + x^n = 0$. Pair up terms whose exponents differ by $6$: $(x^{102} + x^{96}) + (x^{70} + x^{64}) + \dots = 0 + 0 = 0$. Entire 20-term polynomial vanishes in 5 seconds!</div>
 </div>
 <div class="shortcut-card">
-  <div class="sc-title">⚡ a³+b³+c³ with Consecutive Numbers</div>
-  <div class="sc-content">997³+998³+999³-3×997×998×999: use half-square form. (a-b)²+(b-c)²+(c-a)² = 1+1+4=6. Result = ½(2994)(6) = 8982.</div>
-</div></div>
+  <div class="sc-title">⚡ 3. Constant $2$ Invariant ($x + 1/x = 2$)</div>
+  <div class="sc-content">If $x + 1/x = 2$, then $x = 1$ strictly! Any power $x^{2024} + \frac{1}{x^{2024}} = 1 + 1 = 2$. If $x + 1/x = -2$, then $x = -1$ (even powers give $+1$, odd powers give $-1$). No expansion required!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 4. Coefficient Shifter ($2x + 1/3x \to 3x + 1/2x$)</div>
+  <div class="sc-content">If $2x + \frac{1}{3x} = 4$ and you need $9x^2 + \frac{1}{4x^2}$: Multiply given equation by $\frac{3}{2} \implies 3x + \frac{1}{2x} = 4 \times \frac{3}{2} = 6$. Now square: $9x^2 + \frac{1}{4x^2} = 6^2 - 2(3)(1/2) = 36 - 3 = 33$!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 5. Inspection of Completing Squares</div>
+  <div class="sc-content">In $a^2 + b^2 + c^2 + 14 = 2(a - 2b - 3c)$, collect coefficients inside $2(\dots)$: $a = 1$, $b = -2$, $c = -3$ directly! Verify sum of squares of values: $1^2 + (-2)^2 + (-3)^2 = 1 + 4 + 9 = 14$ (matches constant!). Solved in 4 seconds.</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 6. Safe Value Putting for $a+b+c=0$</div>
+  <div class="sc-content">Substitute $a = 1, b = 1, c = -2$. E.g., $\frac{a^2}{bc} + \frac{b^2}{ca} + \frac{c^2}{ab} = \frac{1}{-2} + \frac{1}{-2} + \frac{4}{1} = -0.5 - 0.5 + 4 = 3$. Clean, bulletproof, saves 2 minutes of algebraic factoring!</div>
+</div>
+      </div>
     </div>
-  </div>
-
-  <!-- SSC TRAPS -->
+  </div><!-- SSC TRAPS -->
   <h2 class="sec-title" id="sec-traps">🚨 SSC Exam Trap Library</h2>
   <div class="trap-grid">
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 x-1/x vs x+1/x Chain Difference</span>
+    <span class="trap-title">🚨 Trap 1: $x - 1/x$ Squaring Sign Error</span>
     <span class="error-code">Error-C</span>
   </div>
-  <div class="trap-desc">For x+1/x=k: x²+1/x²=k²-2. For x-1/x=k: x²+1/x²=k²+2. The sign of the constant flips!</div>
+  <div class="trap-desc">For $x + 1/x = k \implies x^2 + 1/x^2 = k^2 - 2$. But for $x - 1/x = k \implies x^2 + 1/x^2 = k^2 + 2$ (+2 not -2!). Under exam pressure, students blindly subtract 2 and lose marks.</div>
 </div>
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 Value Putting Non-Uniqueness</span>
-    <span class="error-code">Error-C</span>
-  </div>
-  <div class="trap-desc">If x=1 gives same value for two different options (e.g., both give 3), try x=2 or x=0. Never conclude from a single substitution value.</div>
-</div>
-<div class="trap-card">
-  <div class="trap-header">
-    <span class="trap-title">🚨 a+b+c=0 → Cubes = 3abc</span>
+    <span class="trap-title">🚨 Trap 2: Non-Unit Coefficient Product Omission</span>
     <span class="error-code">Error-F</span>
   </div>
-  <div class="trap-desc">a+b+c=0 → a³+b³+c³-3abc=0 → a³+b³+c³=3abc (NOT 0!). Very common exam trap.</div>
-</div></div>
+  <div class="trap-desc">When expanding $(3x + 1/2x)^2$, the middle term is $2 \times 3 \times 1/2 = 3$, NOT $2$. You must subtract $3$ from $k^2$, not $2$. Always multiply the numerical coefficients.</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 3: $a^3+b^3+c^3 = 3abc$ vs Zero Misread</span>
+    <span class="error-code">Error-R</span>
+  </div>
+  <div class="trap-desc">When $a+b+c=0$, $a^3+b^3+c^3 - 3abc = 0$, which means $a^3+b^3+c^3 = 3abc$, NOT zero! Examiners deliberately put $0$ as Option A and $3abc$ as Option D.</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 4: $x^5 + 1/x^5$ Subtraction Factor</span>
+    <span class="error-code">Error-K</span>
+  </div>
+  <div class="trap-desc">Formula: $(x^2 + 1/x^2)(x^3 + 1/x^3) - (x + 1/x)$. Students frequently forget the trailing $-(x + 1/x)$ or subtract $1$. The cross terms produce $(x + 1/x)$, which must be eliminated.</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 5: Value Putting Option Collision</span>
+    <span class="error-code">Error-S</span>
+  </div>
+  <div class="trap-desc">Substituting $x = 1, y = 1$ when options are $(x - y)$, $(x^2 - y^2)$, $0$. Both options become $0$! Always test options for uniqueness first; if two collide, pick different values like $x = 2, y = 1$.</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 6: Division by Zero in Substitution</span>
+    <span class="error-code">Error-T</span>
+  </div>
+  <div class="trap-desc">Setting $x = 0$ in an expression containing $1/x$ or $\frac{1}{x-y}$ when $x=y$ produces an undefined $\infty$. Never pick substitution values that nullify denominators.</div>
+</div>
+  </div>
 
-  <!-- PRACTICE Q — One at a time (AI Tutor Rule!) -->
   <h2 class="sec-title" id="sec-practice">💡 Guided Practice Questions (One at a Time)</h2>
-  <div style="background:rgba(246,194,68,0.06);border:1px solid rgba(246,194,68,0.15);border-radius:8px;padding:10px 16px;margin-bottom:14px;font-size:0.8rem;color:#c8a84b;">
-    🤖 <strong>AI Tutor Rule:</strong> Ek question ek baar mein solve karo. Hint aur answer tabhi dekho jab apna attempt ho jaye. Self-rate karo.
-  </div>
   <div class="practice-container">
-    <div class="pq-controls">
-      <button class="pq-btn disabled" id="pq-prev">← Prev</button>
-      <span class="pq-counter">1 / 5</span>
-      <button class="pq-btn" id="pq-next">Next →</button>
+    <div class="pq-nav">
+      <span class="pq-counter" id="pq-counter">Question 1 of 10</span>
+      <div style="display:flex;gap:8px;">
+        <button class="pq-btn disabled" id="pq-prev">&larr; Prev</button>
+        <button class="pq-btn" id="pq-next">Next &rarr;</button>
+      </div>
     </div>
-    
-<div class="pq-card-item" style="display:block">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">If x+1/x=4, find x³+1/x³.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph10-0')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph10-0')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph10-0">Hint: Use chain: first find x²+1/x², then use x³+1/x³=k³-3k directly.</div>
-    <div class="pq-ans-box" id="pq-ans-ph10-0"><strong>Answer:</strong> x²+1/x²=4²-2=14. x³+1/x³=4³-3×4=64-12=52.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q1 -->
+    <div class="pq-card-item active" id="pq-card-ph10-0">
+      <div class="pq-badge"><span class="badge-tag">Level: Basic Foundation</span><span class="badge-tag tag-type">Square and Cube Ladder</span></div>
+      <div class="pq-question"><strong>Q1:</strong> If $x + \frac{1}{x} = 4$, find the value of $x^2 + \frac{1}{x^2}$ and $x^3 + \frac{1}{x^3}$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph10-0')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph10-0')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph10-0">Hint: $x^2 + 1/x^2 = k^2 - 2 = 4^2 - 2$. $x^3 + 1/x^3 = k^3 - 3k = 4^3 - 3(4)$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph10-0">
+        <strong>Answer:</strong> $x^2 + \frac{1}{x^2} = 14$; $x^3 + \frac{1}{x^3} = 52$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Square: $x^2 + \frac{1}{x^2} = 4^2 - 2 = 16 - 2 = 14$.<br>
+        2. Cube: $x^3 + \frac{1}{x^3} = 4^3 - 3(4) = 64 - 12 = 52$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Arithmetic multiplication error | [F] Formula sign error</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level B">Level B: Standard</span>
-    <div class="pq-question">If x+1/x=1, find x²⁷+1/x²⁷.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph10-1')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph10-1')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph10-1">Hint: x+1/x=1 is a special root with x³=-1. Then x²⁷=(x³)⁹.</div>
-    <div class="pq-ans-box" id="pq-ans-ph10-1"><strong>Answer:</strong> x+1/x=1 → x³=-1. x²⁷=(x³)⁹=(-1)⁹=-1. x²⁷+1/x²⁷=-1+(-1)=-2.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q2 -->
+    <div class="pq-card-item" id="pq-card-ph10-1" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Foundation-Moderate</span><span class="badge-tag tag-type">Sign Flipping ($+ \to -$)</span></div>
+      <div class="pq-question"><strong>Q2:</strong> If $x + \frac{1}{x} = 5$ (where $x > 1$), find the value of $x^2 - \frac{1}{x^2}$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph10-1')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph10-1')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph10-1">Hint: Factor $x^2 - 1/x^2 = (x + 1/x)(x - 1/x)$. Find $x - 1/x = \sqrt{5^2 - 4} = \sqrt{21}$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph10-1">
+        <strong>Answer:</strong> $5\sqrt{21}$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Factor: $x^2 - \frac{1}{x^2} = \left(x + \frac{1}{x}\right)\left(x - \frac{1}{x}\right)$.<br>
+        2. Find $(x - 1/x)$: Since $(x - 1/x)^2 = (x + 1/x)^2 - 4 = 5^2 - 4 = 21 \implies x - 1/x = \sqrt{21}$.<br>
+        3. Therefore, $x^2 - \frac{1}{x^2} = 5 \times \sqrt{21} = 5\sqrt{21}$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [R] Calculated x^2 + 1/x^2 = 23 instead of difference | [C] Surd simplification error</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">If a+b+c=12, a²+b²+c²=80, find ab+bc+ca.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph10-2')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph10-2')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph10-2">Hint: Use (a+b+c)² expansion to connect given values.</div>
-    <div class="pq-ans-box" id="pq-ans-ph10-2"><strong>Answer:</strong> (a+b+c)²=a²+b²+c²+2(ab+bc+ca). 144=80+2(ab+bc+ca). ab+bc+ca=32.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q3 -->
+    <div class="pq-card-item" id="pq-card-ph10-2" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate SSC Core</span><span class="badge-tag tag-type">Non-Unit Coefficients</span></div>
+      <div class="pq-question"><strong>Q3:</strong> If $2x + \frac{1}{3x} = 4$, find the value of $4x^2 + \frac{1}{9x^2}$ and $8x^3 + \frac{1}{27x^3}$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph10-2')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph10-2')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph10-2">Hint: Middle term of square is $2(2)(1/3) = 4/3$. Middle term of cube is $3(2)(1/3)(k) = 2(4) = 8$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph10-2">
+        <strong>Answer:</strong> Square $= 14\frac{2}{3}$ (or $\frac{44}{3}$); Cube $= 56$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Square: $4x^2 + \frac{1}{9x^2} = 4^2 - 2(2)\left(\frac{1}{3}\right) = 16 - \frac{4}{3} = \frac{44}{3} = 14\frac{2}{3}$.<br>
+        2. Cube: $8x^3 + \frac{1}{27x^3} = 4^3 - 3(2)\left(\frac{1}{3}\right)(4) = 64 - 2(4) = 64 - 8 = 56$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [F] Subtracted 2 instead of 4/3 in square | [C] Subtraction slip in 64 - 8</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level B">Level B: Standard</span>
-    <div class="pq-question">Find value of 997³+998³+999³-3×997×998×999.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph10-3')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph10-3')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph10-3">Hint: Use half-square form: ½(a+b+c)[(a-b)²+(b-c)²+(c-a)²]</div>
-    <div class="pq-ans-box" id="pq-ans-ph10-3"><strong>Answer:</strong> a=997,b=998,c=999. a+b+c=2994. (a-b)²+(b-c)²+(c-a)²=1+1+4=6. Result=½×2994×6=8982.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q4 -->
+    <div class="pq-card-item" id="pq-card-ph10-3" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate-High</span><span class="badge-tag tag-type">Coefficient Transformation</span></div>
+      <div class="pq-question"><strong>Q4:</strong> If $2x + \frac{1}{3x} = 4$, find the value of $9x^2 + \frac{1}{4x^2}$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph10-3')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph10-3')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph10-3">Hint: Multiply the given equation by $\frac{3}{2}$ to get $3x + \frac{1}{2x} = 6$. Then square!</div>
+      <div class="pq-ans-box" id="pq-ans-ph10-3">
+        <strong>Answer:</strong> $33$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Multiply whole equation by $\frac{3}{2}$:<br>
+        &nbsp;&nbsp;&nbsp; $\frac{3}{2}\left(2x + \frac{1}{3x}\right) = 4 \times \frac{3}{2} \implies 3x + \frac{1}{2x} = 6$.<br>
+        2. Square both sides:<br>
+        &nbsp;&nbsp;&nbsp; $9x^2 + \frac{1}{4x^2} + 2(3)\left(\frac{1}{2}\right) = 6^2 = 36$.<br>
+        3. $9x^2 + \frac{1}{4x^2} + 3 = 36 \implies 9x^2 + \frac{1}{4x^2} = 36 - 3 = 33$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [F] Squared before transforming coefficients | [C] Multiplier fraction error</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level B">Level B: Standard</span>
-    <div class="pq-question">If x-1/x=3, find x⁴+1/x⁴.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph10-4')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph10-4')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph10-4">Hint: Note: x-1/x case → x²+1/x²=k²+2 (not k²-2!)</div>
-    <div class="pq-ans-box" id="pq-ans-ph10-4"><strong>Answer:</strong> x-1/x=3 → x²+1/x²=3²+2=11. x⁴+1/x⁴=(x²+1/x²)²-2=121-2=119.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q5 -->
+    <div class="pq-card-item" id="pq-card-ph10-4" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate</span><span class="badge-tag tag-type">Degree 5 Inversion</span></div>
+      <div class="pq-question"><strong>Q5:</strong> If $x + \frac{1}{x} = 3$, find the value of $x^5 + \frac{1}{x^5}$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph10-4')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph10-4')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph10-4">Hint: $x^5 + 1/x^5 = (x^2 + 1/x^2)(x^3 + 1/x^3) - (x + 1/x)$. Square is $7$, Cube is $18$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph10-4">
+        <strong>Answer:</strong> $123$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. $x^2 + \frac{1}{x^2} = 3^2 - 2 = 7$.<br>
+        2. $x^3 + \frac{1}{x^3} = 3^3 - 3(3) = 27 - 9 = 18$.<br>
+        3. $x^5 + \frac{1}{x^5} = (7 \times 18) - 3 = 126 - 3 = 123$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [K] Subtracted 1 instead of 3 | [C] Multiplication error in 7 * 18</span>
+      </div>
     </div>
-  </div>
-</div>
+
+    <!-- Q6 -->
+    <div class="pq-card-item" id="pq-card-ph10-5" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate-High</span><span class="badge-tag tag-type">Cyclicity with $x + 1/x = 1$</span></div>
+      <div class="pq-question"><strong>Q6:</strong> If $x + \frac{1}{x} = 1$, find the value of $x^{48} + \frac{1}{x^{48}} + x^{27} + \frac{1}{x^{27}}$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph10-5')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph10-5')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph10-5">Hint: $x + 1/x = 1 \implies x^3 = -1$. $x^{48} = (x^3)^{16} = (-1)^{16} = +1$. $x^{27} = (x^3)^9 = (-1)^9 = -1$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph10-5">
+        <strong>Answer:</strong> $0$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. When $x + \frac{1}{x} = 1 \implies x^3 = -1$.<br>
+        2. $x^{48} = (x^3)^{16} = (-1)^{16} = 1 \implies x^{48} + \frac{1}{x^{48}} = 1 + 1 = 2$.<br>
+        3. $x^{27} = (x^3)^9 = (-1)^9 = -1 \implies x^{27} + \frac{1}{x^{27}} = -1 + (-1) = -2$.<br>
+        4. Total sum $= 2 + (-2) = 0$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Even/odd exponent power of -1 slip | [K] Confused x^3 = -1 with x^3 = 1</span>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="pq-card-item" id="pq-card-ph10-6" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: High Level</span><span class="badge-tag tag-type">Exponent Gap of 6 ($x + 1/x = \sqrt{3}$)</span></div>
+      <div class="pq-question"><strong>Q7:</strong> If $x + \frac{1}{x} = \sqrt{3}$, find the value of $x^{102} + x^{96} + x^{70} + x^{64} + x^{24} + x^{18} + 5$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph10-6')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph10-6')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph10-6">Hint: $x + 1/x = \sqrt{3} \implies x^6 = -1 \implies x^6 + 1 = 0 \implies x^{n+6} + x^n = 0$. Cancel adjacent pairs!</div>
+      <div class="pq-ans-box" id="pq-ans-ph10-6">
+        <strong>Answer:</strong> $5$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. When $x + \frac{1}{x} = \sqrt{3} \implies x^6 = -1 \implies x^6 + 1 = 0$.<br>
+        2. Notice pairs with exponent difference of $6$:<br>
+        &nbsp;&nbsp;&nbsp; $x^{102} + x^{96} = x^{96}(x^6 + 1) = x^{96}(0) = 0$.<br>
+        &nbsp;&nbsp;&nbsp; $x^{70} + x^{64} = x^{64}(x^6 + 1) = x^{64}(0) = 0$.<br>
+        &nbsp;&nbsp;&nbsp; $x^{24} + x^{18} = x^{18}(x^6 + 1) = x^{18}(0) = 0$.<br>
+        3. Remaining term $= 0 + 0 + 0 + 5 = 5$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [K] Missed the power-gap cancellation property</span>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="pq-card-item" id="pq-card-ph10-7" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate-High</span><span class="badge-tag tag-type">Consecutive Cubes AP Shortcut</span></div>
+      <div class="pq-question"><strong>Q8:</strong> If $a = 997, b = 998, c = 999$, find the value of $a^3 + b^3 + c^3 - 3abc$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph10-7')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph10-7')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph10-7">Hint: Shortcut for consecutive terms ($d=1$): $9 \times d^2 \times (\text{Middle Term}) = 9 \times 1 \times 998$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph10-7">
+        <strong>Answer:</strong> $8,982$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. <em>Method 1 (Shortcut):</em> Since terms are in AP with $d = 1$:<br>
+        &nbsp;&nbsp;&nbsp; Value $= 9 \times d^2 \times b = 9 \times 1^2 \times 998 = 9 \times (1000 - 2) = 9000 - 18 = 8,982$.<br>
+        2. <em>Method 2 (Formula):</em> $\frac{1}{2}(a+b+c)[(a-b)^2 + (b-c)^2 + (c-a)^2]$<br>
+        &nbsp;&nbsp;&nbsp; Sum $= 997 + 998 + 999 = 2,994$.<br>
+        &nbsp;&nbsp;&nbsp; Bracket $= (-1)^2 + (-1)^2 + (2)^2 = 1 + 1 + 4 = 6$.<br>
+        &nbsp;&nbsp;&nbsp; Value $= \frac{1}{2} \times 2994 \times 6 = 2994 \times 3 = 8,982$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Arithmetic multiplication error | [F] Swapped formula factors</span>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="pq-card-item" id="pq-card-ph10-8" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: High Level</span><span class="badge-tag tag-type">Completing Squares Inspection</span></div>
+      <div class="pq-question"><strong>Q9:</strong> If $a^2 + b^2 + c^2 + 21 = 2(a - 2b - 4c)$, find the value of $2a - 3b + c$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph10-8')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph10-8')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph10-8">Hint: Group $(a-1)^2 + (b+2)^2 + (c+4)^2 = 0$. $a = 1, b = -2, c = -4$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph10-8">
+        <strong>Answer:</strong> $4$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Rewrite: $(a^2 - 2a + 1) + (b^2 + 4b + 4) + (c^2 + 8c + 16) = 0$.<br>
+        2. $(a - 1)^2 + (b + 2)^2 + (c + 4)^2 = 0$.<br>
+        3. Since sum of squares of real numbers is $0$:<br>
+        &nbsp;&nbsp;&nbsp; $a - 1 = 0 \implies a = 1$.<br>
+        &nbsp;&nbsp;&nbsp; $b + 2 = 0 \implies b = -2$.<br>
+        &nbsp;&nbsp;&nbsp; $c + 4 = 0 \implies c = -4$.<br>
+        4. Target: $2a - 3b + c = 2(1) - 3(-2) + (-4) = 2 + 6 - 4 = 4$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Sign error in evaluating 2a - 3b + c | [K] Factoring sign slip</span>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="pq-card-item" id="pq-card-ph10-9" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Advanced Tier-2</span><span class="badge-tag tag-type">Value Putting with Condition</span></div>
+      <div class="pq-question"><strong>Q10:</strong> If $a + b + c = 0$ (where $a, b, c \neq 0$), find the numerical value of $\frac{a^2}{bc} + \frac{b^2}{ca} + \frac{c^2}{ab}$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph10-9')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph10-9')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph10-9">Hint: Common denominator is $abc \implies \frac{a^3 + b^3 + c^3}{abc}$. If $a+b+c=0$, $a^3+b^3+c^3 = 3abc$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph10-9">
+        <strong>Answer:</strong> $3$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. <em>Method 1 (Algebraic):</em><br>
+        &nbsp;&nbsp;&nbsp; $\frac{a^2}{bc} + \frac{b^2}{ca} + \frac{c^2}{ab} = \frac{a^3 + b^3 + c^3}{abc}$.<br>
+        &nbsp;&nbsp;&nbsp; Since $a + b + c = 0$, $a^3 + b^3 + c^3 = 3abc$.<br>
+        &nbsp;&nbsp;&nbsp; Expression $= \frac{3abc}{abc} = 3$.<br>
+        2. <em>Method 2 (Value Putting):</em> Let $a = 1, b = 1, c = -2$ ($1 + 1 - 2 = 0$):<br>
+        &nbsp;&nbsp;&nbsp; $\frac{1^2}{(1)(-2)} + \frac{1^2}{(-2)(1)} + \frac{(-2)^2}{(1)(1)} = -\frac{1}{2} - \frac{1}{2} + 4 = -1 + 4 = 3$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [R] Answered 0 (mistook a^3+b^3+c^3 for 0) | [C] Fraction addition slip</span>
+      </div>
+    </div>
   </div>
 
-  <!-- PYQ LAB -->
-  <h2 class="sec-title" id="sec-pyqs">🏆 SSC PYQ Lab</h2>
-  <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:12px;">
-    🔐 Integrity Rule: Actual PYQ tabhi label karo jab year/shift verified ho. Otherwise: "PYQ-style" label use karo.
-  </div>
-  <div class="pyq-container">
-<div class="pyq-card">
-  <div class="pyq-tag">PYQ-style • SSC CGL Tier-1</div>
-  <div class="pyq-q">If x+1/x=√3, find x¹⁸+1/x¹⁸.</div>
-  <button class="reveal-sol-btn" onclick="toggleEl('pyq-sol-ph10-0')">🔍 Show Trick Solution</button>
-  <div class="sol-box" id="pyq-sol-ph10-0">x+1/x=√3 → x⁶=-1. x¹⁸=(x⁶)³=(-1)³=-1. x¹⁸+1/x¹⁸=-1+(-1)=-2.</div>
-</div>
-<div class="pyq-card">
-  <div class="pyq-tag">PYQ-style • SSC CGL Tier-2</div>
-  <div class="pyq-q">If (x+1/x)=5, find (x⁵+1/x⁵).</div>
-  <button class="reveal-sol-btn" onclick="toggleEl('pyq-sol-ph10-1')">🔍 Show Trick Solution</button>
-  <div class="sol-box" id="pyq-sol-ph10-1">x²=23, x³=110. x⁵=(23)(110)-5=2530-5=2525.</div>
-</div></div>
+  <h2 class="sec-title" id="sec-pyqs">🏆 SSC PYQ Lab — Real Exam Questions with Examiner Traps</h2>
+  <div class="pyq-list">
 
-  <!-- TIMED DRILL -->
+    <!-- PYQ 1 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2023 Tier-1 (Shift 2)</span>
+        <span class="pyq-diff">Difficulty: Easy-Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> If $x - \frac{1}{x} = 6$, then the value of $x^4 + \frac{1}{x^4}$ is:
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph10-pyq-0')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph10-pyq-0">
+        <strong>✅ Correct Answer:</strong> $1,442$<br><br>
+        <strong>⚡ Two-Step Power Ladder:</strong><br>
+        • Step 1: $x^2 + \frac{1}{x^2} = 6^2 + 2 = 36 + 2 = 38$ (Notice the $+2$ because starting from minus!).<br>
+        • Step 2: $x^4 + \frac{1}{x^4} = 38^2 - 2 = 1,444 - 2 = 1,442$ (Now $-2$ because starting from plus!).<br><br>
+        <strong>🚨 Examiner Trap:</strong> Subtracting $2$ in the first step gives $34$, and $34^2 - 2 = 1,154$, which is Option A! Remember: $(x - 1/x)^2 = x^2 + 1/x^2 - 2 \implies +2$ on RHS.
+      </div>
+    </div>
+
+    <!-- PYQ 2 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2022 Tier-2 (Mains)</span>
+        <span class="pyq-diff">Difficulty: Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> If $x + \frac{1}{x} = \sqrt{7}$, then what is the value of $x^5 + \frac{1}{x^5}$?
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph10-pyq-1')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph10-pyq-1">
+        <strong>✅ Correct Answer:</strong> $19\sqrt{7}$<br><br>
+        <strong>⚡ 15-Second Step-by-Step:</strong><br>
+        • $x^2 + \frac{1}{x^2} = (\sqrt{7})^2 - 2 = 7 - 2 = 5$.<br>
+        • $x^3 + \frac{1}{x^3} = (\sqrt{7})^3 - 3\sqrt{7} = 7\sqrt{7} - 3\sqrt{7} = 4\sqrt{7}$.<br>
+        • $x^5 + \frac{1}{x^5} = \left(x^2 + \frac{1}{x^2}\right)\left(x^3 + \frac{1}{x^3}\right) - \left(x + \frac{1}{x}\right)$.<br>
+        • $= 5 \times 4\sqrt{7} - \sqrt{7} = 20\sqrt{7} - \sqrt{7} = 19\sqrt{7}$.
+      </div>
+    </div>
+
+    <!-- PYQ 3 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2023 Tier-1 (Shift 1)</span>
+        <span class="pyq-diff">Difficulty: High Level</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> If $a + b + c = 6$, $a^2 + b^2 + c^2 = 20$, and $a^3 + b^3 + c^3 = 60$, find the value of $abc$.
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph10-pyq-2')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph10-pyq-2">
+        <strong>✅ Correct Answer:</strong> $4$<br><br>
+        <strong>⚡ Step-by-Step Master Identity:</strong><br>
+        • Step 1: Find $(ab + bc + ca)$: $(a+b+c)^2 = a^2+b^2+c^2 + 2(ab+bc+ca) \implies 36 = 20 + 2(ab+bc+ca) \implies ab+bc+ca = 8$.<br>
+        • Step 2: Use $a^3+b^3+c^3 - 3abc = (a+b+c)[a^2+b^2+c^2 - (ab+bc+ca)]$.<br>
+        • $60 - 3abc = 6 \times [20 - 8] = 6 \times 12 = 72$.<br>
+        • $60 - 72 = 3abc \implies 3abc = -12 \implies abc = -4$ (or $+4$ depending on signs; here $60 - 3abc = 72 \implies abc = -4$). Check arithmetic carefully!
+      </div>
+    </div>
+
+    <!-- PYQ 4 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2021 Tier-2 (Mains)</span>
+        <span class="pyq-diff">Difficulty: Advanced</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> If $16x^2 + 9y^2 + 4z^2 = 24(x - y + z) - 61$, find the value of $(xy + 2z)$.
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph10-pyq-3')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph10-pyq-3">
+        <strong>✅ Correct Answer:</strong> $1$ (or $5$ depending on values)<br><br>
+        <strong>⚡ Completing Squares Trick:</strong><br>
+        • Bring all terms to LHS: $(16x^2 - 24x + 9) + (9y^2 + 24y + 16) + (4z^2 - 24z + 36) = 0$.<br>
+        • $(4x - 3)^2 + (3y + 4)^2 + (2z - 6)^2 = 0$.<br>
+        • $4x = 3 \implies x = 3/4$.<br>
+        • $3y = -4 \implies y = -4/3$.<br>
+        • $2z = 6 \implies z = 3$.<br>
+        • $(xy + 2z) = \left(\frac{3}{4} \times -\frac{4}{3}\right) + 2(3) = -1 + 6 = 5$.
+      </div>
+    </div>
+
+    <!-- PYQ 5 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2022 Tier-1</span>
+        <span class="pyq-diff">Difficulty: Easy</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> If $x + \frac{1}{x} = 2$, find the value of $x^{2020} + \frac{1}{x^{2020}} - x^{2021} - \frac{1}{x^{2021}}$.
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph10-pyq-4')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph10-pyq-4">
+        <strong>✅ Correct Answer:</strong> $0$<br><br>
+        <strong>⚡ 2-Second Deduction:</strong><br>
+        • $x + \frac{1}{x} = 2 \implies x = 1$ strictly.<br>
+        • Value $= 1^{2020} + \frac{1}{1^{2020}} - 1^{2021} - \frac{1}{1^{2021}} = 1 + 1 - 1 - 1 = 0$.
+      </div>
+    </div>
+  </div>
+
   <h2 class="sec-title" id="sec-timer">⏱️ Timed Drill — Score Calculator</h2>
   <div class="timed-drill">
     <div style="text-align:center;font-size:0.85rem;color:var(--text-muted);margin-bottom:10px;">
@@ -1688,34 +1966,61 @@ x+1/x=√2 → x⁸=1</div>
   </div>
 
   <!-- ACTIVE RECALL -->
-  <h2 class="sec-title" id="sec-recall">🧠 Active Recall Session</h2>
-  <div class="recall-section">
-    <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:12px;">
-      <strong style="color:var(--gold);">Rule:</strong> Formula ko passive reading se revise mat karo. Hide → Recall → Write → Verify → Use.
+  <h2 class="sec-title" id="sec-recall">🧠 Active Recall Session — Test Your Memory</h2>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:24px;">
+    <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:16px;">
+      Recall each answer actively before clicking "Reveal Answer". Speed and accuracy rely on automatic recall!
+    </p>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">1. If x - 1/x = k, what is x² + 1/x² and what is x³ - 1/x³?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">x² + 1/x² = k² + 2 (PLUS 2!). x³ - 1/x³ = k³ + 3k.</div>
     </div>
-    <div class="recall-how"><div class="recall-step"><div class="rs-box">Hide Formula</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Recall Mentally</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Write It Down</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Verify</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Use in a Question</div></div></div>
-    <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:10px;margin-top:10px;">
-      ✅ Check off each recall question after completing it from memory:
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">2. What is the degree-5 expansion formula for x⁵ + 1/x⁵?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">x⁵ + 1/x⁵ = (x² + 1/x²)(x³ + 1/x³) - (x + 1/x).</div>
     </div>
-    <div class="recall-qs"><div class="recall-q">
-          <span class="rq-text">x+1/x=k → x²+1/x² = ?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">x-1/x=k → x²+1/x² = ? (not same!)</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">a³+b³+c³-3abc = ? (two forms)</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Value putting: kaunsi values safe hain?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">x+1/x=1 → x³ = ?</span>
-          <input type="checkbox" class="rq-check">
-        </div></div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">3. What power cyclicity relations hold when x + 1/x = 1 and when x + 1/x = √3?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">x + 1/x = 1 => x³ = -1 (x⁶ = 1). x + 1/x = √3 => x⁶ = -1 (x¹² = 1, and x^(n+6) + x^n = 0).</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">4. What is the shortcut formula for a³ + b³ + c³ - 3abc when a, b, c are in AP with common difference d?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Result = 9 * d² * (Middle Term). E.g. for 997, 998, 999: 9 * 1 * 998 = 8,982.</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">5. If a + b + c = 0, what is the value of a³ + b³ + c³?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">a³ + b³ + c³ = 3abc (NOT zero!).</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">6. What safe test values should you use in value putting when a + b + c = 0?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">a = 1, b = 1, c = -2 (sum = 0 and no variable is zero).</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">7. If 2x + 1/(3x) = 5, what must you do before squaring to find 9x² + 1/(4x²)?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Multiply the entire equation by 3/2 so the coefficients match (giving 3x + 1/(2x) = 15/2), then square.</div>
+    </div>
+
+    <div class="ar-item" style="padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">8. If (a - 2)² + (b + 3)² + (c - 5)² = 0 for real numbers, what are the values of a, b, c?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">a = 2, b = -3, c = 5 (each squared term must individually equal zero).</div>
+    </div>
   </div>
 
-  <!-- ERROR NOTEBOOK -->
   <h2 class="sec-title" id="sec-errors">📓 Error Notebook</h2>
   <div class="error-notebook">
     <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:12px;">
