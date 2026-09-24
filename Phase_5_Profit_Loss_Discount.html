@@ -676,9 +676,375 @@ footer a { color:var(--primary); text-decoration:none; }
   .floating-toc-btn { bottom: 16px; right: 16px; padding: 8px 14px; }
 }
 
+
+/* ── ULTRA-ROBUST MOBILE RESPONSIVENESS & NO-OVERFLOW FIXES ── */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+.container {
+  width: 100% !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+}
+img, svg, video, canvas {
+  max-width: 100% !important;
+  height: auto !important;
+}
+table {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  border-collapse: collapse;
+}
+pre, code, .fc-formula {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  word-break: break-word !important;
+  white-space: pre-wrap !important;
+}
+
+/* Grids responsive adjustments */
+.formula-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  gap: 14px !important;
+  margin-bottom: 22px !important;
+}
+.two-col {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  gap: 16px !important;
+  margin-bottom: 22px !important;
+}
+.shortcut-grid, .trap-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+  gap: 12px !important;
+}
+.rs-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) !important;
+  gap: 10px !important;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px 8px !important;
+  }
+  .formula-grid, .two-col, .shortcut-grid, .trap-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .day-card {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  .app-navbar {
+    padding: 8px 10px !important;
+    gap: 6px !important;
+    margin-bottom: 12px !important;
+  }
+  .nav-brand .brand-text {
+    font-size: 0.84rem !important;
+  }
+  .nav-brand .brand-badge {
+    display: none !important;
+  }
+  .nav-right {
+    gap: 4px !important;
+  }
+  .nav-icon-btn {
+    padding: 5px 8px !important;
+    font-size: 0.72rem !important;
+  }
+  .phase-hero {
+    padding: 22px 14px !important;
+  }
+  h1 {
+    font-size: 1.4rem !important;
+  }
+  .mastery-levels {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 6px !important;
+  }
+  .en-form {
+    grid-template-columns: 1fr !important;
+  }
+  .timer-display {
+    font-size: 2.3rem !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .mastery-levels {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .rs-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .nav-brand .brand-text {
+    font-size: 0.78rem !important;
+  }
+}
+
+/* ── PRINT MODAL ── */
+.print-modal-backdrop {
+  position: fixed; inset: 0;
+  background: rgba(4, 7, 13, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1050;
+  display: flex; align-items: center; justify-content: center;
+  padding: 16px;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.print-modal-backdrop.active {
+  opacity: 1; pointer-events: auto;
+}
+.print-modal {
+  background: #0f172a;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  max-width: 480px; width: 100%;
+  padding: 24px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+  animation: modalScale 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes modalScale {
+  from { transform: scale(0.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.pm-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 12px;
+}
+.pm-title {
+  font-size: 1.1rem; font-weight: 700; color: #fff;
+  display: flex; align-items: center; gap: 8px;
+}
+.pm-close {
+  background: var(--surface-elevated); border: 1px solid var(--border);
+  color: var(--text-muted); width: 30px; height: 30px; border-radius: 8px;
+  cursor: pointer; font-size: 1rem; display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+}
+.pm-close:hover { color: #fff; border-color: var(--red); background: rgba(241,106,106,0.15); }
+.pm-desc {
+  font-size: 0.84rem; color: #94a3b8; line-height: 1.5; margin-bottom: 18px;
+}
+.pm-options {
+  display: flex; flex-direction: column; gap: 12px;
+}
+.pm-opt-btn {
+  display: flex; align-items: center; gap: 14px;
+  background: var(--surface-elevated); border: 1px solid var(--border);
+  border-radius: 12px; padding: 14px 16px; text-align: left;
+  cursor: pointer; transition: all 0.2s;
+}
+.pm-opt-btn:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 229, 255, 0.12);
+}
+.pmo-icon {
+  font-size: 1.8rem; flex-shrink: 0;
+}
+.pmo-text { display: flex; flex-direction: column; gap: 3px; }
+.pmo-name { font-size: 0.92rem; font-weight: 700; color: #fff; }
+.pmo-sub { font-size: 0.74rem; color: #94a3b8; line-height: 1.35; }
+
+/* ── COMPREHENSIVE COLOR & CLEAN PRINT ENGINE ── */
+@media print {
+  @page {
+    margin: 10mm 10mm;
+    size: auto;
+  }
+  
+  html, body {
+    width: 100% !important;
+    overflow: visible !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+  .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Force browser to print exact background colors, graphics & badges */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Hide interactive navigation & timers during print */
+  .app-navbar, .sidebar-backdrop, .sidebar-drawer, .floating-toc-btn,
+  .phase-nav, .pq-controls, .pq-hint-btn, .pq-reveal-btn, .reveal-sol-btn,
+  .pq-self-rate, .timer-controls, .score-calc, .score-input-row,
+  .en-form, .en-save-btn, .copy-btn, .rs-date-input, .print-modal-backdrop,
+  .topbar, footer, .sidebar-toggle-btn {
+    display: none !important;
+  }
+
+  /* EXPAND ALL PRACTICE QUESTIONS SEQUENTIALLY */
+  .practice-container, .pq-card {
+    display: block !important;
+  }
+  .pq-card-item {
+    display: block !important;
+    margin-bottom: 24px !important;
+    padding-bottom: 16px !important;
+    border-bottom: 1.5px dashed #94a3b8 !important;
+    page-break-inside: avoid !important;
+  }
+  .pq-hint-box, .pq-ans-box, .sol-box {
+    display: block !important;
+    margin-top: 10px !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Page break avoidance for cards */
+  .formula-card, .day-card, .shortcut-card, .trap-card, .pyq-card, .en-entry {
+    page-break-inside: avoid !important;
+    margin-bottom: 14px !important;
+  }
+
+  /* LIGHT / WHITE PAPER COLOR PRINT MODE */
+  body.print-mode-light {
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+  body.print-mode-light .phase-hero {
+    background: #f8fafc !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #0f172a !important;
+  }
+  body.print-mode-light h1, body.print-mode-light h2, body.print-mode-light h3, body.print-mode-light .sec-title {
+    color: #0f172a !important;
+    -webkit-text-fill-color: initial !important;
+  }
+  body.print-mode-light .hero-objective {
+    background: #f0fdf4 !important;
+    border: 1px solid #bbf7d0 !important;
+    color: #166534 !important;
+  }
+  body.print-mode-light .formula-card,
+  body.print-mode-light .day-card,
+  body.print-mode-light .pq-card,
+  body.print-mode-light .pyq-card,
+  body.print-mode-light .mastery-tracker,
+  body.print-mode-light .mastery-checklist,
+  body.print-mode-light .revision-schedule {
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #1e293b !important;
+  }
+  body.print-mode-light .fc-header {
+    background: #f1f5f9 !important;
+    border-bottom: 1px solid #cbd5e1 !important;
+  }
+  body.print-mode-light .fc-name { color: #0284c7 !important; }
+  body.print-mode-light .fc-formula {
+    background: #f8fafc !important;
+    border-left: 3px solid #0284c7 !important;
+    color: #0369a1 !important;
+  }
+  body.print-mode-light .pq-question, body.print-mode-light .pyq-q {
+    color: #0f172a !important;
+    font-weight: 600 !important;
+  }
+  body.print-mode-light .pq-hint-box {
+    background: #fefce8 !important;
+    color: #854d0e !important;
+    border-left: 3px solid #ca8a04 !important;
+  }
+  body.print-mode-light .pq-ans-box {
+    background: #f0fdf4 !important;
+    color: #166534 !important;
+    border-left: 3px solid #16a34a !important;
+  }
+  body.print-mode-light .sol-box {
+    background: #f5f3ff !important;
+    color: #5b21b6 !important;
+    border-left: 3px solid #7c3aed !important;
+  }
+  body.print-mode-light .trap-card {
+    background: #fef2f2 !important;
+    color: #991b1b !important;
+    border: 1px solid #fecaca !important;
+  }
+  body.print-mode-light .shortcut-card {
+    background: #fffbeb !important;
+    color: #92400e !important;
+    border: 1px solid #fde68a !important;
+  }
+
+  /* DARK FULL COLOR PRINT MODE (For saving complete Neon PDF) */
+  body.print-mode-dark {
+    background: #080B12 !important;
+    color: #F0F4F8 !important;
+  }
+  body.print-mode-dark .phase-hero,
+  body.print-mode-dark .formula-card,
+  body.print-mode-dark .day-card,
+  body.print-mode-dark .pq-card,
+  body.print-mode-dark .pyq-card,
+  body.print-mode-dark .mastery-tracker {
+    background: #0f1623 !important;
+    border: 1px solid #1e2e47 !important;
+    color: #F0F4F8 !important;
+  }
+}
+
 </style>
 </head>
 <body>
+
+<!-- PRINT OPTIONS MODAL -->
+<div class="print-modal-backdrop" id="print-modal-backdrop">
+  <div class="print-modal">
+    <div class="pm-header">
+      <div class="pm-title">🖨️ Print / Export Complete Notes</div>
+      <button class="pm-close" id="pm-close">✕</button>
+    </div>
+    <p class="pm-desc">Ek hi baar me poora phase notes print karein — sabhi formulas, exam traps, aur <strong>saare practice questions with full solutions</strong> ek saath print honge:</p>
+    <div class="pm-options">
+      <button class="pm-opt-btn pm-color-light" onclick="triggerCompletePrint('light')">
+        <span class="pmo-icon">📄</span>
+        <div class="pmo-text">
+          <div class="pmo-name">Clean Color Print (Paper Friendly)</div>
+          <div class="pmo-sub">White background par colorful badges aur formula boxes (Ink saving)</div>
+        </div>
+      </button>
+      <button class="pm-opt-btn pm-color-dark" onclick="triggerCompletePrint('dark')">
+        <span class="pmo-icon">🎨</span>
+        <div class="pmo-text">
+          <div class="pmo-name">Full Color Notes (Save as PDF)</div>
+          <div class="pmo-sub">Dark theme, glowing formulas aur colorful badges ke saath</div>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+
 <div class="container">
 
   
@@ -948,7 +1314,7 @@ footer a { color:var(--primary); text-decoration:none; }
     <div class="nav-right">
       <button class="nav-icon-btn" id="nav-toc-btn" title="Open Jump Menu">📑 Jump</button>
       <a href="index.html" class="nav-icon-btn" title="Master Hub">🏠 Hub</a>
-      <button class="nav-icon-btn" onclick="window.print()" title="Print Study Notes">🖨️ Print</button>
+      <button class="nav-icon-btn" onclick="openPrintModal()" title="Print Study Notes">🖨️ Print</button>
     </div>
   </nav>
 
@@ -1679,6 +2045,54 @@ document.querySelectorAll('.rs-date-input').forEach(inp => {
     });
   }
 })();
+
+
+// ── COMPLETE NOTES COLOR PRINT CONTROLLER ──
+function openPrintModal() {
+  const modal = document.getElementById('print-modal-backdrop');
+  if (modal) modal.classList.add('active');
+}
+function closePrintModal() {
+  const modal = document.getElementById('print-modal-backdrop');
+  if (modal) modal.classList.remove('active');
+}
+document.getElementById('pm-close')?.addEventListener('click', closePrintModal);
+document.getElementById('print-modal-backdrop')?.addEventListener('click', (e) => {
+  if (e.target.id === 'print-modal-backdrop') closePrintModal();
+});
+
+function triggerCompletePrint(mode) {
+  closePrintModal();
+  document.body.classList.remove('print-mode-dark', 'print-mode-light');
+  document.body.classList.add(mode === 'dark' ? 'print-mode-dark' : 'print-mode-light');
+
+  // Reveal all practice questions & solutions
+  const cards = document.querySelectorAll('.pq-card-item');
+  const hints = document.querySelectorAll('.pq-hint-box, .pq-ans-box, .sol-box');
+
+  cards.forEach(c => c.style.display = 'block');
+  hints.forEach(h => h.style.display = 'block');
+
+  setTimeout(() => {
+    window.print();
+    setTimeout(() => {
+      document.body.classList.remove('print-mode-dark', 'print-mode-light');
+      if (typeof currentPQ !== 'undefined' && cards.length) {
+        cards.forEach((c, idx) => c.style.display = (idx === currentPQ) ? 'block' : 'none');
+      }
+      hints.forEach(h => h.style.display = 'none');
+    }, 1000);
+  }, 250);
+}
+
+window.addEventListener('afterprint', () => {
+  document.body.classList.remove('print-mode-dark', 'print-mode-light');
+  const cards = document.querySelectorAll('.pq-card-item');
+  if (typeof currentPQ !== 'undefined' && cards.length) {
+    cards.forEach((c, idx) => c.style.display = (idx === currentPQ) ? 'block' : 'none');
+  }
+  document.querySelectorAll('.pq-hint-box, .pq-ans-box, .sol-box').forEach(h => h.style.display = 'none');
+});
 
 </script>
 </body>
