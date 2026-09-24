@@ -33,6 +33,30 @@ Har HTML/CSS notes page ke liye standard visual architecture & styling guide:
 
 ---
 
+## ⚡ Direct Access: All 16 Completed Interactive Phase Web Apps
+
+The interactive modules have been built adhering to all rules in [AI Tutor Rule.md](AI%20Tutor%20Rule.md):
+
+| Phase | Title | Interactive Web Module |
+| :---: | :--- | :---: |
+| ⚡ | **All-in-One Learning Hub** | [Open Master Portal (index.html)](index.html) |
+| 0 | Calculation Foundation | [Open Phase 0 HTML](Phase_0_Calculation_Foundation.html) |
+| 1 | Number System | [Open Phase 1 HTML](Phase_1_Number_System.html) |
+| 2 | Percentage | [Open Phase 2 HTML](Phase_2_Percentage.html) |
+| 3 | Ratio & Proportion | [Open Phase 3 HTML](Phase_3_Ratio_and_Proportion.html) |
+| 4 | Average | [Open Phase 4 HTML](Phase_4_Average.html) |
+| 5 | Profit, Loss & Discount | [Open Phase 5 HTML](Phase_5_Profit_Loss_Discount.html) |
+| 6 | Simple & Compound Interest | [Open Phase 6 HTML](Phase_6_Simple_and_Compound_Interest.html) |
+| 7 | Partnership & Mixtures | [Open Phase 7 HTML](Phase_7_Partnership_and_Mixtures.html) |
+| 8 | Time & Work + Pipes | [Open Phase 8 HTML](Phase_8_Time_and_Work.html) |
+| 9 | Time, Speed & Distance | [Open Phase 9 HTML](Phase_9_Time_Speed_Distance.html) |
+| 10 | Algebra | [Open Phase 10 HTML](Phase_10_Algebra.html) |
+| 11 | Geometry | [Open Phase 11 HTML](Phase_11_Geometry.html) |
+| 12 | Mensuration 2D & 3D | [Open Phase 12 HTML](Phase_12_Mensuration.html) |
+| 13 | Trigonometry | [Open Phase 13 HTML](Phase_13_Trigonometry.html) |
+| 14 | Data Interpretation & Statistics | [Open Phase 14 HTML](Phase_14_DI_and_Statistics.html) |
+| 15 | Revision & Mock Tests | [Open Phase 15 HTML](Phase_15_Revision_and_Mocks.html) |
+
 ---
 
 # PHASE 0 — Calculation Foundation (Days 1–5)

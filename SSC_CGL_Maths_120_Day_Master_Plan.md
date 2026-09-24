@@ -52,6 +52,32 @@
 
 ---
 
+## 🌐 Interactive Web Study Modules (Built on AI Tutor Rules)
+
+Access all interactive single-page study modules featuring Mastery Level Trackers (L0–L4), Formula Vaults, Interactive Practice with Hidden Hints, Real-Time Stopwatch Drills, and LocalStorage Error Notebooks:
+
+| Phase | Topic | Days | Interactive Module |
+| :---: | :--- | :---: | :---: |
+| ⚡ | **All Phases Learning Portal** | — | [Open Master Hub ➔](index.html) |
+| 0 | Calculation Foundation | Days 1–5 | [Open Phase 0 Notes ➔](Phase_0_Calculation_Foundation.html) |
+| 1 | Number System | Days 6–12 | [Open Phase 1 Notes ➔](Phase_1_Number_System.html) |
+| 2 | Percentage | Days 13–20 | [Open Phase 2 Notes ➔](Phase_2_Percentage.html) |
+| 3 | Ratio & Proportion | Days 21–26 | [Open Phase 3 Notes ➔](Phase_3_Ratio_and_Proportion.html) |
+| 4 | Average | Days 27–31 | [Open Phase 4 Notes ➔](Phase_4_Average.html) |
+| 5 | Profit, Loss & Discount | Days 32–39 | [Open Phase 5 Notes ➔](Phase_5_Profit_Loss_Discount.html) |
+| 6 | Simple & Compound Interest | Days 40–44 | [Open Phase 6 Notes ➔](Phase_6_Simple_and_Compound_Interest.html) |
+| 7 | Partnership + Mixture | Days 45–51 | [Open Phase 7 Notes ➔](Phase_7_Partnership_and_Mixtures.html) |
+| 8 | Time & Work + Pipes | Days 52–59 | [Open Phase 8 Notes ➔](Phase_8_Time_and_Work.html) |
+| 9 | Time, Speed & Distance | Days 60–67 | [Open Phase 9 Notes ➔](Phase_9_Time_Speed_Distance.html) |
+| 10 | Algebra | Days 68–72 | [Open Phase 10 Notes ➔](Phase_10_Algebra.html) |
+| 11 | Geometry | Days 73–78 | [Open Phase 11 Notes ➔](Phase_11_Geometry.html) |
+| 12 | Mensuration 2D & 3D | Days 79–83 | [Open Phase 12 Notes ➔](Phase_12_Mensuration.html) |
+| 13 | Trigonometry + H&D | Days 84–87 | [Open Phase 13 Notes ➔](Phase_13_Trigonometry.html) |
+| 14 | DI & Statistics | Day 88 | [Open Phase 14 Notes ➔](Phase_14_DI_and_Statistics.html) |
+| 15 | Revision, PYQs & Mocks | Days 89–120 | [Open Phase 15 Notes ➔](Phase_15_Revision_and_Mocks.html) |
+
+---
+
 # 1. Course Objective
 
 The objective is not simply to "finish chapters".
