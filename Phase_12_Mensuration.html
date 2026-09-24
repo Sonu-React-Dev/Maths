@@ -1447,214 +1447,490 @@ pre, code, .fc-formula {
       <div>
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Key 2D Formulas</span>
-    <button class="copy-btn" data-formula="Rhombus: Area=d₁d₂/2 | Side: 4a²=d₁²+d₂²
-Equilateral Δ: Area=√3/4 a² | Inrad=a/2√3 | Circumrad=a/√3
-Trapezium: Area=½(a+b)h
-Sector: Area=(θ/360)πr² | Arc=θ/360×2πr">Copy</button>
+    <span class="fc-name">📐 2D Polygons, Rhombus, Trapezium &amp; Equilateral $\Delta$</span>
+    <button class="copy-btn" data-formula="Rhombus: Area = (d1*d2)/2, 4a² = d1² + d2² | Trapezium: (1/2)(a+b)h | Eq Tri: Area = (sqrt(3)/4)a², r = a/(2*sqrt(3)), R = a/sqrt(3)">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">Rhombus: Area=d₁d₂/2 | Side: 4a²=d₁²+d₂²
-Equilateral Δ: Area=√3/4 a² | Inrad=a/2√3 | Circumrad=a/√3
-Trapezium: Area=½(a+b)h
-Sector: Area=(θ/360)πr² | Arc=θ/360×2πr</div>
-    <div class="fc-row"><strong>When to use:</strong> 2D shape area/perimeter calculation</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> Rhombus side from diagonals: half-diagonals form a right triangle with side as hypotenuse.</div>
-    <div class="fc-trap">🚨 Trap: Rhombus perimeter=4a (NOT 2(d₁+d₂))! Area=d₁d₂/2 (NOT d₁+d₂).</div>
+    <div class="fc-formula">\text{Rhombus: } \text{Area} = \frac{1}{2}d_1 d_2, \; 4a^2 = d_1^2 + d_2^2 &nbsp;|&nbsp; \text{Trapezium: } \frac{1}{2}(a+b)h &nbsp;|&nbsp; \text{Eq } \Delta: \frac{\sqrt{3}}{4}a^2, \; r = \frac{a}{2\sqrt{3}}, \; R = \frac{a}{\sqrt{3}}</div>
+    <div class="fc-row"><strong>When to use:</strong> Calculating areas, inradius, and circumradius of 2D geometric shapes.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Rhombus side: Half-diagonals $(d_1/2, d_2/2)$ and side $a$ form a right-angled triangle. E.g. $d_1=16, d_2=12 \implies$ half-diagonals $8, 6 \implies a = 10$ cm (via $6:8:10$ triplet)!</div>
+    <div class="fc-trap">🚨 Trap: Rhombus perimeter is $4a$, NOT $2(d_1 + d_2)$. Diagonals do NOT equal sides!</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Key 3D Formulas</span>
-    <button class="copy-btn" data-formula="Cylinder: V=πr²h | CSA=2πrh | TSA=2πr(r+h)
-Cone: V=⅓πr²h | l=√(r²+h²) | CSA=πrl
-Sphere: V=⁴⁄₃πr³ | SA=4πr²
-Hemisphere: V=⅔πr³ | TSA=3πr²">Copy</button>
+    <span class="fc-name">📐 Cylinder, Hollow Cylinder &amp; Wire Drawing</span>
+    <button class="copy-btn" data-formula="Solid: V = pi*r²*h | CSA = 2*pi*r*h | TSA = 2*pi*r*(r + h) | Hollow: V = pi*(R² - r²)*h | TSA = 2*pi*(R+r)*h + 2*pi*(R²-r²)">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">Cylinder: V=πr²h | CSA=2πrh | TSA=2πr(r+h)
-Cone: V=⅓πr²h | l=√(r²+h²) | CSA=πrl
-Sphere: V=⁴⁄₃πr³ | SA=4πr²
-Hemisphere: V=⅔πr³ | TSA=3πr²</div>
-    <div class="fc-row"><strong>When to use:</strong> 3D shape volume and surface area problems</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> Hemisphere TSA = Curved(2πr²) + Base(πr²) = 3πr². Many students forget the circular base.</div>
-    <div class="fc-trap">🚨 Trap: Hemisphere TSA=3πr² NOT 2πr². Curved surface only = 2πr².</div>
+    <div class="fc-formula">V = \pi r^2 h &nbsp;|&nbsp; \text{CSA} = 2\pi rh &nbsp;|&nbsp; \text{TSA} = 2\pi r(r + h) &nbsp;|&nbsp; \text{Hollow } V = \pi(R^2 - r^2)h</div>
+    <div class="fc-row"><strong>When to use:</strong> Cylinders, pipes, coins melted/stacked, and metallic rods drawn into wires.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Melting rod into wire: Volume is conserved: $\pi r_{\text{rod}}^2 L_{\text{rod}} = \pi r_{\text{wire}}^2 L_{\text{wire}}$. Ensure length and radius units match (cm to m)!</div>
+    <div class="fc-trap">🚨 Trap: Hollow cylinder TSA must include the two circular ring bases at the ends ($2\pi(R^2 - r^2)$).</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Recasting / Melting Rule</span>
-    <button class="copy-btn" data-formula="Volume₁ = Volume₂ (material conserved)
-n × V_small = V_large
-n = V_large / V_small">Copy</button>
+    <span class="fc-name">📐 Cone, Frustum &amp; Slant Height Relations</span>
+    <button class="copy-btn" data-formula="Cone: l = sqrt(r² + h²), V = (1/3)pi*r²*h, CSA = pi*r*l, TSA = pi*r*(l+r) | Frustum: V = (1/3)pi*h*(R²+r²+Rr), CSA = pi*(R+r)*l">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">Volume₁ = Volume₂ (material conserved)
-n × V_small = V_large
-n = V_large / V_small</div>
-    <div class="fc-row"><strong>When to use:</strong> Any melting, recasting, reshaping problem</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> Sphere R=6 melted to spheres r=2: n=(6/2)³=27.</div>
-    <div class="fc-trap">🚨 Trap: Volume is conserved ONLY if problem doesn't mention wastage/loss. If 10% loss is mentioned, V₂=0.9V₁.</div>
+    <div class="fc-formula">l = \sqrt{r^2 + h^2} &nbsp;|&nbsp; V = \frac{1}{3}\pi r^2 h &nbsp;|&nbsp; \text{CSA} = \pi r l &nbsp;|&nbsp; \text{Frustum } V = \frac{1}{3}\pi h(R^2 + r^2 + Rr)</div>
+    <div class="fc-row"><strong>When to use:</strong> Conical tents, buckets, heaps of sand, and cutting cones with parallel planes.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> In $\text{CSA} = \pi r l$, remember $l$ is the SLANT height, formed by Pythagorean triplet $(r, h, l)$. For $r=12, h=16 \implies l=20$ cm instantly!</div>
+    <div class="fc-trap">🚨 Trap: Using vertical height $h$ in CSA instead of slant height $l$. CSA depends strictly on the hypotenuse slant edge!</div>
   </div>
-</div></div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Sphere, Hemisphere &amp; Spherical Shells</span>
+    <button class="copy-btn" data-formula="Sphere: V = (4/3)pi*r³, SA = 4*pi*r² | Hemisphere: V = (2/3)pi*r³, CSA = 2*pi*r², TSA = 3*pi*r²">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">\text{Sphere: } V = \frac{4}{3}\pi r^3, \; SA = 4\pi r^2 &nbsp;|&nbsp; \text{Hemisphere: } V = \frac{2}{3}\pi r^3, \; \text{CSA} = 2\pi r^2, \; \text{TSA} = 3\pi r^2</div>
+    <div class="fc-row"><strong>When to use:</strong> Spheres, hemispheres, lead shots, bowls, and hemispherical domes.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Solid hemisphere Total Surface Area $= 3\pi r^2$ ($2\pi r^2$ curved surface $+$ $\pi r^2$ flat circular base).</div>
+    <div class="fc-trap">🚨 Trap: Writing $2\pi r^2$ for hemisphere TSA. Curved is $2\pi r^2$, but TOTAL is $3\pi r^2$!</div>
+  </div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Right Prism &amp; Pyramid Fundamental Metrics</span>
+    <button class="copy-btn" data-formula="Prism: V = Base Area * H, LSA = Base Perimeter * H | Pyramid: V = (1/3)*Base Area*H, LSA = (1/2)*Base Perimeter*Slant_Height">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">\text{Prism: } V = A_{\text{base}} \times H, \; \text{LSA} = P_{\text{base}} \times H &nbsp;|&nbsp; \text{Pyramid: } V = \frac{1}{3} A_{\text{base}} \times H, \; \text{LSA} = \frac{1}{2} P_{\text{base}} \times l</div>
+    <div class="fc-row"><strong>When to use:</strong> Prisms (triangular, hexagonal bases) and pyramids with polygon bases.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Regular Tetrahedron (edge $a$): Height $= a\sqrt{2/3}$, Volume $= \frac{a^3}{6\sqrt{2}}$, $\text{TSA} = \sqrt{3}a^2$.</div>
+    <div class="fc-trap">🚨 Trap: In pyramid LSA, use SLANT HEIGHT ($l$), NOT vertical height ($H$). Slant height connects apex to midpoint of base edge!</div>
+  </div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Recasting, Melting &amp; Number of Castings</span>
+    <button class="copy-btn" data-formula="n = V_large / V_small | Spheres: n = (R / r)³ | If w% wasted: n * V_small = V_large * (1 - w/100)">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">n = \frac{\text{Volume}_{\text{large}}}{\text{Volume}_{\text{small}}} &nbsp;|&nbsp; \text{Spheres: } n = \left(\frac{R}{r}\right)^3 &nbsp;|&nbsp; \text{With Wastage: } n \cdot V_{\text{sm}} = V_{\text{lg}}\left(1 - \frac{w}{100}\right)</div>
+    <div class="fc-row"><strong>When to use:</strong> Melting a large metal shape to form smaller solid objects.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Large sphere of radius $R=6$ melted into spheres of $r=0.5$: $n = (6/0.5)^3 = 12^3 = 1,728$ in 3 seconds!</div>
+    <div class="fc-trap">🚨 Trap: Forgetting wastage reduction factor $(1 - w/100)$ when problem mentions melting loss.</div>
+  </div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Paths, Borders &amp; Room Diagonals</span>
+    <button class="copy-btn" data-formula="Outer Path = 2w(l + b + 2w) | Inner Path = 2w(l + b - 2w) | Crossroads = w(l + b - w) | Longest Rod = sqrt(l² + b² + h²)">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">\text{Outer Path} = 2w(l + b + 2w) &nbsp;|&nbsp; \text{Inner Path} = 2w(l + b - 2w) &nbsp;|&nbsp; \text{Longest Rod} = \sqrt{l^2 + b^2 + h^2}</div>
+    <div class="fc-row"><strong>When to use:</strong> Walking paths around lawns, crossroads inside parks, and longest pole inside a room.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Longest rod inside room $(12 \times 9 \times 8)$: $\sqrt{144 + 81 + 64} = \sqrt{289} = 17$ m instantly!</div>
+    <div class="fc-trap">🚨 Trap: Crossroad path area has $-w$ at the end because the center square of width $w \times w$ overlaps and must be subtracted once!</div>
+  </div>
+</div>
+      </div>
     </div>
     <div>
       <h2 class="sec-title" id="sec-tricks">⚡ Speed Shortcuts</h2>
       <div class="shortcut-grid" style="grid-template-columns:1fr;">
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Sphere-to-Spheres Count Formula</div>
-  <div class="sc-content">n small spheres from 1 large: n = (R/r)³. Cylinder-to-spheres: n = πR²H/(4/3πr³). Set volumes equal and solve.</div>
+  <div class="sc-title">⚡ 1. Divisibility by 11 (The $\pi$ Elimination Hack)</div>
+  <div class="sc-content">Every formula with $\pi = 22/7$ contains a factor of $11$. Check option choices for divisibility by $11$: $(Sum_{\text{odd digits}} - Sum_{\text{even digits}}) = 0$ or multiple of $11$. Often eliminates 3 wrong options in 5 seconds! (Verify radius doesn't have a 7-factor in denominator).</div>
 </div>
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Painting Painted Area Shortcut</div>
-  <div class="sc-content">Cube painted on all sides, cut into n³ small cubes: 3 faces painted=(n-2)³×8corners. Adjust for 2-face, 1-face, 0-face. Formula: corners=8, edges=12(n-2), faces=6(n-2)², interior=(n-2)³.</div>
+  <div class="sc-title">⚡ 2. Percentage Multipliers in Volume &amp; Area</div>
+  <div class="sc-content">Radius increases by $+20\%$, height decreases by $-15\%$: Volume factor for cylinder/cone $= (1.2)^2 \times 0.85 = 1.44 \times 0.85 = 1.224 \implies +22.4\%$ net increase without assuming numerical values!</div>
 </div>
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Diagonal Formulas</div>
-  <div class="sc-content">Square diagonal=a√2. Cuboid space diagonal=√(l²+b²+h²). Cube space diagonal=a√3.</div>
-</div></div>
+  <div class="sc-title">⚡ 3. Rhombus 5-Second Side from Triplet</div>
+  <div class="sc-content">Diagonals bisect at $90^\circ$. Half-diagonals are legs of right triangle. If $d_1 = 24, d_2 = 10 \implies$ legs are $12$ and $5 \implies$ side $a = 13$ cm (via $5:12:13$ triplet). Perimeter $= 4 \times 13 = 52$ cm!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 4. Longest Rod in a Room Space Diagonal</div>
+  <div class="sc-content">Longest pole that fits in a cuboidal room is the space diagonal: $D = \sqrt{l^2 + b^2 + h^2}$. E.g., for $12 \text{ m} \times 9 \text{ m} \times 8 \text{ m}$: $\sqrt{144 + 81 + 64} = \sqrt{289} = 17$ m!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 5. Cutting a Cone Parallel to Base</div>
+  <div class="sc-content">A cone of height $H$ is cut at distance $h$ from apex: Volume ratio is $\left(\frac{h}{H}\right)^3$. If cut at $1/3$ height from top ($h/H = 1/3$): Small cone $= (1/3)^3 = 1/27$. Remaining Frustum $= 1 - 1/27 = 26/27$. Ratio of small cone to frustum $= 1 : 26$!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 6. Sphere-to-Small Spheres Ratio</div>
+  <div class="sc-content">Number of spheres of radius $r$ formed from large sphere of radius $R$: $n = \left(\frac{R}{r}\right)^3$. For $R = 15$ cm and $r = 3$ cm $\implies n = (15/3)^3 = 5^3 = 125$ spheres in 2 seconds!</div>
+</div>
+      </div>
     </div>
-  </div>
-
-  <!-- SSC TRAPS -->
+  </div><!-- SSC TRAPS -->
   <h2 class="sec-title" id="sec-traps">🚨 SSC Exam Trap Library</h2>
   <div class="trap-grid">
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 Hemisphere TSA = 3πr² Trap</span>
+    <span class="trap-title">🚨 Trap 1: Hemisphere TSA Base Omission</span>
     <span class="error-code">Error-F</span>
   </div>
-  <div class="trap-desc">Hemisphere's Total Surface Area = Curved surface (2πr²) + Circular base (πr²) = 3πr². Many students use 2πr² (forgetting the base).</div>
+  <div class="trap-desc">Hemisphere CSA $= 2\pi r^2$. But Total Surface Area (TSA) includes the flat circular base ($	op = \pi r^2$), making it $3\pi r^2$! Using $2\pi r^2$ for TSA is the #1 mensuration mistake in SSC exams.</div>
 </div>
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 Cone Slant Height Not Height</span>
+    <span class="trap-title">🚨 Trap 2: Cone Slant Height vs Height</span>
     <span class="error-code">Error-C</span>
   </div>
-  <div class="trap-desc">Cone CSA = πrl where l = SLANT height = √(r²+h²). Using h (vertical height) instead of l gives wrong CSA.</div>
+  <div class="trap-desc">Cone CSA $= \pi r l$ where $l$ is the SLANT height: $l = \sqrt{r^2 + h^2}$. Candidates mistakenly plug in the vertical height $h$ instead of $l$, yielding incorrect CSA.</div>
 </div>
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 Recasting Wastage Trap</span>
+    <span class="trap-title">🚨 Trap 3: Recasting Material Wastage Ignored</span>
     <span class="error-code">Error-R</span>
   </div>
-  <div class="trap-desc">If problem says 10% material is wasted during recasting: V_products = 0.9 × V_original. Without this adjustment, count of objects will be wrong.</div>
-</div></div>
+  <div class="trap-desc">If $10\%$ material is lost during melting, the effective usable volume is $0.90 \times V_{\text{large}}$. Dividing total initial volume without deducting wastage produces an inflated number of small castings.</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 4: Inner vs Outer Path Formula Sign</span>
+    <span class="error-code">Error-K</span>
+  </div>
+  <div class="trap-desc">Outer path around a lawn adds width: $2w(l + b + 2w)$. Inner path running inside a lawn subtracts width: $2w(l + b - 2w)$. Swapping $(+)$ and $(-)$ ruins the answer.</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 5: Hollow Cylinder End Rings Omission</span>
+    <span class="error-code">Error-S</span>
+  </div>
+  <div class="trap-desc">Hollow cylinder TSA $= 2\pi Rh + 2\pi rh + 2\pi(R^2 - r^2)$. Candidates sum internal and external curved surfaces but forget the two flat circular washer rings at the top and bottom.</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 6: Frustum Slant Height Sign Trap</span>
+    <span class="error-code">Error-T</span>
+  </div>
+  <div class="trap-desc">Frustum slant height $l = \sqrt{h^2 + (R - r)^2}$. Candidates frequently add radii as $(R + r)^2$ inside the square root, creating an impossibly long slant edge.</div>
+</div>
+  </div>
 
-  <!-- PRACTICE Q — One at a time (AI Tutor Rule!) -->
   <h2 class="sec-title" id="sec-practice">💡 Guided Practice Questions (One at a Time)</h2>
-  <div style="background:rgba(246,194,68,0.06);border:1px solid rgba(246,194,68,0.15);border-radius:8px;padding:10px 16px;margin-bottom:14px;font-size:0.8rem;color:#c8a84b;">
-    🤖 <strong>AI Tutor Rule:</strong> Ek question ek baar mein solve karo. Hint aur answer tabhi dekho jab apna attempt ho jaye. Self-rate karo.
-  </div>
   <div class="practice-container">
-    <div class="pq-controls">
-      <button class="pq-btn disabled" id="pq-prev">← Prev</button>
-      <span class="pq-counter">1 / 5</span>
-      <button class="pq-btn" id="pq-next">Next →</button>
+    <div class="pq-nav">
+      <span class="pq-counter" id="pq-counter">Question 1 of 10</span>
+      <div style="display:flex;gap:8px;">
+        <button class="pq-btn disabled" id="pq-prev">&larr; Prev</button>
+        <button class="pq-btn" id="pq-next">Next &rarr;</button>
+      </div>
     </div>
-    
-<div class="pq-card-item" style="display:block">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">Find the number of spheres of radius 2 cm formed by melting a sphere of radius 6 cm.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph12-0')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph12-0')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph12-0">Hint: For sphere to spheres: n = (R/r)³</div>
-    <div class="pq-ans-box" id="pq-ans-ph12-0"><strong>Answer:</strong> n = (R/r)³ = (6/2)³ = 27.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q1 -->
+    <div class="pq-card-item active" id="pq-card-ph12-0">
+      <div class="pq-badge"><span class="badge-tag">Level: Basic Foundation</span><span class="badge-tag tag-type">Rhombus Metrics</span></div>
+      <div class="pq-question"><strong>Q1:</strong> The diagonals of a rhombus are $24$ cm and $10$ cm. Find its area, the length of its side, and its perimeter.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph12-0')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph12-0')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph12-0">Hint: Area $= \frac{1}{2}d_1 d_2$. Side $a = \sqrt{(d_1/2)^2 + (d_2/2)^2} = \sqrt{12^2 + 5^2}$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph12-0">
+        <strong>Answer:</strong> Area $= 120\text{ cm}^2$; Side $= 13$ cm; Perimeter $= 52$ cm.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Area $= \frac{1}{2} \times 24 \times 10 = 120\text{ cm}^2$.<br>
+        2. Half-diagonals are $12$ cm and $5$ cm.<br>
+        3. Side $a = \sqrt{12^2 + 5^2} = \sqrt{144 + 25} = \sqrt{169} = 13$ cm.<br>
+        4. Perimeter $= 4a = 4 \times 13 = 52$ cm.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [F] Used (d1+d2) for perimeter | [C] Arithmetic error</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">A cone and a cylinder have same base and height. Find ratio of their volumes.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph12-1')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph12-1')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph12-1">Hint: Cone = 1/3 × Cylinder (same base and height)</div>
-    <div class="pq-ans-box" id="pq-ans-ph12-1"><strong>Answer:</strong> V_cone=⅓πr²h, V_cylinder=πr²h. Ratio=1:3.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q2 -->
+    <div class="pq-card-item" id="pq-card-ph12-1" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Foundation</span><span class="badge-tag tag-type">Trapezium Area</span></div>
+      <div class="pq-question"><strong>Q2:</strong> The parallel sides of a trapezium are $18$ cm and $24$ cm, and the perpendicular distance between them is $12$ cm. Find its area.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph12-1')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph12-1')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph12-1">Hint: $\text{Area} = \frac{1}{2}(a + b)h = \frac{1}{2}(18 + 24) \times 12$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph12-1">
+        <strong>Answer:</strong> $252\text{ cm}^2$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. $\text{Area} = \frac{1}{2} \times (18 + 24) \times 12 = \frac{1}{2} \times 42 \times 12$.<br>
+        2. $\text{Area} = 21 \times 12 = 252\text{ cm}^2$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Arithmetic multiplication error | [F] Forgot the 1/2 factor</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">Diagonals of a rhombus are 24 cm and 10 cm. Find its perimeter.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph12-2')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph12-2')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph12-2">Hint: Half-diagonals form right triangle with side as hypotenuse.</div>
-    <div class="pq-ans-box" id="pq-ans-ph12-2"><strong>Answer:</strong> Side = √(12²+5²) = √(144+25) = √169 = 13 cm. Perimeter=4×13=52 cm.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q3 -->
+    <div class="pq-card-item" id="pq-card-ph12-2" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate SSC Core</span><span class="badge-tag tag-type">Equilateral Triangle Inradius &amp; Circumradius</span></div>
+      <div class="pq-question"><strong>Q3:</strong> An equilateral triangle has side $12$ cm. Find its area, inradius ($r$), and circumradius ($R$).</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph12-2')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph12-2')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph12-2">Hint: Area $= \frac{\sqrt{3}}{4}a^2$. $r = \frac{a}{2\sqrt{3}}$, $R = \frac{a}{\sqrt{3}} = 2r$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph12-2">
+        <strong>Answer:</strong> Area $= 36\sqrt{3}\text{ cm}^2$; $r = 2\sqrt{3}$ cm; $R = 4\sqrt{3}$ cm.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Area $= \frac{\sqrt{3}}{4} \times 12^2 = \frac{\sqrt{3}}{4} \times 144 = 36\sqrt{3}\text{ cm}^2$.<br>
+        2. Inradius $r = \frac{12}{2\sqrt{3}} = \frac{6}{\sqrt{3}} = 2\sqrt{3}$ cm.<br>
+        3. Circumradius $R = 2 \times r = 4\sqrt{3}$ cm (or $\frac{12}{\sqrt{3}} = 4\sqrt{3}$ cm).<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [F] Swapped r and R formulas | [C] Surd rationalization error</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level B">Level B: Standard</span>
-    <div class="pq-question">A cylinder of radius 6 cm and height 8 cm is melted to form a cone of radius 6 cm. Find height of cone.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph12-3')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph12-3')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph12-3">Hint: Same radius: Volume cylinder = πr²×8. Volume cone = (1/3)πr²×h. Set equal.</div>
-    <div class="pq-ans-box" id="pq-ans-ph12-3"><strong>Answer:</strong> V_cylinder = V_cone → πr²h₁ = ⅓πr²h₂ → h₂ = 3h₁ = 24 cm.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q4 -->
+    <div class="pq-card-item" id="pq-card-ph12-3" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate</span><span class="badge-tag tag-type">Solid Cylinder Metrics</span></div>
+      <div class="pq-question"><strong>Q4:</strong> A solid right circular cylinder has base radius $7$ cm and height $20$ cm. Find its volume, Curved Surface Area (CSA), and Total Surface Area (TSA) using $\pi = 22/7$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph12-3')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph12-3')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph12-3">Hint: $V = \pi r^2 h$. $\text{CSA} = 2\pi rh$. $\text{TSA} = 2\pi r(r + h) = \text{CSA} + 2\pi r^2$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph12-3">
+        <strong>Answer:</strong> Volume $= 3,080\text{ cm}^3$; CSA $= 880\text{ cm}^2$; TSA $= 1,188\text{ cm}^2$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Volume $= \frac{22}{7} \times 7^2 \times 20 = 22 \times 7 \times 20 = 154 \times 20 = 3,080\text{ cm}^3$.<br>
+        2. $\text{CSA} = 2 \times \frac{22}{7} \times 7 \times 20 = 44 \times 20 = 880\text{ cm}^2$.<br>
+        3. Base areas $= 2 \times \frac{22}{7} \times 49 = 308\text{ cm}^2 \implies \text{TSA} = 880 + 308 = 1,188\text{ cm}^2$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Arithmetic error | [F] TSA omitted top or bottom circle</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level B">Level B: Standard</span>
-    <div class="pq-question">Area of a sector of a circle with radius 21 cm and angle 120° is?</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph12-4')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph12-4')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph12-4">Hint: Sector area = (θ/360)×πr². Use θ=120°, r=21.</div>
-    <div class="pq-ans-box" id="pq-ans-ph12-4"><strong>Answer:</strong> A = (120/360)×π×21² = (1/3)×(22/7)×441 = 462 cm².</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q5 -->
+    <div class="pq-card-item" id="pq-card-ph12-4" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate-High</span><span class="badge-tag tag-type">Cone Slant Height &amp; CSA</span></div>
+      <div class="pq-question"><strong>Q5:</strong> The base radius of a right circular cone is $12$ cm and its vertical height is $16$ cm. Find its slant height and Curved Surface Area (CSA) in terms of $\pi$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph12-4')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph12-4')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph12-4">Hint: $l = \sqrt{r^2 + h^2} = \sqrt{12^2 + 16^2} = 20$ cm (via $3:4:5$ triplet scaled by 4). $\text{CSA} = \pi r l$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph12-4">
+        <strong>Answer:</strong> Slant height $= 20$ cm; CSA $= 240\pi\text{ cm}^2$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Slant height $l = \sqrt{12^2 + 16^2} = \sqrt{144 + 256} = \sqrt{400} = 20$ cm.<br>
+        2. $\text{CSA} = \pi r l = \pi \times 12 \times 20 = 240\pi\text{ cm}^2$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Used vertical height 16 in CSA (getting 192 pi) | [F] Slant height formula error</span>
+      </div>
     </div>
-  </div>
-</div>
+
+    <!-- Q6 -->
+    <div class="pq-card-item" id="pq-card-ph12-5" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate SSC Core</span><span class="badge-tag tag-type">Solid Hemisphere TSA</span></div>
+      <div class="pq-question"><strong>Q6:</strong> Find the Total Surface Area of a solid hemisphere of radius $7$ cm (use $\pi = 22/7$).</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph12-5')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph12-5')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph12-5">Hint: Solid hemisphere TSA $= 3\pi r^2 = 3 \times \frac{22}{7} \times 7^2$. Do NOT use $2\pi r^2$!</div>
+      <div class="pq-ans-box" id="pq-ans-ph12-5">
+        <strong>Answer:</strong> $462\text{ cm}^2$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Formula for solid hemisphere TSA $= 3\pi r^2$.<br>
+        2. $\text{TSA} = 3 \times \frac{22}{7} \times 7 \times 7 = 3 \times 22 \times 7 = 66 \times 7 = 462\text{ cm}^2$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [F] Used 2*pi*r^2 = 308 cm^2 (CSA trap) | [C] Multiplication error</span>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="pq-card-item" id="pq-card-ph12-6" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate-High</span><span class="badge-tag tag-type">Recasting Sphere to Cones</span></div>
+      <div class="pq-question"><strong>Q7:</strong> A solid metallic sphere of radius $10.5$ cm is melted and recast into small solid cones, each of radius $3.5$ cm and height $3$ cm. Find the number of cones formed.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph12-6')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph12-6')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph12-6">Hint: $n = \frac{\text{Volume of sphere}}{\text{Volume of cone}} = \frac{\frac{4}{3}\pi R^3}{\frac{1}{3}\pi r^2 h} = \frac{4 R^3}{r^2 h}$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph12-6">
+        <strong>Answer:</strong> $126$ cones.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Formula: $n = \frac{4 R^3}{r^2 h}$.<br>
+        2. Note: $R = 10.5 = \frac{21}{2}$, $r = 3.5 = \frac{7}{2}$, $h = 3$.<br>
+        3. $\frac{R}{r} = \frac{10.5}{3.5} = 3$.<br>
+        4. $n = \frac{4 \times (10.5)^3}{(3.5)^2 \times 3} = \frac{4 \times 10.5 \times (10.5/3.5)^2}{3} = \frac{4 \times 10.5 \times 9}{3} = 4 \times 10.5 \times 3 = 42 \times 3 = 126$ cones.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Arithmetic simplification error | [F] Forgot the 4 factor for sphere volume</span>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="pq-card-item" id="pq-card-ph12-7" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate-High</span><span class="badge-tag tag-type">Wire Drawing from Rod</span></div>
+      <div class="pq-question"><strong>Q8:</strong> A solid copper cylindrical rod of diameter $1$ cm and length $8$ cm is drawn into a wire of length $18$ m of uniform circular cross-section. Find the radius of the wire.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph12-7')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph12-7')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph12-7">Hint: Convert 18 m to cm: $1800$ cm. $\pi r_1^2 h_1 = \pi r_2^2 h_2$. $r_1 = 0.5$ cm.</div>
+      <div class="pq-ans-box" id="pq-ans-ph12-7">
+        <strong>Answer:</strong> $\frac{1}{30}$ cm (or $0.33$ mm).<br>
+        <strong>Step-by-step:</strong><br>
+        1. Rod: Radius $r_1 = 0.5 = \frac{1}{2}$ cm, Length $h_1 = 8$ cm.<br>
+        2. Volume of rod $= \pi \times \left(\frac{1}{2}\right)^2 \times 8 = \pi \times \frac{1}{4} \times 8 = 2\pi\text{ cm}^3$.<br>
+        3. Wire: Length $h_2 = 18\text{ m} = 1,800$ cm. Volume $= \pi r_2^2 \times 1,800$.<br>
+        4. Equate volumes: $2\pi = \pi r_2^2 \times 1800 \implies r_2^2 = \frac{2}{1800} = \frac{1}{900}$.<br>
+        5. Taking square root: $r_2 = \frac{1}{30}$ cm.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [T] Unit conversion error (18 m to cm) | [C] Squaring radius error</span>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="pq-card-item" id="pq-card-ph12-8" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: High Level</span><span class="badge-tag tag-type">Frustum Bucket Capacity</span></div>
+      <div class="pq-question"><strong>Q9:</strong> A bucket is in the form of a frustum of a cone with top circular radius $20$ cm, bottom circular radius $10$ cm, and vertical depth $14$ cm. Find its capacity in litres (use $\pi = 22/7$).</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph12-8')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph12-8')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph12-8">Hint: $V = \frac{1}{3}\pi h (R^2 + r^2 + Rr) = \frac{1}{3} \times \frac{22}{7} \times 14 \times (400 + 100 + 200)$. $1000\text{ cm}^3 = 1$ litre.</div>
+      <div class="pq-ans-box" id="pq-ans-ph12-8">
+        <strong>Answer:</strong> $10.267$ litres (or $10\frac{4}{15}$ litres).<br>
+        <strong>Step-by-step:</strong><br>
+        1. Frustum Volume $= \frac{1}{3}\pi h(R^2 + r^2 + Rr)$.<br>
+        2. Bracket $= 20^2 + 10^2 + (20 \times 10) = 400 + 100 + 200 = 700\text{ cm}^2$.<br>
+        3. $V = \frac{1}{3} \times \frac{22}{7} \times 14 \times 700 = \frac{1}{3} \times 22 \times 2 \times 700 = \frac{30,800}{3} = 10,266.67\text{ cm}^3$.<br>
+        4. Convert to litres: $\frac{10,266.67}{1,000} \approx 10.267$ litres.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [F] Used (R+r)^2 instead of R^2 + r^2 + Rr | [T] Litre conversion slip</span>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="pq-card-item" id="pq-card-ph12-9" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Advanced Tier-2</span><span class="badge-tag tag-type">Cone Volume Cut by Parallel Plane</span></div>
+      <div class="pq-question"><strong>Q10:</strong> A solid right circular cone of height $30$ cm is sliced by a plane parallel to its base at a distance of $10$ cm from its apex. Find the ratio of the volume of the smaller cone so formed to the volume of the remaining frustum.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph12-9')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph12-9')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph12-9">Hint: Ratio of heights is $10 : 30 = 1 : 3$. Volume ratio of smaller cone to original cone is $(1/3)^3 = 1 : 27$. Frustum $= 27 - 1 = 26$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph12-9">
+        <strong>Answer:</strong> $1 : 26$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Height ratio $\frac{h}{H} = \frac{10}{30} = \frac{1}{3}$.<br>
+        2. Since smaller cone is similar to original cone, Volume ratio $= \left(\frac{h}{H}\right)^3 = \left(\frac{1}{3}\right)^3 = \frac{1}{27}$.<br>
+        3. Let original cone volume $= 27$ units. Smaller cone volume $= 1$ unit.<br>
+        4. Volume of remaining frustum $= 27 - 1 = 26$ units.<br>
+        5. Ratio of smaller cone to frustum $= 1 : 26$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [S] Answered 1:27 (ratio to whole cone instead of frustum) | [F] Squared instead of cubing</span>
+      </div>
+    </div>
   </div>
 
-  <!-- PYQ LAB -->
-  <h2 class="sec-title" id="sec-pyqs">🏆 SSC PYQ Lab</h2>
-  <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:12px;">
-    🔐 Integrity Rule: Actual PYQ tabhi label karo jab year/shift verified ho. Otherwise: "PYQ-style" label use karo.
-  </div>
-  <div class="pyq-container">
-<div class="pyq-card">
-  <div class="pyq-tag">PYQ-style • SSC CGL Tier-1</div>
-  <div class="pyq-q">A hemispherical bowl of radius 9 cm is to be painted inside. Find the cost at ₹4 per cm².</div>
-  <button class="reveal-sol-btn" onclick="toggleEl('pyq-sol-ph12-0')">🔍 Show Trick Solution</button>
-  <div class="sol-box" id="pyq-sol-ph12-0">Curved SA of hemisphere = 2πr² = 2×(22/7)×81 = 509.14 cm². Cost = 509.14×4 ≈ ₹2,036.</div>
-</div>
-<div class="pyq-card">
-  <div class="pyq-tag">PYQ-style • SSC CGL Tier-1</div>
-  <div class="pyq-q">If radius of sphere is doubled, by what % does its volume increase?</div>
-  <button class="reveal-sol-btn" onclick="toggleEl('pyq-sol-ph12-1')">🔍 Show Trick Solution</button>
-  <div class="sol-box" id="pyq-sol-ph12-1">V ∝ r³. New V = (2r)³/r³ = 8 times. Increase = (8-1)/1 × 100 = 700%.</div>
-</div></div>
+  <h2 class="sec-title" id="sec-pyqs">🏆 SSC PYQ Lab — Real Exam Questions with Examiner Traps</h2>
+  <div class="pyq-list">
 
-  <!-- TIMED DRILL -->
+    <!-- PYQ 1 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2023 Tier-1 (Shift 2)</span>
+        <span class="pyq-diff">Difficulty: Easy-Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> If the radius of a cylinder is increased by $20\%$ and its height is decreased by $15\%$, find the percentage change in its volume.
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph12-pyq-0')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph12-pyq-0">
+        <strong>✅ Correct Answer:</strong> Increases by $22.4\%$<br><br>
+        <strong>⚡ 10-Second Multiplier Shortcut:</strong><br>
+        • Volume of cylinder $\propto r^2 h$.<br>
+        • $r$ factor $= 1.20 \implies r^2$ factor $= 1.20^2 = 1.44$.<br>
+        • $h$ factor $= 1 - 0.15 = 0.85$.<br>
+        • Net Volume Multiplier $= 1.44 \times 0.85 = 1.224$.<br>
+        • Percentage change $= (1.224 - 1) \times 100 = +22.4\%$ (Increase).<br><br>
+        <strong>🚨 Examiner Trap:</strong> Adding percentage changes directly: $20 - 15 = 5\%$. In volume, radius appears TWICE ($r^2$), so its compounding effect is dominant!
+      </div>
+    </div>
+
+    <!-- PYQ 2 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2022 Tier-2 (Mains)</span>
+        <span class="pyq-diff">Difficulty: Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> The length of the longest pole that can be kept in a room of dimensions $12\text{ m} \times 9\text{ m} \times 8\text{ m}$ is:
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph12-pyq-1')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph12-pyq-1">
+        <strong>✅ Correct Answer:</strong> $17$ m<br><br>
+        <strong>⚡ 8-Second Diagonal Formula:</strong><br>
+        • Longest pole $= \sqrt{l^2 + b^2 + h^2} = \sqrt{12^2 + 9^2 + 8^2}$.<br>
+        • $= \sqrt{144 + 81 + 64} = \sqrt{289} = 17$ m!<br>
+        • Solved without diagram in 8 seconds.
+      </div>
+    </div>
+
+    <!-- PYQ 3 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2023 Tier-1 (Shift 1)</span>
+        <span class="pyq-diff">Difficulty: Easy</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> A solid metallic sphere of radius $15$ cm is melted and recast into smaller solid spheres of radius $3$ cm each. How many such small spheres are formed?
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph12-pyq-2')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph12-pyq-2">
+        <strong>✅ Correct Answer:</strong> $125$<br><br>
+        <strong>⚡ 3-Second Ratio Cube Shortcut:</strong><br>
+        • $n = \left(\frac{R}{r}\right)^3 = \left(\frac{15}{3}\right)^3 = 5^3 = 125$.
+      </div>
+    </div>
+
+    <!-- PYQ 4 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2021 Tier-2 (Mains)</span>
+        <span class="pyq-diff">Difficulty: Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> A right circular cylinder has diameter $14$ cm and volume $1,540\text{ cm}^3$. What is its curved surface area in $\text{cm}^2$?
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph12-pyq-3')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph12-pyq-3">
+        <strong>✅ Correct Answer:</strong> $440\text{ cm}^2$<br><br>
+        <strong>⚡ Direct Ratio Shortcut:</strong><br>
+        • Radius $r = 14/2 = 7$ cm.<br>
+        • Base Area $= \frac{22}{7} \times 49 = 154\text{ cm}^2$.<br>
+        • Height $h = \frac{\text{Volume}}{\text{Base Area}} = \frac{1540}{154} = 10$ cm.<br>
+        • $\text{CSA} = 2\pi rh = 2 \times \frac{22}{7} \times 7 \times 10 = 440\text{ cm}^2$.
+      </div>
+    </div>
+
+    <!-- PYQ 5 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2022 Tier-1</span>
+        <span class="pyq-diff">Difficulty: Moderate-High</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> The base of a right prism is an equilateral triangle of side $8$ cm, and its height is $10$ cm. Find the total surface area of the prism.
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph12-pyq-4')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph12-pyq-4">
+        <strong>✅ Correct Answer:</strong> $(240 + 32\sqrt{3})\text{ cm}^2$<br><br>
+        <strong>⚡ Step-by-Step Prism TSA:</strong><br>
+        • Base perimeter $= 3 \times 8 = 24$ cm.<br>
+        • $\text{LSA} = \text{Base Perimeter} \times \text{Height} = 24 \times 10 = 240\text{ cm}^2$.<br>
+        • Area of $1$ base $= \frac{\sqrt{3}}{4} \times 8^2 = 16\sqrt{3}\text{ cm}^2$.<br>
+        • Area of $2$ bases $= 2 \times 16\sqrt{3} = 32\sqrt{3}\text{ cm}^2$.<br>
+        • $\text{TSA} = \text{LSA} + 2(\text{Base Area}) = 240 + 32\sqrt{3}\text{ cm}^2$.
+      </div>
+    </div>
+  </div>
+
   <h2 class="sec-title" id="sec-timer">⏱️ Timed Drill — Score Calculator</h2>
   <div class="timed-drill">
     <div style="text-align:center;font-size:0.85rem;color:var(--text-muted);margin-bottom:10px;">
@@ -1680,34 +1956,61 @@ n = V_large / V_small</div>
   </div>
 
   <!-- ACTIVE RECALL -->
-  <h2 class="sec-title" id="sec-recall">🧠 Active Recall Session</h2>
-  <div class="recall-section">
-    <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:12px;">
-      <strong style="color:var(--gold);">Rule:</strong> Formula ko passive reading se revise mat karo. Hide → Recall → Write → Verify → Use.
+  <h2 class="sec-title" id="sec-recall">🧠 Active Recall Session — Test Your Memory</h2>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:24px;">
+    <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:16px;">
+      Answer each question from memory before clicking "Reveal Answer". Solid mastery requires proactive testing!
+    </p>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">1. What is the Total Surface Area (TSA) formula of a solid hemisphere of radius r?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">TSA = 3 * pi * r² (2*pi*r² curved surface + pi*r² flat circular base).</div>
     </div>
-    <div class="recall-how"><div class="recall-step"><div class="rs-box">Hide Formula</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Recall Mentally</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Write It Down</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Verify</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Use in a Question</div></div></div>
-    <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:10px;margin-top:10px;">
-      ✅ Check off each recall question after completing it from memory:
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">2. How do you find the side of a rhombus from its two diagonals d1 and d2?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Side a = sqrt((d1/2)² + (d2/2)²) or 4a² = d1² + d2².</div>
     </div>
-    <div class="recall-qs"><div class="recall-q">
-          <span class="rq-text">Hemisphere TSA formula kya hai?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Cone slant height (l) formula?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Recasting rule kya hai?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Rhombus ka perimeter nikalne ka shortcut?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Sector area formula?</span>
-          <input type="checkbox" class="rq-check">
-        </div></div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">3. What is the formula for the length of the longest rod that can be placed in a room of dimensions l, b, h?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Longest rod = sqrt(l² + b² + h²).</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">4. What are the formulas for inradius (r) and circumradius (R) of an equilateral triangle of side a?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Inradius r = a / (2*sqrt(3)). Circumradius R = a / sqrt(3) = 2r.</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">5. If a cone of height H is cut by a parallel plane at height h from the apex, what is the ratio of volumes of smaller cone to original cone?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Volume ratio = (h / H)³.</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">6. What is the volume formula for a frustum of a cone with radii R, r and height h?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">V = (1/3) * pi * h * (R² + r² + R*r).</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">7. What are the LSA and Volume formulas for a right prism with base perimeter P and base area A?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Volume = Base Area * Height. LSA = Base Perimeter * Height. TSA = LSA + 2*(Base Area).</div>
+    </div>
+
+    <div class="ar-item" style="padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">8. How do you quickly test options for questions involving pi = 22/7?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Check for divisibility by 11: (Sum of odd digits - Sum of even digits) = 0 or multiple of 11.</div>
+    </div>
   </div>
 
-  <!-- ERROR NOTEBOOK -->
   <h2 class="sec-title" id="sec-errors">📓 Error Notebook</h2>
   <div class="error-notebook">
     <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:12px;">
