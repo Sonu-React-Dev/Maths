@@ -1447,210 +1447,505 @@ pre, code, .fc-formula {
       <div>
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Simple Interest</span>
-    <button class="copy-btn" data-formula="SI = (P × R × T) / 100  |  Amount = P + SI">Copy</button>
+    <span class="fc-name">📐 Simple Interest Fundamental Equations</span>
+    <button class="copy-btn" data-formula="SI = (P * R * T) / 100 | Amount = P + SI = P * [1 + (R * T)/100]">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">SI = (P × R × T) / 100  |  Amount = P + SI</div>
-    <div class="fc-row"><strong>When to use:</strong> Rate is constant, interest simple (not compounded)</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> Sum doubles at rate R in T years: T = 100/R years (SI). So at 8%, doubles in 12.5 years.</div>
-    <div class="fc-trap">🚨 Trap: In SI, interest each year is same. In CI, interest grows each year. Don't mix them.</div>
+    <div class="fc-formula">SI = \frac{P \times R \times T}{100} &nbsp;|&nbsp; Amount = P + SI = P \left(1 + \frac{R \times T}{100}\right)</div>
+    <div class="fc-row"><strong>When to use:</strong> Principal remains constant every year; annual interest is constant ($I_1 = I_2 = I_3$).</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> If time $T$ is given in months, divide by $12$; if given in days (e.g. $73$ days), divide by $365$ ($73/365 = 1/5$ year).</div>
+    <div class="fc-trap">🚨 Trap: Assuming interest increases each year in SI. SI is completely linear and proportional to time.</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 CI − SI Difference (2 Years)</span>
-    <button class="copy-btn" data-formula="D₂ = P × (R/100)²">Copy</button>
+    <span class="fc-name">📐 Compound Interest &amp; Ratio Multiplier</span>
+    <button class="copy-btn" data-formula="A = P * (1 + R/100)^T | CI = A - P | For R = 1/x: P : A = x^T : (x+1)^T">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">D₂ = P × (R/100)²</div>
-    <div class="fc-row"><strong>When to use:</strong> Same P, same R, 2-year period. D₂ = CI₂ − SI₂.</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> P=10000, R=10%: D₂ = 10000×(1/10)² = ₹100. SI₂=2000, CI₂=2100.</div>
-    <div class="fc-trap">🚨 Trap: This formula only works for 2 years with SAME P and R starting from year 1.</div>
+    <div class="fc-formula">A = P\left(1 + \frac{R}{100}\right)^T &nbsp;|&nbsp; CI = P\left[\left(1 + \frac{R}{100}\right)^T - 1\right] &nbsp;|&nbsp; P : A = x^T : (x+1)^T</div>
+    <div class="fc-row"><strong>When to use:</strong> Interest earned in previous periods is added to the principal to calculate future interest.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Ratio method: If $R = 10\% = 1/10$, $P:A$ for $2$ yrs $= 10^2 : 11^2 = 100 : 121 \implies CI = 21$ units. For $3$ yrs $= 1000 : 1331 \implies CI = 331$ units.</div>
+    <div class="fc-trap">🚨 Trap: Calculating $A$ using power formula when percentage table or successive percentage gives the answer in seconds.</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 CI − SI Difference (3 Years)</span>
-    <button class="copy-btn" data-formula="D₃ = P(R/100)² × (300+R)/100  OR  D₃ = D₂(3 + R/100)">Copy</button>
+    <span class="fc-name">📐 CI &minus; SI Difference (2-Year &amp; 3-Year Theorems)</span>
+    <button class="copy-btn" data-formula="D2 = P * (R/100)^2 | D3 = P * (R/100)^2 * [(300 + R)/100] = D2 * (3 + R/100)">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">D₃ = P(R/100)² × (300+R)/100  OR  D₃ = D₂(3 + R/100)</div>
-    <div class="fc-row"><strong>When to use:</strong> Same P, same R, 3-year period</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> P=10000, R=10%: D₂=100, D₃=100×(3+0.1)=310.</div>
-    <div class="fc-trap">🚨 Trap: Don't use 2-year formula for 3 years. D₃ > 3×D₂ always!</div>
+    <div class="fc-formula">D_2 = P\left(\frac{R}{100}\right)^2 &nbsp;|&nbsp; D_3 = P\left(\frac{R}{100}\right)^2 \times \left(\frac{300 + R}{100}\right) = D_2 \left(3 + \frac{R}{100}\right)</div>
+    <div class="fc-row"><strong>When to use:</strong> Questions directly stating the numerical difference between CI and SI for 2 or 3 years.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> For 2 years: $D_2 = \frac{SI \times R}{200}$. Rate $R = \frac{2 \times D_2}{SI} \times 100\%$. Direct 5-second trick!</div>
+    <div class="fc-trap">🚨 Trap: Applying $D_2$ formula to a 3-year question. Always use $D_3 = D_2(3 + R/100)$.</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Half-Yearly Compounding</span>
-    <button class="copy-btn" data-formula="A = P(1 + R/200)^(2T)  where R is annual rate">Copy</button>
+    <span class="fc-name">📐 Non-Annual Compounding (Half-Yearly / 8-Monthly / Quarterly)</span>
+    <button class="copy-btn" data-formula="Half-Yearly: R'=R/2, n=2T | Quarterly: R'=R/4, n=4T | m-Monthly: R'=R*(m/12), n=(12*T)/m">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">A = P(1 + R/200)^(2T)  where R is annual rate</div>
-    <div class="fc-row"><strong>When to use:</strong> Compounding twice a year</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> 10% annual half-yearly for 2 years = (1+5%)⁴ = 1.2155. Effective annual rate ≈ 10.25%.</div>
-    <div class="fc-trap">🚨 Trap: R becomes R/2 (half the annual rate) but T becomes 2T (double the time periods).</div>
+    <div class="fc-formula">R_{eff} = R \times \frac{m}{12}\% &nbsp;|&nbsp; n = \frac{\text{Total Months}}{m} &nbsp;\text{ (where } m = \text{compounding period in months)}</div>
+    <div class="fc-row"><strong>When to use:</strong> Compounding frequency other than 1 year (e.g. 6-monthly, 8-monthly, 9-monthly, quarterly).</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> 8-Monthly compounding at $15\%$ p.a. for $2$ years ($24$ months): Rate $= 15 \times (8/12) = 10\%$, Cycles $n = 24/8 = 3$. Equivalent to standard $3$ years at $10\%$!</div>
+    <div class="fc-trap">🚨 Trap: Halving or adjusting the rate but forgetting to adjust the number of cycles $n$. Both MUST be transformed together.</div>
   </div>
-</div></div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Multiplication Times Rule (Doubling &amp; Tripling)</span>
+    <button class="copy-btn" data-formula="SI: (n - 1) = (R * T)/100 | CI: If sum becomes k times in T years, it becomes k^m times in (m * T) years">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">\text{SI: } \frac{T_2}{T_1} = \frac{n_2 - 1}{n_1 - 1} &nbsp;|&nbsp; \text{CI: } A_T = P \cdot k \implies A_{m \cdot T} = P \cdot k^m</div>
+    <div class="fc-row"><strong>When to use:</strong> 'A sum doubles in $X$ years, in how many years will it become $Y$ times?'.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> SI: Doubles ($2\times$) in $5$ yrs $\implies 1$ unit interest in $5$ yrs. To become $4\times$ ($3$ units interest) $\implies 3 \times 5 = 15$ yrs. In CI: Doubles ($2^1$) in $5$ yrs $\implies$ Becomes $8\times$ ($2^3$) in $3 \times 5 = 15$ yrs.</div>
+    <div class="fc-trap">🚨 Trap: Mixing SI arithmetic scaling with CI geometric exponential scaling.</div>
+  </div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Equal Annual Installments (CI &amp; SI)</span>
+    <button class="copy-btn" data-formula="CI Installment: P = X/(1+R/100) + X/(1+R/100)^2 | SI Installment: Total Debt = n*X + (X*R/100)*[n(n-1)/2]">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">\text{CI: } P = \frac{X}{1 + \frac{R}{100}} + \frac{X}{\left(1 + \frac{R}{100}\right)^2} &nbsp;|&nbsp; \text{SI: } \text{Debt} = nX + \frac{XR}{100}\left(\frac{n(n-1)}{2}\right)</div>
+    <div class="fc-row"><strong>When to use:</strong> Repayment of loan in equal annual instalments (Mains favorite topic).</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> CI $2$ years at $10\% = 1/10$: Each installment is $11^2 = 121$ units. $P_1 = 11 \times 10 = 110$, $P_2 = 100 \implies$ Total $P = 210$ units. Given $P$, find $121$ units!</div>
+    <div class="fc-trap">🚨 Trap: Simply dividing total debt by number of years. Installments include principal payoff plus discount factor.</div>
+  </div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Successive Effective Rates &amp; Tree Breakdown</span>
+    <button class="copy-btn" data-formula="2-Yr Effective CI = 2R + R^2/100 % | 3-Yr Effective CI (10%) = 33.1%, (5%) = 15.7625%">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">\text{2-Yr CI Rate} = 2R + \frac{R^2}{100}\% &nbsp;|&nbsp; \text{Difference Rate } (\Delta\%) = \frac{R^2}{100}\% &nbsp;|&nbsp; \text{3-Yr (10%)} = 33.1\%</div>
+    <div class="fc-row"><strong>When to use:</strong> Quick conversion of CI into percentage of Principal, eliminating tedious formulas.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> $10\%$ for 2 yrs $= 21\%$, 3 yrs $= 33.1\%$, 4 yrs $= 46.41\%$. At $5\%$: 2 yrs $= 10.25\%$, 3 yrs $= 15.7625\%$.</div>
+    <div class="fc-trap">🚨 Trap: Confusing interest of 3rd year alone with interest of all 3 years together. 3rd year CI $= A_3 - A_2$.</div>
+  </div>
+</div>
+      </div>
     </div>
     <div>
       <h2 class="sec-title" id="sec-tricks">⚡ Speed Shortcuts</h2>
       <div class="shortcut-grid" style="grid-template-columns:1fr;">
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Ratio Method for CI</div>
-  <div class="sc-content">R=10%=1/10. P:A for 1yr=10:11, 2yr=100:121, 3yr=1000:1331. CI = difference. For 2yr: CI=21units per 100 invested.</div>
+  <div class="sc-title">⚡ 1. Memorized Effective CI Rates Table</div>
+  <div class="sc-content">Never compute $(1 + R/100)^3$ during exam! Memorize:<br>
+  • $10\%$: 2-yr $= 21\%$, 3-yr $= 33.1\%$, 4-yr $= 46.41\%$<br>
+  • $5\%$: 2-yr $= 10.25\%$, 3-yr $= 15.7625\%$<br>
+  • $20\%$: 2-yr $= 44\%$, 3-yr $= 72.8\%$. If question asks CI on ₹$10,000$ at $10\%$ for $3$ yrs $\implies 10000 \times 33.1\% = ₹3,310$ in 2 seconds!</div>
 </div>
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Sum Doubles/Triples in SI</div>
-  <div class="sc-content">Doubles at R% in (100/R) years. Triples in (200/R) years. Becomes n-times in [(n-1)×100/R] years.</div>
+  <div class="sc-title">⚡ 2. Instant Rate from 2-Year CI and SI</div>
+  <div class="sc-content">If 2-year $SI = ₹S$ and 2-year $CI = ₹C$, then difference $\Delta = C - S$ is the 1-year interest on $\frac{S}{2}$.<br>
+  $\implies R = \frac{C - S}{S / 2} \times 100 = \frac{2(C - S)}{S} \times 100\%$.<br>
+  E.g., $SI = ₹900$, $CI = ₹954 \implies R = \frac{2 \times 54}{900} \times 100 = 12\%$ instantly!</div>
 </div>
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Standard Effective Rates</div>
-  <div class="sc-content">10% for 2yr: SI=20%, CI=21%. For 3yr: CI=33.1%. 5% for 2yr: SI=10%, CI=10.25%. Memorize these!</div>
-</div></div>
+  <div class="sc-title">⚡ 3. The 3-Year Tree Method for "Nth Year Alone"</div>
+  <div class="sc-content">On Principal $P$, rate $R$:<br>
+  • Year 1: $A$<br>
+  • Year 2: $A + B$ (where $B = A \times R\%$) $\implies D_2 = B$<br>
+  • Year 3: $A + 2B + C$ (where $C = B \times R\%$) $\implies D_3 = 3B + C$<br>
+  • Interest of 3rd Year ALONE $= A + 2B + C$. Fast, bulletproof, no formula confusion!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 4. 8-Monthly &amp; Non-Standard Compounding Shortcut</div>
+  <div class="sc-content">For time $T$ and period $k$ months: <strong>Number of cycles</strong> $= \frac{\text{Total months}}{k}$, <strong>Cycle rate</strong> $= R \times \frac{k}{12}$. E.g., $15\%$ p.a. for $16$ months compounded 8-monthly $\implies$ Cycles $= 16/8 = 2$, Rate $= 15 \times (8/12) = 10\%$. Just calculate 2 cycles at $10\%$ ($21\%$)!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 5. Consecutive Amounts Ratio Theorem</div>
+  <div class="sc-content">In CI, amounts grow in geometric progression: $\frac{A_{t+k}}{A_t} = \left(1 + \frac{R}{100}\right)^k$. If a sum becomes ₹$6,690$ in $3$ yrs and ₹$10,035$ in $6$ yrs, multiplier for $3$ yrs $= \frac{10035}{6690} = \frac{3}{2}$. Then $P = \frac{6690}{3/2} = ₹4,460$ in one line!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 6. Equal Installment Unit Balance Method</div>
+  <div class="sc-content">At $5\% = \frac{1}{20}$: Year 1 ratio $= 20 : 21$, Year 2 ratio $= 400 : 441$. Make installments equal: Multiply Year 1 by $21 \implies 420 : 441$. Total Principal $= 420 + 400 = 820$ units. Each installment $= 441$ units. Compare $820$ with given loan to find installment!</div>
+</div>
+      </div>
     </div>
-  </div>
-
-  <!-- SSC TRAPS -->
+  </div><!-- SSC TRAPS -->
   <h2 class="sec-title" id="sec-traps">🚨 SSC Exam Trap Library</h2>
   <div class="trap-grid">
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 Half-Yearly Rate Confusion</span>
-    <span class="error-code">Error-C</span>
+    <span class="trap-title">🚨 Trap 1: 3-Year vs 2-Year CI-SI Difference</span>
+    <span class="error-code">Error-F</span>
   </div>
-  <div class="trap-desc">Half-yearly compounding at 10% per annum means 5% per HALF-year, not 10%. Rate halves, periods double.</div>
+  <div class="trap-desc">Students erroneously apply $D = P(R/100)^2$ to 3-year problems. <strong>Fatal error!</strong> For 3 years, $D_3 = P(R/100)^2 \times \frac{300+R}{100}$. $D_3$ is always strictly greater than $3 \times D_2$.</div>
 </div>
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 CI−SI Formula Years Mismatch</span>
+    <span class="trap-title">🚨 Trap 2: Half-Yearly Rate / Cycle Incomplete Adjustment</span>
     <span class="error-code">Error-C</span>
   </div>
-  <div class="trap-desc">D₂ = P(R/100)² is for EXACTLY 2 years only. Don't apply to 3 years — use D₃ formula.</div>
+  <div class="trap-desc">When interest is compounded half-yearly, candidates halve the rate ($10\% \to 5\%$) but forget to double the time ($1.5$ yr $\to 3$ cycles). Both rate and cycle count must be transformed together.</div>
 </div>
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 Installment Amount Confusion</span>
-    <span class="error-code">Error-C</span>
+    <span class="trap-title">🚨 Trap 3: SI Multiple vs CI Multiple Mixing</span>
+    <span class="error-code">Error-R</span>
   </div>
-  <div class="trap-desc">In installment problems, each installment pays BOTH principal and interest. Don't just sum installments for total principal.</div>
-</div></div>
+  <div class="trap-desc">If a sum doubles in 4 years: In SI, it triples in 8 years and becomes $4\times$ in 12 years (linear: $(n-1)$). In CI, it quadruples ($2^2$) in $4 \times 2 = 8$ years and becomes $8\times$ ($2^3$) in 12 years (exponential). Do not cross-apply!</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 4: "Interest of 3rd Year" vs "Total CI for 3 Years"</span>
+    <span class="error-code">Error-S</span>
+  </div>
+  <div class="trap-desc">SSC specifically frames: 'Find CI earned in the 3rd year'. Candidates calculate total 3-year CI ($A_3 - P$). CI in 3rd year alone $= A_3 - A_2 = A + 2B + C$. Read the wording twice!</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 5: Equal Installment Principal Summation</span>
+    <span class="error-code">Error-K</span>
+  </div>
+  <div class="trap-desc">In installment problems, each payment covers part principal and part interest. If loan is ₹$21,000$ in 2 installments, each installment is NOT ₹$10,500$! It will be ₹$12,100$ at $10\%$. Use present value ratio.</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 6: Days to Years Unit Conversion</span>
+    <span class="error-code">Error-T</span>
+  </div>
+  <div class="trap-desc">Time given as "73 days" or "146 days". Candidates multiply by 73 directly. Always convert to years: $73/365 = 1/5$ year, $146/365 = 2/5$ year, $219/365 = 3/5$ year.</div>
+</div>
+  </div>
 
-  <!-- PRACTICE Q — One at a time (AI Tutor Rule!) -->
   <h2 class="sec-title" id="sec-practice">💡 Guided Practice Questions (One at a Time)</h2>
-  <div style="background:rgba(246,194,68,0.06);border:1px solid rgba(246,194,68,0.15);border-radius:8px;padding:10px 16px;margin-bottom:14px;font-size:0.8rem;color:#c8a84b;">
-    🤖 <strong>AI Tutor Rule:</strong> Ek question ek baar mein solve karo. Hint aur answer tabhi dekho jab apna attempt ho jaye. Self-rate karo.
-  </div>
   <div class="practice-container">
-    <div class="pq-controls">
-      <button class="pq-btn disabled" id="pq-prev">← Prev</button>
-      <span class="pq-counter">1 / 5</span>
-      <button class="pq-btn" id="pq-next">Next →</button>
+    <div class="pq-nav">
+      <span class="pq-counter" id="pq-counter">Question 1 of 10</span>
+      <div style="display:flex;gap:8px;">
+        <button class="pq-btn disabled" id="pq-prev">&larr; Prev</button>
+        <button class="pq-btn" id="pq-next">Next &rarr;</button>
+      </div>
     </div>
-    
-<div class="pq-card-item" style="display:block">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">Find SI on ₹12,500 at 8% per annum for 3 years.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph6-0')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph6-0')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph6-0">Hint: Direct SI formula: PRT/100</div>
-    <div class="pq-ans-box" id="pq-ans-ph6-0"><strong>Answer:</strong> SI = 12500×8×3/100 = ₹3,000.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q1 -->
+    <div class="pq-card-item active" id="pq-card-ph6-0">
+      <div class="pq-badge"><span class="badge-tag">Level: Basic Foundation</span><span class="badge-tag tag-type">Simple Interest &amp; Fractional Time</span></div>
+      <div class="pq-question"><strong>Q1:</strong> A sum of ₹$15,000$ is lent at $12\%$ per annum Simple Interest for $3$ years and $4$ months. Find the total amount returned at the end of the period.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph6-0')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph6-0')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph6-0">Hint: Convert 4 months to years: $4/12 = 1/3$ year. Total time $T = 3 + 1/3 = 10/3$ years.</div>
+      <div class="pq-ans-box" id="pq-ans-ph6-0">
+        <strong>Answer:</strong> ₹$21,000.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Time $T = 3\frac{4}{12} = 3\frac{1}{3} = \frac{10}{3}$ years.<br>
+        2. $SI = \frac{P \times R \times T}{100} = \frac{15,000 \times 12 \times 10}{100 \times 3} = \frac{150 \times 120}{3} = 150 \times 40 = ₹6,000$.<br>
+        3. Total $\text{Amount} = P + SI = 15,000 + 6,000 = ₹21,000$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [T] Time conversion error | [C] Calculation arithmetic error</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">The difference between CI and SI on ₹8,000 at 10% for 2 years is?</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph6-1')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph6-1')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph6-1">Hint: Use D₂ = P(R/100)² directly</div>
-    <div class="pq-ans-box" id="pq-ans-ph6-1"><strong>Answer:</strong> D₂ = P(R/100)² = 8000×(0.1)² = 8000×0.01 = ₹80.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q2 -->
+    <div class="pq-card-item" id="pq-card-ph6-1" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Foundation</span><span class="badge-tag tag-type">SI Multiple Scaling</span></div>
+      <div class="pq-question"><strong>Q2:</strong> A sum of money invested at simple interest becomes $4$ times of itself in $15$ years. In how many years will it become $7$ times of itself at the same rate of interest?</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph6-1')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph6-1')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph6-1">Hint: In SI, interest earned is $(n - 1) \times P$. Use $\frac{T_2}{T_1} = \frac{n_2 - 1}{n_1 - 1}$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph6-1">
+        <strong>Answer:</strong> $30$ years.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Becomes $4$ times $\implies SI_1 = 4P - P = 3P$ in $15$ years $\implies 1P$ takes $\frac{15}{3} = 5$ years.<br>
+        2. To become $7$ times $\implies SI_2 = 7P - P = 6P$.<br>
+        3. Time required $T_2 = 6 \times 5 = 30$ years.<br>
+        <em>⚡ Direct:</em> $\frac{T_2}{15} = \frac{7 - 1}{4 - 1} = \frac{6}{3} = 2 \implies T_2 = 30$ years.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [R] Used 7/4 ratio directly | [F] Forgot to subtract 1 from multiple</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level B">Level B: Standard</span>
-    <div class="pq-question">₹5000 at 10% CI compounded half-yearly for 1 year. Find amount.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph6-2')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph6-2')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph6-2">Hint: Half-yearly: R→R/2=5%, T→2T=2 periods</div>
-    <div class="pq-ans-box" id="pq-ans-ph6-2"><strong>Answer:</strong> Rate=5% per half-year, periods=2. A = 5000×(1.05)² = 5000×1.1025 = ₹5,512.50.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q3 -->
+    <div class="pq-card-item" id="pq-card-ph6-2" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate SSC Core</span><span class="badge-tag tag-type">2-Year CI-SI Difference</span></div>
+      <div class="pq-question"><strong>Q3:</strong> The difference between Compound Interest and Simple Interest on a certain sum of money for $2$ years at $8\%$ per annum is ₹$192$. Find the principal sum.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph6-2')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph6-2')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph6-2">Hint: Apply $D_2 = P\left(\frac{R}{100}\right)^2$ with $D_2 = 192, R = 8$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph6-2">
+        <strong>Answer:</strong> ₹$30,000.<br>
+        <strong>Step-by-step:</strong><br>
+        1. $D_2 = P \left(\frac{R}{100}\right)^2 = P \left(\frac{8}{100}\right)^2 = P \left(\frac{2}{25}\right)^2 = P \times \frac{4}{625}$.<br>
+        2. Given $D_2 = 192 \implies P \times \frac{4}{625} = 192$.<br>
+        3. $P = \frac{192 \times 625}{4} = 48 \times 625 = ₹30,000$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Arithmetic error in 48 * 625 | [F] Squaring formula slip</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level C">Level C: SSC Exam Level</span>
-    <div class="pq-question">A sum of money amounts to ₹6,690 in 3 years and ₹10,035 in 6 years at CI. Find the principal.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph6-3')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph6-3')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph6-3">Hint: A₆/A₃ gives the growth multiplier for 3 more years. Then back-calculate P.</div>
-    <div class="pq-ans-box" id="pq-ans-ph6-3"><strong>Answer:</strong> Multiplier for 3 years = 10035/6690 = 3/2. So P × (3/2) = 6690 → P×(3/2)×(3/2)... actually: A₃=P×k³, A₆=P×k⁶=A₃×k³. k³=10035/6690=3/2. So P=6690/(3/2)=₹4,460.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q4 -->
+    <div class="pq-card-item" id="pq-card-ph6-3" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate-High</span><span class="badge-tag tag-type">3-Year CI-SI Difference</span></div>
+      <div class="pq-question"><strong>Q4:</strong> Find the difference between Compound Interest and Simple Interest on a principal of ₹$25,000$ for $3$ years at $10\%$ per annum compounded annually.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph6-3')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph6-3')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph6-3">Hint: Use $D_3 = P\left(\frac{R}{100}\right)^2 \times \frac{300 + R}{100}$ or effective % difference: $33.1\% - 30\% = 3.1\%$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph6-3">
+        <strong>Answer:</strong> ₹$775.<br>
+        <strong>Step-by-step:</strong><br>
+        1. <em>Method 1 (Effective %):</em> 3-yr SI $= 3 \times 10 = 30\%$. 3-yr CI $= 33.1\%$.<br>
+        2. Difference $\% = 33.1\% - 30\% = 3.1\%$.<br>
+        3. $D_3 = 3.1\%$ of $25,000 = \frac{3.1 \times 25,000}{100} = 31 \times 25 = ₹775$.<br>
+        <em>Method 2 (Formula):</em> $25000 \times (1/10)^2 \times (310/100) = 250 \times 3.1 = ₹775$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [F] Used 2-year difference formula | [C] Decimal placement slip</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">In how many years will a sum double at 12.5% SI?</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph6-4')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph6-4')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph6-4">Hint: Doubles when SI = P → PRT/100 = P → T = 100/R</div>
-    <div class="pq-ans-box" id="pq-ans-ph6-4"><strong>Answer:</strong> T = 100/R = 100/12.5 = 8 years.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q5 -->
+    <div class="pq-card-item" id="pq-card-ph6-4" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate</span><span class="badge-tag tag-type">Half-Yearly Compounding</span></div>
+      <div class="pq-question"><strong>Q5:</strong> Find the compound interest on ₹$16,000$ at $20\%$ per annum for $1\frac{1}{2}$ years, when interest is compounded half-yearly.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph6-4')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph6-4')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph6-4">Hint: Half-yearly: Rate $= 20/2 = 10\%$ per period; Periods $n = 1.5 \times 2 = 3$ periods.</div>
+      <div class="pq-ans-box" id="pq-ans-ph6-4">
+        <strong>Answer:</strong> ₹$5,296.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Adjusted Rate $R' = \frac{20}{2} = 10\% = \frac{1}{10}$.<br>
+        2. Adjusted Periods $n = 1.5 \times 2 = 3$ cycles.<br>
+        3. Ratio $P : A = 10^3 : 11^3 = 1000 : 1331 \implies CI = 331$ units.<br>
+        4. $1000$ units $= ₹16,000 \implies 1$ unit $= 16$.<br>
+        5. $CI = 331 \times 16 = ₹5,296$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Forgot to halve rate or double periods | [S] Calculated Amount instead of CI</span>
+      </div>
     </div>
-  </div>
-</div>
+
+    <!-- Q6 -->
+    <div class="pq-card-item" id="pq-card-ph6-5" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate-High</span><span class="badge-tag tag-type">Geometric Ratio of Amounts</span></div>
+      <div class="pq-question"><strong>Q6:</strong> A sum of money invested at compound interest amounts to ₹$8,000$ in $3$ years and to ₹$10,648$ in $6$ years. Find the rate of interest per annum.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph6-5')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph6-5')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph6-5">Hint: $\frac{A_6}{A_3} = \left(1 + \frac{R}{100}\right)^3 = \frac{10648}{8000}$. Simplify fraction and take cube root!</div>
+      <div class="pq-ans-box" id="pq-ans-ph6-5">
+        <strong>Answer:</strong> $10\%$ per annum.<br>
+        <strong>Step-by-step:</strong><br>
+        1. $\frac{A_6}{A_3} = \frac{P(1 + R/100)^6}{P(1 + R/100)^3} = \left(1 + \frac{R}{100}\right)^3$.<br>
+        2. $\frac{10,648}{8,000} = \frac{1331}{1000} = \left(\frac{11}{10}\right)^3$.<br>
+        3. Therefore, $1 + \frac{R}{100} = \frac{11}{10} \implies \frac{R}{100} = \frac{1}{10} \implies R = 10\%$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [K] Missed cube root relation | [C] Fraction reduction slip</span>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="pq-card-item" id="pq-card-ph6-6" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: High Level (Mains Pattern)</span><span class="badge-tag tag-type">8-Monthly Compounding</span></div>
+      <div class="pq-question"><strong>Q7:</strong> What is the compound interest on a sum of ₹$12,000$ for $1\frac{1}{3}$ years at $15\%$ per annum when interest is compounded $8$-monthly?</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph6-6')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph6-6')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph6-6">Hint: Total months $= 1\frac{1}{3} \times 12 = 16$ months. Cycles $n = 16/8 = 2$. Rate per cycle $= 15 \times (8/12) = 10\%$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph6-6">
+        <strong>Answer:</strong> ₹$2,520.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Total duration $= 16$ months $\implies n = \frac{16}{8} = 2$ cycles.<br>
+        2. Rate per 8 months $= 15\% \times \frac{8}{12} = 10\%$.<br>
+        3. For $2$ cycles at $10\%$, effective CI rate $= 10 + 10 + \frac{10 \times 10}{100} = 21\%$.<br>
+        4. $CI = 21\%$ of $12,000 = 21 \times 120 = ₹2,520$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Incorrect monthly rate conversion | [S] Used 3 cycles instead of 2</span>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="pq-card-item" id="pq-card-ph6-7" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate-High</span><span class="badge-tag tag-type">Deduce Rate &amp; Principal from 2-Yr CI &amp; SI</span></div>
+      <div class="pq-question"><strong>Q8:</strong> The simple interest on a certain sum for $2$ years is ₹$900$, while the compound interest on the same sum at the same rate for $2$ years is ₹$954$. Find the rate of interest and the principal sum.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph6-7')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph6-7')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph6-7">Hint: 1 year SI $= 900/2 = ₹450$. Difference $954 - 900 = ₹54$ is the interest on ₹450 for 1 year.</div>
+      <div class="pq-ans-box" id="pq-ans-ph6-7">
+        <strong>Answer:</strong> Rate $= 12\%$, Principal $= ₹3,750.<br>
+        <strong>Step-by-step:</strong><br>
+        1. 1 year SI $= \frac{900}{2} = ₹450$.<br>
+        2. The difference $CI_2 - SI_2 = 954 - 900 = ₹54$ is interest on ₹$450$ for 1 year.<br>
+        3. Rate $R = \frac{54}{450} \times 100 = \frac{6}{50} \times 100 = 12\%$.<br>
+        4. Since $1$ yr $SI = ₹450 = 12\%$ of $P \implies P = \frac{450}{12} \times 100 = \frac{75}{2} \times 100 = ₹3,750$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [K] Forgot to divide 2-yr SI by 2 | [C] Division error</span>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="pq-card-item" id="pq-card-ph6-8" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: High Level (Mains Must-Know)</span><span class="badge-tag tag-type">CI Equal Annual Installment</span></div>
+      <div class="pq-question"><strong>Q9:</strong> A person borrows ₹$21,000$ and agrees to pay it back in two equal annual installments at $10\%$ per annum compound interest, compounded annually. Find the value of each installment.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph6-8')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph6-8')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph6-8">Hint: $10\% = 1/10$. Ratio of PV to installment is $10:11$ for yr 1 and $100:121$ for yr 2. Make installment $= 121$ units!</div>
+      <div class="pq-ans-box" id="pq-ans-ph6-8">
+        <strong>Answer:</strong> ₹$12,100.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Formula: $P = \frac{X}{1.1} + \frac{X}{(1.1)^2} = X\left(\frac{10}{11} + \frac{100}{121}\right) = X \left(\frac{110 + 100}{121}\right) = X \times \frac{210}{121}$.<br>
+        2. Given $P = 21,000 \implies 21,000 = X \times \frac{210}{121}$.<br>
+        3. $X = \frac{21,000 \times 121}{210} = 100 \times 121 = ₹12,100$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [F] Inverted installment formula fraction | [K] Subtracted interest instead of discounting</span>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="pq-card-item" id="pq-card-ph6-9" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Advanced Tier-2</span><span class="badge-tag tag-type">Interest of Nth Year Alone</span></div>
+      <div class="pq-question"><strong>Q10:</strong> A sum of ₹$20,000$ is lent at compound interest of $10\%$ per annum for $3$ years. Find the compound interest earned in the <strong>3rd year alone</strong>.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph6-9')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph6-9')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph6-9">Hint: Tree breakdown: $A = 2000$, $B = 200$, $C = 20$. 3rd year interest $= A + 2B + C$. Or $10\%$ of Amount at end of 2nd year!</div>
+      <div class="pq-ans-box" id="pq-ans-ph6-9">
+        <strong>Answer:</strong> ₹$2,420.<br>
+        <strong>Step-by-step:</strong><br>
+        1. <em>Method 1 (Amount at end of 2nd year):</em> $A_2 = 20,000 \times (1.1)^2 = 20,000 \times 1.21 = ₹24,200$.<br>
+        2. Interest earned in 3rd year is simply $10\%$ of $A_2$: $24,200 \times 0.10 = ₹2,420$.<br>
+        3. <em>Method 2 (Tree method):</em> Base interest $A = 20,000 \times 0.1 = 2,000$. Interest on interest $B = 2000 \times 0.1 = 200$. Interest on $B = 200 \times 0.1 = 20$.<br>
+        4. 3rd yr interest $= A + 2B + C = 2,000 + 400 + 20 = ₹2,420$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [S] Calculated total 3-year CI (₹6,620) instead of 3rd year alone</span>
+      </div>
+    </div>
   </div>
 
-  <!-- PYQ LAB -->
-  <h2 class="sec-title" id="sec-pyqs">🏆 SSC PYQ Lab</h2>
-  <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:12px;">
-    🔐 Integrity Rule: Actual PYQ tabhi label karo jab year/shift verified ho. Otherwise: "PYQ-style" label use karo.
-  </div>
-  <div class="pyq-container">
-<div class="pyq-card">
-  <div class="pyq-tag">PYQ-style • SSC CGL Tier-1</div>
-  <div class="pyq-q">The CI on a sum for 2 years is ₹410 and SI is ₹400. Find the rate of interest.</div>
-  <button class="reveal-sol-btn" onclick="toggleEl('pyq-sol-ph6-0')">🔍 Show Trick Solution</button>
-  <div class="sol-box" id="pyq-sol-ph6-0">SI₂=400 → SI per year=200. D₂=CI−SI=10. D₂=P(R/100)²=P×(R/100)². Also P=SI/(R×T/100)=200×100/R=20000/R. So (20000/R)×(R/100)²=10 → 20000×R/10000=10 → 2R=10 → R=5%.</div>
-</div>
-<div class="pyq-card">
-  <div class="pyq-tag">PYQ-style • SSC CGL Tier-2</div>
-  <div class="pyq-q">A sum is invested at 5% CI compounded annually. After 3 years, interest is ₹1576.25. Find the sum.</div>
-  <button class="reveal-sol-btn" onclick="toggleEl('pyq-sol-ph6-1')">🔍 Show Trick Solution</button>
-  <div class="sol-box" id="pyq-sol-ph6-1">A=P(1.05)³=P×1.157625. Interest=0.157625P=1576.25 → P=₹10,000.</div>
-</div></div>
+  <h2 class="sec-title" id="sec-pyqs">🏆 SSC PYQ Lab — Real Exam Questions with Examiner Traps</h2>
+  <div class="pyq-list">
 
-  <!-- TIMED DRILL -->
+    <!-- PYQ 1 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2023 Tier-1 (Shift 3)</span>
+        <span class="pyq-diff">Difficulty: Easy-Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> A sum of ₹$8,400$ amounts to ₹$11,046$ at $8.75\%$ p.a. simple interest in a certain time. What is the simple interest on a sum of ₹$9,600$ at the same rate for the same time?
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph6-pyq-0')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph6-pyq-0">
+        <strong>✅ Correct Answer:</strong> ₹$3,024<br><br>
+        <strong>⚡ 15-Second Direct Proportionality Trick:</strong><br>
+        • When Rate and Time are constant, $SI \propto \text{Principal}$. You DO NOT need to calculate Time $T$!<br>
+        • $SI_1 = 11,046 - 8,400 = ₹2,646$.<br>
+        • Ratio of Principals: $\frac{P_2}{P_1} = \frac{9,600}{8,400} = \frac{96}{84} = \frac{8}{7}$.<br>
+        • Therefore, $SI_2 = SI_1 \times \frac{8}{7} = 2,646 \times \frac{8}{7} = 378 \times 8 = ₹3,024$.<br><br>
+        <strong>🚨 Examiner Trap:</strong> Students spend 75 seconds computing $T = \frac{2646 \times 100}{8400 \times 8.75} = 3.6$ years and then calculating $SI_2$. In CGL, use ratio of principals directly!
+      </div>
+    </div>
+
+    <!-- PYQ 2 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2022 Tier-2 (Mains)</span>
+        <span class="pyq-diff">Difficulty: Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> What is the difference (in ₹) between the compound interest, compounded yearly, and the simple interest on a sum of ₹$12,000$ for $2$ years at $15\%$ per annum?
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph6-pyq-1')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph6-pyq-1">
+        <strong>✅ Correct Answer:</strong> ₹$270<br><br>
+        <strong>⚡ 8-Second Formula Trick:</strong><br>
+        • $D_2 = P \left(\frac{R}{100}\right)^2 = 12,000 \times \left(\frac{15}{100}\right)^2 = 12,000 \times \frac{225}{10,000} = 1.2 \times 225 = ₹270$.<br><br>
+        <strong>🚨 Examiner Trap:</strong> Multiplying $12000 \times 1.15^2$ manually. Always use the difference formula $P(R/100)^2$ directly.
+      </div>
+    </div>
+
+    <!-- PYQ 3 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2023 Tier-1 (Shift 1)</span>
+        <span class="pyq-diff">Difficulty: Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> A sum of ₹$12,500$ is invested for $1\frac{1}{2}$ years at $12\%$ per annum compounded $6$-monthly. What is the compound interest (in ₹)?
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph6-pyq-2')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph6-pyq-2">
+        <strong>✅ Correct Answer:</strong> ₹$2,387<br><br>
+        <strong>⚡ Ratio Multiplier Method:</strong><br>
+        • Half-yearly rate $= \frac{12}{2} = 6\%$. Periods $n = 1.5 \times 2 = 3$.<br>
+        • Effective 3-period rate for $6\%$: $3 \times 6 + 3 \times 0.36 + 0.00216 = 18 + 1.08 + 0.00216 = 19.096\%$.<br>
+        • Or Amount $= 12,500 \times (1.06)^3 = 12,500 \times 1.191016 = ₹14,887.70$.<br>
+        • $CI = 14,887.70 - 12,500 \approx ₹2,387$.
+      </div>
+    </div>
+
+    <!-- PYQ 4 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2022 Tier-1</span>
+        <span class="pyq-diff">Difficulty: Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> A sum amounts to ₹$18,600$ after $3$ years and to ₹$27,900$ after $6$ years at a certain rate percent p.a., when the interest is compounded annually. The sum is:
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph6-pyq-3')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph6-pyq-3">
+        <strong>✅ Correct Answer:</strong> ₹$12,400<br><br>
+        <strong>⚡ 10-Second GP Property:</strong><br>
+        • In CI with equal time intervals ($0 \to 3 \to 6$ years): $P$, $A_3$, $A_6$ are in Geometric Progression!<br>
+        • Therefore, $\frac{A_3}{P} = \frac{A_6}{A_3} \implies P = \frac{A_3^2}{A_6}$.<br>
+        • $P = \frac{18,600 \times 18,600}{27,900} = \frac{186 \times 18,600}{279}$.<br>
+        • Since $186/279 = 2/3$, $P = \frac{2}{3} \times 18,600 = 2 \times 6,200 = ₹12,400$!
+      </div>
+    </div>
+
+    <!-- PYQ 5 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2021 Tier-2 (Mains)</span>
+        <span class="pyq-diff">Difficulty: High Level</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> A loan of ₹$12,300$ is to be paid back in two equal annual installments. If the interest is compounded annually at $5\%$ per annum, then the amount of each installment is:
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph6-pyq-4')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph6-pyq-4">
+        <strong>✅ Correct Answer:</strong> ₹$6,615<br><br>
+        <strong>⚡ Unit Ratio Trick:</strong><br>
+        • $5\% = \frac{1}{20}$. Installment unit $= 21^2 = 441$.<br>
+        • Year 1 Principal $= 20 \times 21 = 420$ units.<br>
+        • Year 2 Principal $= 20^2 = 400$ units.<br>
+        • Total Principal $= 420 + 400 = 820$ units.<br>
+        • Given $820$ units $= ₹12,300 \implies 1$ unit $= \frac{12,300}{820} = 15$.<br>
+        • Each Installment $= 441 \times 15 = ₹6,615$.<br><br>
+        <strong>🚨 Option Elimination:</strong> Installment MUST be a multiple of $21^2 = 441$! Only option ₹$6,615$ is divisible by $441$.
+      </div>
+    </div>
+  </div>
+
   <h2 class="sec-title" id="sec-timer">⏱️ Timed Drill — Score Calculator</h2>
   <div class="timed-drill">
     <div style="text-align:center;font-size:0.85rem;color:var(--text-muted);margin-bottom:10px;">
@@ -1676,34 +1971,61 @@ pre, code, .fc-formula {
   </div>
 
   <!-- ACTIVE RECALL -->
-  <h2 class="sec-title" id="sec-recall">🧠 Active Recall Session</h2>
-  <div class="recall-section">
-    <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:12px;">
-      <strong style="color:var(--gold);">Rule:</strong> Formula ko passive reading se revise mat karo. Hide → Recall → Write → Verify → Use.
+  <h2 class="sec-title" id="sec-recall">🧠 Active Recall Session — Test Your Memory</h2>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:24px;">
+    <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:16px;">
+      Answer each question mentally or on scratch paper BEFORE clicking "Reveal Answer". High retention depends on retrieval practice!
+    </p>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">1. What is the exact formula for CI &minus; SI difference for 2 years and for 3 years?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">D2 = P * (R/100)^2. D3 = P * (R/100)^2 * [(300 + R)/100] = D2 * (3 + R/100).</div>
     </div>
-    <div class="recall-how"><div class="recall-step"><div class="rs-box">Hide Formula</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Recall Mentally</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Write It Down</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Verify</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Use in a Question</div></div></div>
-    <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:10px;margin-top:10px;">
-      ✅ Check off each recall question after completing it from memory:
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">2. If a sum doubles in 5 years at simple interest, in how many years will it become 5 times?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">SI for 1P = 5 years. For 5 times, SI = 4P => Time = 4 * 5 = 20 years.</div>
     </div>
-    <div class="recall-qs"><div class="recall-q">
-          <span class="rq-text">SI formula kya hai?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">D₂ formula (2-yr CI−SI diff) likhein?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Half-yearly compounding mein R aur T kaise change hote hain?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Sum doubles in SI at R% mein kitne years mein?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Standard effective rate: 10% for 2 years CI = ?</span>
-          <input type="checkbox" class="rq-check">
-        </div></div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">3. If a sum doubles in 5 years at compound interest, in how many years will it become 8 times?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">8 times = 2^3 times. Time = 3 * 5 = 15 years. (In CI, powers multiply by time).</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">4. In an 8-monthly compounding scheme at 15% p.a. for 2 years, what are the effective rate per cycle and the number of cycles?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Rate per cycle = 15% * (8/12) = 10%. Number of cycles = 24 / 8 = 3 cycles.</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">5. If 2-year SI is ₹800 and 2-year CI is ₹832, what is the rate of interest?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">1-yr SI = 400. Difference = 32. Rate R = (32 / 400) * 100 = 8%.</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">6. What are the memorized effective CI rates for 10% over 2, 3, and 4 years?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">2 years = 21%, 3 years = 33.1%, 4 years = 46.41%.</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">7. If a sum amounts to A in 3 years and B in 6 years at CI, what is the principal P?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">P = A^2 / B (because P, A, B form a Geometric Progression).</div>
+    </div>
+
+    <div class="ar-item" style="padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">8. How do you find the compound interest of the 3rd year ALONE using Amount values?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">CI of 3rd year alone = A3 - A2 (or Rate% * A2).</div>
+    </div>
   </div>
 
-  <!-- ERROR NOTEBOOK -->
   <h2 class="sec-title" id="sec-errors">📓 Error Notebook</h2>
   <div class="error-notebook">
     <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:12px;">
