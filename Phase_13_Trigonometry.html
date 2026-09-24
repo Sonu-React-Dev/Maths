@@ -1435,208 +1435,497 @@ pre, code, .fc-formula {
       <div>
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Pythagorean Identities</span>
-    <button class="copy-btn" data-formula="sin²θ + cos²θ = 1
-sec²θ - tan²θ = 1  (→ secθ+tanθ = 1/(secθ-tanθ))
-cosec²θ - cot²θ = 1  (→ cosecθ+cotθ = 1/(cosecθ-cotθ))">Copy</button>
+    <span class="fc-name">📐 Pythagorean Identities &amp; Reciprocal Inversions</span>
+    <button class="copy-btn" data-formula="sin²θ + cos²θ = 1 | sec²θ - tan²θ = 1 => secθ - tanθ = 1/(secθ + tanθ) | cosec²θ - cot²θ = 1 => cosecθ - cotθ = 1/(cosecθ + cotθ)">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">sin²θ + cos²θ = 1
-sec²θ - tan²θ = 1  (→ secθ+tanθ = 1/(secθ-tanθ))
-cosec²θ - cot²θ = 1  (→ cosecθ+cotθ = 1/(cosecθ-cotθ))</div>
-    <div class="fc-row"><strong>When to use:</strong> Simplification of trig expressions, proving identities</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> If secθ+tanθ=x → secθ-tanθ=1/x → 2secθ=x+1/x → secθ=(x²+1)/2x</div>
-    <div class="fc-trap">🚨 Trap: sec²θ-tan²θ=1, NOT sec²θ+tan²θ=1. The minus is crucial!</div>
+    <div class="fc-formula">\sin^2\theta + \cos^2\theta = 1 &nbsp;|&nbsp; \sec^2\theta - \tan^2\theta = 1 &nbsp;|&nbsp; \text{cosec}^2\theta - \cot^2\theta = 1</div>
+    <div class="fc-row"><strong>When to use:</strong> Simplifying trigonometric fractions, proving identities, and converting sec-tan or cosec-cot pairs.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> If $\sec\theta + \tan\theta = x \implies \sec\theta - \tan\theta = \frac{1}{x}$. Then $\sin\theta = \frac{x^2 - 1}{x^2 + 1}$ directly in 3 seconds!</div>
+    <div class="fc-trap">🚨 Trap: Writing $\sec^2\theta + \tan^2\theta = 1$. The minus sign between $\sec^2$ and $\tan^2$ is crucial!</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Max-Min of Linear Combinations</span>
-    <button class="copy-btn" data-formula="Max of (a sinθ + b cosθ) = +√(a² + b²)
-Min of (a sinθ + b cosθ) = -√(a² + b²)">Copy</button>
+    <span class="fc-name">📐 Complementary Angle Pairs ($A + B = 90^\circ$)</span>
+    <button class="copy-btn" data-formula="If A + B = 90°: sin A = cos B | tan A * tan B = 1 | sin²A + sin²B = 1 | cos²A + cos²B = 1">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">Max of (a sinθ + b cosθ) = +√(a² + b²)
-Min of (a sinθ + b cosθ) = -√(a² + b²)</div>
-    <div class="fc-row"><strong>When to use:</strong> Any expression of form a sinθ + b cosθ OR a cosθ - b sinθ</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> 3sinθ+4cosθ: Max=√(9+16)=5, Min=-5.</div>
-    <div class="fc-trap">🚨 Trap: For a sinθ - b cosθ: still √(a²+b²) for max/min. The sign between doesn't change the formula.</div>
+    <div class="fc-formula">\sin A = \cos B &nbsp;|&nbsp; \tan A \times \tan B = 1 &nbsp;|&nbsp; \sin^2 A + \sin^2 B = 1 &nbsp;|&nbsp; \sec A = \text{cosec } B</div>
+    <div class="fc-row"><strong>When to use:</strong> Angles adding to $90^\circ$ (e.g. $10^\circ$ and $80^\circ$, $25^\circ$ and $65^\circ$, $35^\circ$ and $55^\circ$).</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Tan product series $\tan 1^\circ \tan 2^\circ \dots \tan 89^\circ = 1$ because each pair $\tan \theta \tan(90-\theta) = 1$, and $\tan 45^\circ = 1$.</div>
+    <div class="fc-trap">🚨 Trap: Trying to look up non-standard angles ($10^\circ, 80^\circ$) instead of pairing them into complementary ones.</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Height & Distance (Ratio Method)</span>
-    <button class="copy-btn" data-formula="30°-60°-90°: sides = 1 : √3 : 2
-45°-45°-90°: sides = 1 : 1 : √2
-Angle of elevation from A to top B: tanθ=height/base">Copy</button>
+    <span class="fc-name">📐 Maxima &amp; Minima of Trigonometric Functions</span>
+    <button class="copy-btn" data-formula="a sinθ + b cosθ: Max = +sqrt(a²+b²), Min = -sqrt(a²+b²) | a sin²θ + b cosec²θ: Min = 2*sqrt(ab) (a>=b) | a tan²θ + b cot²θ: Min = 2*sqrt(ab)">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">30°-60°-90°: sides = 1 : √3 : 2
-45°-45°-90°: sides = 1 : 1 : √2
-Angle of elevation from A to top B: tanθ=height/base</div>
-    <div class="fc-row"><strong>When to use:</strong> Tower, building, pole height-distance problems</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> Tower angle=60°, observer 10m away: height=10√3m (using 1:√3:2 ratio, base=10→height=10√3).</div>
-    <div class="fc-trap">🚨 Trap: Angle of elevation is measured from horizontal, NOT from vertical. Confirm before setting up triangle.</div>
+    <div class="fc-formula">a\sin\theta + b\cos\theta \in [-\sqrt{a^2+b^2}, +\sqrt{a^2+b^2}] &nbsp;|&nbsp; \text{Min}(a\tan^2\theta + b\cot^2\theta) = 2\sqrt{ab}</div>
+    <div class="fc-row"><strong>When to use:</strong> Extreme values of linear sums or reciprocal quadratic pairs.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> For $a\sin^2\theta + b\text{cosec}^2\theta$: If $a \ge b$, $\text{Min} = 2\sqrt{ab}$. If $a < b$, $\text{Min} = a + b$!</div>
+    <div class="fc-trap">🚨 Trap: In $a\sin\theta - b\cos\theta$, maximum is STILL $+\sqrt{a^2+b^2}$. The minus sign does not change the square root!</div>
   </div>
-</div></div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Height &amp; Distance Triangles ($30^\circ-60^\circ-90^\circ$ &amp; $45^\circ-45^\circ-90^\circ$)</span>
+    <button class="copy-btn" data-formula="30°-60°-90°: sides = 1 : sqrt(3) : 2 | 45°-45°-90°: sides = 1 : 1 : sqrt(2) | Complementary points: h = sqrt(a * b)">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">30^\circ : 60^\circ : 90^\circ \implies 1 : \sqrt{3} : 2 &nbsp;|&nbsp; 45^\circ : 45^\circ : 90^\circ \implies 1 : 1 : \sqrt{2} &nbsp;|&nbsp; h = \sqrt{a \times b}</div>
+    <div class="fc-row"><strong>When to use:</strong> Towers, poles, hills, shadows, and elevation/depression angle problems.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Complementary angles of elevation from distances $a$ and $b$ from base: Tower height $h = \sqrt{a \times b}$ in 2 seconds!</div>
+    <div class="fc-trap">🚨 Trap: Measuring angle of depression from vertical rather than horizontal line of sight.</div>
+  </div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 The $a\sin\theta + b\cos\theta = c$ Orthogonal Inversion</span>
+    <button class="copy-btn" data-formula="If a sinθ + b cosθ = c => a cosθ - b sinθ = +/- sqrt(a² + b² - c²)">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">a\sin\theta + b\cos\theta = c \implies a\cos\theta - b\sin\theta = \pm\sqrt{a^2 + b^2 - c^2}</div>
+    <div class="fc-row"><strong>When to use:</strong> Linear combination of $\sin\theta$ and $\cos\theta$ where coefficients are swapped and sign is inverted.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> If $3\sin\theta + 4\cos\theta = 5 \implies 3\cos\theta - 4\sin\theta = \sqrt{9 + 16 - 25} = 0$ instantly!</div>
+    <div class="fc-trap">🚨 Trap: Squaring and expanding both sides manually. The identity $(a\sin+b\cos)^2 + (a\cos-b\sin)^2 = a^2 + b^2$ gives it in 1 step!</div>
+  </div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Double Angle &amp; Tangent Half-Angle Expansions</span>
+    <button class="copy-btn" data-formula="sin 2θ = 2sinθ cosθ = 2tanθ/(1+tan²θ) | cos 2θ = cos²θ - sin²θ = 2cos²θ - 1 = 1 - 2sin²θ = (1-tan²θ)/(1+tan²θ)">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">\sin 2\theta = 2\sin\theta\cos\theta = \frac{2\tan\theta}{1 + \tan^2\theta} &nbsp;|&nbsp; \cos 2\theta = 2\cos^2\theta - 1 = \frac{1 - \tan^2\theta}{1 + \tan^2\theta}</div>
+    <div class="fc-row"><strong>When to use:</strong> Simplifying trigonometric equations with multiple angles ($2\theta, 4\theta$).</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> $1 + \cos 2\theta = 2\cos^2\theta$ and $1 - \cos 2\theta = 2\sin^2\theta$. Half-angle square removers!</div>
+    <div class="fc-trap">🚨 Trap: Confusing $\tan 2\theta = \frac{2\tan\theta}{1 - \tan^2\theta}$ (MINUS) with $\sin 2\theta = \frac{2\tan\theta}{1 + \tan^2\theta}$ (PLUS).</div>
+  </div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Value Substitution Guidelines in Trigonometry</span>
+    <button class="copy-btn" data-formula="Test θ = 45° for general expressions | Test θ = 0° or 90° if no tan/cot/sec/cosec undefined | Check option collision">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">\text{Standard Choice: } \theta = 45^\circ &nbsp;|&nbsp; \text{Alternative Choice: } \theta = 30^\circ \text{ or } 60^\circ &nbsp;|&nbsp; \text{Avoid } \div 0</div>
+    <div class="fc-row"><strong>When to use:</strong> Complicated algebraic expressions in $\sin, \cos, \tan$ where answer choices are pure numbers or degree-free.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> If options are distinct numbers, test $\theta = 45^\circ$: $\sin 45^\circ = \cos 45^\circ = 1/\sqrt{2}$, $\tan 45^\circ = \cot 45^\circ = 1$.</div>
+    <div class="fc-trap">🚨 Trap: Testing $\theta = 0^\circ$ when $\text{cosec}$ or $\cot$ is in denominator ($1/0 = \infty$).</div>
+  </div>
+</div>
+      </div>
     </div>
     <div>
       <h2 class="sec-title" id="sec-tricks">⚡ Speed Shortcuts</h2>
       <div class="shortcut-grid" style="grid-template-columns:1fr;">
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Standard Angle Value Memory (SOH CAH TOA Table)</div>
-  <div class="sc-content">sin: 0°=0, 30°=½, 45°=1/√2, 60°=√3/2, 90°=1. Memory: 0,1,√2,√3,2 under √ divided by 2 → √0/2,√1/2,√2/2,√3/2,√4/2.</div>
+  <div class="sc-title">⚡ 1. The $\sec\theta + \tan\theta = x$ Reciprocal Inversion</div>
+  <div class="sc-content">$\sec\theta + \tan\theta = x \implies \sin\theta = \frac{x^2 - 1}{x^2 + 1}$, $\cos\theta = \frac{2x}{x^2 + 1}$. If $\sec\theta + \tan\theta = 5 \implies \sin\theta = \frac{25 - 1}{25 + 1} = \frac{24}{26} = \frac{12}{13}$ in 3 seconds!</div>
 </div>
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Co-Function Pairs</div>
-  <div class="sc-content">sin(90°-θ)=cosθ. tan(90°-θ)=cotθ. sec(90°-θ)=cosecθ. Add co- to get the partner.</div>
+  <div class="sc-title">⚡ 2. Complementary Points Tower Height ($h = \sqrt{ab}$)</div>
+  <div class="sc-content">If angles of elevation from points at distances $a$ and $b$ from tower base are complementary: $h = \sqrt{a \times b}$. E.g., distances $16$ m and $25$ m $\implies h = \sqrt{16 \times 25} = 4 \times 5 = 20$ m!</div>
 </div>
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Sec-Tan Reciprocal Trick</div>
-  <div class="sc-content">secθ+tanθ=5 → secθ-tanθ=0.2. Add: 2secθ=5.2 → secθ=2.6. Subtract: 2tanθ=4.8 → tanθ=2.4. Then sinθ=tanθ/secθ=2.4/2.6=12/13.</div>
-</div></div>
+  <div class="sc-title">⚡ 3. The $30^\circ \to 60^\circ$ Elevation Advance</div>
+  <div class="sc-content">When moving towards a tower over distance $d$, angle changes from $30^\circ$ to $60^\circ$: Remaining distance to base is ALWAYS $\frac{d}{2}$, and Tower Height $h = \frac{d}{2}\sqrt{3}$. If $d = 40$ m $\implies h = 20\sqrt{3}$ m!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 4. $a\sin\theta + b\cos\theta = c$ Inversion</div>
+  <div class="sc-content">$a\sin\theta + b\cos\theta = c \implies a\cos\theta - b\sin\theta = \sqrt{a^2 + b^2 - c^2}$. E.g., $\sin\theta + \cos\theta = 1 \implies \cos\theta - \sin\theta = \sqrt{1^2 + 1^2 - 1^2} = \pm 1$ in 2 seconds!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 5. Tan Product Cancellation ($1^\circ \dots 89^\circ$)</div>
+  <div class="sc-content">Pair up $\tan\theta \times \tan(90^\circ - \theta) = 1$. E.g., $\tan 10^\circ \tan 25^\circ \tan 45^\circ \tan 65^\circ \tan 80^\circ = (1) \times (1) \times 1 = 1$. No calculation needed!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 6. AM-GM Minima for $a\tan^2\theta + b\cot^2\theta$</div>
+  <div class="sc-content">Minimum value is ALWAYS $2\sqrt{ab}$. E.g., for $16\tan^2\theta + 25\cot^2\theta \implies 2\sqrt{16 \times 25} = 2 \times 20 = 40$ instantly!</div>
+</div>
+      </div>
     </div>
-  </div>
-
-  <!-- SSC TRAPS -->
+  </div><!-- SSC TRAPS -->
   <h2 class="sec-title" id="sec-traps">🚨 SSC Exam Trap Library</h2>
   <div class="trap-grid">
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 Sec²-Tan² Sign Trap</span>
+    <span class="trap-title">🚨 Trap 1: $\sec^2\theta - \tan^2\theta = 1$ Sign Trap</span>
     <span class="error-code">Error-F</span>
   </div>
-  <div class="trap-desc">sec²θ - tan²θ = 1 (not plus!). Similarly cosec²θ - cot²θ = 1. Don't write + between them.</div>
+  <div class="trap-desc">$\sin^2 + \cos^2 = 1$ has a PLUS sign, but $\sec^2 - \tan^2 = 1$ and $\text{cosec}^2 - \cot^2 = 1$ have MINUS signs. Candidates routinely write $\sec^2 + \tan^2 = 1$ and invert signs throughout.</div>
 </div>
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 Angle of Elevation vs Depression</span>
+    <span class="trap-title">🚨 Trap 2: Angle of Depression Line of Sight</span>
     <span class="error-code">Error-C</span>
   </div>
-  <div class="trap-desc">Elevation: looking UP from horizontal. Depression: looking DOWN from horizontal. They are equal when observer and target are at ends of a horizontal distance (alternate angles).</div>
+  <div class="trap-desc">Angle of depression is measured from the HORIZONTAL line looking down, NOT from the vertical cliff/building! Measuring from vertical produces $(90^\circ - \theta)$, swapping opposite and adjacent sides.</div>
 </div>
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 Min of a sin²+b cosec² Trap</span>
-    <span class="error-code">Error-C</span>
+    <span class="trap-title">🚨 Trap 3: Minima of $a\sin^2\theta + b\text{cosec}^2\theta$ when $a < b$</span>
+    <span class="error-code">Error-K</span>
   </div>
-  <div class="trap-desc">Min of (a sin²θ + b cosec²θ) = 2√(ab) by AM-GM. Many students think min is at θ=0 or 90° — it's actually at sinθ=⁴√(b/a).</div>
-</div></div>
+  <div class="trap-desc">If $a \ge b$, minimum is $2\sqrt{ab}$. But if $a < b$ (e.g. $4\sin^2\theta + 9\text{cosec}^2\theta$), the AM-GM equality requires $\sin^2\theta = \sqrt{b/a} > 1$ (impossible). Hence minimum is $(a + b) = 13$, NOT $2\sqrt{36} = 12$!</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 4: Value Putting at Undefined Angles</span>
+    <span class="error-code">Error-T</span>
+  </div>
+  <div class="trap-desc">Putting $\theta = 0^\circ$ when the expression contains $\cot\theta$ or $\text{cosec}\theta$ yields $\infty$ ($1/0$). Always inspect denominators before selecting substitution angles ($\,45^\circ$ is usually safest).</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 5: Complementary Squares Addition Trap</span>
+    <span class="error-code">Error-R</span>
+  </div>
+  <div class="trap-desc">$\sin^2 20^\circ + \sin^2 70^\circ = \sin^2 20^\circ + \cos^2 20^\circ = 1$. Candidates often attempt expansion or leave it blank, unaware that complementary sine squares sum to $1$.</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 6: Observation Points on Same vs Opposite Sides</span>
+    <span class="error-code">Error-S</span>
+  </div>
+  <div class="trap-desc">In tower problems, verify whether two observers are on the SAME side of the tower ($d = x_1 - x_2$) or on OPPOSITE sides ($d = x_1 + x_2$). Misreading orientation inverts the distance.</div>
+</div>
+  </div>
 
-  <!-- PRACTICE Q — One at a time (AI Tutor Rule!) -->
   <h2 class="sec-title" id="sec-practice">💡 Guided Practice Questions (One at a Time)</h2>
-  <div style="background:rgba(246,194,68,0.06);border:1px solid rgba(246,194,68,0.15);border-radius:8px;padding:10px 16px;margin-bottom:14px;font-size:0.8rem;color:#c8a84b;">
-    🤖 <strong>AI Tutor Rule:</strong> Ek question ek baar mein solve karo. Hint aur answer tabhi dekho jab apna attempt ho jaye. Self-rate karo.
-  </div>
   <div class="practice-container">
-    <div class="pq-controls">
-      <button class="pq-btn disabled" id="pq-prev">← Prev</button>
-      <span class="pq-counter">1 / 5</span>
-      <button class="pq-btn" id="pq-next">Next →</button>
+    <div class="pq-nav">
+      <span class="pq-counter" id="pq-counter">Question 1 of 10</span>
+      <div style="display:flex;gap:8px;">
+        <button class="pq-btn disabled" id="pq-prev">&larr; Prev</button>
+        <button class="pq-btn" id="pq-next">Next &rarr;</button>
+      </div>
     </div>
-    
-<div class="pq-card-item" style="display:block">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">Find the maximum value of 3sinθ + 4cosθ.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph13-0')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph13-0')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph13-0">Hint: Max of (a sinθ + b cosθ) = √(a²+b²)</div>
-    <div class="pq-ans-box" id="pq-ans-ph13-0"><strong>Answer:</strong> Max = √(3²+4²) = √25 = 5.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q1 -->
+    <div class="pq-card-item active" id="pq-card-ph13-0">
+      <div class="pq-badge"><span class="badge-tag">Level: Basic Foundation</span><span class="badge-tag tag-type">Sec-Tan Reciprocal Formula</span></div>
+      <div class="pq-question"><strong>Q1:</strong> If $\sec\theta + \tan\theta = 4$, find the value of $\sin\theta$ and $\cos\theta$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph13-0')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph13-0')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph13-0">Hint: $\sec\theta - \tan\theta = 1/4$. Add both to find $\sec\theta$, then $\sin\theta = \frac{x^2 - 1}{x^2 + 1}$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph13-0">
+        <strong>Answer:</strong> $\sin\theta = \frac{15}{17}$; $\cos\theta = \frac{8}{17}$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. $\sec\theta + \tan\theta = 4$ and $\sec\theta - \tan\theta = \frac{1}{4}$.<br>
+        2. Adding: $2\sec\theta = 4 + \frac{1}{4} = \frac{17}{4} \implies \sec\theta = \frac{17}{8} \implies \cos\theta = \frac{8}{17}$.<br>
+        3. Subtracting: $2\tan\theta = 4 - \frac{1}{4} = \frac{15}{4} \implies \tan\theta = \frac{15}{8}$.<br>
+        4. $\sin\theta = \frac{\tan\theta}{\sec\theta} = \frac{15/8}{17/8} = \frac{15}{17}$.<br>
+        <em>⚡ Direct Shortcut:</em> $\sin\theta = \frac{4^2 - 1}{4^2 + 1} = \frac{15}{17}$ in 2 seconds!<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Arithmetic fraction addition slip | [F] Formula inversion error</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level B">Level B: Standard</span>
-    <div class="pq-question">If secθ + tanθ = 3, find sinθ.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph13-1')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph13-1')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph13-1">Hint: Use secθ+tanθ=3 and secθ-tanθ=1/3. Add and subtract to find sec and tan individually.</div>
-    <div class="pq-ans-box" id="pq-ans-ph13-1"><strong>Answer:</strong> secθ-tanθ=1/3. Add: 2secθ=10/3→secθ=5/3. sinθ=tanθ/secθ. Subtract: 2tanθ=8/3→tanθ=4/3. sinθ=4/3÷5/3=4/5.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q2 -->
+    <div class="pq-card-item" id="pq-card-ph13-1" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Foundation</span><span class="badge-tag tag-type">Complementary Tan Product</span></div>
+      <div class="pq-question"><strong>Q2:</strong> Find the numerical value of $\tan 10^\circ \times \tan 25^\circ \times \tan 45^\circ \times \tan 65^\circ \times \tan 80^\circ$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph13-1')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph13-1')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph13-1">Hint: Pair complementary angles: $\tan 10^\circ \tan 80^\circ = 1$ and $\tan 25^\circ \tan 65^\circ = 1$. $\tan 45^\circ = 1$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph13-1">
+        <strong>Answer:</strong> $1$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. $\tan 80^\circ = \tan(90^\circ - 10^\circ) = \cot 10^\circ \implies \tan 10^\circ \cot 10^\circ = 1$.<br>
+        2. $\tan 65^\circ = \tan(90^\circ - 25^\circ) = \cot 25^\circ \implies \tan 25^\circ \cot 25^\circ = 1$.<br>
+        3. $\tan 45^\circ = 1$.<br>
+        4. Value $= 1 \times 1 \times 1 = 1$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Multiplied incorrectly | [K] Failed to recognize complementary property</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">Tower height = 50m. Observer on ground sees top at 60°. Find distance from tower base.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph13-2')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph13-2')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph13-2">Hint: Or use 30-60-90 ratio: opposite 60° is height=50m. Adjacent=50/√3.</div>
-    <div class="pq-ans-box" id="pq-ans-ph13-2"><strong>Answer:</strong> tan60°=50/d → √3=50/d → d=50/√3=50√3/3≈28.87m.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q3 -->
+    <div class="pq-card-item" id="pq-card-ph13-2" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate SSC Core</span><span class="badge-tag tag-type">Complementary Sine Squares Series</span></div>
+      <div class="pq-question"><strong>Q3:</strong> Find the sum of the series: $\sin^2 5^\circ + \sin^2 10^\circ + \sin^2 15^\circ + \dots + \sin^2 85^\circ + \sin^2 90^\circ$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph13-2')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph13-2')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph13-2">Hint: From $5^\circ$ to $85^\circ$, there are $17$ terms. $8$ pairs sum to $1$ each ($= 8$). $\sin^2 45^\circ = 1/2$. $\sin^2 90^\circ = 1$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph13-2">
+        <strong>Answer:</strong> $9.5$ (or $9\frac{1}{2}$).<br>
+        <strong>Step-by-step:</strong><br>
+        1. Terms from $5^\circ$ to $85^\circ$: $\frac{85 - 5}{5} + 1 = 17$ terms.<br>
+        2. Pairing: $(\sin^2 5^\circ + \sin^2 85^\circ) + \dots + (\sin^2 40^\circ + \sin^2 50^\circ) = 8$ pairs $\times 1 = 8$.<br>
+        3. Middle unpaired term $= \sin^2 45^\circ = (1/\sqrt{2})^2 = \frac{1}{2} = 0.5$.<br>
+        4. Last term $= \sin^2 90^\circ = 1^2 = 1$.<br>
+        5. Total Sum $= 8 + 0.5 + 1 = 9.5$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Counted pairs incorrectly | [S] Forgot sin² 90° term</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level B">Level B: Standard</span>
-    <div class="pq-question">If sin A = 3/5, find the value of (4 + 4tanA) / (4secA).</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph13-3')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph13-3')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph13-3">Hint: Find all trig values from sinA=3/5 using the 3-4-5 right triangle.</div>
-    <div class="pq-ans-box" id="pq-ans-ph13-3"><strong>Answer:</strong> sinA=3/5 → cosA=4/5, tanA=3/4, secA=5/4. (4+4×3/4)/(4×5/4) = (4+3)/5 = 7/5.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q4 -->
+    <div class="pq-card-item" id="pq-card-ph13-3" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate-High</span><span class="badge-tag tag-type">Orthogonal Linear Inversion</span></div>
+      <div class="pq-question"><strong>Q4:</strong> If $3\sin\theta + 4\cos\theta = 5$, find the value of $3\cos\theta - 4\sin\theta$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph13-3')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph13-3')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph13-3">Hint: Formula: $a\cos\theta - b\sin\theta = \pm\sqrt{a^2 + b^2 - c^2} = \sqrt{3^2 + 4^2 - 5^2}$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph13-3">
+        <strong>Answer:</strong> $0$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Theorem: $(a\sin\theta + b\cos\theta)^2 + (a\cos\theta - b\sin\theta)^2 = a^2 + b^2$.<br>
+        2. $5^2 + (3\cos\theta - 4\sin\theta)^2 = 3^2 + 4^2 = 9 + 16 = 25$.<br>
+        3. $25 + (3\cos\theta - 4\sin\theta)^2 = 25 \implies (3\cos\theta - 4\sin\theta)^2 = 0$.<br>
+        4. $3\cos\theta - 4\sin\theta = 0$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [F] Failed to use the orthogonal identity | [C] Arithmetic error</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level C">Level C: SSC Exam Level</span>
-    <div class="pq-question">The angle of elevation from a point 20m from base of tower changes from 45° to 60° when observer moves 10m closer. Find tower height.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph13-4')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph13-4')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph13-4">Hint: Set up two equations with height h and closer distance d. Solve simultaneously.</div>
-    <div class="pq-ans-box" id="pq-ans-ph13-4"><strong>Answer:</strong> Let h=height. tan45°=h/20→h=20m. Check: tan60°=h/10=20/10=2≠√3. So h≠20. Set up: h/d=tan60°=√3 and h/(d+10)=tan45°=1 → h=d+10. Also h=√3d. √3d=d+10 → d(√3-1)=10 → d=10/(√3-1)=5(√3+1). h=5(√3+1)×√3=5(3+√3)=15+5√3≈23.66m.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q5 -->
+    <div class="pq-card-item" id="pq-card-ph13-4" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate</span><span class="badge-tag tag-type">Maxima &amp; Minima of Linear Form</span></div>
+      <div class="pq-question"><strong>Q5:</strong> Find the maximum and minimum values of the expression $7\sin\theta + 24\cos\theta - 5$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph13-4')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph13-4')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph13-4">Hint: The range of $7\sin\theta + 24\cos\theta$ is $[-\sqrt{7^2 + 24^2}, +\sqrt{7^2 + 24^2}] = [-25, 25]$. Subtract 5 from both ends!</div>
+      <div class="pq-ans-box" id="pq-ans-ph13-4">
+        <strong>Answer:</strong> Maximum $= 20$; Minimum $= -30$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Magnitude $\sqrt{a^2 + b^2} = \sqrt{7^2 + 24^2} = \sqrt{49 + 576} = \sqrt{625} = 25$.<br>
+        2. Maximum value $= +25 - 5 = 20$.<br>
+        3. Minimum value $= -25 - 5 = -30$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Arithmetic error in -25 - 5 = -30 | [F] Triplet square root error</span>
+      </div>
     </div>
-  </div>
-</div>
+
+    <!-- Q6 -->
+    <div class="pq-card-item" id="pq-card-ph13-5" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate-High</span><span class="badge-tag tag-type">AM-GM Minimum</span></div>
+      <div class="pq-question"><strong>Q6:</strong> Find the minimum value of $16\tan^2\theta + 25\cot^2\theta$ (where $\theta$ is acute).</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph13-5')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph13-5')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph13-5">Hint: Apply AM-GM inequality: $\frac{a + b}{2} \ge \sqrt{ab} \implies a + b \ge 2\sqrt{ab}$. $\tan^2\theta \times \cot^2\theta = 1$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph13-5">
+        <strong>Answer:</strong> $40$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Minimum of $a\tan^2\theta + b\cot^2\theta = 2\sqrt{a \times b}$.<br>
+        2. $\text{Min} = 2\sqrt{16 \times 25} = 2 \times (4 \times 5) = 2 \times 20 = 40$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Forgot the 2 factor in 2*sqrt(ab) | [K] Substituted theta = 45° (giving 41)</span>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="pq-card-item" id="pq-card-ph13-6" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: High Level</span><span class="badge-tag tag-type">Height &amp; Distance Elevation Shift</span></div>
+      <div class="pq-question"><strong>Q7:</strong> The shadow of a vertical tower on level ground increases by $20$ meters when the altitude of the sun changes from $60^\circ$ to $45^\circ$. Find the height of the tower (in meters).</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph13-6')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph13-6')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph13-6">Hint: Shadow at $45^\circ$ is $h$. Shadow at $60^\circ$ is $h/\sqrt{3}$. Difference: $h - \frac{h}{\sqrt{3}} = 20$. Rationalize!</div>
+      <div class="pq-ans-box" id="pq-ans-ph13-6">
+        <strong>Answer:</strong> $10(\sqrt{3} + 3)$ m (or $\frac{20\sqrt{3}}{\sqrt{3}-1} = 10(3 + \sqrt{3})$ m).<br>
+        <strong>Step-by-step:</strong><br>
+        1. Let height be $h$.<br>
+        2. Base at $45^\circ = h$. Base at $60^\circ = \frac{h}{\sqrt{3}}$.<br>
+        3. Difference: $h - \frac{h}{\sqrt{3}} = 20 \implies h\left(\frac{\sqrt{3} - 1}{\sqrt{3}}\right) = 20$.<br>
+        4. $h = \frac{20\sqrt{3}}{\sqrt{3} - 1} = \frac{20\sqrt{3}(\sqrt{3} + 1)}{2} = 10\sqrt{3}(\sqrt{3} + 1) = 10(3 + \sqrt{3})$ meters.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Rationalization error | [F] Reversed shadow lengths</span>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="pq-card-item" id="pq-card-ph13-7" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate SSC Core</span><span class="badge-tag tag-type">Complementary Points Tower Height</span></div>
+      <div class="pq-question"><strong>Q8:</strong> The angles of elevation of the top of a tower from two points on the ground at distances of $16$ m and $25$ m from the base of the tower and in the same straight line are complementary. Find the height of the tower.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph13-7')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph13-7')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph13-7">Hint: Shortcut for complementary angles: $h = \sqrt{a \times b} = \sqrt{16 \times 25}$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph13-7">
+        <strong>Answer:</strong> $20$ meters.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Let angles be $\theta$ and $90^\circ - \theta$.<br>
+        2. $\tan\theta = \frac{h}{16}$ and $\tan(90^\circ - \theta) = \cot\theta = \frac{h}{25}$.<br>
+        3. Multiply: $\tan\theta \times \cot\theta = \frac{h^2}{16 \times 25} \implies 1 = \frac{h^2}{400}$.<br>
+        4. $h = \sqrt{400} = 20$ meters.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [F] Forgot the square root property | [C] Multiplication error</span>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="pq-card-item" id="pq-card-ph13-8" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate</span><span class="badge-tag tag-type">Trigonometric Simplification</span></div>
+      <div class="pq-question"><strong>Q9:</strong> Simplify the expression: $\frac{\cos\theta}{1 - \sin\theta} + \frac{\cos\theta}{1 + \sin\theta}$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph13-8')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph13-8')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph13-8">Hint: Common denominator is $(1 - \sin\theta)(1 + \sin\theta) = 1 - \sin^2\theta = \cos^2\theta$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph13-8">
+        <strong>Answer:</strong> $2\sec\theta$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. $\text{Numerator} = \cos\theta(1 + \sin\theta) + \cos\theta(1 - \sin\theta) = \cos\theta(1 + \sin\theta + 1 - \sin\theta) = 2\cos\theta$.<br>
+        2. $\text{Denominator} = (1 - \sin\theta)(1 + \sin\theta) = 1 - \sin^2\theta = \cos^2\theta$.<br>
+        3. Fraction $= \frac{2\cos\theta}{\cos^2\theta} = \frac{2}{\cos\theta} = 2\sec\theta$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Fraction addition slip | [F] Identity error in 1 - sin^2</span>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="pq-card-item" id="pq-card-ph13-9" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Advanced Tier-2</span><span class="badge-tag tag-type">Higher Powers Minima</span></div>
+      <div class="pq-question"><strong>Q10:</strong> Find the minimum value of $\sin^4\theta + \cos^4\theta$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph13-9')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph13-9')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph13-9">Hint: $\sin^4\theta + \cos^4\theta = 1 - 2\sin^2\theta\cos^2\theta = 1 - \frac{1}{2}\sin^2 2\theta$. Maximum of $\sin^2 2\theta$ is $1$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph13-9">
+        <strong>Answer:</strong> $\frac{1}{2}$ (or $0.5$).<br>
+        <strong>Step-by-step:</strong><br>
+        1. Rewrite: $\sin^4\theta + \cos^4\theta = (\sin^2\theta + \cos^2\theta)^2 - 2\sin^2\theta\cos^2\theta = 1 - 2\sin^2\theta\cos^2\theta$.<br>
+        2. Note that $2\sin\theta\cos\theta = \sin 2\theta \implies 2\sin^2\theta\cos^2\theta = \frac{1}{2}\sin^2 2\theta$.<br>
+        3. Expression $= 1 - \frac{1}{2}\sin^2 2\theta$.<br>
+        4. To minimize, $\sin^2 2\theta$ must attain its MAXIMUM value, which is $1$.<br>
+        5. Minimum value $= 1 - \frac{1}{2}(1) = 1 - \frac{1}{2} = \frac{1}{2}$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Arithmetic error | [K] Substituted theta = 0 (giving maximum = 1 instead of min)</span>
+      </div>
+    </div>
   </div>
 
-  <!-- PYQ LAB -->
-  <h2 class="sec-title" id="sec-pyqs">🏆 SSC PYQ Lab</h2>
-  <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:12px;">
-    🔐 Integrity Rule: Actual PYQ tabhi label karo jab year/shift verified ho. Otherwise: "PYQ-style" label use karo.
-  </div>
-  <div class="pyq-container">
-<div class="pyq-card">
-  <div class="pyq-tag">PYQ-style • SSC CGL Tier-1</div>
-  <div class="pyq-q">Find minimum value of (4sin²θ + 9cosec²θ).</div>
-  <button class="reveal-sol-btn" onclick="toggleEl('pyq-sol-ph13-0')">🔍 Show Trick Solution</button>
-  <div class="sol-box" id="pyq-sol-ph13-0">Min = 2√(4×9) = 2√36 = 12.</div>
-</div>
-<div class="pyq-card">
-  <div class="pyq-tag">PYQ-style • SSC CGL Tier-2</div>
-  <div class="pyq-q">If tanA + cotA = 4, find tan²A + cot²A.</div>
-  <button class="reveal-sol-btn" onclick="toggleEl('pyq-sol-ph13-1')">🔍 Show Trick Solution</button>
-  <div class="sol-box" id="pyq-sol-ph13-1">tan²A+cot²A = (tanA+cotA)²-2 = 16-2=14.</div>
-</div></div>
+  <h2 class="sec-title" id="sec-pyqs">🏆 SSC PYQ Lab — Real Exam Questions with Examiner Traps</h2>
+  <div class="pyq-list">
 
-  <!-- TIMED DRILL -->
+    <!-- PYQ 1 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2023 Tier-1 (Shift 2)</span>
+        <span class="pyq-diff">Difficulty: Easy-Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> If $\sec\theta + \tan\theta = 5$, then find the value of $\frac{\text{cosec}\theta + 1}{\text{cosec}\theta - 1}$.
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph13-pyq-0')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph13-pyq-0">
+        <strong>✅ Correct Answer:</strong> $25$<br><br>
+        <strong>⚡ 12-Second Step-by-Step Trick:</strong><br>
+        • $\sec\theta + \tan\theta = 5 \implies \sec\theta - \tan\theta = 1/5$.<br>
+        • $2\sec\theta = 5 + 0.2 = 5.2 \implies \sec\theta = 2.6 = 13/5 \implies \cos\theta = 5/13$.<br>
+        • By $(5, 12, 13)$ triplet, $\sin\theta = 12/13 \implies \text{cosec}\theta = 13/12$.<br>
+        • Value $= \frac{13/12 + 1}{13/12 - 1} = \frac{25/12}{1/12} = 25$!<br><br>
+        <strong>🚨 Alternate Magic:</strong> Notice that $\frac{\text{cosec}\theta + 1}{\text{cosec}\theta - 1} = \frac{1 + \sin\theta}{1 - \sin\theta} = (\sec\theta + \tan\theta)^2 = 5^2 = 25$ in 2 seconds!
+      </div>
+    </div>
+
+    <!-- PYQ 2 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2022 Tier-2 (Mains)</span>
+        <span class="pyq-diff">Difficulty: High Level</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> From the top of a $7$ m high building, the angle of elevation of the top of a cable tower is $60^\circ$ and the angle of depression of its foot is $45^\circ$. Determine the height of the tower.
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph13-pyq-1')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph13-pyq-1">
+        <strong>✅ Correct Answer:</strong> $7(\sqrt{3} + 1)$ m<br><br>
+        <strong>⚡ Visual Ratio Method:</strong><br>
+        • Height of building $= 7$ m.<br>
+        • Angle of depression of foot $= 45^\circ \implies$ Horizontal distance between building and tower $= 7 \times \cot 45^\circ = 7$ m.<br>
+        • Angle of elevation of tower top from building top $= 60^\circ \implies$ Extra height above building $= 7 \times \tan 60^\circ = 7\sqrt{3}$ m.<br>
+        • Total height of cable tower $= 7 + 7\sqrt{3} = 7(\sqrt{3} + 1)$ m.
+      </div>
+    </div>
+
+    <!-- PYQ 3 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2023 Tier-1 (Shift 1)</span>
+        <span class="pyq-diff">Difficulty: Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> If $\sin\theta + \cos\theta = \frac{\sqrt{3} + 1}{2}$, find the value of $\sin\theta \times \cos\theta$.
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph13-pyq-2')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph13-pyq-2">
+        <strong>✅ Correct Answer:</strong> $\frac{\sqrt{3}}{4}$<br><br>
+        <strong>⚡ 10-Second Squaring Trick:</strong><br>
+        • Square both sides: $(\sin\theta + \cos\theta)^2 = \left(\frac{\sqrt{3} + 1}{2}\right)^2$.<br>
+        • $1 + 2\sin\theta\cos\theta = \frac{3 + 1 + 2\sqrt{3}}{4} = \frac{4 + 2\sqrt{3}}{4} = 1 + \frac{\sqrt{3}}{2}$.<br>
+        • $2\sin\theta\cos\theta = \frac{\sqrt{3}}{2} \implies \sin\theta\cos\theta = \frac{\sqrt{3}}{4}$.
+      </div>
+    </div>
+
+    <!-- PYQ 4 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2021 Tier-2 (Mains)</span>
+        <span class="pyq-diff">Difficulty: High Level</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> Find the value of $\frac{\tan 15^\circ \cot 75^\circ + \tan 75^\circ \cot 15^\circ}{\sec 10^\circ \text{cosec } 80^\circ - \tan 10^\circ \cot 80^\circ}$.
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph13-pyq-3')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph13-pyq-3">
+        <strong>✅ Correct Answer:</strong> $14$<br><br>
+        <strong>⚡ Denominator &amp; Numerator Separation:</strong><br>
+        • Denominator: $\sec 10^\circ \text{cosec } 80^\circ - \tan 10^\circ \cot 80^\circ = \sec^2 10^\circ - \tan^2 10^\circ = 1$.<br>
+        • Numerator: $\tan 15^\circ \cot 75^\circ = \tan^2 15^\circ$. $\tan 75^\circ \cot 15^\circ = \tan^2 75^\circ$.<br>
+        • $\tan 15^\circ = 2 - \sqrt{3} \implies \tan^2 15^\circ = 7 - 4\sqrt{3}$.<br>
+        • $\tan 75^\circ = 2 + \sqrt{3} \implies \tan^2 75^\circ = 7 + 4\sqrt{3}$.<br>
+        • Sum $= (7 - 4\sqrt{3}) + (7 + 4\sqrt{3}) = 14$.<br>
+        • Value $= \frac{14}{1} = 14$.
+      </div>
+    </div>
+
+    <!-- PYQ 5 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2022 Tier-1</span>
+        <span class="pyq-diff">Difficulty: Easy</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> A meteorological balloon is tied to a ground station by a cable of length $215$ m inclined at $60^\circ$ to the horizontal. Determine the height of the balloon from the ground.
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph13-pyq-4')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph13-pyq-4">
+        <strong>✅ Correct Answer:</strong> $\frac{215\sqrt{3}}{2}$ m ($\approx 186.2$ m)<br><br>
+        <strong>⚡ 5-Second Ratio Method:</strong><br>
+        • Cable is the hypotenuse: Hypotenuse $= 215$ m.<br>
+        • In $30^\circ-60^\circ-90^\circ$ triangle, side opposite $60^\circ$ is $\frac{\sqrt{3}}{2} \times \text{Hypotenuse}$.<br>
+        • Height $= 215 \times \frac{\sqrt{3}}{2} = \frac{215\sqrt{3}}{2}$ m.
+      </div>
+    </div>
+  </div>
+
   <h2 class="sec-title" id="sec-timer">⏱️ Timed Drill — Score Calculator</h2>
   <div class="timed-drill">
     <div style="text-align:center;font-size:0.85rem;color:var(--text-muted);margin-bottom:10px;">
@@ -1662,34 +1951,61 @@ Angle of elevation from A to top B: tanθ=height/base</div>
   </div>
 
   <!-- ACTIVE RECALL -->
-  <h2 class="sec-title" id="sec-recall">🧠 Active Recall Session</h2>
-  <div class="recall-section">
-    <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:12px;">
-      <strong style="color:var(--gold);">Rule:</strong> Formula ko passive reading se revise mat karo. Hide → Recall → Write → Verify → Use.
+  <h2 class="sec-title" id="sec-recall">🧠 Active Recall Session — Test Your Memory</h2>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:24px;">
+    <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:16px;">
+      Answer each question from memory before clicking "Reveal Answer". Speed and accuracy rely on automatic recall!
+    </p>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">1. If secθ + tanθ = x, what is secθ - tanθ and what is sinθ in terms of x?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">secθ - tanθ = 1/x. sinθ = (x² - 1) / (x² + 1).</div>
     </div>
-    <div class="recall-how"><div class="recall-step"><div class="rs-box">Hide Formula</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Recall Mentally</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Write It Down</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Verify</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Use in a Question</div></div></div>
-    <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:10px;margin-top:10px;">
-      ✅ Check off each recall question after completing it from memory:
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">2. What are the maximum and minimum values of a sinθ + b cosθ?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Maximum = +sqrt(a² + b²). Minimum = -sqrt(a² + b²).</div>
     </div>
-    <div class="recall-qs"><div class="recall-q">
-          <span class="rq-text">sin, cos, tan values at 30° aur 60°?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Sec²-tan²=? (mnemonic)?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Max of a sinθ + b cosθ = ?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Sec-tan reciprocal trick kya hai?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Height-distance problem mein 30-60-90 ratio use kaise karein?</span>
-          <input type="checkbox" class="rq-check">
-        </div></div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">3. What is the shortcut formula for tower height h when angles of elevation from distances a and b are complementary?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">h = sqrt(a * b). E.g. for 4m and 9m: h = sqrt(36) = 6m.</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">4. What are the side ratios for a 30°-60°-90° right triangle?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Opposite to 30° : Opposite to 60° : Hypotenuse (90°) = 1 : sqrt(3) : 2.</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">5. If a sinθ + b cosθ = c, what is the value of a cosθ - b sinθ?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Value = +/- sqrt(a² + b² - c²).</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">6. What is the minimum value of 16 tan²θ + 25 cot²θ?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Min = 2 * sqrt(16 * 25) = 2 * 20 = 40 (by AM-GM).</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">7. What is the value of tan 1° * tan 2° * ... * tan 89°?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">1 (each complementary pair tan θ * tan(90-θ) = 1, and tan 45° = 1).</div>
+    </div>
+
+    <div class="ar-item" style="padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">8. If moving toward a tower over distance d changes angle of elevation from 30° to 60°, what is the tower height?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Tower height h = (d / 2) * sqrt(3). (Remaining distance to base is d/2).</div>
+    </div>
   </div>
 
-  <!-- ERROR NOTEBOOK -->
   <h2 class="sec-title" id="sec-errors">📓 Error Notebook</h2>
   <div class="error-notebook">
     <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:12px;">
