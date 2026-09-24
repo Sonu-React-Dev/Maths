@@ -33,7 +33,7 @@ def get_head_and_styles():
   --shadow-cyan: rgba(0,229,255,0.08);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+html { scroll-behavior: smooth; scroll-padding-top: 130px; }
 body {
   background: var(--bg);
   color: var(--text);
@@ -45,6 +45,140 @@ body {
   overflow-x: hidden;
 }
 .container { max-width: 1180px; margin: 0 auto; }
+
+/* ── STICKY TOPIC NAV BAR ── */
+.topic-nav-bar {
+  position: sticky; top: 62px; z-index: 180;
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(15, 22, 35, 0.95);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px 14px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(12px);
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.topic-nav-bar::-webkit-scrollbar { display: none; }
+.topic-nav-label {
+  font-size: 0.72rem; font-weight: 800; color: var(--gold);
+  text-transform: uppercase; letter-spacing: 0.8px;
+  display: flex; align-items: center; gap: 5px; flex-shrink: 0;
+  padding-right: 8px; border-right: 1px solid var(--border);
+}
+.tnav-chip {
+  background: var(--surface-elevated); color: var(--text-muted);
+  border: 1px solid var(--border); padding: 5px 12px;
+  border-radius: 20px; font-size: 0.75rem; font-weight: 600;
+  text-decoration: none; transition: all 0.2s ease;
+  display: inline-flex; align-items: center; gap: 5px; flex-shrink: 0;
+}
+.tnav-chip:hover {
+  border-color: var(--primary); color: #fff;
+  background: rgba(0, 229, 255, 0.12);
+  transform: translateY(-1px);
+}
+.tnav-chip.active {
+  background: linear-gradient(90deg, rgba(246,194,68,0.2), rgba(0,229,255,0.2));
+  border-color: var(--primary); color: var(--primary);
+  box-shadow: 0 0 10px rgba(0,229,255,0.2);
+}
+
+/* ── TOPIC HUB DIRECTORY ── */
+.topic-hub-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 24px;
+}
+.topic-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+.topic-hub-card {
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.topic-hub-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 18px rgba(0,229,255,0.12);
+  transform: translateY(-2px);
+}
+.thc-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 8px;
+}
+.thc-badge {
+  font-size: 0.68rem; font-weight: 700; padding: 2px 8px; border-radius: 4px;
+  background: rgba(0,229,255,0.12); color: var(--primary); border: 1px solid rgba(0,229,255,0.25);
+}
+.thc-weight {
+  font-size: 0.7rem; color: var(--gold); font-weight: 600;
+}
+.thc-title {
+  font-size: 0.98rem; font-weight: 700; color: #fff; margin-bottom: 6px;
+}
+.thc-desc {
+  font-size: 0.8rem; color: #94a3b8; line-height: 1.5; margin-bottom: 12px; flex-grow: 1;
+}
+.thc-actions {
+  display: flex; gap: 8px; margin-top: 10px;
+}
+.thc-btn {
+  flex: 1; text-align: center; font-size: 0.74rem; font-weight: 600;
+  padding: 6px 10px; border-radius: 6px; text-decoration: none;
+  transition: all 0.2s;
+}
+.thc-btn-theory {
+  background: rgba(246,194,68,0.12); color: var(--gold); border: 1px solid rgba(246,194,68,0.3);
+}
+.thc-btn-theory:hover {
+  background: var(--gold); color: #080b12;
+}
+.thc-btn-practice {
+  background: rgba(34,211,165,0.12); color: var(--green); border: 1px solid rgba(34,211,165,0.3);
+}
+.thc-btn-practice:hover {
+  background: var(--green); color: #080b12;
+}
+
+/* ── TOPIC FILTER BAR IN QUESTIONS ── */
+.topic-filter-bar {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px;
+  background: var(--surface-elevated); padding: 12px 14px;
+  border-radius: 12px; border: 1px solid var(--border);
+  align-items: center;
+}
+.filter-label {
+  font-size: 0.78rem; font-weight: 700; color: var(--gold); margin-right: 6px;
+}
+.q-filter-chip {
+  background: var(--surface); color: var(--text-muted);
+  border: 1px solid var(--border); padding: 5px 12px;
+  border-radius: 16px; font-size: 0.74rem; font-weight: 600;
+  cursor: pointer; transition: all 0.2s;
+}
+.q-filter-chip:hover {
+  border-color: var(--primary); color: #fff;
+}
+.q-filter-chip.active {
+  background: var(--primary); color: #080b12; border-color: var(--primary);
+  font-weight: 700;
+}
+.topic-anchor-block {
+  scroll-margin-top: 130px;
+}
 
 /* ── TOPBAR ── */
 .topbar {

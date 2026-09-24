@@ -25,7 +25,7 @@
   --shadow-cyan: rgba(0,229,255,0.08);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+html { scroll-behavior: smooth; scroll-padding-top: 130px; }
 body {
   background: var(--bg);
   color: var(--text);
@@ -37,6 +37,140 @@ body {
   overflow-x: hidden;
 }
 .container { max-width: 1180px; margin: 0 auto; }
+
+/* ── STICKY TOPIC NAV BAR ── */
+.topic-nav-bar {
+  position: sticky; top: 62px; z-index: 180;
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(15, 22, 35, 0.95);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px 14px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(12px);
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.topic-nav-bar::-webkit-scrollbar { display: none; }
+.topic-nav-label {
+  font-size: 0.72rem; font-weight: 800; color: var(--gold);
+  text-transform: uppercase; letter-spacing: 0.8px;
+  display: flex; align-items: center; gap: 5px; flex-shrink: 0;
+  padding-right: 8px; border-right: 1px solid var(--border);
+}
+.tnav-chip {
+  background: var(--surface-elevated); color: var(--text-muted);
+  border: 1px solid var(--border); padding: 5px 12px;
+  border-radius: 20px; font-size: 0.75rem; font-weight: 600;
+  text-decoration: none; transition: all 0.2s ease;
+  display: inline-flex; align-items: center; gap: 5px; flex-shrink: 0;
+}
+.tnav-chip:hover {
+  border-color: var(--primary); color: #fff;
+  background: rgba(0, 229, 255, 0.12);
+  transform: translateY(-1px);
+}
+.tnav-chip.active {
+  background: linear-gradient(90deg, rgba(246,194,68,0.2), rgba(0,229,255,0.2));
+  border-color: var(--primary); color: var(--primary);
+  box-shadow: 0 0 10px rgba(0,229,255,0.2);
+}
+
+/* ── TOPIC HUB DIRECTORY ── */
+.topic-hub-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 24px;
+}
+.topic-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+.topic-hub-card {
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.topic-hub-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 18px rgba(0,229,255,0.12);
+  transform: translateY(-2px);
+}
+.thc-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 8px;
+}
+.thc-badge {
+  font-size: 0.68rem; font-weight: 700; padding: 2px 8px; border-radius: 4px;
+  background: rgba(0,229,255,0.12); color: var(--primary); border: 1px solid rgba(0,229,255,0.25);
+}
+.thc-weight {
+  font-size: 0.7rem; color: var(--gold); font-weight: 600;
+}
+.thc-title {
+  font-size: 0.98rem; font-weight: 700; color: #fff; margin-bottom: 6px;
+}
+.thc-desc {
+  font-size: 0.8rem; color: #94a3b8; line-height: 1.5; margin-bottom: 12px; flex-grow: 1;
+}
+.thc-actions {
+  display: flex; gap: 8px; margin-top: 10px;
+}
+.thc-btn {
+  flex: 1; text-align: center; font-size: 0.74rem; font-weight: 600;
+  padding: 6px 10px; border-radius: 6px; text-decoration: none;
+  transition: all 0.2s;
+}
+.thc-btn-theory {
+  background: rgba(246,194,68,0.12); color: var(--gold); border: 1px solid rgba(246,194,68,0.3);
+}
+.thc-btn-theory:hover {
+  background: var(--gold); color: #080b12;
+}
+.thc-btn-practice {
+  background: rgba(34,211,165,0.12); color: var(--green); border: 1px solid rgba(34,211,165,0.3);
+}
+.thc-btn-practice:hover {
+  background: var(--green); color: #080b12;
+}
+
+/* ── TOPIC FILTER BAR IN QUESTIONS ── */
+.topic-filter-bar {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px;
+  background: var(--surface-elevated); padding: 12px 14px;
+  border-radius: 12px; border: 1px solid var(--border);
+  align-items: center;
+}
+.filter-label {
+  font-size: 0.78rem; font-weight: 700; color: var(--gold); margin-right: 6px;
+}
+.q-filter-chip {
+  background: var(--surface); color: var(--text-muted);
+  border: 1px solid var(--border); padding: 5px 12px;
+  border-radius: 16px; font-size: 0.74rem; font-weight: 600;
+  cursor: pointer; transition: all 0.2s;
+}
+.q-filter-chip:hover {
+  border-color: var(--primary); color: #fff;
+}
+.q-filter-chip.active {
+  background: var(--primary); color: #080b12; border-color: var(--primary);
+  font-weight: 700;
+}
+.topic-anchor-block {
+  scroll-margin-top: 130px;
+}
 
 /* ── TOPBAR ── */
 .topbar {
@@ -504,6 +638,7 @@ h1 {
     </a>
     <div class="topbar-actions">
       <button class="tb-btn" id="sidebar-toggle-btn">☰ All Phases</button>
+      <a href="#sec-topics" class="tb-btn">🎯 Topics Hub</a>
       <a href="#sec-theory" class="tb-btn">📖 Theory (6 Ch)</a>
       <a href="#sec-plan" class="tb-btn">📅 Plan</a>
       <a href="#sec-formulas" class="tb-btn">📐 Formulas</a>
@@ -514,6 +649,23 @@ h1 {
       <button class="tb-btn" onclick="openPrintModal()">🖨️ Print Book</button>
     </div>
   </nav>
+
+  <!-- TOPIC QUICK-NAV BAR (STICKY) -->
+  <div class="topic-nav-bar" id="topic-nav-bar">
+    <span class="tnav-label">📌 Topics:</span>
+    <a href="#topic-1-classification" class="tnav-chip" data-target="topic-1-classification">1. Number Classification</a>
+    <a href="#topic-2-divisibility" class="tnav-chip" data-target="topic-2-divisibility">2. Divisibility Rules</a>
+    <a href="#topic-3-lcm-hcf" class="tnav-chip" data-target="topic-3-lcm-hcf">3. LCM & HCF</a>
+    <a href="#topic-4-remainders" class="tnav-chip" data-target="topic-4-remainders">4. Remainder Theorems</a>
+    <a href="#topic-5-unit-digit" class="tnav-chip" data-target="topic-5-unit-digit">5. Unit Digit & Cyclicity</a>
+    <a href="#topic-6-factors" class="tnav-chip" data-target="topic-6-factors">6. Factors Engine</a>
+    <a href="#sec-shortcuts" class="tnav-chip tnav-tool" data-target="sec-shortcuts">⚡ Shortcuts</a>
+    <a href="#sec-formulas" class="tnav-chip tnav-tool" data-target="sec-formulas">📐 Formulas</a>
+    <a href="#sec-basic" class="tnav-chip tnav-tool" data-target="sec-basic">🟢 Basic (20)</a>
+    <a href="#sec-mixed" class="tnav-chip tnav-tool" data-target="sec-mixed">🟡 Mixed (20)</a>
+    <a href="#sec-pyq" class="tnav-chip tnav-tool" data-target="sec-pyq">🏆 PYQs (15)</a>
+    <a href="#sec-timer" class="tnav-chip tnav-tool" data-target="sec-timer">⏱️ Drill</a>
+  </div>
 
   <!-- HERO -->
   <header class="phase-hero">
@@ -529,6 +681,70 @@ h1 {
       <div class="hstat-card"><div class="hstat-val">55</div><div>Total Graded Qs</div></div>
     </div>
   </header>
+
+  <!-- TOPIC DIRECTORY HUB -->
+  <section class="topic-hub-card" id="sec-topics">
+    <div class="thub-header">
+      <div class="thub-title">🎯 Topic-Wise Study & Practice Hub</div>
+      <div class="thub-sub">Pick any topic to jump directly to its complete theory notes or filtered practice questions</div>
+    </div>
+    <div class="topic-hub-grid">
+      <div class="thub-item">
+        <div class="thub-item-num">TOPIC 1</div>
+        <div class="thub-item-name">Number Classification, Primes & Recurring Decimals</div>
+        <div class="thub-item-meta">Module 1 &bull; Real Hierarchy, Prime Testing ($\sqrt{N}$), Rational/Irrational &bull; 4 Practice Qs</div>
+        <div class="thub-item-actions">
+          <a href="#topic-1-classification" class="thub-btn thub-btn-theory">📖 Read Theory</a>
+          <button class="thub-btn thub-btn-practice" onclick="filterQs('1', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Qs</button>
+        </div>
+      </div>
+      <div class="thub-item">
+        <div class="thub-item-num">TOPIC 2</div>
+        <div class="thub-item-name">Complete Divisibility Rules (2 to 99, 7/11/13, 72, 88)</div>
+        <div class="thub-item-meta">Module 2 &bull; Powers of 2/5, Digit Sums 3/9, Alternating Sum 11, Composites 72/88 &bull; 11 Practice Qs</div>
+        <div class="thub-item-actions">
+          <a href="#topic-2-divisibility" class="thub-btn thub-btn-theory">📖 Read Theory</a>
+          <button class="thub-btn thub-btn-practice" onclick="filterQs('2', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Qs</button>
+        </div>
+      </div>
+      <div class="thub-item">
+        <div class="thub-item-num">TOPIC 3</div>
+        <div class="thub-item-name">LCM & HCF Mastery, Fraction Rules & Remainder Models</div>
+        <div class="thub-item-meta">Module 3 &bull; $H \times L = A \times B$, Coprime Ratios, 4 Classical Remainder Models &bull; 13 Practice Qs</div>
+        <div class="thub-item-actions">
+          <a href="#topic-3-lcm-hcf" class="thub-btn thub-btn-theory">📖 Read Theory</a>
+          <button class="thub-btn thub-btn-practice" onclick="filterQs('3', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Qs</button>
+        </div>
+      </div>
+      <div class="thub-item">
+        <div class="thub-item-num">TOPIC 4</div>
+        <div class="thub-item-name">Remainder Theorems, Negative Remainder & Algebraic Forms</div>
+        <div class="thub-item-meta">Module 4 &bull; Negative Remainder, Binomial $(ax\pm 1)^n$, Fermat, Wilson & Euler Theorems &bull; 9 Practice Qs</div>
+        <div class="thub-item-actions">
+          <a href="#topic-4-remainders" class="thub-btn thub-btn-theory">📖 Read Theory</a>
+          <button class="thub-btn thub-btn-practice" onclick="filterQs('4', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Qs</button>
+        </div>
+      </div>
+      <div class="thub-item">
+        <div class="thub-item-num">TOPIC 5</div>
+        <div class="thub-item-name">Unit Digit (Cyclicity of 4) & Trailing Zeros</div>
+        <div class="thub-item-meta">Module 5 &bull; 3 Cyclicity Classes, Exponent Mod 4 Rule, Power of Power, Factorial Sums &bull; 6 Practice Qs</div>
+        <div class="thub-item-actions">
+          <a href="#topic-5-unit-digit" class="thub-btn thub-btn-theory">📖 Read Theory</a>
+          <button class="thub-btn thub-btn-practice" onclick="filterQs('5', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Qs</button>
+        </div>
+      </div>
+      <div class="thub-item">
+        <div class="thub-item-num">TOPIC 6</div>
+        <div class="thub-item-name">Factors Engine, Divisors Sum & Legendre's Trailing Zeros</div>
+        <div class="thub-item-meta">Module 6 &bull; Total/Even/Odd/Square Factors, Sum/Product, Legendre's $\lfloor N/5^k \rfloor$ &bull; 12 Practice Qs</div>
+        <div class="thub-item-actions">
+          <a href="#topic-6-factors" class="thub-btn thub-btn-theory">📖 Read Theory</a>
+          <button class="thub-btn thub-btn-practice" onclick="filterQs('6', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Qs</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- MASTERY TRACKER -->
   <div class="mastery-tracker" id="sec-mastery">
@@ -694,7 +910,10 @@ h1 {
     </div>
 
     <!-- Chapter 1 -->
-    <div style="margin-bottom:28px;">
+    <div class="topic-anchor-block" id="topic-1-classification" data-topic="1" style="margin-bottom:28px;">
+      <div class="topic-breadcrumb">
+        <a href="#sec-topics">Topics Hub</a> &gt; <span>Topic 1</span> &gt; <strong>Classification, Primes &amp; Decimals</strong>
+      </div>
       <span class="chap-badge">MODULE 1</span>
       <h3 class="chap-title">1. Classification of Numbers, Primes & Decimal Expansions</h3>
       <p class="book-p">
@@ -755,10 +974,22 @@ h1 {
           </li>
         </ul>
       </div>
+
+      <!-- Topic Navigation Footer -->
+      <div class="topic-nav-footer">
+        <span class="tnav-step-info">Topic 1 of 6: Classification &amp; Primes</span>
+        <div class="tnav-footer-btns">
+          <button class="tnav-fbtn practice" onclick="filterQs('1', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Topic Qs</button>
+          <a href="#topic-2-divisibility" class="tnav-fbtn next">Next: Divisibility Rules &rarr;</a>
+        </div>
+      </div>
     </div>
 
     <!-- Chapter 2 -->
-    <div style="margin-bottom:28px;">
+    <div class="topic-anchor-block" id="topic-2-divisibility" data-topic="2" style="margin-bottom:28px;">
+      <div class="topic-breadcrumb">
+        <a href="#sec-topics">Topics Hub</a> &gt; <span>Topic 2</span> &gt; <strong>Divisibility Rules (2 to 99)</strong>
+      </div>
       <span class="chap-badge">MODULE 2</span>
       <h3 class="chap-title">2. The Master Divisibility Engine (2 to 11 & High-Yield Composites 72, 88, 99)</h3>
       <p class="book-p">
@@ -818,10 +1049,20 @@ h1 {
           </tbody>
         </table>
       </div>
+
+      <!-- Topic Navigation Footer -->
+      <div class="topic-nav-footer">
+        <a href="#topic-1-classification" class="tnav-fbtn prev">&larr; Prev: Classification</a>
+        <button class="tnav-fbtn practice" onclick="filterQs('2', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Topic Qs</button>
+        <a href="#topic-3-lcm-hcf" class="tnav-fbtn next">Next: LCM &amp; HCF &rarr;</a>
+      </div>
     </div>
 
     <!-- Chapter 3 -->
-    <div style="margin-bottom:28px;">
+    <div class="topic-anchor-block" id="topic-3-lcm-hcf" data-topic="3" style="margin-bottom:28px;">
+      <div class="topic-breadcrumb">
+        <a href="#sec-topics">Topics Hub</a> &gt; <span>Topic 3</span> &gt; <strong>LCM &amp; HCF Mastery</strong>
+      </div>
       <span class="chap-badge">MODULE 3</span>
       <h3 class="chap-title">3. HCF & LCM Mastery, Fraction Rules & The 4 Classical Remainder Models</h3>
       <p class="book-p">
@@ -876,10 +1117,20 @@ h1 {
           </tbody>
         </table>
       </div>
+
+      <!-- Topic Navigation Footer -->
+      <div class="topic-nav-footer">
+        <a href="#topic-2-divisibility" class="tnav-fbtn prev">&larr; Prev: Divisibility</a>
+        <button class="tnav-fbtn practice" onclick="filterQs('3', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Topic Qs</button>
+        <a href="#topic-4-remainders" class="tnav-fbtn next">Next: Remainder Theorems &rarr;</a>
+      </div>
     </div>
 
     <!-- Chapter 4 -->
-    <div style="margin-bottom:28px;">
+    <div class="topic-anchor-block" id="topic-4-remainders" data-topic="4" style="margin-bottom:28px;">
+      <div class="topic-breadcrumb">
+        <a href="#sec-topics">Topics Hub</a> &gt; <span>Topic 4</span> &gt; <strong>Remainder Theorems &amp; Power Remainder</strong>
+      </div>
       <span class="chap-badge">MODULE 4</span>
       <h3 class="chap-title">4. Remainder Theorems, Negative Remainders & Algebraic Remainder Patterns</h3>
       <p class="book-p">
@@ -935,10 +1186,20 @@ h1 {
           </tbody>
         </table>
       </div>
+
+      <!-- Topic Navigation Footer -->
+      <div class="topic-nav-footer">
+        <a href="#topic-3-lcm-hcf" class="tnav-fbtn prev">&larr; Prev: LCM &amp; HCF</a>
+        <button class="tnav-fbtn practice" onclick="filterQs('4', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Topic Qs</button>
+        <a href="#topic-5-unit-digit" class="tnav-fbtn next">Next: Unit Digit &amp; Cyclicity &rarr;</a>
+      </div>
     </div>
 
     <!-- Chapter 5 -->
-    <div style="margin-bottom:28px;">
+    <div class="topic-anchor-block" id="topic-5-unit-digit" data-topic="5" style="margin-bottom:28px;">
+      <div class="topic-breadcrumb">
+        <a href="#sec-topics">Topics Hub</a> &gt; <span>Topic 5</span> &gt; <strong>Unit Digit &amp; Cyclicity of Powers</strong>
+      </div>
       <span class="chap-badge">MODULE 5</span>
       <h3 class="chap-title">5. Unit Digit (इकाई अंक) & Cyclicity of Powers</h3>
       <p class="book-p">
@@ -991,10 +1252,20 @@ h1 {
         $1! = 1, \quad 2! = 2, \quad 3! = 6, \quad 4! = 24 \to 4, \quad 5! = 120 \to 0$।<br>
         $5!$ या उससे बड़े किसी भी फैक्टोरियल में कम से कम एक 2 और एक 5 अवश्य होता है, अतः <strong>$n \ge 5$ के लिए $n!$ का इकाई अंक सदैव 0 होता है!</strong>
       </div>
+
+      <!-- Topic Navigation Footer -->
+      <div class="topic-nav-footer">
+        <a href="#topic-4-remainders" class="tnav-fbtn prev">&larr; Prev: Remainder Theorems</a>
+        <button class="tnav-fbtn practice" onclick="filterQs('5', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Topic Qs</button>
+        <a href="#topic-6-factors" class="tnav-fbtn next">Next: Factors Engine &rarr;</a>
+      </div>
     </div>
 
     <!-- Chapter 6 -->
-    <div>
+    <div class="topic-anchor-block" id="topic-6-factors" data-topic="6" style="margin-bottom:28px;">
+      <div class="topic-breadcrumb">
+        <a href="#sec-topics">Topics Hub</a> &gt; <span>Topic 6</span> &gt; <strong>Factors, Divisors &amp; Trailing Zeros</strong>
+      </div>
       <span class="chap-badge">MODULE 6</span>
       <h3 class="chap-title">6. Factors (गुणनखंड), Sum of Factors & Trailing Zeros (शून्यकों की संख्या)</h3>
       <p class="book-p">
@@ -1055,6 +1326,13 @@ h1 {
         किसी भी फैक्टोरियल में शून्य (0) का निर्माण $2 \times 5 = 10$ के जोड़े से होता है। $N!$ में 2 की संख्या हमेशा 5 से अधिक होती है, अतः <strong>शून्यों की संख्या 5 की घात पर निर्भर करती है:</strong>
         $$\text{Trailing Zeros} = \left\lfloor \frac{N}{5} \right\rfloor + \left\lfloor \frac{N}{25} \right\rfloor + \left\lfloor \frac{N}{125} \right\rfloor + \dots$$
         उदाहरण: $100!$ में शून्यों की संख्या $= \lfloor 100/5 \rfloor + \lfloor 100/25 \rfloor = 20 + 4 = \mathbf{24}$।
+      </div>
+
+      <!-- Topic Navigation Footer -->
+      <div class="topic-nav-footer">
+        <a href="#topic-5-unit-digit" class="tnav-fbtn prev">&larr; Prev: Unit Digit</a>
+        <button class="tnav-fbtn practice" onclick="filterQs('6', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Topic Qs</button>
+        <a href="#sec-shortcuts" class="tnav-fbtn next">Next: Speed Shortcuts &rarr;</a>
       </div>
     </div>
   </section>
@@ -1193,7 +1471,7 @@ h1 {
   </section>
 
   <!-- SHORTCUTS & TRAPS -->
-  <section style="margin-bottom:24px;">
+  <section id="sec-shortcuts" style="margin-bottom:24px;">
     <h2 class="sec-title">⚡ Speed Shortcuts &amp; Classic SSC Exam Traps</h2>
     
     <div class="shortcut-grid">
@@ -1318,8 +1596,20 @@ h1 {
       🤖 <strong>AI Tutor Rule:</strong> Pehle khud rough sheet par attempt karo. Solution tabhi reveal karo jab attempt ho jaye!
     </p>
 
+    <div class="topic-filter-bar">
+      <span class="tfb-label">Filter:</span>
+      <button class="tfilter-btn active" onclick="filterQs('all', event)">All Topics</button>
+      <button class="tfilter-btn" onclick="filterQs('1', event)">T1: Classification</button>
+      <button class="tfilter-btn" onclick="filterQs('2', event)">T2: Divisibility</button>
+      <button class="tfilter-btn" onclick="filterQs('3', event)">T3: LCM & HCF</button>
+      <button class="tfilter-btn" onclick="filterQs('4', event)">T4: Remainders</button>
+      <button class="tfilter-btn" onclick="filterQs('5', event)">T5: Unit Digit</button>
+      <button class="tfilter-btn" onclick="filterQs('6', event)">T6: Factors Engine</button>
+    </div>
+
+
     <!-- Q1 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="1">
       <div class="q-head">
         <span class="q-num">Q1</span>
         <span class="q-tag">Prime Testing</span>
@@ -1347,7 +1637,7 @@ h1 {
     </div>
 
     <!-- Q2 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="2">
       <div class="q-head">
         <span class="q-num">Q2</span>
         <span class="q-tag">Divisibility by 9</span>
@@ -1374,7 +1664,7 @@ h1 {
     </div>
 
     <!-- Q3 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="2">
       <div class="q-head">
         <span class="q-num">Q3</span>
         <span class="q-tag">Divisibility by 4</span>
@@ -1401,7 +1691,7 @@ h1 {
     </div>
 
     <!-- Q4 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="2">
       <div class="q-head">
         <span class="q-num">Q4</span>
         <span class="q-tag">Divisibility by 8</span>
@@ -1429,7 +1719,7 @@ h1 {
     </div>
 
     <!-- Q5 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="2">
       <div class="q-head">
         <span class="q-num">Q5</span>
         <span class="q-tag">Divisibility by 11</span>
@@ -1458,7 +1748,7 @@ h1 {
     </div>
 
     <!-- Q6 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="2">
       <div class="q-head">
         <span class="q-num">Q6</span>
         <span class="q-tag">Divisibility by 6</span>
@@ -1486,7 +1776,7 @@ h1 {
     </div>
 
     <!-- Q7 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="3">
       <div class="q-head">
         <span class="q-num">Q7</span>
         <span class="q-tag">HCF & LCM Basics</span>
@@ -1514,7 +1804,7 @@ h1 {
     </div>
 
     <!-- Q8 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="3">
       <div class="q-head">
         <span class="q-num">Q8</span>
         <span class="q-tag">HCF &times; LCM Formula</span>
@@ -1541,7 +1831,7 @@ h1 {
     </div>
 
     <!-- Q9 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="3">
       <div class="q-head">
         <span class="q-num">Q9</span>
         <span class="q-tag">Fractions HCF & LCM</span>
@@ -1568,7 +1858,7 @@ h1 {
     </div>
 
     <!-- Q10 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="5">
       <div class="q-head">
         <span class="q-num">Q10</span>
         <span class="q-tag">Unit Digit in Product</span>
@@ -1595,7 +1885,7 @@ h1 {
     </div>
 
     <!-- Q11 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="5">
       <div class="q-head">
         <span class="q-num">Q11</span>
         <span class="q-tag">Unit Digit with Powers</span>
@@ -1622,7 +1912,7 @@ h1 {
     </div>
 
     <!-- Q12 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="5">
       <div class="q-head">
         <span class="q-num">Q12</span>
         <span class="q-tag">Unit Digit of 4 & 9</span>
@@ -1649,7 +1939,7 @@ h1 {
     </div>
 
     <!-- Q13 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="6">
       <div class="q-head">
         <span class="q-num">Q13</span>
         <span class="q-tag">Total Number of Factors</span>
@@ -1675,7 +1965,7 @@ h1 {
     </div>
 
     <!-- Q14 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="6">
       <div class="q-head">
         <span class="q-num">Q14</span>
         <span class="q-tag">Even & Odd Factors</span>
@@ -1703,7 +1993,7 @@ h1 {
     </div>
 
     <!-- Q15 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="6">
       <div class="q-head">
         <span class="q-num">Q15</span>
         <span class="q-tag">Sum of Factors</span>
@@ -1731,7 +2021,7 @@ h1 {
     </div>
 
     <!-- Q16 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="6">
       <div class="q-head">
         <span class="q-num">Q16</span>
         <span class="q-tag">Trailing Zeros in Factorial</span>
@@ -1758,7 +2048,7 @@ h1 {
     </div>
 
     <!-- Q17 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="4">
       <div class="q-head">
         <span class="q-num">Q17</span>
         <span class="q-tag">Basic Remainder Arithmetic</span>
@@ -1787,7 +2077,7 @@ h1 {
     </div>
 
     <!-- Q18 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="4">
       <div class="q-head">
         <span class="q-num">Q18</span>
         <span class="q-tag">Negative Remainder</span>
@@ -1815,7 +2105,7 @@ h1 {
     </div>
 
     <!-- Q19 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="1">
       <div class="q-head">
         <span class="q-num">Q19</span>
         <span class="q-tag">Pure Recurring Decimal</span>
@@ -1840,7 +2130,7 @@ h1 {
     </div>
 
     <!-- Q20 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="1">
       <div class="q-head">
         <span class="q-num">Q20</span>
         <span class="q-tag">Mixed Recurring Decimal</span>
@@ -1880,8 +2170,19 @@ h1 {
       🤖 <strong>AI Tutor Rule:</strong> In prashnon me multiple concepts merge hote hain. Pehle independent attempt karein!
     </p>
 
+    <div class="topic-filter-bar">
+      <span class="tfb-label">Filter:</span>
+      <button class="tfilter-btn active" onclick="filterQs('all', event)">All Topics</button>
+      <button class="tfilter-btn" onclick="filterQs('1', event)">T1: Classification</button>
+      <button class="tfilter-btn" onclick="filterQs('2', event)">T2: Divisibility</button>
+      <button class="tfilter-btn" onclick="filterQs('3', event)">T3: LCM & HCF</button>
+      <button class="tfilter-btn" onclick="filterQs('4', event)">T4: Remainders</button>
+      <button class="tfilter-btn" onclick="filterQs('5', event)">T5: Unit Digit</button>
+      <button class="tfilter-btn" onclick="filterQs('6', event)">T6: Factors Engine</button>
+    </div>
+
     <!-- Q21 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="2">
       <div class="q-head">
         <span class="q-num">Q21</span>
         <span class="q-tag">Divisibility by 72</span>
@@ -1910,7 +2211,7 @@ h1 {
     </div>
 
     <!-- Q22 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="2">
       <div class="q-head">
         <span class="q-num">Q22</span>
         <span class="q-tag">Divisibility by 80</span>
@@ -1940,7 +2241,7 @@ h1 {
     </div>
 
     <!-- Q23 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="2">
       <div class="q-head">
         <span class="q-num">Q23</span>
         <span class="q-tag">Divisibility by 99</span>
@@ -1981,7 +2282,7 @@ h1 {
     </div>
 
     <!-- Q24 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="3">
       <div class="q-head">
         <span class="q-num">Q24</span>
         <span class="q-tag">LCM Word Problem — Constant Remainder</span>
@@ -2010,7 +2311,7 @@ h1 {
     </div>
 
     <!-- Q25 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="3">
       <div class="q-head">
         <span class="q-num">Q25</span>
         <span class="q-tag">LCM Word Problem — Constant Difference</span>
@@ -2038,7 +2339,7 @@ h1 {
     </div>
 
     <!-- Q26 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="3">
       <div class="q-head">
         <span class="q-num">Q26</span>
         <span class="q-tag">HCF Unknown Remainder Model</span>
@@ -2069,7 +2370,7 @@ h1 {
     </div>
 
     <!-- Q27 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="3">
       <div class="q-head">
         <span class="q-num">Q27</span>
         <span class="q-tag">Coprime Pairs from HCF & Sum</span>
@@ -2100,7 +2401,7 @@ h1 {
     </div>
 
     <!-- Q28 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="4">
       <div class="q-head">
         <span class="q-num">Q28</span>
         <span class="q-tag">Fermat's Remainder Theorem</span>
@@ -2127,7 +2428,7 @@ h1 {
     </div>
 
     <!-- Q29 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="4">
       <div class="q-head">
         <span class="q-num">Q29</span>
         <span class="q-tag">Euler's Totient Remainder</span>
@@ -2154,7 +2455,7 @@ h1 {
     </div>
 
     <!-- Q30 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="4">
       <div class="q-head">
         <span class="q-num">Q30</span>
         <span class="q-tag">Algebraic Remainder Pattern</span>
@@ -2180,7 +2481,7 @@ h1 {
     </div>
 
     <!-- Q31 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="4">
       <div class="q-head">
         <span class="q-num">Q31</span>
         <span class="q-tag">Wilson's Theorem</span>
@@ -2206,7 +2507,7 @@ h1 {
     </div>
 
     <!-- Q32 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="5">
       <div class="q-head">
         <span class="q-num">Q32</span>
         <span class="q-tag">Unit Digit of Power of Power</span>
@@ -2234,7 +2535,7 @@ h1 {
     </div>
 
     <!-- Q33 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="5">
       <div class="q-head">
         <span class="q-num">Q33</span>
         <span class="q-tag">Unit Digit of Factorial Sum</span>
@@ -2263,7 +2564,7 @@ h1 {
     </div>
 
     <!-- Q34 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="6">
       <div class="q-head">
         <span class="q-num">Q34</span>
         <span class="q-tag">Product of Factors</span>
@@ -2290,7 +2591,7 @@ h1 {
     </div>
 
     <!-- Q35 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="6">
       <div class="q-head">
         <span class="q-num">Q35</span>
         <span class="q-tag">Factors Divisible by a Number</span>
@@ -2318,7 +2619,7 @@ h1 {
     </div>
 
     <!-- Q36 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="6">
       <div class="q-head">
         <span class="q-num">Q36</span>
         <span class="q-tag">Sum of Even Factors</span>
@@ -2347,7 +2648,7 @@ h1 {
     </div>
 
     <!-- Q37 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="6">
       <div class="q-head">
         <span class="q-num">Q37</span>
         <span class="q-tag">Trailing Zeros in Factorial Product</span>
@@ -2373,7 +2674,7 @@ h1 {
     </div>
 
     <!-- Q38 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="6">
       <div class="q-head">
         <span class="q-num">Q38</span>
         <span class="q-tag">Trailing Zeros in Powers</span>
@@ -2399,7 +2700,7 @@ h1 {
     </div>
 
     <!-- Q39 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="6">
       <div class="q-head">
         <span class="q-num">Q39</span>
         <span class="q-tag">Total vs Distinct Prime Factors</span>
@@ -2425,7 +2726,7 @@ h1 {
     </div>
 
     <!-- Q40 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="1">
       <div class="q-head">
         <span class="q-num">Q40</span>
         <span class="q-tag">Reversible Prime Pairs</span>
@@ -2470,8 +2771,20 @@ h1 {
       🔐 <strong>AI Tutor Integrity Rule:</strong> Har question ka exact exam shift tag diya gaya hai. Pehle solve karein fir shortcut dekhein.
     </p>
 
+    <div class="topic-filter-bar">
+      <span class="tfb-label">Filter:</span>
+      <button class="tfilter-btn active" onclick="filterQs('all', event)">All Topics</button>
+      <button class="tfilter-btn" onclick="filterQs('1', event)">T1: Classification</button>
+      <button class="tfilter-btn" onclick="filterQs('2', event)">T2: Divisibility</button>
+      <button class="tfilter-btn" onclick="filterQs('3', event)">T3: LCM & HCF</button>
+      <button class="tfilter-btn" onclick="filterQs('4', event)">T4: Remainders</button>
+      <button class="tfilter-btn" onclick="filterQs('5', event)">T5: Unit Digit</button>
+      <button class="tfilter-btn" onclick="filterQs('6', event)">T6: Factors Engine</button>
+    </div>
+
+
     <!-- PYQ 1 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="2">
       <div class="pyq-tag">SSC CGL 2023 Tier-1 • 14 July Shift-1</div>
       <div class="pyq-q"><strong>Q41:</strong> A 9-digit number $785x3678y$ is divisible by $72$. Find the value of $(7x - 5y)$ for the largest possible value of $y$.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-41')">🔍 Show Topper Shortcut</button>
@@ -2485,7 +2798,7 @@ h1 {
     </div>
 
     <!-- PYQ 2 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="4">
       <div class="pyq-tag">SSC CGL 2022 Tier-2 (Mains) • 02 March 2023</div>
       <div class="pyq-q"><strong>Q42:</strong> When a positive integer $n$ is divided by $14$, the remainder is $9$. If $n^2$ is divided by $14$, what will be the remainder?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-42')">🔍 Show Topper Shortcut</button>
@@ -2499,7 +2812,7 @@ h1 {
     </div>
 
     <!-- PYQ 3 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="3">
       <div class="pyq-tag">SSC CGL 2023 Tier-1 • 18 July Shift-2</div>
       <div class="pyq-q"><strong>Q43:</strong> Find the greatest 4-digit number which is completely divisible by $15, 25, 40,$ and $75$.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-43')">🔍 Show Topper Shortcut</button>
@@ -2514,7 +2827,7 @@ h1 {
     </div>
 
     <!-- PYQ 4 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="2">
       <div class="pyq-tag">SSC CGL 2022 Tier-2 (Mains) • 03 March 2023</div>
       <div class="pyq-q"><strong>Q44:</strong> If the 9-digit number $83P93678Q$ is divisible by $72$, then what is the value of $\sqrt{P^2 + 12}$ for the largest value of $Q$?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-44')">🔍 Show Topper Shortcut</button>
@@ -2528,7 +2841,7 @@ h1 {
     </div>
 
     <!-- PYQ 5 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="4">
       <div class="pyq-tag">SSC CGL 2021 Tier-2 (Mains) • 29 Jan 2022</div>
       <div class="pyq-q"><strong>Q45:</strong> What is the remainder when $(7^{19} + 2)$ is divided by $6$?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-45')">🔍 Show Topper Shortcut</button>
@@ -2541,7 +2854,7 @@ h1 {
     </div>
 
     <!-- PYQ 6 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="3">
       <div class="pyq-tag">SSC CGL 2020 Tier-1 • 03 March Shift-1</div>
       <div class="pyq-q"><strong>Q46:</strong> Two numbers are in the ratio $4:5$ and their HCF is $16$. Find their sum and LCM.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-46')">🔍 Show Topper Shortcut</button>
@@ -2554,7 +2867,7 @@ h1 {
     </div>
 
     <!-- PYQ 7 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="2">
       <div class="pyq-tag">SSC CPO 2023 • 04 Oct Shift-2</div>
       <div class="pyq-q"><strong>Q47:</strong> If the 10-digit number $5432y1749x$ is divisible by $72$, then what is the value of $(5x - 4y)$?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-47')">🔍 Show Topper Shortcut</button>
@@ -2568,7 +2881,7 @@ h1 {
     </div>
 
     <!-- PYQ 8 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="5">
       <div class="pyq-tag">SSC CHSL 2023 Tier-1 • 09 Aug Shift-1</div>
       <div class="pyq-q"><strong>Q48:</strong> Find the unit digit of the expression $(259)^{148} - (123)^{43}$.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-48')">🔍 Show Topper Shortcut</button>
@@ -2582,7 +2895,7 @@ h1 {
     </div>
 
     <!-- PYQ 9 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="3">
       <div class="pyq-tag">SSC CGL 2022 Tier-1 • 05 Dec Shift-3</div>
       <div class="pyq-q"><strong>Q49:</strong> The product of two numbers is $2028$ and their HCF is $13$. The number of such possible pairs is:</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-49')">🔍 Show Topper Shortcut</button>
@@ -2599,7 +2912,7 @@ h1 {
     </div>
 
     <!-- PYQ 10 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="6">
       <div class="pyq-tag">SSC CGL 2023 Tier-1 • 21 July Shift-3</div>
       <div class="pyq-q"><strong>Q50:</strong> Find the number of factors of $1080$ that are perfect squares.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-50')">🔍 Show Topper Shortcut</button>
@@ -2616,7 +2929,7 @@ h1 {
     </div>
 
     <!-- PYQ 11 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="4">
       <div class="pyq-tag">SSC CGL 2022 Tier-2 (Mains) • 06 March 2023</div>
       <div class="pyq-q"><strong>Q51:</strong> Find the remainder when $3^{61284}$ is divided by $5$.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-51')">🔍 Show Topper Shortcut</button>
@@ -2630,7 +2943,7 @@ h1 {
     </div>
 
     <!-- PYQ 12 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="3">
       <div class="pyq-tag">SSC CPO 2022 • 09 Nov Shift-1</div>
       <div class="pyq-q"><strong>Q52:</strong> What is the least number which when divided by $9, 10,$ and $15$ leaves $4$ as remainder in each case, but when divided by $7$ leaves no remainder?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-52')">🔍 Show Topper Shortcut</button>
@@ -2650,7 +2963,7 @@ h1 {
     </div>
 
     <!-- PYQ 13 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="3">
       <div class="pyq-tag">SSC CGL 2021 Tier-1 • 13 Aug Shift-2</div>
       <div class="pyq-q"><strong>Q53:</strong> Find the sum of digits of the least number which when divided by $12, 16, 18, 20,$ and $25$ leaves remainder $4$ in each case, but is completely divisible by $7$.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-53')">🔍 Show Topper Shortcut</button>
@@ -2667,7 +2980,7 @@ h1 {
     </div>
 
     <!-- PYQ 14 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="6">
       <div class="pyq-tag">SSC CHSL 2022 Tier-1 • 25 May Shift-2</div>
       <div class="pyq-q"><strong>Q54:</strong> Find the number of trailing zeroes at the end of the product $1 \times 3 \times 5 \times 7 \times \dots \times 99 \times 128$.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-54')">🔍 Show Topper Shortcut</button>
@@ -2681,7 +2994,7 @@ h1 {
     </div>
 
     <!-- PYQ 15 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="3">
       <div class="pyq-tag">SSC CGL 2023 Tier-2 (Mains) • 26 Oct 2023</div>
       <div class="pyq-q"><strong>Q55:</strong> If $x$ is the least number between $56,000$ and $60,000$ which when divided by $40, 45, 50,$ and $55$ leaves remainder $23$ in each case, then what is the sum of digits of $x$?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-55')">🔍 Show Topper Shortcut</button>
@@ -2868,8 +3181,21 @@ h1 {
     <button class="sidebar-close-btn" id="sidebar-close" aria-label="Close Sidebar">✕</button>
   </div>
   <div class="sidebar-content">
+    <div class="sb-group-title"><span>🎯 Topic-Wise Theory &amp; Practice</span></div>
+    <div class="sb-toc-grid">
+      <a href="#topic-1-classification" class="sb-toc-link">1. Classification &amp; Primes</a>
+      <a href="#topic-2-divisibility" class="sb-toc-link">2. Divisibility Rules</a>
+      <a href="#topic-3-lcm-hcf" class="sb-toc-link">3. LCM &amp; HCF Mastery</a>
+      <a href="#topic-4-remainders" class="sb-toc-link">4. Remainder Theorems</a>
+      <a href="#topic-5-unit-digit" class="sb-toc-link">5. Unit Digit &amp; Cyclicity</a>
+      <a href="#topic-6-factors" class="sb-toc-link">6. Factors Engine</a>
+      <a href="#sec-shortcuts" class="sb-toc-link">⚡ Speed Shortcuts</a>
+      <a href="#sec-formulas" class="sb-toc-link">📐 Formula Vault</a>
+    </div>
+
     <div class="sb-group-title"><span>📑 Quick Jump Menu</span></div>
     <div class="sb-toc-grid">
+      <a href="#sec-topics" class="sb-toc-link">🎯 Topics Directory Hub</a>
       <a href="#sec-mastery" class="sb-toc-link">📊 Mastery Tracker</a>
       <a href="#sec-plan" class="sb-toc-link">📅 Day-by-Day Plan</a>
       <a href="#sec-theory" class="sb-toc-link">📖 Theory (6 Modules)</a>
@@ -2970,6 +3296,71 @@ if (sbBackdrop) {
     sbBackdrop.classList.remove('active');
   });
 }
+
+// Auto-close sidebar on link click
+document.querySelectorAll('.sb-toc-link, .sb-phase-item').forEach(function(link) {
+  link.addEventListener('click', function() {
+    if (sbDrawer) sbDrawer.classList.remove('open');
+    if (sbBackdrop) sbBackdrop.classList.remove('active');
+  });
+});
+
+// Topic Filter Function
+function filterQs(topic, ev) {
+  if (ev) {
+    var parentBar = ev.target.closest('.topic-filter-bar');
+    if (parentBar) {
+      parentBar.querySelectorAll('.tfilter-btn').forEach(function(b) { b.classList.remove('active'); });
+      ev.target.classList.add('active');
+    }
+  }
+  var cards = document.querySelectorAll('.q-block, .pyq-card');
+  cards.forEach(function(card) {
+    if (topic === 'all' || card.getAttribute('data-topic') === topic) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+  // Sync all filter bars
+  document.querySelectorAll('.topic-filter-bar').forEach(function(bar) {
+    bar.querySelectorAll('.tfilter-btn').forEach(function(btn) {
+      var onclickAttr = btn.getAttribute('onclick') || '';
+      if ((topic === 'all' && onclickAttr.indexOf("'all'") !== -1) ||
+          (onclickAttr.indexOf("'" + topic + "'") !== -1)) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  });
+}
+
+// Topic Nav Scrollspy
+var topicSections = document.querySelectorAll('.topic-anchor-block, #sec-shortcuts, #sec-formulas, #sec-basic, #sec-mixed, #sec-pyq, #sec-timer');
+var navChips = document.querySelectorAll('.tnav-chip');
+
+function onScrollSpy() {
+  var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+  var currentId = '';
+  topicSections.forEach(function(sec) {
+    var top = sec.offsetTop - 140;
+    var height = sec.offsetHeight;
+    if (scrollY >= top && scrollY < top + height) {
+      currentId = sec.id;
+    }
+  });
+  if (currentId) {
+    navChips.forEach(function(chip) {
+      if (chip.getAttribute('data-target') === currentId) {
+        chip.classList.add('active');
+      } else {
+        chip.classList.remove('active');
+      }
+    });
+  }
+}
+window.addEventListener('scroll', onScrollSpy);
 
 // Mastery Tracker
 var mlCards = document.querySelectorAll('.ml-card');

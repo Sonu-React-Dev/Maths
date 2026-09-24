@@ -18,7 +18,10 @@ def get_theory_chapters():
     </div>
 
     <!-- Chapter 1 -->
-    <div style="margin-bottom:28px;">
+    <div class="topic-anchor-block" id="topic-1-classification" data-topic="1" style="margin-bottom:28px;">
+      <div class="topic-breadcrumb">
+        <a href="#sec-topics">Topics Hub</a> &gt; <span>Topic 1</span> &gt; <strong>Classification, Primes &amp; Decimals</strong>
+      </div>
       <span class="chap-badge">MODULE 1</span>
       <h3 class="chap-title">1. Classification of Numbers, Primes & Decimal Expansions</h3>
       <p class="book-p">
@@ -79,10 +82,22 @@ def get_theory_chapters():
           </li>
         </ul>
       </div>
+
+      <!-- Topic Navigation Footer -->
+      <div class="topic-nav-footer">
+        <span class="tnav-step-info">Topic 1 of 6: Classification &amp; Primes</span>
+        <div class="tnav-footer-btns">
+          <button class="tnav-fbtn practice" onclick="filterQs('1', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Topic Qs</button>
+          <a href="#topic-2-divisibility" class="tnav-fbtn next">Next: Divisibility Rules &rarr;</a>
+        </div>
+      </div>
     </div>
 
     <!-- Chapter 2 -->
-    <div style="margin-bottom:28px;">
+    <div class="topic-anchor-block" id="topic-2-divisibility" data-topic="2" style="margin-bottom:28px;">
+      <div class="topic-breadcrumb">
+        <a href="#sec-topics">Topics Hub</a> &gt; <span>Topic 2</span> &gt; <strong>Divisibility Rules (2 to 99)</strong>
+      </div>
       <span class="chap-badge">MODULE 2</span>
       <h3 class="chap-title">2. The Master Divisibility Engine (2 to 11 & High-Yield Composites 72, 88, 99)</h3>
       <p class="book-p">
@@ -142,10 +157,20 @@ def get_theory_chapters():
           </tbody>
         </table>
       </div>
+
+      <!-- Topic Navigation Footer -->
+      <div class="topic-nav-footer">
+        <a href="#topic-1-classification" class="tnav-fbtn prev">&larr; Prev: Classification</a>
+        <button class="tnav-fbtn practice" onclick="filterQs('2', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Topic Qs</button>
+        <a href="#topic-3-lcm-hcf" class="tnav-fbtn next">Next: LCM &amp; HCF &rarr;</a>
+      </div>
     </div>
 
     <!-- Chapter 3 -->
-    <div style="margin-bottom:28px;">
+    <div class="topic-anchor-block" id="topic-3-lcm-hcf" data-topic="3" style="margin-bottom:28px;">
+      <div class="topic-breadcrumb">
+        <a href="#sec-topics">Topics Hub</a> &gt; <span>Topic 3</span> &gt; <strong>LCM &amp; HCF Mastery</strong>
+      </div>
       <span class="chap-badge">MODULE 3</span>
       <h3 class="chap-title">3. HCF & LCM Mastery, Fraction Rules & The 4 Classical Remainder Models</h3>
       <p class="book-p">
@@ -200,10 +225,20 @@ def get_theory_chapters():
           </tbody>
         </table>
       </div>
+
+      <!-- Topic Navigation Footer -->
+      <div class="topic-nav-footer">
+        <a href="#topic-2-divisibility" class="tnav-fbtn prev">&larr; Prev: Divisibility</a>
+        <button class="tnav-fbtn practice" onclick="filterQs('3', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Topic Qs</button>
+        <a href="#topic-4-remainders" class="tnav-fbtn next">Next: Remainder Theorems &rarr;</a>
+      </div>
     </div>
 
     <!-- Chapter 4 -->
-    <div style="margin-bottom:28px;">
+    <div class="topic-anchor-block" id="topic-4-remainders" data-topic="4" style="margin-bottom:28px;">
+      <div class="topic-breadcrumb">
+        <a href="#sec-topics">Topics Hub</a> &gt; <span>Topic 4</span> &gt; <strong>Remainder Theorems &amp; Power Remainder</strong>
+      </div>
       <span class="chap-badge">MODULE 4</span>
       <h3 class="chap-title">4. Remainder Theorems, Negative Remainders & Algebraic Remainder Patterns</h3>
       <p class="book-p">
@@ -259,10 +294,20 @@ def get_theory_chapters():
           </tbody>
         </table>
       </div>
+
+      <!-- Topic Navigation Footer -->
+      <div class="topic-nav-footer">
+        <a href="#topic-3-lcm-hcf" class="tnav-fbtn prev">&larr; Prev: LCM &amp; HCF</a>
+        <button class="tnav-fbtn practice" onclick="filterQs('4', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Topic Qs</button>
+        <a href="#topic-5-unit-digit" class="tnav-fbtn next">Next: Unit Digit &amp; Cyclicity &rarr;</a>
+      </div>
     </div>
 
     <!-- Chapter 5 -->
-    <div style="margin-bottom:28px;">
+    <div class="topic-anchor-block" id="topic-5-unit-digit" data-topic="5" style="margin-bottom:28px;">
+      <div class="topic-breadcrumb">
+        <a href="#sec-topics">Topics Hub</a> &gt; <span>Topic 5</span> &gt; <strong>Unit Digit &amp; Cyclicity of Powers</strong>
+      </div>
       <span class="chap-badge">MODULE 5</span>
       <h3 class="chap-title">5. Unit Digit (इकाई अंक) & Cyclicity of Powers</h3>
       <p class="book-p">
@@ -315,10 +360,20 @@ def get_theory_chapters():
         $1! = 1, \quad 2! = 2, \quad 3! = 6, \quad 4! = 24 \to 4, \quad 5! = 120 \to 0$।<br>
         $5!$ या उससे बड़े किसी भी फैक्टोरियल में कम से कम एक 2 और एक 5 अवश्य होता है, अतः <strong>$n \ge 5$ के लिए $n!$ का इकाई अंक सदैव 0 होता है!</strong>
       </div>
+
+      <!-- Topic Navigation Footer -->
+      <div class="topic-nav-footer">
+        <a href="#topic-4-remainders" class="tnav-fbtn prev">&larr; Prev: Remainder Theorems</a>
+        <button class="tnav-fbtn practice" onclick="filterQs('5', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Topic Qs</button>
+        <a href="#topic-6-factors" class="tnav-fbtn next">Next: Factors Engine &rarr;</a>
+      </div>
     </div>
 
     <!-- Chapter 6 -->
-    <div>
+    <div class="topic-anchor-block" id="topic-6-factors" data-topic="6" style="margin-bottom:28px;">
+      <div class="topic-breadcrumb">
+        <a href="#sec-topics">Topics Hub</a> &gt; <span>Topic 6</span> &gt; <strong>Factors, Divisors &amp; Trailing Zeros</strong>
+      </div>
       <span class="chap-badge">MODULE 6</span>
       <h3 class="chap-title">6. Factors (गुणनखंड), Sum of Factors & Trailing Zeros (शून्यकों की संख्या)</h3>
       <p class="book-p">
@@ -379,6 +434,13 @@ def get_theory_chapters():
         किसी भी फैक्टोरियल में शून्य (0) का निर्माण $2 \times 5 = 10$ के जोड़े से होता है। $N!$ में 2 की संख्या हमेशा 5 से अधिक होती है, अतः <strong>शून्यों की संख्या 5 की घात पर निर्भर करती है:</strong>
         $$\text{Trailing Zeros} = \left\lfloor \frac{N}{5} \right\rfloor + \left\lfloor \frac{N}{25} \right\rfloor + \left\lfloor \frac{N}{125} \right\rfloor + \dots$$
         उदाहरण: $100!$ में शून्यों की संख्या $= \lfloor 100/5 \rfloor + \lfloor 100/25 \rfloor = 20 + 4 = \mathbf{24}$।
+      </div>
+
+      <!-- Topic Navigation Footer -->
+      <div class="topic-nav-footer">
+        <a href="#topic-5-unit-digit" class="tnav-fbtn prev">&larr; Prev: Unit Digit</a>
+        <button class="tnav-fbtn practice" onclick="filterQs('6', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Topic Qs</button>
+        <a href="#sec-shortcuts" class="tnav-fbtn next">Next: Speed Shortcuts &rarr;</a>
       </div>
     </div>
   </section>
@@ -523,7 +585,7 @@ def get_formula_vault():
 def get_shortcuts_and_traps():
     return r'''
   <!-- SHORTCUTS & TRAPS -->
-  <section style="margin-bottom:24px;">
+  <section id="sec-shortcuts" style="margin-bottom:24px;">
     <h2 class="sec-title">⚡ Speed Shortcuts &amp; Classic SSC Exam Traps</h2>
     
     <div class="shortcut-grid">

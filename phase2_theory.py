@@ -18,8 +18,11 @@ def get_theory_chapters():
     </div>
 
     <!-- Module 1 -->
-    <div style="margin-bottom:28px;">
-      <span class="chap-badge">MODULE 1</span>
+    <div class="topic-anchor-block" id="topic-1-fraction-grid" style="margin-bottom:28px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <span class="chap-badge">MODULE 1 • TOPIC 1</span>
+        <a href="#sec-topics" style="font-size:0.75rem;color:var(--primary);text-decoration:none;">↑ Topic Directory</a>
+      </div>
       <h3 class="chap-title">1. Percentage Basics &amp; Fraction &harr; Percentage Master Table</h3>
       <p class="book-p">
         प्रतिशत (Percentage) का शाब्दिक अर्थ है "प्रति 100" (Per Hundred)। किसी भी संख्या या भिन्न को प्रतिशत में बदलने के लिए $100$ से गुणा किया जाता है, और प्रतिशत को भिन्न में बदलने के लिए $100$ से भाग दिया जाता है।
@@ -61,11 +64,19 @@ def get_theory_chapters():
         $$A\% \text{ of } B = B\% \text{ of } A = \frac{A \times B}{100}$$
         <strong>Topper Trick:</strong> यदि प्रश्न में $64\% \text{ of } 25$ पूछा जाए, तो सीधे $25\% \text{ of } 64$ निकालें! $25\% = 1/4$, अतः $\frac{64}{4} = \mathbf{16}$ मात्र 2 सेकंड में!
       </div>
+      <div style="text-align:right;margin-top:12px;">
+        <a href="#sec-topics" class="tb-btn" style="font-size:0.72rem;">↑ All Topics</a>
+        <a href="#topic-2-mf-change" class="tb-btn" style="font-size:0.72rem;color:var(--primary);">Next: MF &amp; Changes &rarr;</a>
+        <a href="#sec-basic" onclick="filterQs('fraction-grid')" class="tb-btn" style="font-size:0.72rem;color:var(--green);border-color:rgba(34,211,165,0.3);">Practice Fraction Qs &rarr;</a>
+      </div>
     </div>
 
     <!-- Module 2 -->
-    <div style="margin-bottom:28px;">
-      <span class="chap-badge">MODULE 2</span>
+    <div class="topic-anchor-block" id="topic-2-mf-change" style="margin-bottom:28px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <span class="chap-badge">MODULE 2 • TOPIC 2</span>
+        <a href="#sec-topics" style="font-size:0.75rem;color:var(--primary);text-decoration:none;">↑ Topic Directory</a>
+      </div>
       <h3 class="chap-title">2. Percentage Increase, Decrease &amp; Multiplying Factors (MF)</h3>
       <p class="book-p">
         किसी राशि में वृद्धि (Increase) या कमी (Decrease) को परंपरागत तरीके से जोड़ने-घटाने के बजाय <strong>गुणांक (Multiplying Factor)</strong> से एक ही कदम में हल किया जाता है।
@@ -123,11 +134,19 @@ def get_theory_chapters():
         3. <strong>"$B$ is what $\%$ less than $A$?"</strong> &rarr; $\frac{A - B}{A} \times 100\%$ (Base is $A$).<br>
         <span style="color:var(--gold);">नियम:</span> "Than" (से) या "Of" (का) जिसके साथ लगा हो, वह हमेशा हर (Denominator) में आता है!
       </div>
+      <div style="text-align:right;margin-top:12px;">
+        <a href="#topic-1-fraction-grid" class="tb-btn" style="font-size:0.72rem;">&larr; Prev Topic</a>
+        <a href="#topic-3-ab-successive" class="tb-btn" style="font-size:0.72rem;color:var(--primary);">Next: AB Formula &rarr;</a>
+        <a href="#sec-basic" onclick="filterQs('mf-change')" class="tb-btn" style="font-size:0.72rem;color:var(--green);border-color:rgba(34,211,165,0.3);">Practice MF Qs &rarr;</a>
+      </div>
     </div>
 
     <!-- Module 3 -->
-    <div style="margin-bottom:28px;">
-      <span class="chap-badge">MODULE 3</span>
+    <div class="topic-anchor-block" id="topic-3-ab-successive" style="margin-bottom:28px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <span class="chap-badge">MODULE 3 • TOPIC 3</span>
+        <a href="#sec-topics" style="font-size:0.75rem;color:var(--primary);text-decoration:none;">↑ Topic Directory</a>
+      </div>
       <h3 class="chap-title">3. Successive Percentage Change &amp; The Universal AB Formula</h3>
       <p class="book-p">
         जब किसी राशि में लगातार दो बार प्रतिशत परिवर्तन होता है, तो कुल शुद्ध परिवर्तन केवल दोनों को जोड़कर नहीं निकलता, बल्कि संयुक्त प्रभाव (compound effect) उत्पन्न होता है।
@@ -186,11 +205,19 @@ def get_theory_chapters():
         &bull; <strong>आयत का क्षेत्रफल ($L \times B$):</strong> लंबाई $+10\%$, चौड़ाई $+20\% \implies \text{Area } +32\%$।<br>
         &bull; <strong>गोले का आयतन ($\frac{4}{3}\pi r^3$):</strong> $r$ में $10\%$ वृद्धि $\implies (1.1)^3 = 1.331 \implies \mathbf{+33.1\%}$ आयतन वृद्धि।
       </div>
+      <div style="text-align:right;margin-top:12px;">
+        <a href="#topic-2-mf-change" class="tb-btn" style="font-size:0.72rem;">&larr; Prev Topic</a>
+        <a href="#topic-4-price-consumption" class="tb-btn" style="font-size:0.72rem;color:var(--primary);">Next: Price-Consumption &rarr;</a>
+        <a href="#sec-basic" onclick="filterQs('ab-successive')" class="tb-btn" style="font-size:0.72rem;color:var(--green);border-color:rgba(34,211,165,0.3);">Practice AB Qs &rarr;</a>
+      </div>
     </div>
 
     <!-- Module 4 -->
-    <div style="margin-bottom:28px;">
-      <span class="chap-badge">MODULE 4</span>
+    <div class="topic-anchor-block" id="topic-4-price-consumption" style="margin-bottom:28px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <span class="chap-badge">MODULE 4 • TOPIC 4</span>
+        <a href="#sec-topics" style="font-size:0.75rem;color:var(--primary);text-decoration:none;">↑ Topic Directory</a>
+      </div>
       <h3 class="chap-title">4. Product Constancy Ratio &amp; Price–Consumption–Expenditure ($P \times C = E$)</h3>
       <p class="book-p">
         जब दो राशियों का गुणनफल स्थिर (Constant) रहता है, तो एक राशि में वृद्धि होने पर दूसरी राशि में स्वतः आनुपातिक कमी हो जाती है।
@@ -234,11 +261,19 @@ def get_theory_chapters():
         &bull; <strong>घटा हुआ मूल्य (Reduced Price / New Price)</strong> $= \frac{M \times x}{100 \times K}$ प्रति किग्रा।<br>
         &bull; <strong>वास्तविक / प्रारंभिक मूल्य (Original Price)</strong> $= \frac{M \times x}{(100 - x) \times K}$ प्रति किग्रा।
       </div>
+      <div style="text-align:right;margin-top:12px;">
+        <a href="#topic-3-ab-successive" class="tb-btn" style="font-size:0.72rem;">&larr; Prev Topic</a>
+        <a href="#topic-5-income-depreciation" class="tb-btn" style="font-size:0.72rem;color:var(--primary);">Next: Income-Deprec &rarr;</a>
+        <a href="#sec-basic" onclick="filterQs('price-consumption')" class="tb-btn" style="font-size:0.72rem;color:var(--green);border-color:rgba(34,211,165,0.3);">Practice P&times;C=E Qs &rarr;</a>
+      </div>
     </div>
 
     <!-- Module 5 -->
-    <div style="margin-bottom:28px;">
-      <span class="chap-badge">MODULE 5</span>
+    <div class="topic-anchor-block" id="topic-5-income-depreciation" style="margin-bottom:28px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <span class="chap-badge">MODULE 5 • TOPIC 5</span>
+        <a href="#sec-topics" style="font-size:0.75rem;color:var(--primary);text-decoration:none;">↑ Topic Directory</a>
+      </div>
       <h3 class="chap-title">5. Income, Expenditure &amp; Savings ($I = E + S$) &amp; Compound Depreciation</h3>
       <p class="book-p">
         व्यक्ति की आय (Income), व्यय (Expenditure) और बचत (Savings) में मूलभूत संबंध होता है:
@@ -261,11 +296,19 @@ def get_theory_chapters():
         $$P_{\text{before}} = \frac{P}{\left(1 \pm \frac{r}{100}\right)^t}$$
         (वृद्धि के लिए $+$, अवमूल्यन/कमी के लिए $-$).
       </div>
+      <div style="text-align:right;margin-top:12px;">
+        <a href="#topic-4-price-consumption" class="tb-btn" style="font-size:0.72rem;">&larr; Prev Topic</a>
+        <a href="#topic-6-election-venn" class="tb-btn" style="font-size:0.72rem;color:var(--primary);">Next: Election &amp; Venn &rarr;</a>
+        <a href="#sec-basic" onclick="filterQs('income-depreciation')" class="tb-btn" style="font-size:0.72rem;color:var(--green);border-color:rgba(34,211,165,0.3);">Practice Income Qs &rarr;</a>
+      </div>
     </div>
 
     <!-- Module 6 -->
-    <div>
-      <span class="chap-badge">MODULE 6</span>
+    <div class="topic-anchor-block" id="topic-6-election-venn">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <span class="chap-badge">MODULE 6 • TOPIC 6</span>
+        <a href="#sec-topics" style="font-size:0.75rem;color:var(--primary);text-decoration:none;">↑ Topic Directory</a>
+      </div>
       <h3 class="chap-title">6. Election Problems &amp; Venn Diagram Sets</h3>
       <p class="book-p">
         चुनाव संबंधी प्रश्न SSC CGL Tier-1 और Tier-2 दोनों में अनिवार्य रूप से पूछे जाते हैं। इन प्रश्नों को हल करने के लिए मतदाता सूची की संरचना को समझना आवश्यक है:
@@ -288,6 +331,11 @@ def get_theory_chapters():
         &bull; दोनों विषयों में उत्तीर्ण छात्र (Passed in both):
         $$\text{Passed Both} = 100\% - (A + B - C)$$
         <span style="color:var(--gold);">महत्वपूर्ण नियम:</span> वेन आरेख में सभी डेटा या तो केवल "अनुत्तीर्ण" (Fail) का रखें, या केवल "उत्तीर्ण" (Pass) का। दोनों को मिलाएँ नहीं!
+      </div>
+      <div style="text-align:right;margin-top:12px;">
+        <a href="#topic-5-income-depreciation" class="tb-btn" style="font-size:0.72rem;">&larr; Prev Topic</a>
+        <a href="#sec-formulas" class="tb-btn" style="font-size:0.72rem;color:var(--gold);">Next: Formula Vault &rarr;</a>
+        <a href="#sec-basic" onclick="filterQs('election-venn')" class="tb-btn" style="font-size:0.72rem;color:var(--green);border-color:rgba(34,211,165,0.3);">Practice Election Qs &rarr;</a>
       </div>
     </div>
   </section>
@@ -431,7 +479,7 @@ def get_formula_vault():
 def get_shortcuts_and_traps():
     return r'''
   <!-- SHORTCUTS & TRAPS -->
-  <section style="margin-bottom:24px;">
+  <section class="book-chapter" id="sec-shortcuts" style="margin-bottom:24px;">
     <h2 class="sec-title">⚡ Speed Shortcuts &amp; Classic SSC Exam Traps</h2>
     
     <div class="shortcut-grid">
@@ -537,6 +585,11 @@ def get_shortcuts_and_traps():
         <div class="trap-desc">
           Kisi sankhya me $+x\%$ aur fir $-x\%$ karne par sankhya wahi nahi rehti, balki hamesha $\frac{x^2}{100}\%$ ki kami hoti hai!
         </div>
+      </div>
+      <div style="text-align:right;margin-top:12px;">
+        <a href="#topic-5-income-depreciation" class="tb-btn" style="font-size:0.72rem;">&larr; Prev Topic</a>
+        <a href="#sec-formulas" class="tb-btn" style="font-size:0.72rem;color:var(--gold);">Next: Formula Vault &rarr;</a>
+        <a href="#sec-basic" onclick="filterQs('election-venn')" class="tb-btn" style="font-size:0.72rem;color:var(--green);border-color:rgba(34,211,165,0.3);">Practice Election Qs &rarr;</a>
       </div>
     </div>
   </section>

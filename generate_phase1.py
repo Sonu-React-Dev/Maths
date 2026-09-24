@@ -24,6 +24,7 @@ def get_topbar_and_hero():
     </a>
     <div class="topbar-actions">
       <button class="tb-btn" id="sidebar-toggle-btn">☰ All Phases</button>
+      <a href="#sec-topics" class="tb-btn">🎯 Topics Hub</a>
       <a href="#sec-theory" class="tb-btn">📖 Theory (6 Ch)</a>
       <a href="#sec-plan" class="tb-btn">📅 Plan</a>
       <a href="#sec-formulas" class="tb-btn">📐 Formulas</a>
@@ -34,6 +35,23 @@ def get_topbar_and_hero():
       <button class="tb-btn" onclick="openPrintModal()">🖨️ Print Book</button>
     </div>
   </nav>
+
+  <!-- TOPIC QUICK-NAV BAR (STICKY) -->
+  <div class="topic-nav-bar" id="topic-nav-bar">
+    <span class="tnav-label">📌 Topics:</span>
+    <a href="#topic-1-classification" class="tnav-chip" data-target="topic-1-classification">1. Number Classification</a>
+    <a href="#topic-2-divisibility" class="tnav-chip" data-target="topic-2-divisibility">2. Divisibility Rules</a>
+    <a href="#topic-3-lcm-hcf" class="tnav-chip" data-target="topic-3-lcm-hcf">3. LCM & HCF</a>
+    <a href="#topic-4-remainders" class="tnav-chip" data-target="topic-4-remainders">4. Remainder Theorems</a>
+    <a href="#topic-5-unit-digit" class="tnav-chip" data-target="topic-5-unit-digit">5. Unit Digit & Cyclicity</a>
+    <a href="#topic-6-factors" class="tnav-chip" data-target="topic-6-factors">6. Factors Engine</a>
+    <a href="#sec-shortcuts" class="tnav-chip tnav-tool" data-target="sec-shortcuts">⚡ Shortcuts</a>
+    <a href="#sec-formulas" class="tnav-chip tnav-tool" data-target="sec-formulas">📐 Formulas</a>
+    <a href="#sec-basic" class="tnav-chip tnav-tool" data-target="sec-basic">🟢 Basic (20)</a>
+    <a href="#sec-mixed" class="tnav-chip tnav-tool" data-target="sec-mixed">🟡 Mixed (20)</a>
+    <a href="#sec-pyq" class="tnav-chip tnav-tool" data-target="sec-pyq">🏆 PYQs (15)</a>
+    <a href="#sec-timer" class="tnav-chip tnav-tool" data-target="sec-timer">⏱️ Drill</a>
+  </div>
 
   <!-- HERO -->
   <header class="phase-hero">
@@ -49,6 +67,70 @@ def get_topbar_and_hero():
       <div class="hstat-card"><div class="hstat-val">55</div><div>Total Graded Qs</div></div>
     </div>
   </header>
+
+  <!-- TOPIC DIRECTORY HUB -->
+  <section class="topic-hub-card" id="sec-topics">
+    <div class="thub-header">
+      <div class="thub-title">🎯 Topic-Wise Study & Practice Hub</div>
+      <div class="thub-sub">Pick any topic to jump directly to its complete theory notes or filtered practice questions</div>
+    </div>
+    <div class="topic-hub-grid">
+      <div class="thub-item">
+        <div class="thub-item-num">TOPIC 1</div>
+        <div class="thub-item-name">Number Classification, Primes & Recurring Decimals</div>
+        <div class="thub-item-meta">Module 1 &bull; Real Hierarchy, Prime Testing ($\sqrt{N}$), Rational/Irrational &bull; 4 Practice Qs</div>
+        <div class="thub-item-actions">
+          <a href="#topic-1-classification" class="thub-btn thub-btn-theory">📖 Read Theory</a>
+          <button class="thub-btn thub-btn-practice" onclick="filterQs('1', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Qs</button>
+        </div>
+      </div>
+      <div class="thub-item">
+        <div class="thub-item-num">TOPIC 2</div>
+        <div class="thub-item-name">Complete Divisibility Rules (2 to 99, 7/11/13, 72, 88)</div>
+        <div class="thub-item-meta">Module 2 &bull; Powers of 2/5, Digit Sums 3/9, Alternating Sum 11, Composites 72/88 &bull; 11 Practice Qs</div>
+        <div class="thub-item-actions">
+          <a href="#topic-2-divisibility" class="thub-btn thub-btn-theory">📖 Read Theory</a>
+          <button class="thub-btn thub-btn-practice" onclick="filterQs('2', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Qs</button>
+        </div>
+      </div>
+      <div class="thub-item">
+        <div class="thub-item-num">TOPIC 3</div>
+        <div class="thub-item-name">LCM & HCF Mastery, Fraction Rules & Remainder Models</div>
+        <div class="thub-item-meta">Module 3 &bull; $H \times L = A \times B$, Coprime Ratios, 4 Classical Remainder Models &bull; 13 Practice Qs</div>
+        <div class="thub-item-actions">
+          <a href="#topic-3-lcm-hcf" class="thub-btn thub-btn-theory">📖 Read Theory</a>
+          <button class="thub-btn thub-btn-practice" onclick="filterQs('3', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Qs</button>
+        </div>
+      </div>
+      <div class="thub-item">
+        <div class="thub-item-num">TOPIC 4</div>
+        <div class="thub-item-name">Remainder Theorems, Negative Remainder & Algebraic Forms</div>
+        <div class="thub-item-meta">Module 4 &bull; Negative Remainder, Binomial $(ax\pm 1)^n$, Fermat, Wilson & Euler Theorems &bull; 9 Practice Qs</div>
+        <div class="thub-item-actions">
+          <a href="#topic-4-remainders" class="thub-btn thub-btn-theory">📖 Read Theory</a>
+          <button class="thub-btn thub-btn-practice" onclick="filterQs('4', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Qs</button>
+        </div>
+      </div>
+      <div class="thub-item">
+        <div class="thub-item-num">TOPIC 5</div>
+        <div class="thub-item-name">Unit Digit (Cyclicity of 4) & Trailing Zeros</div>
+        <div class="thub-item-meta">Module 5 &bull; 3 Cyclicity Classes, Exponent Mod 4 Rule, Power of Power, Factorial Sums &bull; 6 Practice Qs</div>
+        <div class="thub-item-actions">
+          <a href="#topic-5-unit-digit" class="thub-btn thub-btn-theory">📖 Read Theory</a>
+          <button class="thub-btn thub-btn-practice" onclick="filterQs('5', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Qs</button>
+        </div>
+      </div>
+      <div class="thub-item">
+        <div class="thub-item-num">TOPIC 6</div>
+        <div class="thub-item-name">Factors Engine, Divisors Sum & Legendre's Trailing Zeros</div>
+        <div class="thub-item-meta">Module 6 &bull; Total/Even/Odd/Square Factors, Sum/Product, Legendre's $\lfloor N/5^k \rfloor$ &bull; 12 Practice Qs</div>
+        <div class="thub-item-actions">
+          <a href="#topic-6-factors" class="thub-btn thub-btn-theory">📖 Read Theory</a>
+          <button class="thub-btn thub-btn-practice" onclick="filterQs('6', event); document.getElementById('sec-basic').scrollIntoView({behavior:'smooth'});">🎯 Practice Qs</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- MASTERY TRACKER -->
   <div class="mastery-tracker" id="sec-mastery">

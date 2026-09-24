@@ -174,22 +174,32 @@ def get_sidebar_modal_and_js():
         <div class="sb-brand-sub">120-Day Master Prep</div>
       </div>
     </div>
-    <button class="sidebar-close-btn" id="sidebar-close" aria-label="Close Sidebar">✕</button>
-  </div>
-  <div class="sidebar-content">
-    <div class="sb-group-title"><span>📑 Quick Jump Menu</span></div>
+    <button class="sidebar-close-btn" id="sidebar-close" aria-la  <div class="sidebar-content">
+    <div class="sb-group-title"><span>🎯 Topic-Wise Theory &amp; Practice</span></div>
     <div class="sb-toc-grid">
+      <a href="#topic-1-fraction-grid" class="sb-toc-link">1. Fraction Grid</a>
+      <a href="#topic-2-mf-change" class="sb-toc-link">2. MF &amp; Changes</a>
+      <a href="#topic-3-ab-successive" class="sb-toc-link">3. AB Formula</a>
+      <a href="#topic-4-price-consumption" class="sb-toc-link">4. P&times;C=E Ladder</a>
+      <a href="#topic-5-income-depreciation" class="sb-toc-link">5. I=E+S &amp; Deprec</a>
+      <a href="#topic-6-election-venn" class="sb-toc-link">6. Election &amp; Venn</a>
+    </div>
+
+    <div class="sb-group-title"><span>📑 Course Sections</span></div>
+    <div class="sb-toc-grid">
+      <a href="#sec-topics" class="sb-toc-link">📑 Topic Directory</a>
       <a href="#sec-mastery" class="sb-toc-link">📊 Mastery Tracker</a>
       <a href="#sec-plan" class="sb-toc-link">📅 Day-by-Day Plan</a>
       <a href="#sec-theory" class="sb-toc-link">📖 Theory (6 Modules)</a>
       <a href="#sec-formulas" class="sb-toc-link">📐 Formula Vault</a>
-      <a href="#sec-basic" class="sb-toc-link">🟢 20 Basic Questions</a>
-      <a href="#sec-mixed" class="sb-toc-link">🟡 20 Mixed Questions</a>
+      <a href="#sec-basic" class="sb-toc-link">🟢 20 Basic Qs</a>
+      <a href="#sec-mixed" class="sb-toc-link">🟡 20 Mixed Qs</a>
       <a href="#sec-pyq" class="sb-toc-link">🏆 15 SSC PYQs</a>
       <a href="#sec-timer" class="sb-toc-link">⏱️ Timed Drill</a>
       <a href="#sec-recall" class="sb-toc-link">🧠 Active Recall</a>
       <a href="#sec-errors" class="sb-toc-link">📓 Error Notebook</a>
       <a href="#sec-checklist" class="sb-toc-link">✅ Completion Checklist</a>
+      <a href="#sec-revision" class="sb-toc-link">🔄 Revision Tracker</a>
     </div>
 
     <div class="sb-group-title"><span>🔢 All Phases</span></div>
@@ -244,6 +254,36 @@ function copyFormula(text) {
 function openPrintModal() { document.getElementById('print-modal').style.display = 'flex'; }
 function closePrintModal() { document.getElementById('print-modal').style.display = 'none'; }
 
+/* Topic Filter function */
+function filterQs(topic, btn) {
+  if (btn) {
+    var container = btn.parentElement;
+    if (container) {
+      container.querySelectorAll('.q-filter-chip').forEach(function(c) { c.classList.remove('active'); });
+      btn.classList.add('active');
+    }
+  } else {
+    // If called programmatically from topic hub, sync active chip
+    document.querySelectorAll('.topic-filter-bar').forEach(function(bar) {
+      bar.querySelectorAll('.q-filter-chip').forEach(function(c) {
+        if (c.getAttribute('onclick') && c.getAttribute('onclick').indexOf("'" + topic + "'") !== -1) {
+          bar.querySelectorAll('.q-filter-chip').forEach(function(b) { b.classList.remove('active'); });
+          c.classList.add('active');
+        }
+      });
+    });
+  }
+  
+  var cards = document.querySelectorAll('.q-block, .pyq-card');
+  cards.forEach(function(card) {
+    if (topic === 'all' || card.getAttribute('data-topic') === topic) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
 var sbDrawer = document.getElementById('sidebar-drawer');
 var sbBackdrop = document.getElementById('sidebar-backdrop');
 var sbToggle = document.getElementById('sidebar-toggle-btn');
@@ -267,6 +307,14 @@ if (sbBackdrop) {
     sbBackdrop.classList.remove('active');
   });
 }
+
+// Auto close sidebar when clicking a link inside it
+document.querySelectorAll('.sb-toc-link').forEach(function(link) {
+  link.addEventListener('click', function() {
+    if (sbDrawer) sbDrawer.classList.remove('open');
+    if (sbBackdrop) sbBackdrop.classList.remove('active');
+  });
+});
 
 var mlCards = document.querySelectorAll('.ml-card');
 mlCards.forEach(function(card) {
@@ -321,7 +369,7 @@ document.getElementById('calc-score').addEventListener('click', function() {
   
   if (percent >= 85) {
     res.className = 'score-result score-pass';
-    res.innerHTML = '🎉 Outstanding! Score: ' + correct + '/' + total + ' (' + percent + '%) &bull; Percentage Mastery Benchmark Cleared! Ready for Profit & Loss!';
+    res.innerHTML = '🎉 Outstanding! Score: ' + correct + '/' + total + ' (' + percent + '%) &bull; Percentage Mastery Benchmark Cleared! Ready for Profit &amp; Loss!';
   } else if (percent >= 65) {
     res.className = 'score-result score-ok';
     res.innerHTML = '⚠️ Good Progress: Score: ' + correct + '/' + total + ' (' + percent + '%) &bull; Revise Fraction Grid and Retest in 24 hours!';
@@ -330,6 +378,23 @@ document.getElementById('calc-score').addEventListener('click', function() {
     res.innerHTML = '🚨 Score: ' + correct + '/' + total + ' (' + percent + '%) &bull; AI Tutor Rule: Log errors in the notebook and re-attempt all missed questions!';
   }
 });
+
+// ScrollSpy to highlight active topic chips in .topic-nav-bar
+window.addEventListener('scroll', function() {
+  var scrollPos = window.scrollY + 140;
+  var chips = document.querySelectorAll('.tnav-chip');
+  chips.forEach(function(chip) {
+    var targetId = chip.getAttribute('href');
+    if (!targetId || targetId.charAt(0) !== '#') return;
+    var target = document.querySelector(targetId);
+    if (!target) return;
+    var top = target.offsetTop;
+    var height = target.offsetHeight;
+    if (scrollPos >= top && scrollPos < top + height) {
+      chips.forEach(function(c) { c.classList.remove('active'); });
+      chip.classList.add('active');
+    }
+  });
 </script>
 </body>
 </html>

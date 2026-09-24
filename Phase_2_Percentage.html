@@ -25,7 +25,7 @@
   --shadow-cyan: rgba(0,229,255,0.08);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+html { scroll-behavior: smooth; scroll-padding-top: 130px; }
 body {
   background: var(--bg);
   color: var(--text);
@@ -37,6 +37,140 @@ body {
   overflow-x: hidden;
 }
 .container { max-width: 1180px; margin: 0 auto; }
+
+/* ── STICKY TOPIC NAV BAR ── */
+.topic-nav-bar {
+  position: sticky; top: 62px; z-index: 180;
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(15, 22, 35, 0.95);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px 14px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(12px);
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.topic-nav-bar::-webkit-scrollbar { display: none; }
+.topic-nav-label {
+  font-size: 0.72rem; font-weight: 800; color: var(--gold);
+  text-transform: uppercase; letter-spacing: 0.8px;
+  display: flex; align-items: center; gap: 5px; flex-shrink: 0;
+  padding-right: 8px; border-right: 1px solid var(--border);
+}
+.tnav-chip {
+  background: var(--surface-elevated); color: var(--text-muted);
+  border: 1px solid var(--border); padding: 5px 12px;
+  border-radius: 20px; font-size: 0.75rem; font-weight: 600;
+  text-decoration: none; transition: all 0.2s ease;
+  display: inline-flex; align-items: center; gap: 5px; flex-shrink: 0;
+}
+.tnav-chip:hover {
+  border-color: var(--primary); color: #fff;
+  background: rgba(0, 229, 255, 0.12);
+  transform: translateY(-1px);
+}
+.tnav-chip.active {
+  background: linear-gradient(90deg, rgba(246,194,68,0.2), rgba(0,229,255,0.2));
+  border-color: var(--primary); color: var(--primary);
+  box-shadow: 0 0 10px rgba(0,229,255,0.2);
+}
+
+/* ── TOPIC HUB DIRECTORY ── */
+.topic-hub-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 24px;
+}
+.topic-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+.topic-hub-card {
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.topic-hub-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 18px rgba(0,229,255,0.12);
+  transform: translateY(-2px);
+}
+.thc-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 8px;
+}
+.thc-badge {
+  font-size: 0.68rem; font-weight: 700; padding: 2px 8px; border-radius: 4px;
+  background: rgba(0,229,255,0.12); color: var(--primary); border: 1px solid rgba(0,229,255,0.25);
+}
+.thc-weight {
+  font-size: 0.7rem; color: var(--gold); font-weight: 600;
+}
+.thc-title {
+  font-size: 0.98rem; font-weight: 700; color: #fff; margin-bottom: 6px;
+}
+.thc-desc {
+  font-size: 0.8rem; color: #94a3b8; line-height: 1.5; margin-bottom: 12px; flex-grow: 1;
+}
+.thc-actions {
+  display: flex; gap: 8px; margin-top: 10px;
+}
+.thc-btn {
+  flex: 1; text-align: center; font-size: 0.74rem; font-weight: 600;
+  padding: 6px 10px; border-radius: 6px; text-decoration: none;
+  transition: all 0.2s;
+}
+.thc-btn-theory {
+  background: rgba(246,194,68,0.12); color: var(--gold); border: 1px solid rgba(246,194,68,0.3);
+}
+.thc-btn-theory:hover {
+  background: var(--gold); color: #080b12;
+}
+.thc-btn-practice {
+  background: rgba(34,211,165,0.12); color: var(--green); border: 1px solid rgba(34,211,165,0.3);
+}
+.thc-btn-practice:hover {
+  background: var(--green); color: #080b12;
+}
+
+/* ── TOPIC FILTER BAR IN QUESTIONS ── */
+.topic-filter-bar {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px;
+  background: var(--surface-elevated); padding: 12px 14px;
+  border-radius: 12px; border: 1px solid var(--border);
+  align-items: center;
+}
+.filter-label {
+  font-size: 0.78rem; font-weight: 700; color: var(--gold); margin-right: 6px;
+}
+.q-filter-chip {
+  background: var(--surface); color: var(--text-muted);
+  border: 1px solid var(--border); padding: 5px 12px;
+  border-radius: 16px; font-size: 0.74rem; font-weight: 600;
+  cursor: pointer; transition: all 0.2s;
+}
+.q-filter-chip:hover {
+  border-color: var(--primary); color: #fff;
+}
+.q-filter-chip.active {
+  background: var(--primary); color: #080b12; border-color: var(--primary);
+  font-weight: 700;
+}
+.topic-anchor-block {
+  scroll-margin-top: 130px;
+}
 
 /* ── TOPBAR ── */
 .topbar {
@@ -502,23 +636,42 @@ h1 {
       <span>SSC CGL Maths Prep</span>
     </a>
     <div class="topbar-actions">
-      <button class="tb-btn" id="sidebar-toggle-btn">☰ All Phases</button>
-      <a href="#sec-theory" class="tb-btn">📖 Theory (6 Modules)</a>
-      <a href="#sec-plan" class="tb-btn">📅 Plan</a>
+      <button class="tb-btn" id="sidebar-toggle-btn">☰ All Topics &amp; Phases</button>
+      <a href="#sec-topics" class="tb-btn" style="color:var(--primary);font-weight:700;">📑 Topic Directory</a>
+      <a href="#sec-theory" class="tb-btn">📖 Theory</a>
       <a href="#sec-formulas" class="tb-btn">📐 Formulas</a>
-      <a href="#sec-basic" class="tb-btn">🟢 20 Basic Qs</a>
-      <a href="#sec-mixed" class="tb-btn">🟡 20 Mixed Qs</a>
-      <a href="#sec-pyq" class="tb-btn">🏆 15 PYQs</a>
+      <a href="#sec-basic" class="tb-btn">🟢 Basic Qs</a>
+      <a href="#sec-mixed" class="tb-btn">🟡 Mixed Qs</a>
+      <a href="#sec-pyq" class="tb-btn">🏆 PYQs</a>
       <a href="#sec-timer" class="tb-btn">⏱️ Drill</a>
-      <button class="tb-btn" onclick="openPrintModal()">🖨️ Print Book</button>
+      <button class="tb-btn" onclick="openPrintModal()">🖨️ Print</button>
     </div>
   </nav>
+
+  <!-- STICKY TOPIC NAV BAR -->
+  <div class="topic-nav-bar" id="topic-nav-bar">
+    <span class="topic-nav-label"><span>🎯 Topics</span></span>
+    <a href="#topic-1-fraction-grid" class="tnav-chip"><span>1. Fraction Grid</span></a>
+    <a href="#topic-2-mf-change" class="tnav-chip"><span>2. MF &amp; Changes</span></a>
+    <a href="#topic-3-ab-successive" class="tnav-chip"><span>3. AB Formula</span></a>
+    <a href="#topic-4-price-consumption" class="tnav-chip"><span>4. P&times;C=E Ladder</span></a>
+    <a href="#topic-5-income-depreciation" class="tnav-chip"><span>5. I=E+S &amp; Deprec</span></a>
+    <a href="#topic-6-election-venn" class="tnav-chip"><span>6. Election &amp; Venn</span></a>
+    <a href="#sec-formulas" class="tnav-chip"><span>📐 Formulas</span></a>
+    <a href="#sec-shortcuts" class="tnav-chip"><span>⚡ Shortcuts</span></a>
+    <a href="#sec-basic" class="tnav-chip" style="color:var(--green);"><span>🟢 20 Basic Qs</span></a>
+    <a href="#sec-mixed" class="tnav-chip" style="color:var(--gold);"><span>🟡 20 Mixed Qs</span></a>
+    <a href="#sec-pyq" class="tnav-chip" style="color:var(--violet);"><span>🏆 15 PYQs</span></a>
+    <a href="#sec-timer" class="tnav-chip" style="color:var(--orange);"><span>⏱️ Drill</span></a>
+    <a href="#sec-recall" class="tnav-chip"><span>🧠 Recall</span></a>
+    <a href="#sec-errors" class="tnav-chip"><span>📓 Error Log</span></a>
+  </div>
 
   <!-- HERO -->
   <header class="phase-hero">
     <span class="phase-badge">Phase 2 • Days 13–20 • Complete Book Edition</span>
     <h1>Phase 2: Percentage (प्रतिशतता)</h1>
-    <p class="hero-hindi">The Master Foundation of Arithmetic — Ratios, Multiplying Factors, Successive & Word Problems</p>
+    <p class="hero-hindi">The Master Foundation of Arithmetic — Ratios, Multiplying Factors, Successive &amp; Word Problems</p>
     <div class="hero-stats">
       <div class="hstat-card"><div class="hstat-val">6</div><div>Book Modules</div></div>
       <div class="hstat-card"><div class="hstat-val">10</div><div>Formula Cards</div></div>
@@ -553,6 +706,114 @@ h1 {
       ⚠️ <strong>AI Tutor Rule:</strong> Percentage ko complete tabhi mark karo jab mastery drill me &ge;85% accuracy aaye — calendar ke anusar nahi!
     </div>
   </div>
+
+  <!-- TOPIC-WISE MASTER DIRECTORY & ROADMAP -->
+  <section class="topic-hub-section" id="sec-topics">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+      <div>
+        <span class="thc-badge" style="background:rgba(246,194,68,0.15);color:var(--gold);border-color:rgba(246,194,68,0.3);">TOPIC DIRECTORY</span>
+        <h2 style="font-size:1.3rem;font-weight:700;color:#fff;margin-top:4px;">📑 Topic-Wise Master Syllabus &amp; Quick Jump Hub</h2>
+      </div>
+      <span style="font-size:0.8rem;color:var(--text-muted);">Click any topic to jump directly to Theory or Practice Qs</span>
+    </div>
+    <div class="topic-hub-grid">
+      <!-- Topic 1 -->
+      <div class="topic-hub-card">
+        <div>
+          <div class="thc-header">
+            <span class="thc-badge">TOPIC 1</span>
+            <span class="thc-weight">Weight: 2–3 Qs</span>
+          </div>
+          <div class="thc-title">1. Fraction Grid &amp; Basic Conversions</div>
+          <div class="thc-desc">भिन्न से प्रतिशत सारणी ($1/2$ से $1/25$), क्रमविनिमेय नियम ($A\% \text{ of } B = B\% \text{ of } A$), और 5-सेकंड मानसिक गणना।</div>
+        </div>
+        <div class="thc-actions">
+          <a href="#topic-1-fraction-grid" class="thc-btn thc-btn-theory">📖 Read Theory</a>
+          <a href="#sec-basic" onclick="filterQs('fraction-grid')" class="thc-btn thc-btn-practice">🎯 Practice Qs</a>
+        </div>
+      </div>
+
+      <!-- Topic 2 -->
+      <div class="topic-hub-card">
+        <div>
+          <div class="thc-header">
+            <span class="thc-badge">TOPIC 2</span>
+            <span class="thc-weight">Weight: 2 Qs</span>
+          </div>
+          <div class="thc-title">2. Multiplying Factors &amp; Base Shifting</div>
+          <div class="thc-desc">गुणांक (MF) विधि, Initial &times; MF = Final, आधार पहचानने का नियम (Base Identification), और $A$ is what $\%$ more/less than $B$।</div>
+        </div>
+        <div class="thc-actions">
+          <a href="#topic-2-mf-change" class="thc-btn thc-btn-theory">📖 Read Theory</a>
+          <a href="#sec-basic" onclick="filterQs('mf-change')" class="thc-btn thc-btn-practice">🎯 Practice Qs</a>
+        </div>
+      </div>
+
+      <!-- Topic 3 -->
+      <div class="topic-hub-card">
+        <div>
+          <div class="thc-header">
+            <span class="thc-badge">TOPIC 3</span>
+            <span class="thc-weight">Weight: 2–3 Qs</span>
+          </div>
+          <div class="thc-title">3. Successive Change &amp; AB Formula</div>
+          <div class="thc-desc">क्रमागत प्रतिशत परिवर्तन $a + b + \frac{ab}{100}$, छूट (Discounts), $+x\%, -x\% \implies -x^2/100\%$ हानि, और ज्यामिति क्षेत्रफल स्केलिंग।</div>
+        </div>
+        <div class="thc-actions">
+          <a href="#topic-3-ab-successive" class="thc-btn thc-btn-theory">📖 Read Theory</a>
+          <a href="#sec-basic" onclick="filterQs('ab-successive')" class="thc-btn thc-btn-practice">🎯 Practice Qs</a>
+        </div>
+      </div>
+
+      <!-- Topic 4 -->
+      <div class="topic-hub-card">
+        <div>
+          <div class="thc-header">
+            <span class="thc-badge">TOPIC 4</span>
+            <span class="thc-weight">Weight: 2 Qs</span>
+          </div>
+          <div class="thc-title">4. Price–Consumption–Expenditure ($P \times C = E$)</div>
+          <div class="thc-desc">स्वर्णिम सीढ़ी ($1/n \to 1/(n+1)$), खर्च अपरिवर्तित रहने का नियम, और ₹$M$ में $K$ किग्रा अधिक/कम मिलने पर प्रारंभिक व घटा हुआ मूल्य।</div>
+        </div>
+        <div class="thc-actions">
+          <a href="#topic-4-price-consumption" class="thc-btn thc-btn-theory">📖 Read Theory</a>
+          <a href="#sec-basic" onclick="filterQs('price-consumption')" class="thc-btn thc-btn-practice">🎯 Practice Qs</a>
+        </div>
+      </div>
+
+      <!-- Topic 5 -->
+      <div class="topic-hub-card">
+        <div>
+          <div class="thc-header">
+            <span class="thc-badge">TOPIC 5</span>
+            <span class="thc-weight">Weight: 2 Qs</span>
+          </div>
+          <div class="thc-title">5. Income-Expense ($I = E + S$) &amp; Depreciation</div>
+          <div class="thc-desc">आय, व्यय व बचत में भारित औसत (Alligation) विधि, तथा जनसंख्या वृद्धि एवं मशीन अवमूल्यन $P(1 \pm r/100)^t$ सूत्र।</div>
+        </div>
+        <div class="thc-actions">
+          <a href="#topic-5-income-depreciation" class="thc-btn thc-btn-theory">📖 Read Theory</a>
+          <a href="#sec-basic" onclick="filterQs('income-depreciation')" class="thc-btn thc-btn-practice">🎯 Practice Qs</a>
+        </div>
+      </div>
+
+      <!-- Topic 6 -->
+      <div class="topic-hub-card">
+        <div>
+          <div class="thc-header">
+            <span class="thc-badge">TOPIC 6</span>
+            <span class="thc-weight">Weight: 1–2 Qs</span>
+          </div>
+          <div class="thc-title">6. Elections &amp; Venn Diagram Sets</div>
+          <div class="thc-desc">मतदाता सूची (Enrolled, Polled, Valid Votes, Margin) और 2-सेट व 3-सेट वेन आरेख में उत्तीर्ण/अनुत्तीर्ण छात्र गणना।</div>
+        </div>
+        <div class="thc-actions">
+          <a href="#topic-6-election-venn" class="thc-btn thc-btn-theory">📖 Read Theory</a>
+          <a href="#sec-basic" onclick="filterQs('election-venn')" class="thc-btn thc-btn-practice">🎯 Practice Qs</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- AI TUTOR PROTOCOL BANNER -->
   <div style="background:rgba(34,211,165,0.04);border:1px solid rgba(34,211,165,0.15);border-radius:12px;padding:12px 16px;margin-bottom:20px;font-size:0.82rem;color:#7a90a8;">
@@ -705,8 +966,11 @@ h1 {
     </div>
 
     <!-- Module 1 -->
-    <div style="margin-bottom:28px;">
-      <span class="chap-badge">MODULE 1</span>
+    <div class="topic-anchor-block" id="topic-1-fraction-grid" style="margin-bottom:28px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <span class="chap-badge">MODULE 1 • TOPIC 1</span>
+        <a href="#sec-topics" style="font-size:0.75rem;color:var(--primary);text-decoration:none;">↑ Topic Directory</a>
+      </div>
       <h3 class="chap-title">1. Percentage Basics &amp; Fraction &harr; Percentage Master Table</h3>
       <p class="book-p">
         प्रतिशत (Percentage) का शाब्दिक अर्थ है "प्रति 100" (Per Hundred)। किसी भी संख्या या भिन्न को प्रतिशत में बदलने के लिए $100$ से गुणा किया जाता है, और प्रतिशत को भिन्न में बदलने के लिए $100$ से भाग दिया जाता है।
@@ -748,11 +1012,19 @@ h1 {
         $$A\% \text{ of } B = B\% \text{ of } A = \frac{A \times B}{100}$$
         <strong>Topper Trick:</strong> यदि प्रश्न में $64\% \text{ of } 25$ पूछा जाए, तो सीधे $25\% \text{ of } 64$ निकालें! $25\% = 1/4$, अतः $\frac{64}{4} = \mathbf{16}$ मात्र 2 सेकंड में!
       </div>
+      <div style="text-align:right;margin-top:12px;">
+        <a href="#sec-topics" class="tb-btn" style="font-size:0.72rem;">↑ All Topics</a>
+        <a href="#topic-2-mf-change" class="tb-btn" style="font-size:0.72rem;color:var(--primary);">Next: MF &amp; Changes &rarr;</a>
+        <a href="#sec-basic" onclick="filterQs('fraction-grid')" class="tb-btn" style="font-size:0.72rem;color:var(--green);border-color:rgba(34,211,165,0.3);">Practice Fraction Qs &rarr;</a>
+      </div>
     </div>
 
     <!-- Module 2 -->
-    <div style="margin-bottom:28px;">
-      <span class="chap-badge">MODULE 2</span>
+    <div class="topic-anchor-block" id="topic-2-mf-change" style="margin-bottom:28px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <span class="chap-badge">MODULE 2 • TOPIC 2</span>
+        <a href="#sec-topics" style="font-size:0.75rem;color:var(--primary);text-decoration:none;">↑ Topic Directory</a>
+      </div>
       <h3 class="chap-title">2. Percentage Increase, Decrease &amp; Multiplying Factors (MF)</h3>
       <p class="book-p">
         किसी राशि में वृद्धि (Increase) या कमी (Decrease) को परंपरागत तरीके से जोड़ने-घटाने के बजाय <strong>गुणांक (Multiplying Factor)</strong> से एक ही कदम में हल किया जाता है।
@@ -810,11 +1082,19 @@ h1 {
         3. <strong>"$B$ is what $\%$ less than $A$?"</strong> &rarr; $\frac{A - B}{A} \times 100\%$ (Base is $A$).<br>
         <span style="color:var(--gold);">नियम:</span> "Than" (से) या "Of" (का) जिसके साथ लगा हो, वह हमेशा हर (Denominator) में आता है!
       </div>
+      <div style="text-align:right;margin-top:12px;">
+        <a href="#topic-1-fraction-grid" class="tb-btn" style="font-size:0.72rem;">&larr; Prev Topic</a>
+        <a href="#topic-3-ab-successive" class="tb-btn" style="font-size:0.72rem;color:var(--primary);">Next: AB Formula &rarr;</a>
+        <a href="#sec-basic" onclick="filterQs('mf-change')" class="tb-btn" style="font-size:0.72rem;color:var(--green);border-color:rgba(34,211,165,0.3);">Practice MF Qs &rarr;</a>
+      </div>
     </div>
 
     <!-- Module 3 -->
-    <div style="margin-bottom:28px;">
-      <span class="chap-badge">MODULE 3</span>
+    <div class="topic-anchor-block" id="topic-3-ab-successive" style="margin-bottom:28px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <span class="chap-badge">MODULE 3 • TOPIC 3</span>
+        <a href="#sec-topics" style="font-size:0.75rem;color:var(--primary);text-decoration:none;">↑ Topic Directory</a>
+      </div>
       <h3 class="chap-title">3. Successive Percentage Change &amp; The Universal AB Formula</h3>
       <p class="book-p">
         जब किसी राशि में लगातार दो बार प्रतिशत परिवर्तन होता है, तो कुल शुद्ध परिवर्तन केवल दोनों को जोड़कर नहीं निकलता, बल्कि संयुक्त प्रभाव (compound effect) उत्पन्न होता है।
@@ -873,11 +1153,19 @@ h1 {
         &bull; <strong>आयत का क्षेत्रफल ($L \times B$):</strong> लंबाई $+10\%$, चौड़ाई $+20\% \implies \text{Area } +32\%$।<br>
         &bull; <strong>गोले का आयतन ($\frac{4}{3}\pi r^3$):</strong> $r$ में $10\%$ वृद्धि $\implies (1.1)^3 = 1.331 \implies \mathbf{+33.1\%}$ आयतन वृद्धि।
       </div>
+      <div style="text-align:right;margin-top:12px;">
+        <a href="#topic-2-mf-change" class="tb-btn" style="font-size:0.72rem;">&larr; Prev Topic</a>
+        <a href="#topic-4-price-consumption" class="tb-btn" style="font-size:0.72rem;color:var(--primary);">Next: Price-Consumption &rarr;</a>
+        <a href="#sec-basic" onclick="filterQs('ab-successive')" class="tb-btn" style="font-size:0.72rem;color:var(--green);border-color:rgba(34,211,165,0.3);">Practice AB Qs &rarr;</a>
+      </div>
     </div>
 
     <!-- Module 4 -->
-    <div style="margin-bottom:28px;">
-      <span class="chap-badge">MODULE 4</span>
+    <div class="topic-anchor-block" id="topic-4-price-consumption" style="margin-bottom:28px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <span class="chap-badge">MODULE 4 • TOPIC 4</span>
+        <a href="#sec-topics" style="font-size:0.75rem;color:var(--primary);text-decoration:none;">↑ Topic Directory</a>
+      </div>
       <h3 class="chap-title">4. Product Constancy Ratio &amp; Price–Consumption–Expenditure ($P \times C = E$)</h3>
       <p class="book-p">
         जब दो राशियों का गुणनफल स्थिर (Constant) रहता है, तो एक राशि में वृद्धि होने पर दूसरी राशि में स्वतः आनुपातिक कमी हो जाती है।
@@ -921,11 +1209,19 @@ h1 {
         &bull; <strong>घटा हुआ मूल्य (Reduced Price / New Price)</strong> $= \frac{M \times x}{100 \times K}$ प्रति किग्रा।<br>
         &bull; <strong>वास्तविक / प्रारंभिक मूल्य (Original Price)</strong> $= \frac{M \times x}{(100 - x) \times K}$ प्रति किग्रा।
       </div>
+      <div style="text-align:right;margin-top:12px;">
+        <a href="#topic-3-ab-successive" class="tb-btn" style="font-size:0.72rem;">&larr; Prev Topic</a>
+        <a href="#topic-5-income-depreciation" class="tb-btn" style="font-size:0.72rem;color:var(--primary);">Next: Income-Deprec &rarr;</a>
+        <a href="#sec-basic" onclick="filterQs('price-consumption')" class="tb-btn" style="font-size:0.72rem;color:var(--green);border-color:rgba(34,211,165,0.3);">Practice P&times;C=E Qs &rarr;</a>
+      </div>
     </div>
 
     <!-- Module 5 -->
-    <div style="margin-bottom:28px;">
-      <span class="chap-badge">MODULE 5</span>
+    <div class="topic-anchor-block" id="topic-5-income-depreciation" style="margin-bottom:28px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <span class="chap-badge">MODULE 5 • TOPIC 5</span>
+        <a href="#sec-topics" style="font-size:0.75rem;color:var(--primary);text-decoration:none;">↑ Topic Directory</a>
+      </div>
       <h3 class="chap-title">5. Income, Expenditure &amp; Savings ($I = E + S$) &amp; Compound Depreciation</h3>
       <p class="book-p">
         व्यक्ति की आय (Income), व्यय (Expenditure) और बचत (Savings) में मूलभूत संबंध होता है:
@@ -948,11 +1244,19 @@ h1 {
         $$P_{\text{before}} = \frac{P}{\left(1 \pm \frac{r}{100}\right)^t}$$
         (वृद्धि के लिए $+$, अवमूल्यन/कमी के लिए $-$).
       </div>
+      <div style="text-align:right;margin-top:12px;">
+        <a href="#topic-4-price-consumption" class="tb-btn" style="font-size:0.72rem;">&larr; Prev Topic</a>
+        <a href="#topic-6-election-venn" class="tb-btn" style="font-size:0.72rem;color:var(--primary);">Next: Election &amp; Venn &rarr;</a>
+        <a href="#sec-basic" onclick="filterQs('income-depreciation')" class="tb-btn" style="font-size:0.72rem;color:var(--green);border-color:rgba(34,211,165,0.3);">Practice Income Qs &rarr;</a>
+      </div>
     </div>
 
     <!-- Module 6 -->
-    <div>
-      <span class="chap-badge">MODULE 6</span>
+    <div class="topic-anchor-block" id="topic-6-election-venn">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <span class="chap-badge">MODULE 6 • TOPIC 6</span>
+        <a href="#sec-topics" style="font-size:0.75rem;color:var(--primary);text-decoration:none;">↑ Topic Directory</a>
+      </div>
       <h3 class="chap-title">6. Election Problems &amp; Venn Diagram Sets</h3>
       <p class="book-p">
         चुनाव संबंधी प्रश्न SSC CGL Tier-1 और Tier-2 दोनों में अनिवार्य रूप से पूछे जाते हैं। इन प्रश्नों को हल करने के लिए मतदाता सूची की संरचना को समझना आवश्यक है:
@@ -975,6 +1279,11 @@ h1 {
         &bull; दोनों विषयों में उत्तीर्ण छात्र (Passed in both):
         $$\text{Passed Both} = 100\% - (A + B - C)$$
         <span style="color:var(--gold);">महत्वपूर्ण नियम:</span> वेन आरेख में सभी डेटा या तो केवल "अनुत्तीर्ण" (Fail) का रखें, या केवल "उत्तीर्ण" (Pass) का। दोनों को मिलाएँ नहीं!
+      </div>
+      <div style="text-align:right;margin-top:12px;">
+        <a href="#topic-5-income-depreciation" class="tb-btn" style="font-size:0.72rem;">&larr; Prev Topic</a>
+        <a href="#sec-formulas" class="tb-btn" style="font-size:0.72rem;color:var(--gold);">Next: Formula Vault &rarr;</a>
+        <a href="#sec-basic" onclick="filterQs('election-venn')" class="tb-btn" style="font-size:0.72rem;color:var(--green);border-color:rgba(34,211,165,0.3);">Practice Election Qs &rarr;</a>
       </div>
     </div>
   </section>
@@ -1112,7 +1421,7 @@ h1 {
   </section>
 
   <!-- SHORTCUTS & TRAPS -->
-  <section style="margin-bottom:24px;">
+  <section class="book-chapter" id="sec-shortcuts" style="margin-bottom:24px;">
     <h2 class="sec-title">⚡ Speed Shortcuts &amp; Classic SSC Exam Traps</h2>
     
     <div class="shortcut-grid">
@@ -1219,6 +1528,11 @@ h1 {
           Kisi sankhya me $+x\%$ aur fir $-x\%$ karne par sankhya wahi nahi rehti, balki hamesha $\frac{x^2}{100}\%$ ki kami hoti hai!
         </div>
       </div>
+      <div style="text-align:right;margin-top:12px;">
+        <a href="#topic-5-income-depreciation" class="tb-btn" style="font-size:0.72rem;">&larr; Prev Topic</a>
+        <a href="#sec-formulas" class="tb-btn" style="font-size:0.72rem;color:var(--gold);">Next: Formula Vault &rarr;</a>
+        <a href="#sec-basic" onclick="filterQs('election-venn')" class="tb-btn" style="font-size:0.72rem;color:var(--green);border-color:rgba(34,211,165,0.3);">Practice Election Qs &rarr;</a>
+      </div>
     </div>
   </section>
 
@@ -1237,8 +1551,19 @@ h1 {
       🤖 <strong>AI Tutor Rule:</strong> Pehle khud rough sheet par attempt karein. Solution tabhi reveal karein jab attempt ho jaye!
     </p>
 
+    <div class="topic-filter-bar">
+      <span class="filter-label">🏷️ Filter by Topic:</span>
+      <button class="q-filter-chip active" onclick="filterQs('all', this)">All Topics (20 Qs)</button>
+      <button class="q-filter-chip" onclick="filterQs('fraction-grid', this)">1. Fraction Grid</button>
+      <button class="q-filter-chip" onclick="filterQs('mf-change', this)">2. MF &amp; Changes</button>
+      <button class="q-filter-chip" onclick="filterQs('ab-successive', this)">3. AB Formula</button>
+      <button class="q-filter-chip" onclick="filterQs('price-consumption', this)">4. P&times;C=E Ladder</button>
+      <button class="q-filter-chip" onclick="filterQs('income-depreciation', this)">5. I=E+S &amp; Deprec</button>
+      <button class="q-filter-chip" onclick="filterQs('election-venn', this)">6. Election &amp; Venn</button>
+    </div>
+
     <!-- Q1 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="fraction-grid">
       <div class="q-head"><span class="q-num">Q1</span><span class="q-tag">Fraction to Percentage</span></div>
       <div class="q-text">Convert the fraction $\frac{5}{8}$ into percentage.</div>
       <div class="q-actions">
@@ -1260,7 +1585,7 @@ h1 {
     </div>
 
     <!-- Q2 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="fraction-grid">
       <div class="q-head"><span class="q-num">Q2</span><span class="q-tag">Commutative Law</span></div>
       <div class="q-text">Evaluate: $72\% \text{ of } 25 + 48\% \text{ of } 50$.</div>
       <div class="q-actions">
@@ -1283,7 +1608,7 @@ h1 {
     </div>
 
     <!-- Q3 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="mf-change">
       <div class="q-head"><span class="q-num">Q3</span><span class="q-tag">Percentage Comparison</span></div>
       <div class="q-text">If $A = 120$ and $B = 150$, by what percent is $B$ more than $A$, and by what percent is $A$ less than $B$?</div>
       <div class="q-actions">
@@ -1305,7 +1630,7 @@ h1 {
     </div>
 
     <!-- Q4 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="mf-change">
       <div class="q-head"><span class="q-num">Q4</span><span class="q-tag">Base Shifting</span></div>
       <div class="q-text">If $A$'s salary is $20\%$ more than $B$'s salary, by what percent is $B$'s salary less than $A$'s salary?</div>
       <div class="q-actions">
@@ -1328,7 +1653,7 @@ h1 {
     </div>
 
     <!-- Q5 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="ab-successive">
       <div class="q-head"><span class="q-num">Q5</span><span class="q-tag">Successive Change AB Formula</span></div>
       <div class="q-text">The length of a rectangle is increased by $20\%$ and its breadth is increased by $10\%$. Find the percentage change in its area.</div>
       <div class="q-actions">
@@ -1349,7 +1674,7 @@ h1 {
     </div>
 
     <!-- Q6 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="ab-successive">
       <div class="q-head"><span class="q-num">Q6</span><span class="q-tag">Opposite Equal Changes</span></div>
       <div class="q-text">A number is first increased by $15\%$ and then decreased by $15\%$. Find the net percentage change in the number.</div>
       <div class="q-actions">
@@ -1370,7 +1695,7 @@ h1 {
     </div>
 
     <!-- Q7 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="price-consumption">
       <div class="q-head"><span class="q-num">Q7</span><span class="q-tag">Constant Expenditure</span></div>
       <div class="q-text">If the price of petrol increases by $25\%$, by what percentage must a car owner reduce his consumption so that expenditure remains unchanged?</div>
       <div class="q-actions">
@@ -1391,7 +1716,7 @@ h1 {
     </div>
 
     <!-- Q8 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="price-consumption">
       <div class="q-head"><span class="q-num">Q8</span><span class="q-tag">Price Drop Consumption Increase</span></div>
       <div class="q-text">If the price of sugar decreases by $20\%$, by what percent can a family increase its consumption without changing its budget?</div>
       <div class="q-actions">
@@ -1412,7 +1737,7 @@ h1 {
     </div>
 
     <!-- Q9 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="ab-successive">
       <div class="q-head"><span class="q-num">Q9</span><span class="q-tag">Area of Circle</span></div>
       <div class="q-text">If the radius of a circle is increased by $30\%$, find the percentage increase in its area.</div>
       <div class="q-actions">
@@ -1433,7 +1758,7 @@ h1 {
     </div>
 
     <!-- Q10 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="ab-successive">
       <div class="q-head"><span class="q-num">Q10</span><span class="q-tag">Two Successive Discounts</span></div>
       <div class="q-text">Find the single equivalent discount for two successive discounts of $20\%$ and $10\%$.</div>
       <div class="q-actions">
@@ -1454,7 +1779,7 @@ h1 {
     </div>
 
     <!-- Q11 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="election-venn">
       <div class="q-head"><span class="q-num">Q11</span><span class="q-tag">Simple Election</span></div>
       <div class="q-text">In an election between two candidates, the winner secures $65\%$ of the total votes and wins by a margin of $1,800$ votes. Find the total number of votes polled (assuming no invalid votes).</div>
       <div class="q-actions">
@@ -1477,7 +1802,7 @@ h1 {
     </div>
 
     <!-- Q12 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-depreciation">
       <div class="q-head"><span class="q-num">Q12</span><span class="q-tag">Population Growth</span></div>
       <div class="q-text">The population of a town is $80,000$. It increases at the rate of $5\%$ per annum. Find the population after $2$ years.</div>
       <div class="q-actions">
@@ -1498,7 +1823,7 @@ h1 {
     </div>
 
     <!-- Q13 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-depreciation">
       <div class="q-head"><span class="q-num">Q13</span><span class="q-tag">Machine Depreciation</span></div>
       <div class="q-text">A machine depreciates at the rate of $10\%$ per annum. If its current value is ₹$72,900$, what was its value $2$ years ago?</div>
       <div class="q-actions">
@@ -1520,7 +1845,7 @@ h1 {
     </div>
 
     <!-- Q14 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-depreciation">
       <div class="q-head"><span class="q-num">Q14</span><span class="q-tag">Successive Spending</span></div>
       <div class="q-text">A man spends $20\%$ of his monthly salary on house rent and $40\%$ of the remaining on food. If he saves ₹$7,200$, find his monthly salary.</div>
       <div class="q-actions">
@@ -1544,7 +1869,7 @@ h1 {
     </div>
 
     <!-- Q15 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="election-venn">
       <div class="q-head"><span class="q-num">Q15</span><span class="q-tag">Passing Marks Concept</span></div>
       <div class="q-text">A student scores $30\%$ marks and fails by $15$ marks. Another student scores $40\%$ marks and gets $25$ marks more than the minimum passing marks. Find the maximum marks of the examination and the passing percentage.</div>
       <div class="q-actions">
@@ -1569,7 +1894,7 @@ h1 {
     </div>
 
     <!-- Q16 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="election-venn">
       <div class="q-head"><span class="q-num">Q16</span><span class="q-tag">Basic Venn Diagram</span></div>
       <div class="q-text">In an exam, $40\%$ candidates failed in English, $30\%$ failed in Maths, and $15\%$ failed in both. Find the percentage of candidates who passed in both subjects.</div>
       <div class="q-actions">
@@ -1591,7 +1916,7 @@ h1 {
     </div>
 
     <!-- Q17 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="mf-change">
       <div class="q-head"><span class="q-num">Q17</span><span class="q-tag">Two Numbers Comparison</span></div>
       <div class="q-text">Two numbers are respectively $20\%$ and $50\%$ more than a third number. What percentage is the first number of the second number?</div>
       <div class="q-actions">
@@ -1614,7 +1939,7 @@ h1 {
     </div>
 
     <!-- Q18 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-depreciation">
       <div class="q-head"><span class="q-num">Q18</span><span class="q-tag">Tax and Net Income</span></div>
       <div class="q-text">If income tax is increased by $19\%$, net income decreases by $1\%$. Find the rate of income tax.</div>
       <div class="q-actions">
@@ -1637,7 +1962,7 @@ h1 {
     </div>
 
     <!-- Q19 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="ab-successive">
       <div class="q-head"><span class="q-num">Q19</span><span class="q-tag">Volume of Cube Scaling</span></div>
       <div class="q-text">If each edge of a cube is increased by $10\%$, find the percentage increase in its surface area and its volume.</div>
       <div class="q-actions">
@@ -1659,7 +1984,7 @@ h1 {
     </div>
 
     <!-- Q20 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="fraction-grid">
       <div class="q-head"><span class="q-num">Q20</span><span class="q-tag">Fraction Multiplication Error</span></div>
       <div class="q-text">A student multiplied a number by $\frac{3}{5}$ instead of $\frac{5}{3}$. What is the percentage error in the calculation?</div>
       <div class="q-actions">
@@ -1699,8 +2024,19 @@ h1 {
       🤖 <strong>AI Tutor Rule:</strong> Pehle independent attempt karein. Ratio aur Multiplier methods se step count reduce karein!
     </p>
 
+    <div class="topic-filter-bar">
+      <span class="filter-label">🏷️ Filter Mixed Qs by Topic:</span>
+      <button class="q-filter-chip active" onclick="filterQs('all', this)">All Mixed (20 Qs)</button>
+      <button class="q-filter-chip" onclick="filterQs('fraction-grid', this)">1. Fraction Grid</button>
+      <button class="q-filter-chip" onclick="filterQs('mf-change', this)">2. MF &amp; Changes</button>
+      <button class="q-filter-chip" onclick="filterQs('ab-successive', this)">3. AB Formula</button>
+      <button class="q-filter-chip" onclick="filterQs('price-consumption', this)">4. P&times;C=E Ladder</button>
+      <button class="q-filter-chip" onclick="filterQs('income-depreciation', this)">5. I=E+S &amp; Deprec</button>
+      <button class="q-filter-chip" onclick="filterQs('election-venn', this)">6. Election &amp; Venn</button>
+    </div>
+
     <!-- Q21 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="price-consumption">
       <div class="q-head"><span class="q-num">Q21</span><span class="q-tag">Price Drop &amp; Quantity Difference</span></div>
       <div class="q-text">A reduction of $20\%$ in the price of sugar enables a purchaser to obtain $4$ kg more for ₹$160$. Find the original price per kg and the reduced price per kg.</div>
       <div class="q-actions">
@@ -1724,7 +2060,7 @@ h1 {
     </div>
 
     <!-- Q22 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="price-consumption">
       <div class="q-head"><span class="q-num">Q22</span><span class="q-tag">Variable Expenditure Model</span></div>
       <div class="q-text">The price of cooking oil increases by $25\%$. By what percentage should a family reduce its consumption so that its expenditure increases by only $10\%$?</div>
       <div class="q-actions">
@@ -1748,7 +2084,7 @@ h1 {
     </div>
 
     <!-- Q23 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-depreciation">
       <div class="q-head"><span class="q-num">Q23</span><span class="q-tag">Income, Expenditure &amp; Savings Ratio</span></div>
       <div class="q-text">A person spends $75\%$ of his income. His income increases by $20\%$ and his expenditure increases by $10\%$. Find the percentage increase in his savings.</div>
       <div class="q-actions">
@@ -1774,7 +2110,7 @@ h1 {
     </div>
 
     <!-- Q24 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="election-venn">
       <div class="q-head"><span class="q-num">Q24</span><span class="q-tag">Election with Invalid Votes</span></div>
       <div class="q-text">In an election, $10\%$ of voters did not cast their votes and $10\%$ of the votes cast were declared invalid. The winning candidate got $54\%$ of the valid votes and won by a majority of $1,620$ votes. Find the total number of voters enrolled in the voters list.</div>
       <div class="q-actions">
@@ -1801,7 +2137,7 @@ h1 {
     </div>
 
     <!-- Q25 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="ab-successive">
       <div class="q-head"><span class="q-num">Q25</span><span class="q-tag">Complex Successive Changes</span></div>
       <div class="q-text">A number is increased by $20\%$, then decreased by $10\%$, and then increased by $25\%$. What is the net percentage increase or decrease in the number?</div>
       <div class="q-actions">
@@ -1823,7 +2159,7 @@ h1 {
     </div>
 
     <!-- Q26 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="ab-successive">
       <div class="q-head"><span class="q-num">Q26</span><span class="q-tag">Cylinder Volume Expansion</span></div>
       <div class="q-text">If the radius of the base of a cylinder is decreased by $20\%$ and its height is increased by $50\%$, find the percentage change in its volume.</div>
       <div class="q-actions">
@@ -1846,7 +2182,7 @@ h1 {
     </div>
 
     <!-- Q27 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="price-consumption">
       <div class="q-head"><span class="q-num">Q27</span><span class="q-tag">Fresh Fruit vs Dry Fruit</span></div>
       <div class="q-text">Fresh watermelon contains $90\%$ water, whereas dry watermelon contains $20\%$ water. What weight of dry watermelon can be obtained from $40$ kg of fresh watermelon?</div>
       <div class="q-actions">
@@ -1870,7 +2206,7 @@ h1 {
     </div>
 
     <!-- Q28 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="election-venn">
       <div class="q-head"><span class="q-num">Q28</span><span class="q-tag">Passing Marks with Two Students</span></div>
       <div class="q-text">In an examination, A scored $32\%$ marks and failed by $24$ marks. B scored $45\%$ marks and obtained $41$ marks more than the passing marks. What is the passing mark and the maximum mark?</div>
       <div class="q-actions">
@@ -1894,7 +2230,7 @@ h1 {
     </div>
 
     <!-- Q29 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-depreciation">
       <div class="q-head"><span class="q-num">Q29</span><span class="q-tag">Population Male/Female Breakdown</span></div>
       <div class="q-text">The population of a village was $9,800$. In a year, with the increase in population of males by $8\%$ and that of females by $5\%$, the population of the village became $10,458$. What was the number of males in the village before increase?</div>
       <div class="q-actions">
@@ -1919,7 +2255,7 @@ h1 {
     </div>
 
     <!-- Q30 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-depreciation">
       <div class="q-head"><span class="q-num">Q30</span><span class="q-tag">Multi-tier Spendings</span></div>
       <div class="q-text">A man gave $30\%$ of his money to his elder son, $40\%$ of the remaining to his younger son, and $10\%$ of the remaining to a trust. If he is left with ₹$18,900$, find his total initial money.</div>
       <div class="q-actions">
@@ -1941,7 +2277,7 @@ h1 {
     </div>
 
     <!-- Q31 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="mf-change">
       <div class="q-head"><span class="q-num">Q31</span><span class="q-tag">Salary Base Equation</span></div>
       <div class="q-text">If $A$'s salary is $40\%$ of $B$'s salary and $B$'s salary is $25\%$ more than $C$'s salary, by what percentage is $C$'s salary more than $A$'s salary?</div>
       <div class="q-actions">
@@ -1965,7 +2301,7 @@ h1 {
     </div>
 
     <!-- Q32 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="election-venn">
       <div class="q-head"><span class="q-num">Q32</span><span class="q-tag">Venn Diagram Exact Counts</span></div>
       <div class="q-text">In a group of $1,500$ students, $65\%$ like football, $55\%$ like cricket, and $10\%$ like neither. How many students like both football and cricket?</div>
       <div class="q-actions">
@@ -1988,7 +2324,7 @@ h1 {
     </div>
 
     <!-- Q33 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="fraction-grid">
       <div class="q-head"><span class="q-num">Q33</span><span class="q-tag">Fraction Ratio Adjustment</span></div>
       <div class="q-text">If the numerator of a fraction is increased by $20\%$ and its denominator is decreased by $10\%$, the value of the fraction becomes $\frac{16}{21}$. Find the original fraction.</div>
       <div class="q-actions">
@@ -2010,7 +2346,7 @@ h1 {
     </div>
 
     <!-- Q34 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="election-venn">
       <div class="q-head"><span class="q-num">Q34</span><span class="q-tag">Election with Non-Voting</span></div>
       <div class="q-text">In an election, $20\%$ of voters on the voters list did not vote and $120$ votes were cast as invalid. The winner got $41\%$ of the total enrolled voters and won by $200$ votes. Find the total number of enrolled voters.</div>
       <div class="q-actions">
@@ -2036,7 +2372,7 @@ h1 {
     </div>
 
     <!-- Q35 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="price-consumption">
       <div class="q-head"><span class="q-num">Q35</span><span class="q-tag">Price Rise &amp; Quantity Cut</span></div>
       <div class="q-text">A reduction of $10\%$ in the price of tea enables a dealer to purchase $5$ kg more for ₹$450$. What is the difference between the original and the reduced price per kg?</div>
       <div class="q-actions">
@@ -2059,7 +2395,7 @@ h1 {
     </div>
 
     <!-- Q36 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-depreciation">
       <div class="q-head"><span class="q-num">Q36</span><span class="q-tag">Commission System</span></div>
       <div class="q-text">A salesman is allowed $9\%$ commission on total sales plus a bonus of $1\%$ on sales over ₹$20,000$. If his total earnings were ₹$6,800$, find his total sales.</div>
       <div class="q-actions">
@@ -2083,7 +2419,7 @@ h1 {
     </div>
 
     <!-- Q37 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-depreciation">
       <div class="q-head"><span class="q-num">Q37</span><span class="q-tag">Consecutive Rate of Depreciation</span></div>
       <div class="q-text">The value of a car depreciates by $25\%$ in the first year, $20\%$ in the second year, and $15\%$ in the third year. What is the total overall percentage depreciation over the 3 years?</div>
       <div class="q-actions">
@@ -2105,7 +2441,7 @@ h1 {
     </div>
 
     <!-- Q38 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="election-venn">
       <div class="q-head"><span class="q-num">Q38</span><span class="q-tag">Venn Diagram Three Categories</span></div>
       <div class="q-text">In a survey of $200$ people, $120$ read Hindi newspaper, $100$ read English newspaper, and $50$ read both. How many read neither?</div>
       <div class="q-actions">
@@ -2127,7 +2463,7 @@ h1 {
     </div>
 
     <!-- Q39 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-depreciation">
       <div class="q-head"><span class="q-num">Q39</span><span class="q-tag">Alligation in Salary Increase</span></div>
       <div class="q-text">A man's salary is ₹$45,000$. He spends $80\%$ of it and saves the rest. Next year his income increases by $15\%$ and his savings increase by $20\%$. By what percentage does his expenditure increase?</div>
       <div class="q-actions">
@@ -2150,7 +2486,7 @@ h1 {
     </div>
 
     <!-- Q40 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="ab-successive">
       <div class="q-head"><span class="q-num">Q40</span><span class="q-tag">Successive Price Markings</span></div>
       <div class="q-text">A trader marks his goods $40\%$ above the cost price and then allows a discount of $25\%$ on the marked price. Find his net profit or loss percentage.</div>
       <div class="q-actions">
@@ -2186,8 +2522,18 @@ h1 {
       🔐 <strong>AI Tutor Integrity Rule:</strong> Har question ka exact exam shift tag diya gaya hai. Pehle solve karein fir shortcut dekhein.
     </p>
 
+    <div class="topic-filter-bar">
+      <span class="filter-label">🏷️ Filter PYQs by Topic:</span>
+      <button class="q-filter-chip active" onclick="filterQs('all', this)">All Real PYQs (15)</button>
+      <button class="q-filter-chip" onclick="filterQs('mf-change', this)">2. MF &amp; Changes</button>
+      <button class="q-filter-chip" onclick="filterQs('ab-successive', this)">3. AB Formula</button>
+      <button class="q-filter-chip" onclick="filterQs('price-consumption', this)">4. P&times;C=E Ladder</button>
+      <button class="q-filter-chip" onclick="filterQs('income-depreciation', this)">5. I=E+S &amp; Deprec</button>
+      <button class="q-filter-chip" onclick="filterQs('election-venn', this)">6. Election &amp; Venn</button>
+    </div>
+
     <!-- PYQ 1 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="price-consumption">
       <div class="pyq-tag">SSC CGL 2023 Tier-1 • 14 July Shift-3</div>
       <div class="pyq-q"><strong>Q41:</strong> The price of petrol was raised by $15\%$. By what percentage should a motorist reduce his consumption of petrol so that the expenditure on it does not increase? (Round off to 1 decimal place).</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-41')">🔍 Show Topper Shortcut</button>
@@ -2198,7 +2544,7 @@ h1 {
     </div>
 
     <!-- PYQ 2 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="ab-successive">
       <div class="pyq-tag">SSC CGL 2022 Tier-2 (Mains) • 02 March 2023</div>
       <div class="pyq-q"><strong>Q42:</strong> A's salary is $38\%$ more than B's salary. B's salary is what percent less than A's salary? (Correct to one decimal place).</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-42')">🔍 Show Topper Shortcut</button>
@@ -2209,7 +2555,7 @@ h1 {
     </div>
 
     <!-- PYQ 3 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="election-venn">
       <div class="pyq-tag">SSC CGL 2023 Tier-1 • 17 July Shift-1</div>
       <div class="pyq-q"><strong>Q43:</strong> In an election between two candidates, $8\%$ of the voters did not cast their votes. The winning candidate got $48\%$ of the total enrolled votes and won by $1,100$ votes. Find the total number of enrolled voters.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-43')">🔍 Show Topper Shortcut</button>
@@ -2224,7 +2570,7 @@ h1 {
     </div>
 
     <!-- PYQ 4 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="income-depreciation">
       <div class="pyq-tag">SSC CGL 2022 Tier-1 • 01 Dec Shift-2</div>
       <div class="pyq-q"><strong>Q44:</strong> If the length and breadth of a cuboid are increased by $10\%$ and $20\%$ respectively and its height is decreased by $20\%$, what is the percentage change in the volume of the cuboid?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-44')">🔍 Show Topper Shortcut</button>
@@ -2237,7 +2583,7 @@ h1 {
     </div>
 
     <!-- PYQ 5 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="election-venn">
       <div class="pyq-tag">SSC CGL 2023 Tier-2 (Mains) • 26 Oct 2023</div>
       <div class="pyq-q"><strong>Q45:</strong> An examinee has to secure $40\%$ marks to pass. He gets $180$ marks and fails by an equal number of marks. Find the maximum marks.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-45')">🔍 Show Topper Shortcut</button>
@@ -2250,7 +2596,7 @@ h1 {
     </div>
 
     <!-- PYQ 6 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="income-depreciation">
       <div class="pyq-tag">SSC CHSL 2023 Tier-1 • 02 Aug Shift-2</div>
       <div class="pyq-q"><strong>Q46:</strong> A reduction of $15\%$ in the price of wheat allows a housewife to buy $6$ kg more for ₹$2,720$. What is the reduced price per kg?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-46')">🔍 Show Topper Shortcut</button>
@@ -2261,7 +2607,7 @@ h1 {
     </div>
 
     <!-- PYQ 7 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="price-consumption">
       <div class="pyq-tag">SSC CPO 2023 • 03 Oct Shift-1</div>
       <div class="pyq-q"><strong>Q47:</strong> The population of a city was $1,75,000$ two years ago. If it increased by $4\%$ in the first year and $5\%$ in the second year, what is its present population?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-47')">🔍 Show Topper Shortcut</button>
@@ -2272,7 +2618,7 @@ h1 {
     </div>
 
     <!-- PYQ 8 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="mf-change">
       <div class="pyq-tag">SSC CGL 2021 Tier-2 (Mains) • 08 Aug 2022</div>
       <div class="pyq-q"><strong>Q48:</strong> The monthly salary of an employee was increased by $20\%$. After three months, due to company policy, it was reduced by $20\%$. What was the net percentage change in his salary?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-48')">🔍 Show Topper Shortcut</button>
@@ -2283,7 +2629,7 @@ h1 {
     </div>
 
     <!-- PYQ 9 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="election-venn">
       <div class="pyq-tag">SSC CGL 2022 Tier-1 • 08 Dec Shift-4</div>
       <div class="pyq-q"><strong>Q49:</strong> If the radius of a sphere is decreased by $10\%$, by what percentage does its surface area decrease?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-49')">🔍 Show Topper Shortcut</button>
@@ -2295,7 +2641,7 @@ h1 {
     </div>
 
     <!-- PYQ 10 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="income-depreciation">
       <div class="pyq-tag">SSC CHSL 2022 Tier-1 • 27 May Shift-3</div>
       <div class="pyq-q"><strong>Q50:</strong> A person's expenditure and savings are in the ratio $5:3$. If his income increases by $12\%$ and expenditure increases by $15\%$, find the percentage increase in his savings.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-50')">🔍 Show Topper Shortcut</button>
@@ -2306,7 +2652,7 @@ h1 {
     </div>
 
     <!-- PYQ 11 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="ab-successive">
       <div class="pyq-tag">SSC CGL 2023 Tier-1 • 20 July Shift-2</div>
       <div class="pyq-q"><strong>Q51:</strong> In an examination, $70\%$ candidates passed in English and $80\%$ passed in Mathematics. $10\%$ failed in both subjects. If $144$ candidates passed in both, find the total number of candidates.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-51')">🔍 Show Topper Shortcut</button>
@@ -2320,7 +2666,7 @@ h1 {
     </div>
 
     <!-- PYQ 12 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="election-venn">
       <div class="pyq-tag">SSC CPO 2022 • 10 Nov Shift-2</div>
       <div class="pyq-q"><strong>Q52:</strong> Two successive price hikes of $12\%$ and $15\%$ of an article are equivalent to a single price hike of:</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-52')">🔍 Show Topper Shortcut</button>
@@ -2331,7 +2677,7 @@ h1 {
     </div>
 
     <!-- PYQ 13 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="income-depreciation">
       <div class="pyq-tag">SSC CGL 2021 Tier-1 • 18 Aug Shift-3</div>
       <div class="pyq-q"><strong>Q53:</strong> A number is first decreased by $10\%$ and then increased by $10\%$. The number so obtained is $50$ less than the original number. What is the original number?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-53')">🔍 Show Topper Shortcut</button>
@@ -2343,7 +2689,7 @@ h1 {
     </div>
 
     <!-- PYQ 14 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="mf-change">
       <div class="pyq-tag">SSC CHSL 2023 Tier-1 • 11 Aug Shift-3</div>
       <div class="pyq-q"><strong>Q54:</strong> In an election between two candidates, $5\%$ of the voters did not vote, and $2,000$ votes were invalid. The winning candidate received $52\%$ of the valid votes and won by a margin of $3,600$ votes. Find the total number of enrolled voters.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-54')">🔍 Show Topper Shortcut</button>
@@ -2357,7 +2703,7 @@ h1 {
     </div>
 
     <!-- PYQ 15 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="price-consumption">
       <div class="pyq-tag">SSC CGL 2023 Tier-2 (Mains) • 27 Oct 2023</div>
       <div class="pyq-q"><strong>Q55:</strong> If A's income is $60\%$ less than B's income, then B's income is what percentage more than that of A's income?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-55')">🔍 Show Topper Shortcut</button>
@@ -2536,22 +2882,32 @@ h1 {
         <div class="sb-brand-sub">120-Day Master Prep</div>
       </div>
     </div>
-    <button class="sidebar-close-btn" id="sidebar-close" aria-label="Close Sidebar">✕</button>
-  </div>
-  <div class="sidebar-content">
-    <div class="sb-group-title"><span>📑 Quick Jump Menu</span></div>
+    <button class="sidebar-close-btn" id="sidebar-close" aria-la  <div class="sidebar-content">
+    <div class="sb-group-title"><span>🎯 Topic-Wise Theory &amp; Practice</span></div>
     <div class="sb-toc-grid">
+      <a href="#topic-1-fraction-grid" class="sb-toc-link">1. Fraction Grid</a>
+      <a href="#topic-2-mf-change" class="sb-toc-link">2. MF &amp; Changes</a>
+      <a href="#topic-3-ab-successive" class="sb-toc-link">3. AB Formula</a>
+      <a href="#topic-4-price-consumption" class="sb-toc-link">4. P&times;C=E Ladder</a>
+      <a href="#topic-5-income-depreciation" class="sb-toc-link">5. I=E+S &amp; Deprec</a>
+      <a href="#topic-6-election-venn" class="sb-toc-link">6. Election &amp; Venn</a>
+    </div>
+
+    <div class="sb-group-title"><span>📑 Course Sections</span></div>
+    <div class="sb-toc-grid">
+      <a href="#sec-topics" class="sb-toc-link">📑 Topic Directory</a>
       <a href="#sec-mastery" class="sb-toc-link">📊 Mastery Tracker</a>
       <a href="#sec-plan" class="sb-toc-link">📅 Day-by-Day Plan</a>
       <a href="#sec-theory" class="sb-toc-link">📖 Theory (6 Modules)</a>
       <a href="#sec-formulas" class="sb-toc-link">📐 Formula Vault</a>
-      <a href="#sec-basic" class="sb-toc-link">🟢 20 Basic Questions</a>
-      <a href="#sec-mixed" class="sb-toc-link">🟡 20 Mixed Questions</a>
+      <a href="#sec-basic" class="sb-toc-link">🟢 20 Basic Qs</a>
+      <a href="#sec-mixed" class="sb-toc-link">🟡 20 Mixed Qs</a>
       <a href="#sec-pyq" class="sb-toc-link">🏆 15 SSC PYQs</a>
       <a href="#sec-timer" class="sb-toc-link">⏱️ Timed Drill</a>
       <a href="#sec-recall" class="sb-toc-link">🧠 Active Recall</a>
       <a href="#sec-errors" class="sb-toc-link">📓 Error Notebook</a>
       <a href="#sec-checklist" class="sb-toc-link">✅ Completion Checklist</a>
+      <a href="#sec-revision" class="sb-toc-link">🔄 Revision Tracker</a>
     </div>
 
     <div class="sb-group-title"><span>🔢 All Phases</span></div>
@@ -2606,6 +2962,36 @@ function copyFormula(text) {
 function openPrintModal() { document.getElementById('print-modal').style.display = 'flex'; }
 function closePrintModal() { document.getElementById('print-modal').style.display = 'none'; }
 
+/* Topic Filter function */
+function filterQs(topic, btn) {
+  if (btn) {
+    var container = btn.parentElement;
+    if (container) {
+      container.querySelectorAll('.q-filter-chip').forEach(function(c) { c.classList.remove('active'); });
+      btn.classList.add('active');
+    }
+  } else {
+    // If called programmatically from topic hub, sync active chip
+    document.querySelectorAll('.topic-filter-bar').forEach(function(bar) {
+      bar.querySelectorAll('.q-filter-chip').forEach(function(c) {
+        if (c.getAttribute('onclick') && c.getAttribute('onclick').indexOf("'" + topic + "'") !== -1) {
+          bar.querySelectorAll('.q-filter-chip').forEach(function(b) { b.classList.remove('active'); });
+          c.classList.add('active');
+        }
+      });
+    });
+  }
+  
+  var cards = document.querySelectorAll('.q-block, .pyq-card');
+  cards.forEach(function(card) {
+    if (topic === 'all' || card.getAttribute('data-topic') === topic) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
 var sbDrawer = document.getElementById('sidebar-drawer');
 var sbBackdrop = document.getElementById('sidebar-backdrop');
 var sbToggle = document.getElementById('sidebar-toggle-btn');
@@ -2629,6 +3015,14 @@ if (sbBackdrop) {
     sbBackdrop.classList.remove('active');
   });
 }
+
+// Auto close sidebar when clicking a link inside it
+document.querySelectorAll('.sb-toc-link').forEach(function(link) {
+  link.addEventListener('click', function() {
+    if (sbDrawer) sbDrawer.classList.remove('open');
+    if (sbBackdrop) sbBackdrop.classList.remove('active');
+  });
+});
 
 var mlCards = document.querySelectorAll('.ml-card');
 mlCards.forEach(function(card) {
@@ -2683,7 +3077,7 @@ document.getElementById('calc-score').addEventListener('click', function() {
   
   if (percent >= 85) {
     res.className = 'score-result score-pass';
-    res.innerHTML = '🎉 Outstanding! Score: ' + correct + '/' + total + ' (' + percent + '%) &bull; Percentage Mastery Benchmark Cleared! Ready for Profit & Loss!';
+    res.innerHTML = '🎉 Outstanding! Score: ' + correct + '/' + total + ' (' + percent + '%) &bull; Percentage Mastery Benchmark Cleared! Ready for Profit &amp; Loss!';
   } else if (percent >= 65) {
     res.className = 'score-result score-ok';
     res.innerHTML = '⚠️ Good Progress: Score: ' + correct + '/' + total + ' (' + percent + '%) &bull; Revise Fraction Grid and Retest in 24 hours!';
@@ -2692,6 +3086,23 @@ document.getElementById('calc-score').addEventListener('click', function() {
     res.innerHTML = '🚨 Score: ' + correct + '/' + total + ' (' + percent + '%) &bull; AI Tutor Rule: Log errors in the notebook and re-attempt all missed questions!';
   }
 });
+
+// ScrollSpy to highlight active topic chips in .topic-nav-bar
+window.addEventListener('scroll', function() {
+  var scrollPos = window.scrollY + 140;
+  var chips = document.querySelectorAll('.tnav-chip');
+  chips.forEach(function(chip) {
+    var targetId = chip.getAttribute('href');
+    if (!targetId || targetId.charAt(0) !== '#') return;
+    var target = document.querySelector(targetId);
+    if (!target) return;
+    var top = target.offsetTop;
+    var height = target.offsetHeight;
+    if (scrollPos >= top && scrollPos < top + height) {
+      chips.forEach(function(c) { c.classList.remove('active'); });
+      chip.classList.add('active');
+    }
+  });
 </script>
 </body>
 </html>

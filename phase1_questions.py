@@ -24,8 +24,20 @@ def get_basic_questions():
       🤖 <strong>AI Tutor Rule:</strong> Pehle khud rough sheet par attempt karo. Solution tabhi reveal karo jab attempt ho jaye!
     </p>
 
+    <div class="topic-filter-bar">
+      <span class="tfb-label">Filter:</span>
+      <button class="tfilter-btn active" onclick="filterQs('all', event)">All Topics</button>
+      <button class="tfilter-btn" onclick="filterQs('1', event)">T1: Classification</button>
+      <button class="tfilter-btn" onclick="filterQs('2', event)">T2: Divisibility</button>
+      <button class="tfilter-btn" onclick="filterQs('3', event)">T3: LCM & HCF</button>
+      <button class="tfilter-btn" onclick="filterQs('4', event)">T4: Remainders</button>
+      <button class="tfilter-btn" onclick="filterQs('5', event)">T5: Unit Digit</button>
+      <button class="tfilter-btn" onclick="filterQs('6', event)">T6: Factors Engine</button>
+    </div>
+
+
     <!-- Q1 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="1">
       <div class="q-head">
         <span class="q-num">Q1</span>
         <span class="q-tag">Prime Testing</span>
@@ -53,7 +65,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q2 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="2">
       <div class="q-head">
         <span class="q-num">Q2</span>
         <span class="q-tag">Divisibility by 9</span>
@@ -80,7 +92,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q3 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="2">
       <div class="q-head">
         <span class="q-num">Q3</span>
         <span class="q-tag">Divisibility by 4</span>
@@ -107,7 +119,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q4 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="2">
       <div class="q-head">
         <span class="q-num">Q4</span>
         <span class="q-tag">Divisibility by 8</span>
@@ -135,7 +147,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q5 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="2">
       <div class="q-head">
         <span class="q-num">Q5</span>
         <span class="q-tag">Divisibility by 11</span>
@@ -164,7 +176,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q6 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="2">
       <div class="q-head">
         <span class="q-num">Q6</span>
         <span class="q-tag">Divisibility by 6</span>
@@ -192,7 +204,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q7 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="3">
       <div class="q-head">
         <span class="q-num">Q7</span>
         <span class="q-tag">HCF & LCM Basics</span>
@@ -220,7 +232,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q8 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="3">
       <div class="q-head">
         <span class="q-num">Q8</span>
         <span class="q-tag">HCF &times; LCM Formula</span>
@@ -247,7 +259,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q9 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="3">
       <div class="q-head">
         <span class="q-num">Q9</span>
         <span class="q-tag">Fractions HCF & LCM</span>
@@ -274,7 +286,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q10 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="5">
       <div class="q-head">
         <span class="q-num">Q10</span>
         <span class="q-tag">Unit Digit in Product</span>
@@ -301,7 +313,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q11 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="5">
       <div class="q-head">
         <span class="q-num">Q11</span>
         <span class="q-tag">Unit Digit with Powers</span>
@@ -328,7 +340,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q12 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="5">
       <div class="q-head">
         <span class="q-num">Q12</span>
         <span class="q-tag">Unit Digit of 4 & 9</span>
@@ -355,7 +367,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q13 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="6">
       <div class="q-head">
         <span class="q-num">Q13</span>
         <span class="q-tag">Total Number of Factors</span>
@@ -381,7 +393,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q14 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="6">
       <div class="q-head">
         <span class="q-num">Q14</span>
         <span class="q-tag">Even & Odd Factors</span>
@@ -409,7 +421,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q15 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="6">
       <div class="q-head">
         <span class="q-num">Q15</span>
         <span class="q-tag">Sum of Factors</span>
@@ -437,7 +449,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q16 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="6">
       <div class="q-head">
         <span class="q-num">Q16</span>
         <span class="q-tag">Trailing Zeros in Factorial</span>
@@ -464,7 +476,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q17 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="4">
       <div class="q-head">
         <span class="q-num">Q17</span>
         <span class="q-tag">Basic Remainder Arithmetic</span>
@@ -493,7 +505,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q18 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="4">
       <div class="q-head">
         <span class="q-num">Q18</span>
         <span class="q-tag">Negative Remainder</span>
@@ -521,7 +533,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q19 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="1">
       <div class="q-head">
         <span class="q-num">Q19</span>
         <span class="q-tag">Pure Recurring Decimal</span>
@@ -546,7 +558,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q20 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="1">
       <div class="q-head">
         <span class="q-num">Q20</span>
         <span class="q-tag">Mixed Recurring Decimal</span>
@@ -589,8 +601,19 @@ def get_mixed_questions():
       🤖 <strong>AI Tutor Rule:</strong> In prashnon me multiple concepts merge hote hain. Pehle independent attempt karein!
     </p>
 
+    <div class="topic-filter-bar">
+      <span class="tfb-label">Filter:</span>
+      <button class="tfilter-btn active" onclick="filterQs('all', event)">All Topics</button>
+      <button class="tfilter-btn" onclick="filterQs('1', event)">T1: Classification</button>
+      <button class="tfilter-btn" onclick="filterQs('2', event)">T2: Divisibility</button>
+      <button class="tfilter-btn" onclick="filterQs('3', event)">T3: LCM & HCF</button>
+      <button class="tfilter-btn" onclick="filterQs('4', event)">T4: Remainders</button>
+      <button class="tfilter-btn" onclick="filterQs('5', event)">T5: Unit Digit</button>
+      <button class="tfilter-btn" onclick="filterQs('6', event)">T6: Factors Engine</button>
+    </div>
+
     <!-- Q21 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="2">
       <div class="q-head">
         <span class="q-num">Q21</span>
         <span class="q-tag">Divisibility by 72</span>
@@ -619,7 +642,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q22 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="2">
       <div class="q-head">
         <span class="q-num">Q22</span>
         <span class="q-tag">Divisibility by 80</span>
@@ -649,7 +672,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q23 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="2">
       <div class="q-head">
         <span class="q-num">Q23</span>
         <span class="q-tag">Divisibility by 99</span>
@@ -690,7 +713,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q24 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="3">
       <div class="q-head">
         <span class="q-num">Q24</span>
         <span class="q-tag">LCM Word Problem — Constant Remainder</span>
@@ -719,7 +742,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q25 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="3">
       <div class="q-head">
         <span class="q-num">Q25</span>
         <span class="q-tag">LCM Word Problem — Constant Difference</span>
@@ -747,7 +770,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q26 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="3">
       <div class="q-head">
         <span class="q-num">Q26</span>
         <span class="q-tag">HCF Unknown Remainder Model</span>
@@ -778,7 +801,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q27 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="3">
       <div class="q-head">
         <span class="q-num">Q27</span>
         <span class="q-tag">Coprime Pairs from HCF & Sum</span>
@@ -809,7 +832,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q28 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="4">
       <div class="q-head">
         <span class="q-num">Q28</span>
         <span class="q-tag">Fermat's Remainder Theorem</span>
@@ -836,7 +859,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q29 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="4">
       <div class="q-head">
         <span class="q-num">Q29</span>
         <span class="q-tag">Euler's Totient Remainder</span>
@@ -863,7 +886,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q30 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="4">
       <div class="q-head">
         <span class="q-num">Q30</span>
         <span class="q-tag">Algebraic Remainder Pattern</span>
@@ -889,7 +912,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q31 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="4">
       <div class="q-head">
         <span class="q-num">Q31</span>
         <span class="q-tag">Wilson's Theorem</span>
@@ -915,7 +938,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q32 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="5">
       <div class="q-head">
         <span class="q-num">Q32</span>
         <span class="q-tag">Unit Digit of Power of Power</span>
@@ -943,7 +966,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q33 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="5">
       <div class="q-head">
         <span class="q-num">Q33</span>
         <span class="q-tag">Unit Digit of Factorial Sum</span>
@@ -972,7 +995,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q34 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="6">
       <div class="q-head">
         <span class="q-num">Q34</span>
         <span class="q-tag">Product of Factors</span>
@@ -999,7 +1022,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q35 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="6">
       <div class="q-head">
         <span class="q-num">Q35</span>
         <span class="q-tag">Factors Divisible by a Number</span>
@@ -1027,7 +1050,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q36 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="6">
       <div class="q-head">
         <span class="q-num">Q36</span>
         <span class="q-tag">Sum of Even Factors</span>
@@ -1056,7 +1079,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q37 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="6">
       <div class="q-head">
         <span class="q-num">Q37</span>
         <span class="q-tag">Trailing Zeros in Factorial Product</span>
@@ -1082,7 +1105,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q38 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="6">
       <div class="q-head">
         <span class="q-num">Q38</span>
         <span class="q-tag">Trailing Zeros in Powers</span>
@@ -1108,7 +1131,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q39 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="6">
       <div class="q-head">
         <span class="q-num">Q39</span>
         <span class="q-tag">Total vs Distinct Prime Factors</span>
@@ -1134,7 +1157,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q40 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="1">
       <div class="q-head">
         <span class="q-num">Q40</span>
         <span class="q-tag">Reversible Prime Pairs</span>
@@ -1182,8 +1205,20 @@ def get_pyq_lab():
       🔐 <strong>AI Tutor Integrity Rule:</strong> Har question ka exact exam shift tag diya gaya hai. Pehle solve karein fir shortcut dekhein.
     </p>
 
+    <div class="topic-filter-bar">
+      <span class="tfb-label">Filter:</span>
+      <button class="tfilter-btn active" onclick="filterQs('all', event)">All Topics</button>
+      <button class="tfilter-btn" onclick="filterQs('1', event)">T1: Classification</button>
+      <button class="tfilter-btn" onclick="filterQs('2', event)">T2: Divisibility</button>
+      <button class="tfilter-btn" onclick="filterQs('3', event)">T3: LCM & HCF</button>
+      <button class="tfilter-btn" onclick="filterQs('4', event)">T4: Remainders</button>
+      <button class="tfilter-btn" onclick="filterQs('5', event)">T5: Unit Digit</button>
+      <button class="tfilter-btn" onclick="filterQs('6', event)">T6: Factors Engine</button>
+    </div>
+
+
     <!-- PYQ 1 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="2">
       <div class="pyq-tag">SSC CGL 2023 Tier-1 • 14 July Shift-1</div>
       <div class="pyq-q"><strong>Q41:</strong> A 9-digit number $785x3678y$ is divisible by $72$. Find the value of $(7x - 5y)$ for the largest possible value of $y$.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-41')">🔍 Show Topper Shortcut</button>
@@ -1197,7 +1232,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 2 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="4">
       <div class="pyq-tag">SSC CGL 2022 Tier-2 (Mains) • 02 March 2023</div>
       <div class="pyq-q"><strong>Q42:</strong> When a positive integer $n$ is divided by $14$, the remainder is $9$. If $n^2$ is divided by $14$, what will be the remainder?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-42')">🔍 Show Topper Shortcut</button>
@@ -1211,7 +1246,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 3 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="3">
       <div class="pyq-tag">SSC CGL 2023 Tier-1 • 18 July Shift-2</div>
       <div class="pyq-q"><strong>Q43:</strong> Find the greatest 4-digit number which is completely divisible by $15, 25, 40,$ and $75$.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-43')">🔍 Show Topper Shortcut</button>
@@ -1226,7 +1261,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 4 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="2">
       <div class="pyq-tag">SSC CGL 2022 Tier-2 (Mains) • 03 March 2023</div>
       <div class="pyq-q"><strong>Q44:</strong> If the 9-digit number $83P93678Q$ is divisible by $72$, then what is the value of $\sqrt{P^2 + 12}$ for the largest value of $Q$?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-44')">🔍 Show Topper Shortcut</button>
@@ -1240,7 +1275,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 5 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="4">
       <div class="pyq-tag">SSC CGL 2021 Tier-2 (Mains) • 29 Jan 2022</div>
       <div class="pyq-q"><strong>Q45:</strong> What is the remainder when $(7^{19} + 2)$ is divided by $6$?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-45')">🔍 Show Topper Shortcut</button>
@@ -1253,7 +1288,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 6 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="3">
       <div class="pyq-tag">SSC CGL 2020 Tier-1 • 03 March Shift-1</div>
       <div class="pyq-q"><strong>Q46:</strong> Two numbers are in the ratio $4:5$ and their HCF is $16$. Find their sum and LCM.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-46')">🔍 Show Topper Shortcut</button>
@@ -1266,7 +1301,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 7 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="2">
       <div class="pyq-tag">SSC CPO 2023 • 04 Oct Shift-2</div>
       <div class="pyq-q"><strong>Q47:</strong> If the 10-digit number $5432y1749x$ is divisible by $72$, then what is the value of $(5x - 4y)$?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-47')">🔍 Show Topper Shortcut</button>
@@ -1280,7 +1315,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 8 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="5">
       <div class="pyq-tag">SSC CHSL 2023 Tier-1 • 09 Aug Shift-1</div>
       <div class="pyq-q"><strong>Q48:</strong> Find the unit digit of the expression $(259)^{148} - (123)^{43}$.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-48')">🔍 Show Topper Shortcut</button>
@@ -1294,7 +1329,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 9 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="3">
       <div class="pyq-tag">SSC CGL 2022 Tier-1 • 05 Dec Shift-3</div>
       <div class="pyq-q"><strong>Q49:</strong> The product of two numbers is $2028$ and their HCF is $13$. The number of such possible pairs is:</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-49')">🔍 Show Topper Shortcut</button>
@@ -1311,7 +1346,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 10 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="6">
       <div class="pyq-tag">SSC CGL 2023 Tier-1 • 21 July Shift-3</div>
       <div class="pyq-q"><strong>Q50:</strong> Find the number of factors of $1080$ that are perfect squares.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-50')">🔍 Show Topper Shortcut</button>
@@ -1328,7 +1363,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 11 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="4">
       <div class="pyq-tag">SSC CGL 2022 Tier-2 (Mains) • 06 March 2023</div>
       <div class="pyq-q"><strong>Q51:</strong> Find the remainder when $3^{61284}$ is divided by $5$.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-51')">🔍 Show Topper Shortcut</button>
@@ -1342,7 +1377,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 12 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="3">
       <div class="pyq-tag">SSC CPO 2022 • 09 Nov Shift-1</div>
       <div class="pyq-q"><strong>Q52:</strong> What is the least number which when divided by $9, 10,$ and $15$ leaves $4$ as remainder in each case, but when divided by $7$ leaves no remainder?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-52')">🔍 Show Topper Shortcut</button>
@@ -1362,7 +1397,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 13 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="3">
       <div class="pyq-tag">SSC CGL 2021 Tier-1 • 13 Aug Shift-2</div>
       <div class="pyq-q"><strong>Q53:</strong> Find the sum of digits of the least number which when divided by $12, 16, 18, 20,$ and $25$ leaves remainder $4$ in each case, but is completely divisible by $7$.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-53')">🔍 Show Topper Shortcut</button>
@@ -1379,7 +1414,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 14 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="6">
       <div class="pyq-tag">SSC CHSL 2022 Tier-1 • 25 May Shift-2</div>
       <div class="pyq-q"><strong>Q54:</strong> Find the number of trailing zeroes at the end of the product $1 \times 3 \times 5 \times 7 \times \dots \times 99 \times 128$.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-54')">🔍 Show Topper Shortcut</button>
@@ -1393,7 +1428,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 15 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="3">
       <div class="pyq-tag">SSC CGL 2023 Tier-2 (Mains) • 26 Oct 2023</div>
       <div class="pyq-q"><strong>Q55:</strong> If $x$ is the least number between $56,000$ and $60,000$ which when divided by $40, 45, 50,$ and $55$ leaves remainder $23$ in each case, then what is the sum of digits of $x$?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p-sol-55')">🔍 Show Topper Shortcut</button>

@@ -32,7 +32,7 @@ def get_head_and_styles():
   --shadow-cyan: rgba(0,229,255,0.08);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+html { scroll-behavior: smooth; scroll-padding-top: 130px; }
 body {
   background: var(--bg);
   color: var(--text);
@@ -44,6 +44,140 @@ body {
   overflow-x: hidden;
 }
 .container { max-width: 1180px; margin: 0 auto; }
+
+/* ── STICKY TOPIC NAV BAR ── */
+.topic-nav-bar {
+  position: sticky; top: 62px; z-index: 180;
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(15, 22, 35, 0.95);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px 14px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(12px);
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.topic-nav-bar::-webkit-scrollbar { display: none; }
+.topic-nav-label {
+  font-size: 0.72rem; font-weight: 800; color: var(--gold);
+  text-transform: uppercase; letter-spacing: 0.8px;
+  display: flex; align-items: center; gap: 5px; flex-shrink: 0;
+  padding-right: 8px; border-right: 1px solid var(--border);
+}
+.tnav-chip {
+  background: var(--surface-elevated); color: var(--text-muted);
+  border: 1px solid var(--border); padding: 5px 12px;
+  border-radius: 20px; font-size: 0.75rem; font-weight: 600;
+  text-decoration: none; transition: all 0.2s ease;
+  display: inline-flex; align-items: center; gap: 5px; flex-shrink: 0;
+}
+.tnav-chip:hover {
+  border-color: var(--primary); color: #fff;
+  background: rgba(0, 229, 255, 0.12);
+  transform: translateY(-1px);
+}
+.tnav-chip.active {
+  background: linear-gradient(90deg, rgba(246,194,68,0.2), rgba(0,229,255,0.2));
+  border-color: var(--primary); color: var(--primary);
+  box-shadow: 0 0 10px rgba(0,229,255,0.2);
+}
+
+/* ── TOPIC HUB DIRECTORY ── */
+.topic-hub-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 24px;
+}
+.topic-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+.topic-hub-card {
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.topic-hub-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 18px rgba(0,229,255,0.12);
+  transform: translateY(-2px);
+}
+.thc-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 8px;
+}
+.thc-badge {
+  font-size: 0.68rem; font-weight: 700; padding: 2px 8px; border-radius: 4px;
+  background: rgba(0,229,255,0.12); color: var(--primary); border: 1px solid rgba(0,229,255,0.25);
+}
+.thc-weight {
+  font-size: 0.7rem; color: var(--gold); font-weight: 600;
+}
+.thc-title {
+  font-size: 0.98rem; font-weight: 700; color: #fff; margin-bottom: 6px;
+}
+.thc-desc {
+  font-size: 0.8rem; color: #94a3b8; line-height: 1.5; margin-bottom: 12px; flex-grow: 1;
+}
+.thc-actions {
+  display: flex; gap: 8px; margin-top: 10px;
+}
+.thc-btn {
+  flex: 1; text-align: center; font-size: 0.74rem; font-weight: 600;
+  padding: 6px 10px; border-radius: 6px; text-decoration: none;
+  transition: all 0.2s;
+}
+.thc-btn-theory {
+  background: rgba(246,194,68,0.12); color: var(--gold); border: 1px solid rgba(246,194,68,0.3);
+}
+.thc-btn-theory:hover {
+  background: var(--gold); color: #080b12;
+}
+.thc-btn-practice {
+  background: rgba(34,211,165,0.12); color: var(--green); border: 1px solid rgba(34,211,165,0.3);
+}
+.thc-btn-practice:hover {
+  background: var(--green); color: #080b12;
+}
+
+/* ── TOPIC FILTER BAR IN QUESTIONS ── */
+.topic-filter-bar {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px;
+  background: var(--surface-elevated); padding: 12px 14px;
+  border-radius: 12px; border: 1px solid var(--border);
+  align-items: center;
+}
+.filter-label {
+  font-size: 0.78rem; font-weight: 700; color: var(--gold); margin-right: 6px;
+}
+.q-filter-chip {
+  background: var(--surface); color: var(--text-muted);
+  border: 1px solid var(--border); padding: 5px 12px;
+  border-radius: 16px; font-size: 0.74rem; font-weight: 600;
+  cursor: pointer; transition: all 0.2s;
+}
+.q-filter-chip:hover {
+  border-color: var(--primary); color: #fff;
+}
+.q-filter-chip.active {
+  background: var(--primary); color: #080b12; border-color: var(--primary);
+  font-weight: 700;
+}
+.topic-anchor-block {
+  scroll-margin-top: 130px;
+}
 
 /* ── TOPBAR ── */
 .topbar {
@@ -512,23 +646,42 @@ def get_topbar_and_hero():
       <span>SSC CGL Maths Prep</span>
     </a>
     <div class="topbar-actions">
-      <button class="tb-btn" id="sidebar-toggle-btn">☰ All Phases</button>
-      <a href="#sec-theory" class="tb-btn">📖 Theory (6 Modules)</a>
-      <a href="#sec-plan" class="tb-btn">📅 Plan</a>
+      <button class="tb-btn" id="sidebar-toggle-btn">☰ All Topics &amp; Phases</button>
+      <a href="#sec-topics" class="tb-btn" style="color:var(--primary);font-weight:700;">📑 Topic Directory</a>
+      <a href="#sec-theory" class="tb-btn">📖 Theory</a>
       <a href="#sec-formulas" class="tb-btn">📐 Formulas</a>
-      <a href="#sec-basic" class="tb-btn">🟢 20 Basic Qs</a>
-      <a href="#sec-mixed" class="tb-btn">🟡 20 Mixed Qs</a>
-      <a href="#sec-pyq" class="tb-btn">🏆 15 PYQs</a>
+      <a href="#sec-basic" class="tb-btn">🟢 Basic Qs</a>
+      <a href="#sec-mixed" class="tb-btn">🟡 Mixed Qs</a>
+      <a href="#sec-pyq" class="tb-btn">🏆 PYQs</a>
       <a href="#sec-timer" class="tb-btn">⏱️ Drill</a>
-      <button class="tb-btn" onclick="openPrintModal()">🖨️ Print Book</button>
+      <button class="tb-btn" onclick="openPrintModal()">🖨️ Print</button>
     </div>
   </nav>
+
+  <!-- STICKY TOPIC NAV BAR -->
+  <div class="topic-nav-bar" id="topic-nav-bar">
+    <span class="topic-nav-label"><span>🎯 Topics</span></span>
+    <a href="#topic-1-fraction-grid" class="tnav-chip"><span>1. Fraction Grid</span></a>
+    <a href="#topic-2-mf-change" class="tnav-chip"><span>2. MF &amp; Changes</span></a>
+    <a href="#topic-3-ab-successive" class="tnav-chip"><span>3. AB Formula</span></a>
+    <a href="#topic-4-price-consumption" class="tnav-chip"><span>4. P&times;C=E Ladder</span></a>
+    <a href="#topic-5-income-depreciation" class="tnav-chip"><span>5. I=E+S &amp; Deprec</span></a>
+    <a href="#topic-6-election-venn" class="tnav-chip"><span>6. Election &amp; Venn</span></a>
+    <a href="#sec-formulas" class="tnav-chip"><span>📐 Formulas</span></a>
+    <a href="#sec-shortcuts" class="tnav-chip"><span>⚡ Shortcuts</span></a>
+    <a href="#sec-basic" class="tnav-chip" style="color:var(--green);"><span>🟢 20 Basic Qs</span></a>
+    <a href="#sec-mixed" class="tnav-chip" style="color:var(--gold);"><span>🟡 20 Mixed Qs</span></a>
+    <a href="#sec-pyq" class="tnav-chip" style="color:var(--violet);"><span>🏆 15 PYQs</span></a>
+    <a href="#sec-timer" class="tnav-chip" style="color:var(--orange);"><span>⏱️ Drill</span></a>
+    <a href="#sec-recall" class="tnav-chip"><span>🧠 Recall</span></a>
+    <a href="#sec-errors" class="tnav-chip"><span>📓 Error Log</span></a>
+  </div>
 
   <!-- HERO -->
   <header class="phase-hero">
     <span class="phase-badge">Phase 2 • Days 13–20 • Complete Book Edition</span>
     <h1>Phase 2: Percentage (प्रतिशतता)</h1>
-    <p class="hero-hindi">The Master Foundation of Arithmetic — Ratios, Multiplying Factors, Successive & Word Problems</p>
+    <p class="hero-hindi">The Master Foundation of Arithmetic — Ratios, Multiplying Factors, Successive &amp; Word Problems</p>
     <div class="hero-stats">
       <div class="hstat-card"><div class="hstat-val">6</div><div>Book Modules</div></div>
       <div class="hstat-card"><div class="hstat-val">10</div><div>Formula Cards</div></div>
@@ -563,6 +716,114 @@ def get_topbar_and_hero():
       ⚠️ <strong>AI Tutor Rule:</strong> Percentage ko complete tabhi mark karo jab mastery drill me &ge;85% accuracy aaye — calendar ke anusar nahi!
     </div>
   </div>
+
+  <!-- TOPIC-WISE MASTER DIRECTORY & ROADMAP -->
+  <section class="topic-hub-section" id="sec-topics">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+      <div>
+        <span class="thc-badge" style="background:rgba(246,194,68,0.15);color:var(--gold);border-color:rgba(246,194,68,0.3);">TOPIC DIRECTORY</span>
+        <h2 style="font-size:1.3rem;font-weight:700;color:#fff;margin-top:4px;">📑 Topic-Wise Master Syllabus &amp; Quick Jump Hub</h2>
+      </div>
+      <span style="font-size:0.8rem;color:var(--text-muted);">Click any topic to jump directly to Theory or Practice Qs</span>
+    </div>
+    <div class="topic-hub-grid">
+      <!-- Topic 1 -->
+      <div class="topic-hub-card">
+        <div>
+          <div class="thc-header">
+            <span class="thc-badge">TOPIC 1</span>
+            <span class="thc-weight">Weight: 2–3 Qs</span>
+          </div>
+          <div class="thc-title">1. Fraction Grid &amp; Basic Conversions</div>
+          <div class="thc-desc">भिन्न से प्रतिशत सारणी ($1/2$ से $1/25$), क्रमविनिमेय नियम ($A\% \text{ of } B = B\% \text{ of } A$), और 5-सेकंड मानसिक गणना।</div>
+        </div>
+        <div class="thc-actions">
+          <a href="#topic-1-fraction-grid" class="thc-btn thc-btn-theory">📖 Read Theory</a>
+          <a href="#sec-basic" onclick="filterQs('fraction-grid')" class="thc-btn thc-btn-practice">🎯 Practice Qs</a>
+        </div>
+      </div>
+
+      <!-- Topic 2 -->
+      <div class="topic-hub-card">
+        <div>
+          <div class="thc-header">
+            <span class="thc-badge">TOPIC 2</span>
+            <span class="thc-weight">Weight: 2 Qs</span>
+          </div>
+          <div class="thc-title">2. Multiplying Factors &amp; Base Shifting</div>
+          <div class="thc-desc">गुणांक (MF) विधि, Initial &times; MF = Final, आधार पहचानने का नियम (Base Identification), और $A$ is what $\%$ more/less than $B$।</div>
+        </div>
+        <div class="thc-actions">
+          <a href="#topic-2-mf-change" class="thc-btn thc-btn-theory">📖 Read Theory</a>
+          <a href="#sec-basic" onclick="filterQs('mf-change')" class="thc-btn thc-btn-practice">🎯 Practice Qs</a>
+        </div>
+      </div>
+
+      <!-- Topic 3 -->
+      <div class="topic-hub-card">
+        <div>
+          <div class="thc-header">
+            <span class="thc-badge">TOPIC 3</span>
+            <span class="thc-weight">Weight: 2–3 Qs</span>
+          </div>
+          <div class="thc-title">3. Successive Change &amp; AB Formula</div>
+          <div class="thc-desc">क्रमागत प्रतिशत परिवर्तन $a + b + \frac{ab}{100}$, छूट (Discounts), $+x\%, -x\% \implies -x^2/100\%$ हानि, और ज्यामिति क्षेत्रफल स्केलिंग।</div>
+        </div>
+        <div class="thc-actions">
+          <a href="#topic-3-ab-successive" class="thc-btn thc-btn-theory">📖 Read Theory</a>
+          <a href="#sec-basic" onclick="filterQs('ab-successive')" class="thc-btn thc-btn-practice">🎯 Practice Qs</a>
+        </div>
+      </div>
+
+      <!-- Topic 4 -->
+      <div class="topic-hub-card">
+        <div>
+          <div class="thc-header">
+            <span class="thc-badge">TOPIC 4</span>
+            <span class="thc-weight">Weight: 2 Qs</span>
+          </div>
+          <div class="thc-title">4. Price–Consumption–Expenditure ($P \times C = E$)</div>
+          <div class="thc-desc">स्वर्णिम सीढ़ी ($1/n \to 1/(n+1)$), खर्च अपरिवर्तित रहने का नियम, और ₹$M$ में $K$ किग्रा अधिक/कम मिलने पर प्रारंभिक व घटा हुआ मूल्य।</div>
+        </div>
+        <div class="thc-actions">
+          <a href="#topic-4-price-consumption" class="thc-btn thc-btn-theory">📖 Read Theory</a>
+          <a href="#sec-basic" onclick="filterQs('price-consumption')" class="thc-btn thc-btn-practice">🎯 Practice Qs</a>
+        </div>
+      </div>
+
+      <!-- Topic 5 -->
+      <div class="topic-hub-card">
+        <div>
+          <div class="thc-header">
+            <span class="thc-badge">TOPIC 5</span>
+            <span class="thc-weight">Weight: 2 Qs</span>
+          </div>
+          <div class="thc-title">5. Income-Expense ($I = E + S$) &amp; Depreciation</div>
+          <div class="thc-desc">आय, व्यय व बचत में भारित औसत (Alligation) विधि, तथा जनसंख्या वृद्धि एवं मशीन अवमूल्यन $P(1 \pm r/100)^t$ सूत्र।</div>
+        </div>
+        <div class="thc-actions">
+          <a href="#topic-5-income-depreciation" class="thc-btn thc-btn-theory">📖 Read Theory</a>
+          <a href="#sec-basic" onclick="filterQs('income-depreciation')" class="thc-btn thc-btn-practice">🎯 Practice Qs</a>
+        </div>
+      </div>
+
+      <!-- Topic 6 -->
+      <div class="topic-hub-card">
+        <div>
+          <div class="thc-header">
+            <span class="thc-badge">TOPIC 6</span>
+            <span class="thc-weight">Weight: 1–2 Qs</span>
+          </div>
+          <div class="thc-title">6. Elections &amp; Venn Diagram Sets</div>
+          <div class="thc-desc">मतदाता सूची (Enrolled, Polled, Valid Votes, Margin) और 2-सेट व 3-सेट वेन आरेख में उत्तीर्ण/अनुत्तीर्ण छात्र गणना।</div>
+        </div>
+        <div class="thc-actions">
+          <a href="#topic-6-election-venn" class="thc-btn thc-btn-theory">📖 Read Theory</a>
+          <a href="#sec-basic" onclick="filterQs('election-venn')" class="thc-btn thc-btn-practice">🎯 Practice Qs</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- AI TUTOR PROTOCOL BANNER -->
   <div style="background:rgba(34,211,165,0.04);border:1px solid rgba(34,211,165,0.15);border-radius:12px;padding:12px 16px;margin-bottom:20px;font-size:0.82rem;color:#7a90a8;">

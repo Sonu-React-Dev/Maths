@@ -25,7 +25,7 @@
   --shadow-cyan: rgba(0,229,255,0.08);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+html { scroll-behavior: smooth; scroll-padding-top: 130px; }
 body {
   background: var(--bg);
   color: var(--text);
@@ -35,6 +35,289 @@ body {
   font-size: 15px;
 }
 .container { max-width: 1180px; margin: 0 auto; }
+
+
+/* ── TOPIC QUICK-NAV BAR (STICKY) ── */
+.topic-nav-bar {
+  position: sticky;
+  top: 62px;
+  z-index: 180;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(9, 14, 24, 0.96);
+  border: 1px solid rgba(0, 229, 255, 0.25);
+  border-radius: 12px;
+  padding: 8px 14px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(12px);
+  overflow-x: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+.topic-nav-bar::-webkit-scrollbar { height: 4px; }
+.topic-nav-bar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+.tnav-label {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.tnav-chip {
+  white-space: nowrap;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.tnav-chip:hover {
+  border-color: var(--primary);
+  color: var(--text);
+}
+.tnav-chip.active {
+  background: linear-gradient(90deg, #7928ca, #00e5ff);
+  color: #fff;
+  border-color: transparent;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+}
+.tnav-chip.tnav-tool {
+  background: rgba(0, 229, 255, 0.06);
+  border-color: rgba(0, 229, 255, 0.2);
+  color: #a0d8ef;
+}
+.tnav-chip.tnav-tool:hover {
+  background: rgba(0, 229, 255, 0.15);
+  color: #fff;
+}
+
+/* ── TOPIC HUB DIRECTORY ── */
+.topic-hub-card {
+  background: linear-gradient(135deg, rgba(15,22,35,0.95), rgba(22,32,53,0.95));
+  border: 1px solid rgba(0,229,255,0.25);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.thub-header {
+  margin-bottom: 16px;
+}
+.thub-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.thub-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+.topic-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px;
+}
+.thub-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.thub-item:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0,229,255,0.1);
+}
+.thub-item-num {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.thub-item-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 4px 0 6px 0;
+}
+.thub-item-meta {
+  font-size: 0.77rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+.thub-item-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+.thub-btn {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.thub-btn-theory {
+  background: rgba(0, 229, 255, 0.1);
+  color: var(--primary);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+}
+.thub-btn-theory:hover {
+  background: var(--primary);
+  color: #080b12;
+}
+.thub-btn-practice {
+  background: rgba(34, 211, 165, 0.1);
+  color: var(--green);
+  border: 1px solid rgba(34, 211, 165, 0.3);
+}
+.thub-btn-practice:hover {
+  background: var(--green);
+  color: #080b12;
+}
+
+/* ── INTER-TOPIC NAVIGATION FOOTER & ANCHORS ── */
+.topic-anchor-block {
+  scroll-margin-top: 130px;
+}
+.topic-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+.topic-breadcrumb a {
+  color: var(--primary);
+  text-decoration: none;
+}
+.topic-breadcrumb a:hover {
+  text-decoration: underline;
+}
+.topic-nav-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 16px;
+  background: rgba(0, 229, 255, 0.04);
+  border: 1px solid rgba(0, 229, 255, 0.15);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.tnav-step-info {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+.tnav-footer-btns {
+  display: flex;
+  gap: 8px;
+}
+.tnav-fbtn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.tnav-fbtn.prev {
+  background: var(--surface-elevated);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.tnav-fbtn.prev:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.tnav-fbtn.next {
+  background: linear-gradient(90deg, #7928ca, #00e5ff);
+  color: #fff;
+  border: none;
+}
+.tnav-fbtn.next:hover {
+  opacity: 0.9;
+}
+.tnav-fbtn.practice {
+  background: rgba(34, 211, 165, 0.15);
+  color: var(--green);
+  border: 1px solid rgba(34, 211, 165, 0.3);
+}
+.tnav-fbtn.practice:hover {
+  background: var(--green);
+  color: #080b12;
+}
+
+/* ── TOPIC FILTER BAR ── */
+.topic-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 10px 0;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.topic-filter-bar::-webkit-scrollbar { height: 4px; }
+.topic-filter-bar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+.tfb-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-right: 4px;
+  white-space: nowrap;
+}
+.tfilter-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 0.74rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.tfilter-btn:hover {
+  border-color: var(--primary);
+  color: var(--text);
+}
+.tfilter-btn.active {
+  background: var(--primary);
+  color: #080b12;
+  border-color: var(--primary);
+  font-weight: 700;
+}
 
 /* ── TOPBAR ── */
 .topbar {
@@ -1068,6 +1351,24 @@ pre, code, .fc-formula {
 
   <div class="sidebar-content">
     
+    <!-- TOPIC-WISE NAVIGATION -->
+    <div class="sidebar-group">
+      <div class="sb-group-title">
+        <span>🎯 Topic-Wise Foundations</span>
+        <span class="sb-group-count">5 Days</span>
+      </div>
+      <div class="sb-toc-grid">
+        <a href="#day-1-vbodmas" class="sb-toc-link"><span class="toc-icon">1️⃣</span><span>Day 1: VBODMAS & Basics</span></a>
+        <a href="#day-2-fractions" class="sb-toc-link"><span class="toc-icon">2️⃣</span><span>Day 2: Fractions & Decimals</span></a>
+        <a href="#day-3-multiplication" class="sb-toc-link"><span class="toc-icon">3️⃣</span><span>Day 3: Fast Multiplication</span></a>
+        <a href="#day-4-percentage-grid" class="sb-toc-link"><span class="toc-icon">4️⃣</span><span>Day 4: % Conversion Grid</span></a>
+        <a href="#day-5-squares-cubes" class="sb-toc-link"><span class="toc-icon">5️⃣</span><span>Day 5: Squares & Cubes</span></a>
+        <a href="#sec-tricks" class="sb-toc-link"><span class="toc-icon">⚡</span><span>Speed Shortcuts</span></a>
+        <a href="#sec-traps" class="sb-toc-link"><span class="toc-icon">🚨</span><span>Exam Traps</span></a>
+        <a href="#sec-formulas" class="sb-toc-link"><span class="toc-icon">📐</span><span>Formula Vault</span></a>
+      </div>
+    </div>
+
     <!-- ON-PAGE TABLE OF CONTENTS -->
     <div class="sidebar-group">
       <div class="sb-group-title">
@@ -1318,6 +1619,21 @@ pre, code, .fc-formula {
     </div>
   </nav>
 
+  <!-- TOPIC QUICK-NAV BAR (STICKY) -->
+  <div class="topic-nav-bar" id="topic-nav-bar">
+    <span class="tnav-label">📌 Topics:</span>
+    <a href="#day-1-vbodmas" class="tnav-chip" data-target="day-1-vbodmas">1. VBODMAS & Basics</a>
+    <a href="#day-2-fractions" class="tnav-chip" data-target="day-2-fractions">2. Fractions & Decimals</a>
+    <a href="#day-3-multiplication" class="tnav-chip" data-target="day-3-multiplication">3. Fast Multiplication</a>
+    <a href="#day-4-percentage-grid" class="tnav-chip" data-target="day-4-percentage-grid">4. % Conversion Grid</a>
+    <a href="#day-5-squares-cubes" class="tnav-chip" data-target="day-5-squares-cubes">5. Squares & Cubes</a>
+    <a href="#sec-tricks" class="tnav-chip tnav-tool" data-target="sec-tricks">⚡ Shortcuts</a>
+    <a href="#sec-traps" class="tnav-chip tnav-tool" data-target="sec-traps">🚨 Traps</a>
+    <a href="#sec-formulas" class="tnav-chip tnav-tool" data-target="sec-formulas">📐 Formulas</a>
+    <a href="#sec-practice" class="tnav-chip tnav-tool" data-target="sec-practice">💡 Practice</a>
+    <a href="#sec-pyqs" class="tnav-chip tnav-tool" data-target="sec-pyqs">🏆 PYQ Lab</a>
+    <a href="#sec-timer" class="tnav-chip tnav-tool" data-target="sec-timer">⏱️ Drill</a>
+  </div>
 
   <!-- PHASE NAVIGATION -->
   <div class="phase-nav"><a href="Phase_0_Calculation_Foundation.html" class="pnav-chip  active">0. Calculation Foundation</a><a href="Phase_1_Number_System.html" class="pnav-chip">1. Number System</a><a href="Phase_2_Percentage.html" class="pnav-chip">2. Percentage</a><a href="Phase_3_Ratio_and_Proportion.html" class="pnav-chip">3. Ratio & Proportion</a><a href="Phase_4_Average.html" class="pnav-chip">4. Average</a><a href="Phase_5_Profit_Loss_Discount.html" class="pnav-chip">5. Profit, Loss & Discount</a><a href="Phase_6_Simple_and_Compound_Interest.html" class="pnav-chip">6. Simple & Compound Interest</a><a href="Phase_7_Partnership_and_Mixtures.html" class="pnav-chip">7. Partnership + Mixture & Alligation</a><a href="Phase_8_Time_and_Work.html" class="pnav-chip">8. Time & Work + Pipes & Cisterns</a><a href="Phase_9_Time_Speed_Distance.html" class="pnav-chip">9. Time, Speed & Distance + Trains & Boats</a><a href="Phase_10_Algebra.html" class="pnav-chip">10. Algebra</a><a href="Phase_11_Geometry.html" class="pnav-chip">11. Geometry</a><a href="Phase_12_Mensuration.html" class="pnav-chip">12. Mensuration 2D & 3D</a><a href="Phase_13_Trigonometry.html" class="pnav-chip">13. Trigonometry + Height & Distance</a><a href="Phase_14_DI_and_Statistics.html" class="pnav-chip">14. Data Interpretation & Statistics</a><a href="Phase_15_Revision_and_Mocks.html" class="pnav-chip">15. Revision, PYQ Mastery & Exam Mode</a></div>
@@ -1369,6 +1685,63 @@ pre, code, .fc-formula {
     </div>
   </div>
 
+
+  <!-- TOPIC DIRECTORY HUB -->
+  <section class="topic-hub-card" id="sec-topics">
+    <div class="thub-header">
+      <div class="thub-title">🎯 Calculation Foundation — Topic Hub</div>
+      <div class="thub-sub">5 Core Pillars of SSC Calculation Speed • Instant Jump to Theory &amp; Practice</div>
+    </div>
+    <div class="topic-hub-grid">
+      <div class="thub-item">
+        <div class="thub-item-num">TOPIC 1 • DAY 1</div>
+        <div class="thub-item-name">Number Basics, Place Value &amp; Strict VBODMAS</div>
+        <div class="thub-item-meta">Vinculum Bar, 'Of' Precedence, Negative Numbers Arithmetic &bull; Foundation of All Calculations</div>
+        <div class="thub-item-actions">
+          <a href="#day-1-vbodmas" class="thub-btn thub-btn-theory">📖 Read Theory</a>
+          <button class="thub-btn thub-btn-practice" onclick="filterQs('1', event); document.getElementById('sec-practice').scrollIntoView({behavior:'smooth'});">🎯 Practice Qs</button>
+        </div>
+      </div>
+      <div class="thub-item">
+        <div class="thub-item-num">TOPIC 2 • DAY 2</div>
+        <div class="thub-item-name">Fractions &amp; Decimals Mastery</div>
+        <div class="thub-item-meta">Butterfly Cross-Method, Mixed Fraction Splitting, Cross-Multiplication Lightning Comparison</div>
+        <div class="thub-item-actions">
+          <a href="#day-2-fractions" class="thub-btn thub-btn-theory">📖 Read Theory</a>
+          <button class="thub-btn thub-btn-practice" onclick="filterQs('2', event); document.getElementById('sec-practice').scrollIntoView({behavior:'smooth'});">🎯 Practice Qs</button>
+        </div>
+      </div>
+      <div class="thub-item">
+        <div class="thub-item-num">TOPIC 3 • DAY 3</div>
+        <div class="thub-item-name">Mental Multiplication &amp; Fast Division</div>
+        <div class="thub-item-meta">Power of 5 (x5, x25, x125), Vedic Base 100 Multiplication, 2-Digit Single-Line Cross Method</div>
+        <div class="thub-item-actions">
+          <a href="#day-3-multiplication" class="thub-btn thub-btn-theory">📖 Read Theory</a>
+          <button class="thub-btn thub-btn-practice" onclick="filterQs('3', event); document.getElementById('sec-practice').scrollIntoView({behavior:'smooth'});">🎯 Practice Qs</button>
+        </div>
+      </div>
+      <div class="thub-item">
+        <div class="thub-item-num">TOPIC 4 • DAY 4</div>
+        <div class="thub-item-name">Universal Fraction &harr; Decimal &harr; % Grid</div>
+        <div class="thub-item-meta">Universal Memory Grid (1/2 to 1/16), Commutative Law A% of B = B% of A, Mental Splitting</div>
+        <div class="thub-item-actions">
+          <a href="#day-4-percentage-grid" class="thub-btn thub-btn-theory">📖 Read Theory</a>
+          <button class="thub-btn thub-btn-practice" onclick="filterQs('4', event); document.getElementById('sec-practice').scrollIntoView({behavior:'smooth'});">🎯 Practice Qs</button>
+        </div>
+      </div>
+      <div class="thub-item">
+        <div class="thub-item-num">TOPIC 5 • DAY 5</div>
+        <div class="thub-item-name">Squares, Cubes &amp; Lightning Roots</div>
+        <div class="thub-item-meta">Squares 1–30, Base 50/100 Squaring, Numbers ending in 5, Cubes 1–15 &amp; 3-sec Cube Root</div>
+        <div class="thub-item-actions">
+          <a href="#day-5-squares-cubes" class="thub-btn thub-btn-theory">📖 Read Theory</a>
+          <button class="thub-btn thub-btn-practice" onclick="filterQs('5', event); document.getElementById('sec-practice').scrollIntoView({behavior:'smooth'});">🎯 Practice Qs</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <!-- AI TUTOR LESSON FLOW BANNER -->
   <div style="background:rgba(0,229,255,0.04);border:1px solid rgba(0,229,255,0.15);border-radius:12px;padding:14px 18px;margin-bottom:22px;font-size:0.82rem;color:#7a90a8;">
     <strong style="color:var(--primary);">⏱️ AI Tutor Standard Lesson Protocol:</strong>
@@ -1382,7 +1755,10 @@ pre, code, .fc-formula {
   <div class="day-cards">
 
     <!-- Day 1 -->
-    <div class="day-card">
+    <div class="day-card topic-anchor-block" id="day-1-vbodmas" data-topic="1">
+      <div class="topic-breadcrumb">
+        <a href="#sec-topics">Topics Hub</a> &gt; <span>Day 1</span> &gt; <strong>VBODMAS & Number Basics</strong>
+      </div>
       <div class="day-label">
         <div class="day-tag">Day 1</div>
         <div class="day-name">Number Basics &amp; VBODMAS Rule</div>
@@ -1421,11 +1797,21 @@ pre, code, .fc-formula {
             📖 Open Complete Book Notes for Day 1 (Theory + 55 Questions) &rarr;
           </a>
         </div>
+        <div class="topic-nav-footer">
+          <span class="tnav-step-info">Day 1 of 5: VBODMAS &amp; Place Value</span>
+          <div class="tnav-footer-btns">
+            <button class="tnav-fbtn practice" onclick="filterQs('1', event); document.getElementById('sec-practice').scrollIntoView({behavior:'smooth'});">🎯 Practice Topic Qs</button>
+            <a href="#day-2-fractions" class="tnav-fbtn next">Next: Fractions &amp; Decimals &rarr;</a>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- Day 2 -->
-    <div class="day-card">
+    <div class="day-card topic-anchor-block" id="day-2-fractions" data-topic="2">
+      <div class="topic-breadcrumb">
+        <a href="#sec-topics">Topics Hub</a> &gt; <span>Day 2</span> &gt; <strong>Fractions &amp; Decimals Mastery</strong>
+      </div>
       <div class="day-label">
         <div class="day-tag">Day 2</div>
         <div class="day-name">Fractions &amp; Decimals Mastery</div>
@@ -1457,11 +1843,19 @@ ight) = 6 + rac{6}{6} = 7$! (Solves without converting to massive improper frac
         <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
           🎯 <strong>Day 2 Focus:</strong> Separate integer parts and fractional parts when dealing with mixed fractions to eliminate arithmetic errors.
         </div>
+        <div class="topic-nav-footer">
+          <a href="#day-1-vbodmas" class="tnav-fbtn prev">&larr; Prev: Day 1 VBODMAS</a>
+          <button class="tnav-fbtn practice" onclick="filterQs('2', event); document.getElementById('sec-practice').scrollIntoView({behavior:'smooth'});">🎯 Practice Topic Qs</button>
+          <a href="#day-3-multiplication" class="tnav-fbtn next">Next: Mental Multiplication &rarr;</a>
+        </div>
       </div>
     </div>
 
     <!-- Day 3 -->
-    <div class="day-card">
+    <div class="day-card topic-anchor-block" id="day-3-multiplication" data-topic="3">
+      <div class="topic-breadcrumb">
+        <a href="#sec-topics">Topics Hub</a> &gt; <span>Day 3</span> &gt; <strong>Mental Multiplication &amp; Division</strong>
+      </div>
       <div class="day-label">
         <div class="day-tag">Day 3</div>
         <div class="day-name">Mental Multiplication &amp; Fast Division</div>
@@ -1494,11 +1888,19 @@ ight) = 6 + rac{6}{6} = 7$! (Solves without converting to massive improper frac
         <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
           🎯 <strong>Day 3 Focus:</strong> Never use traditional 3-line school multiplication for 2-digit numbers. Practice single-line cross-multiplication.
         </div>
+        <div class="topic-nav-footer">
+          <a href="#day-2-fractions" class="tnav-fbtn prev">&larr; Prev: Day 2 Fractions</a>
+          <button class="tnav-fbtn practice" onclick="filterQs('3', event); document.getElementById('sec-practice').scrollIntoView({behavior:'smooth'});">🎯 Practice Topic Qs</button>
+          <a href="#day-4-percentage-grid" class="tnav-fbtn next">Next: % Conversion Grid &rarr;</a>
+        </div>
       </div>
     </div>
 
     <!-- Day 4 -->
-    <div class="day-card">
+    <div class="day-card topic-anchor-block" id="day-4-percentage-grid" data-topic="4">
+      <div class="topic-breadcrumb">
+        <a href="#sec-topics">Topics Hub</a> &gt; <span>Day 4</span> &gt; <strong>Fraction &harr; Decimal &harr; % Grid</strong>
+      </div>
       <div class="day-label">
         <div class="day-tag">Day 4</div>
         <div class="day-name">Fraction &harr; Decimal &harr; % Conversion</div>
@@ -1531,11 +1933,19 @@ ight) = 6 + rac{6}{6} = 7$! (Solves without converting to massive improper frac
         <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
           🎯 <strong>Day 4 Focus:</strong> Break non-standard percentages into friendly anchors ($50\%, 10\%, 5\%, 1\%$) rather than multiplying by decimals.
         </div>
+        <div class="topic-nav-footer">
+          <a href="#day-3-multiplication" class="tnav-fbtn prev">&larr; Prev: Day 3 Multiplication</a>
+          <button class="tnav-fbtn practice" onclick="filterQs('4', event); document.getElementById('sec-practice').scrollIntoView({behavior:'smooth'});">🎯 Practice Topic Qs</button>
+          <a href="#day-5-squares-cubes" class="tnav-fbtn next">Next: Squares &amp; Cubes &rarr;</a>
+        </div>
       </div>
     </div>
 
     <!-- Day 5 -->
-    <div class="day-card">
+    <div class="day-card topic-anchor-block" id="day-5-squares-cubes" data-topic="5">
+      <div class="topic-breadcrumb">
+        <a href="#sec-topics">Topics Hub</a> &gt; <span>Day 5</span> &gt; <strong>Squares, Cubes &amp; Estimation</strong>
+      </div>
       <div class="day-label">
         <div class="day-tag">Day 5</div>
         <div class="day-name">Squares, Cubes &amp; Estimation</div>
@@ -1573,6 +1983,11 @@ ight) = 6 + rac{6}{6} = 7$! (Solves without converting to massive improper frac
         </ul>
         <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
           🎯 <strong>Day 5 Focus:</strong> Take the 30-Question Phase 0 Mastery test. Target: &ge; 90% accuracy in under 20 minutes before stepping into Phase 1!
+        </div>
+        <div class="topic-nav-footer">
+          <a href="#day-4-percentage-grid" class="tnav-fbtn prev">&larr; Prev: Day 4 % Grid</a>
+          <button class="tnav-fbtn practice" onclick="filterQs('5', event); document.getElementById('sec-practice').scrollIntoView({behavior:'smooth'});">🎯 Practice Topic Qs</button>
+          <a href="#sec-tricks" class="tnav-fbtn next">Next: Speed Shortcuts &rarr;</a>
         </div>
       </div>
     </div>
@@ -1697,6 +2112,15 @@ ight) = 6 + rac{6}{6} = 7$! (Solves without converting to massive improper frac
   <div style="background:rgba(246,194,68,0.06);border:1px solid rgba(246,194,68,0.15);border-radius:8px;padding:10px 16px;margin-bottom:14px;font-size:0.8rem;color:#c8a84b;">
     🤖 <strong>AI Tutor Rule:</strong> Ek question ek baar mein solve karo. Hint aur answer tabhi dekho jab apna attempt ho jaye. Self-rate karo.
   </div>
+    <div class="topic-filter-bar">
+      <span class="tfb-label">Filter:</span>
+      <button class="tfilter-btn active" onclick="filterQs('all', event)">All Topics</button>
+      <button class="tfilter-btn" onclick="filterQs('1', event)">T1: VBODMAS</button>
+      <button class="tfilter-btn" onclick="filterQs('2', event)">T2: Fractions</button>
+      <button class="tfilter-btn" onclick="filterQs('3', event)">T3: Multiplication</button>
+      <button class="tfilter-btn" onclick="filterQs('4', event)">T4: % Grid</button>
+      <button class="tfilter-btn" onclick="filterQs('5', event)">T5: Squares & Cubes</button>
+    </div>
   <div class="practice-container">
     <div class="pq-controls">
       <button class="pq-btn disabled" id="pq-prev">← Prev</button>
@@ -1704,7 +2128,7 @@ ight) = 6 + rac{6}{6} = 7$! (Solves without converting to massive improper frac
       <button class="pq-btn" id="pq-next">Next →</button>
     </div>
     
-<div class="pq-card-item" style="display:block">
+<div class="pq-card-item" data-topic="1" style="display:block">
   <div class="pq-card">
     <span class="pq-level A">Level A: Foundation</span>
     <div class="pq-question">Evaluate: 12 + 8 × 3 − 4 ÷ 2</div>
@@ -1720,7 +2144,7 @@ ight) = 6 + rac{6}{6} = 7$! (Solves without converting to massive improper frac
     </div>
   </div>
 </div>
-<div class="pq-card-item" style="display:none">
+<div class="pq-card-item" data-topic="3" style="display:none">
   <div class="pq-card">
     <span class="pq-level A">Level A: Foundation</span>
     <div class="pq-question">Calculate: 64 × 125 using the shortcut</div>
@@ -1736,7 +2160,7 @@ ight) = 6 + rac{6}{6} = 7$! (Solves without converting to massive improper frac
     </div>
   </div>
 </div>
-<div class="pq-card-item" style="display:none">
+<div class="pq-card-item" data-topic="2" style="display:none">
   <div class="pq-card">
     <span class="pq-level B">Level B: Standard</span>
     <div class="pq-question">Simplify: 3½ + 2¾ − 1⅙</div>
@@ -1752,7 +2176,7 @@ ight) = 6 + rac{6}{6} = 7$! (Solves without converting to massive improper frac
     </div>
   </div>
 </div>
-<div class="pq-card-item" style="display:none">
+<div class="pq-card-item" data-topic="3" style="display:none">
   <div class="pq-card">
     <span class="pq-level B">Level B: Standard</span>
     <div class="pq-question">Calculate 96 × 98 mentally</div>
@@ -1768,7 +2192,7 @@ ight) = 6 + rac{6}{6} = 7$! (Solves without converting to massive improper frac
     </div>
   </div>
 </div>
-<div class="pq-card-item" style="display:none">
+<div class="pq-card-item" data-topic="4" style="display:none">
   <div class="pq-card">
     <span class="pq-level C">Level C: SSC Exam Level</span>
     <div class="pq-question">A man earns ₹4,800/month. He spends 1/3 on rent, 1/4 on food and saves the rest. What % does he save?</div>
@@ -1791,14 +2215,23 @@ ight) = 6 + rac{6}{6} = 7$! (Solves without converting to massive improper frac
   <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:12px;">
     🔐 Integrity Rule: Actual PYQ tabhi label karo jab year/shift verified ho. Otherwise: "PYQ-style" label use karo.
   </div>
+    <div class="topic-filter-bar">
+      <span class="tfb-label">Filter:</span>
+      <button class="tfilter-btn active" onclick="filterQs('all', event)">All Topics</button>
+      <button class="tfilter-btn" onclick="filterQs('1', event)">T1: VBODMAS</button>
+      <button class="tfilter-btn" onclick="filterQs('2', event)">T2: Fractions</button>
+      <button class="tfilter-btn" onclick="filterQs('3', event)">T3: Multiplication</button>
+      <button class="tfilter-btn" onclick="filterQs('4', event)">T4: % Grid</button>
+      <button class="tfilter-btn" onclick="filterQs('5', event)">T5: Squares & Cubes</button>
+    </div>
   <div class="pyq-container">
-<div class="pyq-card">
+<div class="pyq-card" data-topic="1">
   <div class="pyq-tag">PYQ-style • SSC CGL Tier-1 Pattern</div>
   <div class="pyq-q">Simplify: 18 ÷ [6 − {4 − (8 − 6 + 3 of 2)}]</div>
   <button class="reveal-sol-btn" onclick="toggleEl('pyq-sol-ph0-0')">🔍 Show Trick Solution</button>
   <div class="sol-box" id="pyq-sol-ph0-0">3 of 2=6 → 8−6+6=8 → 4−8=−4 → 6−(−4)=10 → 18÷10 = 1.8</div>
 </div>
-<div class="pyq-card">
+<div class="pyq-card" data-topic="5">
   <div class="pyq-tag">PYQ-style • SSC CGL Tier-2 Pattern</div>
   <div class="pyq-q">Find the value of: (0.1)³ + (0.2)³ + (0.3)³ − 3(0.1)(0.2)(0.3) / [(0.1)² + (0.2)² + (0.3)² − (0.1)(0.2) − (0.2)(0.3) − (0.3)(0.1)]</div>
   <button class="reveal-sol-btn" onclick="toggleEl('pyq-sol-ph0-1')">🔍 Show Trick Solution</button>
@@ -2200,6 +2633,84 @@ window.addEventListener('afterprint', () => {
   }
   document.querySelectorAll('.pq-hint-box, .pq-ans-box, .sol-box').forEach(h => h.style.display = 'none');
 });
+
+
+// ── TOPIC FILTER FUNCTION ──
+function filterQs(topic, ev) {
+  if (ev) {
+    var parentBar = ev.target.closest('.topic-filter-bar');
+    if (parentBar) {
+      parentBar.querySelectorAll('.tfilter-btn').forEach(b => b.classList.remove('active'));
+      ev.target.classList.add('active');
+    }
+  }
+
+  // Filter guided practice items
+  var pItems = document.querySelectorAll('.pq-card-item');
+  var matchingP = [];
+  pItems.forEach((item, idx) => {
+    if (topic === 'all' || item.getAttribute('data-topic') === topic) {
+      matchingP.push(item);
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+
+  // If topic has matched items, show controls accordingly
+  var counter = document.querySelector('.pq-counter');
+  if (counter) {
+    counter.textContent = matchingP.length ? ('1 / ' + matchingP.length) : '0 / 0';
+  }
+
+  // Filter PYQ cards
+  var pyqCards = document.querySelectorAll('.pyq-card');
+  pyqCards.forEach(card => {
+    if (topic === 'all' || card.getAttribute('data-topic') === topic) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+
+  // Sync active states on all filter bars
+  document.querySelectorAll('.topic-filter-bar').forEach(bar => {
+    bar.querySelectorAll('.tfilter-btn').forEach(btn => {
+      var attr = btn.getAttribute('onclick') || '';
+      if ((topic === 'all' && attr.includes("'all'")) || attr.includes("'" + topic + "'")) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  });
+}
+
+// ── TOPIC NAV SCROLLSPY ──
+var topicSections = document.querySelectorAll('.topic-anchor-block, #sec-tricks, #sec-traps, #sec-formulas, #sec-practice, #sec-pyqs, #sec-timer');
+var navChips = document.querySelectorAll('.tnav-chip');
+
+function onScrollSpyP0() {
+  var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+  var currentId = '';
+  topicSections.forEach(function(sec) {
+    var top = sec.offsetTop - 140;
+    var height = sec.offsetHeight;
+    if (scrollY >= top && scrollY < top + height) {
+      currentId = sec.id;
+    }
+  });
+  if (currentId) {
+    navChips.forEach(function(chip) {
+      if (chip.getAttribute('data-target') === currentId) {
+        chip.classList.add('active');
+      } else {
+        chip.classList.remove('active');
+      }
+    });
+  }
+}
+window.addEventListener('scroll', onScrollSpyP0);
 
 </script>
 </body>

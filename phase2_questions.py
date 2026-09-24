@@ -24,8 +24,19 @@ def get_basic_questions():
       🤖 <strong>AI Tutor Rule:</strong> Pehle khud rough sheet par attempt karein. Solution tabhi reveal karein jab attempt ho jaye!
     </p>
 
+    <div class="topic-filter-bar">
+      <span class="filter-label">🏷️ Filter by Topic:</span>
+      <button class="q-filter-chip active" onclick="filterQs('all', this)">All Topics (20 Qs)</button>
+      <button class="q-filter-chip" onclick="filterQs('fraction-grid', this)">1. Fraction Grid</button>
+      <button class="q-filter-chip" onclick="filterQs('mf-change', this)">2. MF &amp; Changes</button>
+      <button class="q-filter-chip" onclick="filterQs('ab-successive', this)">3. AB Formula</button>
+      <button class="q-filter-chip" onclick="filterQs('price-consumption', this)">4. P&times;C=E Ladder</button>
+      <button class="q-filter-chip" onclick="filterQs('income-depreciation', this)">5. I=E+S &amp; Deprec</button>
+      <button class="q-filter-chip" onclick="filterQs('election-venn', this)">6. Election &amp; Venn</button>
+    </div>
+
     <!-- Q1 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="fraction-grid">
       <div class="q-head"><span class="q-num">Q1</span><span class="q-tag">Fraction to Percentage</span></div>
       <div class="q-text">Convert the fraction $\frac{5}{8}$ into percentage.</div>
       <div class="q-actions">
@@ -47,7 +58,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q2 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="fraction-grid">
       <div class="q-head"><span class="q-num">Q2</span><span class="q-tag">Commutative Law</span></div>
       <div class="q-text">Evaluate: $72\% \text{ of } 25 + 48\% \text{ of } 50$.</div>
       <div class="q-actions">
@@ -70,7 +81,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q3 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="mf-change">
       <div class="q-head"><span class="q-num">Q3</span><span class="q-tag">Percentage Comparison</span></div>
       <div class="q-text">If $A = 120$ and $B = 150$, by what percent is $B$ more than $A$, and by what percent is $A$ less than $B$?</div>
       <div class="q-actions">
@@ -92,7 +103,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q4 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="mf-change">
       <div class="q-head"><span class="q-num">Q4</span><span class="q-tag">Base Shifting</span></div>
       <div class="q-text">If $A$'s salary is $20\%$ more than $B$'s salary, by what percent is $B$'s salary less than $A$'s salary?</div>
       <div class="q-actions">
@@ -115,7 +126,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q5 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="ab-successive">
       <div class="q-head"><span class="q-num">Q5</span><span class="q-tag">Successive Change AB Formula</span></div>
       <div class="q-text">The length of a rectangle is increased by $20\%$ and its breadth is increased by $10\%$. Find the percentage change in its area.</div>
       <div class="q-actions">
@@ -136,7 +147,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q6 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="ab-successive">
       <div class="q-head"><span class="q-num">Q6</span><span class="q-tag">Opposite Equal Changes</span></div>
       <div class="q-text">A number is first increased by $15\%$ and then decreased by $15\%$. Find the net percentage change in the number.</div>
       <div class="q-actions">
@@ -157,7 +168,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q7 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="price-consumption">
       <div class="q-head"><span class="q-num">Q7</span><span class="q-tag">Constant Expenditure</span></div>
       <div class="q-text">If the price of petrol increases by $25\%$, by what percentage must a car owner reduce his consumption so that expenditure remains unchanged?</div>
       <div class="q-actions">
@@ -178,7 +189,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q8 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="price-consumption">
       <div class="q-head"><span class="q-num">Q8</span><span class="q-tag">Price Drop Consumption Increase</span></div>
       <div class="q-text">If the price of sugar decreases by $20\%$, by what percent can a family increase its consumption without changing its budget?</div>
       <div class="q-actions">
@@ -199,7 +210,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q9 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="ab-successive">
       <div class="q-head"><span class="q-num">Q9</span><span class="q-tag">Area of Circle</span></div>
       <div class="q-text">If the radius of a circle is increased by $30\%$, find the percentage increase in its area.</div>
       <div class="q-actions">
@@ -220,7 +231,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q10 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="ab-successive">
       <div class="q-head"><span class="q-num">Q10</span><span class="q-tag">Two Successive Discounts</span></div>
       <div class="q-text">Find the single equivalent discount for two successive discounts of $20\%$ and $10\%$.</div>
       <div class="q-actions">
@@ -241,7 +252,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q11 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="election-venn">
       <div class="q-head"><span class="q-num">Q11</span><span class="q-tag">Simple Election</span></div>
       <div class="q-text">In an election between two candidates, the winner secures $65\%$ of the total votes and wins by a margin of $1,800$ votes. Find the total number of votes polled (assuming no invalid votes).</div>
       <div class="q-actions">
@@ -264,7 +275,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q12 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-depreciation">
       <div class="q-head"><span class="q-num">Q12</span><span class="q-tag">Population Growth</span></div>
       <div class="q-text">The population of a town is $80,000$. It increases at the rate of $5\%$ per annum. Find the population after $2$ years.</div>
       <div class="q-actions">
@@ -285,7 +296,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q13 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-depreciation">
       <div class="q-head"><span class="q-num">Q13</span><span class="q-tag">Machine Depreciation</span></div>
       <div class="q-text">A machine depreciates at the rate of $10\%$ per annum. If its current value is ₹$72,900$, what was its value $2$ years ago?</div>
       <div class="q-actions">
@@ -307,7 +318,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q14 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-depreciation">
       <div class="q-head"><span class="q-num">Q14</span><span class="q-tag">Successive Spending</span></div>
       <div class="q-text">A man spends $20\%$ of his monthly salary on house rent and $40\%$ of the remaining on food. If he saves ₹$7,200$, find his monthly salary.</div>
       <div class="q-actions">
@@ -331,7 +342,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q15 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="election-venn">
       <div class="q-head"><span class="q-num">Q15</span><span class="q-tag">Passing Marks Concept</span></div>
       <div class="q-text">A student scores $30\%$ marks and fails by $15$ marks. Another student scores $40\%$ marks and gets $25$ marks more than the minimum passing marks. Find the maximum marks of the examination and the passing percentage.</div>
       <div class="q-actions">
@@ -356,7 +367,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q16 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="election-venn">
       <div class="q-head"><span class="q-num">Q16</span><span class="q-tag">Basic Venn Diagram</span></div>
       <div class="q-text">In an exam, $40\%$ candidates failed in English, $30\%$ failed in Maths, and $15\%$ failed in both. Find the percentage of candidates who passed in both subjects.</div>
       <div class="q-actions">
@@ -378,7 +389,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q17 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="mf-change">
       <div class="q-head"><span class="q-num">Q17</span><span class="q-tag">Two Numbers Comparison</span></div>
       <div class="q-text">Two numbers are respectively $20\%$ and $50\%$ more than a third number. What percentage is the first number of the second number?</div>
       <div class="q-actions">
@@ -401,7 +412,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q18 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-depreciation">
       <div class="q-head"><span class="q-num">Q18</span><span class="q-tag">Tax and Net Income</span></div>
       <div class="q-text">If income tax is increased by $19\%$, net income decreases by $1\%$. Find the rate of income tax.</div>
       <div class="q-actions">
@@ -424,7 +435,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q19 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="ab-successive">
       <div class="q-head"><span class="q-num">Q19</span><span class="q-tag">Volume of Cube Scaling</span></div>
       <div class="q-text">If each edge of a cube is increased by $10\%$, find the percentage increase in its surface area and its volume.</div>
       <div class="q-actions">
@@ -446,7 +457,7 @@ def get_basic_questions():
     </div>
 
     <!-- Q20 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="fraction-grid">
       <div class="q-head"><span class="q-num">Q20</span><span class="q-tag">Fraction Multiplication Error</span></div>
       <div class="q-text">A student multiplied a number by $\frac{3}{5}$ instead of $\frac{5}{3}$. What is the percentage error in the calculation?</div>
       <div class="q-actions">
@@ -489,8 +500,19 @@ def get_mixed_questions():
       🤖 <strong>AI Tutor Rule:</strong> Pehle independent attempt karein. Ratio aur Multiplier methods se step count reduce karein!
     </p>
 
+    <div class="topic-filter-bar">
+      <span class="filter-label">🏷️ Filter Mixed Qs by Topic:</span>
+      <button class="q-filter-chip active" onclick="filterQs('all', this)">All Mixed (20 Qs)</button>
+      <button class="q-filter-chip" onclick="filterQs('fraction-grid', this)">1. Fraction Grid</button>
+      <button class="q-filter-chip" onclick="filterQs('mf-change', this)">2. MF &amp; Changes</button>
+      <button class="q-filter-chip" onclick="filterQs('ab-successive', this)">3. AB Formula</button>
+      <button class="q-filter-chip" onclick="filterQs('price-consumption', this)">4. P&times;C=E Ladder</button>
+      <button class="q-filter-chip" onclick="filterQs('income-depreciation', this)">5. I=E+S &amp; Deprec</button>
+      <button class="q-filter-chip" onclick="filterQs('election-venn', this)">6. Election &amp; Venn</button>
+    </div>
+
     <!-- Q21 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="price-consumption">
       <div class="q-head"><span class="q-num">Q21</span><span class="q-tag">Price Drop &amp; Quantity Difference</span></div>
       <div class="q-text">A reduction of $20\%$ in the price of sugar enables a purchaser to obtain $4$ kg more for ₹$160$. Find the original price per kg and the reduced price per kg.</div>
       <div class="q-actions">
@@ -514,7 +536,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q22 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="price-consumption">
       <div class="q-head"><span class="q-num">Q22</span><span class="q-tag">Variable Expenditure Model</span></div>
       <div class="q-text">The price of cooking oil increases by $25\%$. By what percentage should a family reduce its consumption so that its expenditure increases by only $10\%$?</div>
       <div class="q-actions">
@@ -538,7 +560,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q23 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-depreciation">
       <div class="q-head"><span class="q-num">Q23</span><span class="q-tag">Income, Expenditure &amp; Savings Ratio</span></div>
       <div class="q-text">A person spends $75\%$ of his income. His income increases by $20\%$ and his expenditure increases by $10\%$. Find the percentage increase in his savings.</div>
       <div class="q-actions">
@@ -564,7 +586,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q24 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="election-venn">
       <div class="q-head"><span class="q-num">Q24</span><span class="q-tag">Election with Invalid Votes</span></div>
       <div class="q-text">In an election, $10\%$ of voters did not cast their votes and $10\%$ of the votes cast were declared invalid. The winning candidate got $54\%$ of the valid votes and won by a majority of $1,620$ votes. Find the total number of voters enrolled in the voters list.</div>
       <div class="q-actions">
@@ -591,7 +613,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q25 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="ab-successive">
       <div class="q-head"><span class="q-num">Q25</span><span class="q-tag">Complex Successive Changes</span></div>
       <div class="q-text">A number is increased by $20\%$, then decreased by $10\%$, and then increased by $25\%$. What is the net percentage increase or decrease in the number?</div>
       <div class="q-actions">
@@ -613,7 +635,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q26 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="ab-successive">
       <div class="q-head"><span class="q-num">Q26</span><span class="q-tag">Cylinder Volume Expansion</span></div>
       <div class="q-text">If the radius of the base of a cylinder is decreased by $20\%$ and its height is increased by $50\%$, find the percentage change in its volume.</div>
       <div class="q-actions">
@@ -636,7 +658,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q27 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="price-consumption">
       <div class="q-head"><span class="q-num">Q27</span><span class="q-tag">Fresh Fruit vs Dry Fruit</span></div>
       <div class="q-text">Fresh watermelon contains $90\%$ water, whereas dry watermelon contains $20\%$ water. What weight of dry watermelon can be obtained from $40$ kg of fresh watermelon?</div>
       <div class="q-actions">
@@ -660,7 +682,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q28 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="election-venn">
       <div class="q-head"><span class="q-num">Q28</span><span class="q-tag">Passing Marks with Two Students</span></div>
       <div class="q-text">In an examination, A scored $32\%$ marks and failed by $24$ marks. B scored $45\%$ marks and obtained $41$ marks more than the passing marks. What is the passing mark and the maximum mark?</div>
       <div class="q-actions">
@@ -684,7 +706,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q29 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-depreciation">
       <div class="q-head"><span class="q-num">Q29</span><span class="q-tag">Population Male/Female Breakdown</span></div>
       <div class="q-text">The population of a village was $9,800$. In a year, with the increase in population of males by $8\%$ and that of females by $5\%$, the population of the village became $10,458$. What was the number of males in the village before increase?</div>
       <div class="q-actions">
@@ -709,7 +731,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q30 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-depreciation">
       <div class="q-head"><span class="q-num">Q30</span><span class="q-tag">Multi-tier Spendings</span></div>
       <div class="q-text">A man gave $30\%$ of his money to his elder son, $40\%$ of the remaining to his younger son, and $10\%$ of the remaining to a trust. If he is left with ₹$18,900$, find his total initial money.</div>
       <div class="q-actions">
@@ -731,7 +753,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q31 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="mf-change">
       <div class="q-head"><span class="q-num">Q31</span><span class="q-tag">Salary Base Equation</span></div>
       <div class="q-text">If $A$'s salary is $40\%$ of $B$'s salary and $B$'s salary is $25\%$ more than $C$'s salary, by what percentage is $C$'s salary more than $A$'s salary?</div>
       <div class="q-actions">
@@ -755,7 +777,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q32 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="election-venn">
       <div class="q-head"><span class="q-num">Q32</span><span class="q-tag">Venn Diagram Exact Counts</span></div>
       <div class="q-text">In a group of $1,500$ students, $65\%$ like football, $55\%$ like cricket, and $10\%$ like neither. How many students like both football and cricket?</div>
       <div class="q-actions">
@@ -778,7 +800,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q33 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="fraction-grid">
       <div class="q-head"><span class="q-num">Q33</span><span class="q-tag">Fraction Ratio Adjustment</span></div>
       <div class="q-text">If the numerator of a fraction is increased by $20\%$ and its denominator is decreased by $10\%$, the value of the fraction becomes $\frac{16}{21}$. Find the original fraction.</div>
       <div class="q-actions">
@@ -800,7 +822,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q34 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="election-venn">
       <div class="q-head"><span class="q-num">Q34</span><span class="q-tag">Election with Non-Voting</span></div>
       <div class="q-text">In an election, $20\%$ of voters on the voters list did not vote and $120$ votes were cast as invalid. The winner got $41\%$ of the total enrolled voters and won by $200$ votes. Find the total number of enrolled voters.</div>
       <div class="q-actions">
@@ -826,7 +848,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q35 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="price-consumption">
       <div class="q-head"><span class="q-num">Q35</span><span class="q-tag">Price Rise &amp; Quantity Cut</span></div>
       <div class="q-text">A reduction of $10\%$ in the price of tea enables a dealer to purchase $5$ kg more for ₹$450$. What is the difference between the original and the reduced price per kg?</div>
       <div class="q-actions">
@@ -849,7 +871,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q36 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-depreciation">
       <div class="q-head"><span class="q-num">Q36</span><span class="q-tag">Commission System</span></div>
       <div class="q-text">A salesman is allowed $9\%$ commission on total sales plus a bonus of $1\%$ on sales over ₹$20,000$. If his total earnings were ₹$6,800$, find his total sales.</div>
       <div class="q-actions">
@@ -873,7 +895,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q37 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-depreciation">
       <div class="q-head"><span class="q-num">Q37</span><span class="q-tag">Consecutive Rate of Depreciation</span></div>
       <div class="q-text">The value of a car depreciates by $25\%$ in the first year, $20\%$ in the second year, and $15\%$ in the third year. What is the total overall percentage depreciation over the 3 years?</div>
       <div class="q-actions">
@@ -895,7 +917,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q38 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="election-venn">
       <div class="q-head"><span class="q-num">Q38</span><span class="q-tag">Venn Diagram Three Categories</span></div>
       <div class="q-text">In a survey of $200$ people, $120$ read Hindi newspaper, $100$ read English newspaper, and $50$ read both. How many read neither?</div>
       <div class="q-actions">
@@ -917,7 +939,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q39 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="income-depreciation">
       <div class="q-head"><span class="q-num">Q39</span><span class="q-tag">Alligation in Salary Increase</span></div>
       <div class="q-text">A man's salary is ₹$45,000$. He spends $80\%$ of it and saves the rest. Next year his income increases by $15\%$ and his savings increase by $20\%$. By what percentage does his expenditure increase?</div>
       <div class="q-actions">
@@ -940,7 +962,7 @@ def get_mixed_questions():
     </div>
 
     <!-- Q40 -->
-    <div class="q-block">
+    <div class="q-block" data-topic="ab-successive">
       <div class="q-head"><span class="q-num">Q40</span><span class="q-tag">Successive Price Markings</span></div>
       <div class="q-text">A trader marks his goods $40\%$ above the cost price and then allows a discount of $25\%$ on the marked price. Find his net profit or loss percentage.</div>
       <div class="q-actions">
@@ -979,8 +1001,18 @@ def get_pyq_lab():
       🔐 <strong>AI Tutor Integrity Rule:</strong> Har question ka exact exam shift tag diya gaya hai. Pehle solve karein fir shortcut dekhein.
     </p>
 
+    <div class="topic-filter-bar">
+      <span class="filter-label">🏷️ Filter PYQs by Topic:</span>
+      <button class="q-filter-chip active" onclick="filterQs('all', this)">All Real PYQs (15)</button>
+      <button class="q-filter-chip" onclick="filterQs('mf-change', this)">2. MF &amp; Changes</button>
+      <button class="q-filter-chip" onclick="filterQs('ab-successive', this)">3. AB Formula</button>
+      <button class="q-filter-chip" onclick="filterQs('price-consumption', this)">4. P&times;C=E Ladder</button>
+      <button class="q-filter-chip" onclick="filterQs('income-depreciation', this)">5. I=E+S &amp; Deprec</button>
+      <button class="q-filter-chip" onclick="filterQs('election-venn', this)">6. Election &amp; Venn</button>
+    </div>
+
     <!-- PYQ 1 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="price-consumption">
       <div class="pyq-tag">SSC CGL 2023 Tier-1 • 14 July Shift-3</div>
       <div class="pyq-q"><strong>Q41:</strong> The price of petrol was raised by $15\%$. By what percentage should a motorist reduce his consumption of petrol so that the expenditure on it does not increase? (Round off to 1 decimal place).</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-41')">🔍 Show Topper Shortcut</button>
@@ -991,7 +1023,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 2 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="ab-successive">
       <div class="pyq-tag">SSC CGL 2022 Tier-2 (Mains) • 02 March 2023</div>
       <div class="pyq-q"><strong>Q42:</strong> A's salary is $38\%$ more than B's salary. B's salary is what percent less than A's salary? (Correct to one decimal place).</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-42')">🔍 Show Topper Shortcut</button>
@@ -1002,7 +1034,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 3 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="election-venn">
       <div class="pyq-tag">SSC CGL 2023 Tier-1 • 17 July Shift-1</div>
       <div class="pyq-q"><strong>Q43:</strong> In an election between two candidates, $8\%$ of the voters did not cast their votes. The winning candidate got $48\%$ of the total enrolled votes and won by $1,100$ votes. Find the total number of enrolled voters.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-43')">🔍 Show Topper Shortcut</button>
@@ -1017,7 +1049,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 4 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="income-depreciation">
       <div class="pyq-tag">SSC CGL 2022 Tier-1 • 01 Dec Shift-2</div>
       <div class="pyq-q"><strong>Q44:</strong> If the length and breadth of a cuboid are increased by $10\%$ and $20\%$ respectively and its height is decreased by $20\%$, what is the percentage change in the volume of the cuboid?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-44')">🔍 Show Topper Shortcut</button>
@@ -1030,7 +1062,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 5 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="election-venn">
       <div class="pyq-tag">SSC CGL 2023 Tier-2 (Mains) • 26 Oct 2023</div>
       <div class="pyq-q"><strong>Q45:</strong> An examinee has to secure $40\%$ marks to pass. He gets $180$ marks and fails by an equal number of marks. Find the maximum marks.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-45')">🔍 Show Topper Shortcut</button>
@@ -1043,7 +1075,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 6 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="income-depreciation">
       <div class="pyq-tag">SSC CHSL 2023 Tier-1 • 02 Aug Shift-2</div>
       <div class="pyq-q"><strong>Q46:</strong> A reduction of $15\%$ in the price of wheat allows a housewife to buy $6$ kg more for ₹$2,720$. What is the reduced price per kg?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-46')">🔍 Show Topper Shortcut</button>
@@ -1054,7 +1086,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 7 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="price-consumption">
       <div class="pyq-tag">SSC CPO 2023 • 03 Oct Shift-1</div>
       <div class="pyq-q"><strong>Q47:</strong> The population of a city was $1,75,000$ two years ago. If it increased by $4\%$ in the first year and $5\%$ in the second year, what is its present population?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-47')">🔍 Show Topper Shortcut</button>
@@ -1065,7 +1097,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 8 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="mf-change">
       <div class="pyq-tag">SSC CGL 2021 Tier-2 (Mains) • 08 Aug 2022</div>
       <div class="pyq-q"><strong>Q48:</strong> The monthly salary of an employee was increased by $20\%$. After three months, due to company policy, it was reduced by $20\%$. What was the net percentage change in his salary?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-48')">🔍 Show Topper Shortcut</button>
@@ -1076,7 +1108,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 9 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="election-venn">
       <div class="pyq-tag">SSC CGL 2022 Tier-1 • 08 Dec Shift-4</div>
       <div class="pyq-q"><strong>Q49:</strong> If the radius of a sphere is decreased by $10\%$, by what percentage does its surface area decrease?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-49')">🔍 Show Topper Shortcut</button>
@@ -1088,7 +1120,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 10 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="income-depreciation">
       <div class="pyq-tag">SSC CHSL 2022 Tier-1 • 27 May Shift-3</div>
       <div class="pyq-q"><strong>Q50:</strong> A person's expenditure and savings are in the ratio $5:3$. If his income increases by $12\%$ and expenditure increases by $15\%$, find the percentage increase in his savings.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-50')">🔍 Show Topper Shortcut</button>
@@ -1099,7 +1131,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 11 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="ab-successive">
       <div class="pyq-tag">SSC CGL 2023 Tier-1 • 20 July Shift-2</div>
       <div class="pyq-q"><strong>Q51:</strong> In an examination, $70\%$ candidates passed in English and $80\%$ passed in Mathematics. $10\%$ failed in both subjects. If $144$ candidates passed in both, find the total number of candidates.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-51')">🔍 Show Topper Shortcut</button>
@@ -1113,7 +1145,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 12 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="election-venn">
       <div class="pyq-tag">SSC CPO 2022 • 10 Nov Shift-2</div>
       <div class="pyq-q"><strong>Q52:</strong> Two successive price hikes of $12\%$ and $15\%$ of an article are equivalent to a single price hike of:</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-52')">🔍 Show Topper Shortcut</button>
@@ -1124,7 +1156,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 13 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="income-depreciation">
       <div class="pyq-tag">SSC CGL 2021 Tier-1 • 18 Aug Shift-3</div>
       <div class="pyq-q"><strong>Q53:</strong> A number is first decreased by $10\%$ and then increased by $10\%$. The number so obtained is $50$ less than the original number. What is the original number?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-53')">🔍 Show Topper Shortcut</button>
@@ -1136,7 +1168,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 14 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="mf-change">
       <div class="pyq-tag">SSC CHSL 2023 Tier-1 • 11 Aug Shift-3</div>
       <div class="pyq-q"><strong>Q54:</strong> In an election between two candidates, $5\%$ of the voters did not vote, and $2,000$ votes were invalid. The winning candidate received $52\%$ of the valid votes and won by a margin of $3,600$ votes. Find the total number of enrolled voters.</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-54')">🔍 Show Topper Shortcut</button>
@@ -1150,7 +1182,7 @@ def get_pyq_lab():
     </div>
 
     <!-- PYQ 15 -->
-    <div class="pyq-card">
+    <div class="pyq-card" data-topic="price-consumption">
       <div class="pyq-tag">SSC CGL 2023 Tier-2 (Mains) • 27 Oct 2023</div>
       <div class="pyq-q"><strong>Q55:</strong> If A's income is $60\%$ less than B's income, then B's income is what percentage more than that of A's income?</div>
       <button class="reveal-sol-btn" onclick="toggleEl('p2-p-sol-55')">🔍 Show Topper Shortcut</button>

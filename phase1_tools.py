@@ -177,8 +177,21 @@ def get_sidebar_modal_and_js():
     <button class="sidebar-close-btn" id="sidebar-close" aria-label="Close Sidebar">✕</button>
   </div>
   <div class="sidebar-content">
+    <div class="sb-group-title"><span>🎯 Topic-Wise Theory &amp; Practice</span></div>
+    <div class="sb-toc-grid">
+      <a href="#topic-1-classification" class="sb-toc-link">1. Classification &amp; Primes</a>
+      <a href="#topic-2-divisibility" class="sb-toc-link">2. Divisibility Rules</a>
+      <a href="#topic-3-lcm-hcf" class="sb-toc-link">3. LCM &amp; HCF Mastery</a>
+      <a href="#topic-4-remainders" class="sb-toc-link">4. Remainder Theorems</a>
+      <a href="#topic-5-unit-digit" class="sb-toc-link">5. Unit Digit &amp; Cyclicity</a>
+      <a href="#topic-6-factors" class="sb-toc-link">6. Factors Engine</a>
+      <a href="#sec-shortcuts" class="sb-toc-link">⚡ Speed Shortcuts</a>
+      <a href="#sec-formulas" class="sb-toc-link">📐 Formula Vault</a>
+    </div>
+
     <div class="sb-group-title"><span>📑 Quick Jump Menu</span></div>
     <div class="sb-toc-grid">
+      <a href="#sec-topics" class="sb-toc-link">🎯 Topics Directory Hub</a>
       <a href="#sec-mastery" class="sb-toc-link">📊 Mastery Tracker</a>
       <a href="#sec-plan" class="sb-toc-link">📅 Day-by-Day Plan</a>
       <a href="#sec-theory" class="sb-toc-link">📖 Theory (6 Modules)</a>
@@ -279,6 +292,71 @@ if (sbBackdrop) {
     sbBackdrop.classList.remove('active');
   });
 }
+
+// Auto-close sidebar on link click
+document.querySelectorAll('.sb-toc-link, .sb-phase-item').forEach(function(link) {
+  link.addEventListener('click', function() {
+    if (sbDrawer) sbDrawer.classList.remove('open');
+    if (sbBackdrop) sbBackdrop.classList.remove('active');
+  });
+});
+
+// Topic Filter Function
+function filterQs(topic, ev) {
+  if (ev) {
+    var parentBar = ev.target.closest('.topic-filter-bar');
+    if (parentBar) {
+      parentBar.querySelectorAll('.tfilter-btn').forEach(function(b) { b.classList.remove('active'); });
+      ev.target.classList.add('active');
+    }
+  }
+  var cards = document.querySelectorAll('.q-block, .pyq-card');
+  cards.forEach(function(card) {
+    if (topic === 'all' || card.getAttribute('data-topic') === topic) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+  // Sync all filter bars
+  document.querySelectorAll('.topic-filter-bar').forEach(function(bar) {
+    bar.querySelectorAll('.tfilter-btn').forEach(function(btn) {
+      var onclickAttr = btn.getAttribute('onclick') || '';
+      if ((topic === 'all' && onclickAttr.indexOf("'all'") !== -1) ||
+          (onclickAttr.indexOf("'" + topic + "'") !== -1)) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  });
+}
+
+// Topic Nav Scrollspy
+var topicSections = document.querySelectorAll('.topic-anchor-block, #sec-shortcuts, #sec-formulas, #sec-basic, #sec-mixed, #sec-pyq, #sec-timer');
+var navChips = document.querySelectorAll('.tnav-chip');
+
+function onScrollSpy() {
+  var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+  var currentId = '';
+  topicSections.forEach(function(sec) {
+    var top = sec.offsetTop - 140;
+    var height = sec.offsetHeight;
+    if (scrollY >= top && scrollY < top + height) {
+      currentId = sec.id;
+    }
+  });
+  if (currentId) {
+    navChips.forEach(function(chip) {
+      if (chip.getAttribute('data-target') === currentId) {
+        chip.classList.add('active');
+      } else {
+        chip.classList.remove('active');
+      }
+    });
+  }
+}
+window.addEventListener('scroll', onScrollSpy);
 
 // Mastery Tracker
 var mlCards = document.querySelectorAll('.ml-card');
