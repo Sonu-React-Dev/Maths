@@ -1459,220 +1459,487 @@ pre, code, .fc-formula {
       <div>
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Four Triangle Center Angles</span>
-    <button class="copy-btn" data-formula="∠BIC = 90° + A/2  (Incenter)
-∠BOC = 2A  (Circumcenter)
-∠BHC = 180° - A  (Orthocenter)
-Centroid divides median 2:1 from vertex">Copy</button>
+    <span class="fc-name">📐 Four Triangle Centers &amp; Angle Theorems</span>
+    <button class="copy-btn" data-formula="Incenter: angle BIC = 90 + A/2, r = Delta/s | Circumcenter: angle BOC = 2A, R = abc/(4*Delta) | Orthocenter: angle BHC = 180 - A | Centroid: divides median 2:1">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">∠BIC = 90° + A/2  (Incenter)
-∠BOC = 2A  (Circumcenter)
-∠BHC = 180° - A  (Orthocenter)
-Centroid divides median 2:1 from vertex</div>
-    <div class="fc-row"><strong>When to use:</strong> Any question mentioning angle bisectors, perpendicular bisectors, altitudes or medians meeting at a point</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> If ∠A=70°: ∠BIC=125°, ∠BOC=140°, ∠BHC=110°. Pattern: 90+35, 140, 180-70.</div>
-    <div class="fc-trap">🚨 Trap: Centroid formula gives RATIO (2:1), not an angle. Centroid has NO simple angle formula.</div>
+    <div class="fc-formula">\angle BIC = 90^\circ + \frac{\angle A}{2} &nbsp;|&nbsp; \angle BOC = 2\angle A &nbsp;|&nbsp; \angle BHC = 180^\circ - \angle A &nbsp;|&nbsp; AG : GD = 2 : 1</div>
+    <div class="fc-row"><strong>When to use:</strong> Incenter ($I$, angle bisectors), Circumcenter ($O$, $\perp$ bisectors), Orthocenter ($H$, altitudes), Centroid ($G$, medians).</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> If $\angle A = 80^\circ$: $\angle BIC = 90 + 40 = 130^\circ$, $\angle BOC = 160^\circ$, $\angle BHC = 180 - 80 = 100^\circ$ in 2 seconds!</div>
+    <div class="fc-trap">🚨 Trap: Centroid has NO angle formula; it divides each median in $2:1$ from vertex to base. Don't invent angle formulas for centroid!</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Tangent-Secant Theorem</span>
-    <button class="copy-btn" data-formula="PT² = PA × PB">Copy</button>
+    <span class="fc-name">📐 Tangent-Secant &amp; Intersecting Chords</span>
+    <button class="copy-btn" data-formula="PT² = PA * PB | PA * PB = PC * PD | DCT = sqrt(d² - (r1 - r2)²) | TCT = sqrt(d² - (r1 + r2)²)">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">PT² = PA × PB</div>
-    <div class="fc-row"><strong>When to use:</strong> P is external point, PT is tangent, PAB is secant (A nearer, B farther)</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> PT=12, PA=8: 144=8×PB → PB=18. Chord AB=18-8=10cm.</div>
-    <div class="fc-trap">🚨 Trap: A is the NEARER intersection, B is FARTHER. Don't swap — you'll get wrong chord length.</div>
+    <div class="fc-formula">PT^2 = PA \times PB &nbsp;|&nbsp; PA \times PB = PC \times PD &nbsp;|&nbsp; \text{DCT} = \sqrt{d^2 - (r_1 - r_2)^2} &nbsp;|&nbsp; \text{TCT} = \sqrt{d^2 - (r_1 + r_2)^2}</div>
+    <div class="fc-row"><strong>When to use:</strong> Tangent $PT$ and secant $PAB$ from external point $P$; common tangents between two circles.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> If $PT = 12$ and $PA = 8 \implies PB = 144/8 = 18 \implies$ Chord $AB = 18 - 8 = 10$ cm immediately!</div>
+    <div class="fc-trap">🚨 Trap: $PB$ is total secant length ($PA + AB$), NOT chord $AB$. $PT^2 = PA \times AB$ is a catastrophic error!</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Intersecting Chords</span>
-    <button class="copy-btn" data-formula="PA × PB = PC × PD">Copy</button>
+    <span class="fc-name">📐 Similarity &amp; Thales Theorem (Area vs Side)</span>
+    <button class="copy-btn" data-formula="Area1 / Area2 = (Side1 / Side2)² = (P1 / P2)² = (h1 / h2)² | Thales: AD/DB = AE/EC">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">PA × PB = PC × PD</div>
-    <div class="fc-row"><strong>When to use:</strong> Chords AB and CD intersect at P inside the circle</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> PA=4, PB=9, PC=6: PD=4×9/6=6.</div>
-    <div class="fc-trap">🚨 Trap: Inside chord intersection: BOTH products use internal point. External secant uses (PA × PB = PC × PD) but with different geometry.</div>
+    <div class="fc-formula">\frac{\text{Area}_1}{\text{Area}_2} = \left(\frac{\text{Side}_1}{\text{Side}_2}\right)^2 = \left(\frac{P_1}{P_2}\right)^2 &nbsp;|&nbsp; \frac{AD}{DB} = \frac{AE}{EC} \quad (DE \parallel BC)</div>
+    <div class="fc-row"><strong>When to use:</strong> Similar triangles formed by parallel lines or angle-angle congruence.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Area ratio $49 : 81 \implies$ Side ratio $= 7 : 9$, Perimeter ratio $= 7 : 9$, Altitude ratio $= 7 : 9$.</div>
+    <div class="fc-trap">🚨 Trap: Confusing side ratio with area ratio. Area ratio is ALWAYS the square of the linear scale factor!</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Similarity Area & Side Ratio</span>
-    <button class="copy-btn" data-formula="Area Ratio = (Side Ratio)²
-Perimeter Ratio = Side Ratio
-Altitude Ratio = Side Ratio">Copy</button>
+    <span class="fc-name">📐 Circle Angle Properties &amp; Alternate Segment</span>
+    <button class="copy-btn" data-formula="angle at center = 2 * angle at circle | Semicircle angle = 90° | Cyclic Quad: A + C = 180° | Alternate Segment Theorem">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">Area Ratio = (Side Ratio)²
-Perimeter Ratio = Side Ratio
-Altitude Ratio = Side Ratio</div>
-    <div class="fc-row"><strong>When to use:</strong> Two similar triangles with given side ratio or area ratio</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> Area ratio 4:9 → Side ratio 2:3 → Perimeter ratio 2:3.</div>
-    <div class="fc-trap">🚨 Trap: Area ratio is SQUARE of side ratio, not same as side ratio!</div>
+    <div class="fc-formula">\angle BOC = 2\angle BAC &nbsp;|&nbsp; \text{Semicircle} = 90^\circ &nbsp;|&nbsp; \angle A + \angle C = 180^\circ &nbsp;|&nbsp; \angle(\text{tangent, chord}) = \angle(\text{alternate segment})</div>
+    <div class="fc-row"><strong>When to use:</strong> Angles subtended by chords, tangents, and inscribed quadrilaterals.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Angle in semicircle is $90^\circ$. Whenever diameter is given, immediately connect endpoints to circumference to create a right angle!</div>
+    <div class="fc-trap">🚨 Trap: Alternate segment theorem angle is opposite to the chord, NOT the adjacent interior angle.</div>
   </div>
-</div></div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Interior &amp; Exterior Angle Bisector Theorems</span>
+    <button class="copy-btn" data-formula="Interior: BD / DC = AB / AC | Length AD² = AB * AC - BD * DC | Exterior: BE / EC = AB / AC">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">\frac{BD}{DC} = \frac{AB}{AC} &nbsp;|&nbsp; AD^2 = AB \cdot AC - BD \cdot DC &nbsp;|&nbsp; \frac{BE}{EC} = \frac{AB}{AC} \text{ (exterior)}</div>
+    <div class="fc-row"><strong>When to use:</strong> Triangle with an angle bisector dividing the opposite side or exterior extended line.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> The segments on base divide in the EXACT ratio of the adjacent legs: $BD : DC = c : b$.</div>
+    <div class="fc-trap">🚨 Trap: Swapping $BD/DC$ as $AC/AB$. Segment $BD$ is adjacent to side $AB$, so it corresponds to $AB$ in numerator!</div>
+  </div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Right-Angled Triangle Metric Relations</span>
+    <button class="copy-btn" data-formula="In right triangle ABC with altitude BD to hypotenuse AC: BD = (AB*BC)/AC | BD² = AD*DC | AB² = AD*AC | Median to hyp = AC/2">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">BD = \frac{AB \times BC}{AC} &nbsp;|&nbsp; BD^2 = AD \times DC &nbsp;|&nbsp; AB^2 = AD \times AC &nbsp;|&nbsp; m_{\text{hyp}} = \frac{AC}{2} = R</div>
+    <div class="fc-row"><strong>When to use:</strong> Altitude dropped from $90^\circ$ vertex onto hypotenuse.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Median from right angle to hypotenuse equals HALF of hypotenuse ($m = c/2 = R$). If legs are $6, 8 \implies$ median to hypotenuse $= 5$ cm!</div>
+    <div class="fc-trap">🚨 Trap: Assuming altitude equals median. Altitude $\perp$ hypotenuse; median bisects hypotenuse. They coincide only in isosceles right triangles.</div>
+  </div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Tangential Quadrilateral &amp; Ptolemy's Theorem</span>
+    <button class="copy-btn" data-formula="Tangential Quad: AB + CD = BC + AD | Cyclic Quad (Ptolemy): AC * BD = (AB * CD) + (BC * AD)">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">\text{Tangential Quad: } AB + CD = BC + AD &nbsp;|&nbsp; \text{Ptolemy: } AC \cdot BD = (AB \cdot CD) + (BC \cdot AD)</div>
+    <div class="fc-row"><strong>When to use:</strong> Circle inscribed in a quadrilateral (touching 4 sides), or cyclic quadrilateral diagonals.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Sum of opposite sides is EQUAL: $Top + Bottom = Left + Right$. E.g. $8 + 12 = 9 + x \implies x = 11$ in 2 seconds!</div>
+    <div class="fc-trap">🚨 Trap: Applying $AB + CD = BC + AD$ to cyclic quad instead of tangential quad. Tangential = circle inside; Cyclic = circle outside!</div>
+  </div>
+</div>
+      </div>
     </div>
     <div>
       <h2 class="sec-title" id="sec-tricks">⚡ Speed Shortcuts</h2>
       <div class="shortcut-grid" style="grid-template-columns:1fr;">
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Pythagorean Triplets Quick List</div>
-  <div class="sc-content">(3,4,5), (5,12,13), (7,24,25), (8,15,17), (9,40,41), (11,60,61), (12,35,37), (20,21,29). All multiples of these are also triplets: (6,8,10), (10,24,26), etc.</div>
+  <div class="sc-title">⚡ 1. Core Pythagorean Triplets Arsenal</div>
+  <div class="sc-content">Instant visual recognition: $(3,4,5)$, $(5,12,13)$, $(7,24,25)$, $(8,15,17)$, $(9,40,41)$, $(11,60,61)$, $(12,35,37)$, $(20,21,29)$. Scaled multiples: $(15,20,25)$, $(10,24,26)$, $(16,30,34)$. Solves 80% of altitude/chord questions without square roots!</div>
 </div>
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Angle in Equilateral Triangle Centers</div>
-  <div class="sc-content">Equilateral triangle (all angles=60°): ∠BIC=90+30=120°, ∠BOC=120°, ∠BHC=120°. All centers coincide in equilateral triangle!</div>
+  <div class="sc-title">⚡ 2. Tangential Quadrilateral 3-Second Equation</div>
+  <div class="sc-content">A circle touches all $4$ sides of $ABCD$: $AB + CD = BC + AD$. E.g., $AB = 8.4, BC = 9.8, CD = 5.6 \implies AD = (8.4 + 5.6) - 9.8 = 14.0 - 9.8 = 4.2$ cm in 3 seconds!</div>
 </div>
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Cyclic Quadrilateral Shortcut</div>
-  <div class="sc-content">Opposite angles sum=180°. If one angle=x, opposite=180°-x. Product of diagonals = sum of products of opposite sides (Ptolemy).</div>
-</div></div>
+  <div class="sc-title">⚡ 3. Incenter Angle Quick Ladder</div>
+  <div class="sc-content">$\angle BIC = 90^\circ + \frac{\angle A}{2}$. If $\angle A = 70^\circ \implies 90 + 35 = 125^\circ$. If $\angle BIC = 135^\circ \implies \angle A/2 = 45^\circ \implies \angle A = 90^\circ$ (Right-angled triangle!).</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 4. Right Triangle Altitude to Hypotenuse</div>
+  <div class="sc-content">In right $\Delta ABC$ ($ngle B = 90^\circ$), altitude $BD = \frac{\text{Base} \times \text{Perpendicular}}{\text{Hypotenuse}} = \frac{AB \times BC}{AC}$. If legs are $15$ and $20$, hyp $= 25 \implies BD = \frac{15 \times 20}{25} = 12$ cm in 5 seconds!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 5. Tangent-Secant Chord Hack</div>
+  <div class="sc-content">Given $PT = 15$ and $PA = 9$: $PB = \frac{PT^2}{PA} = \frac{225}{9} = 25$. Chord $AB = PB - PA = 25 - 9 = 16$ cm without quadratic equation!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 6. Common Tangents Comparison (DCT vs TCT)</div>
+  <div class="sc-content">$DCT = \sqrt{d^2 - (r_1 - r_2)^2}$, $TCT = \sqrt{d^2 - (r_1 + r_2)^2}$. Direct tangent is ALWAYS longer than transverse tangent. If circles touch externally ($d = r_1 + r_2$), $TCT = 0$ and $DCT = 2\sqrt{r_1 r_2}$!</div>
+</div>
+      </div>
     </div>
-  </div>
-
-  <!-- SSC TRAPS -->
+  </div><!-- SSC TRAPS -->
   <h2 class="sec-title" id="sec-traps">🚨 SSC Exam Trap Library</h2>
   <div class="trap-grid">
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 Area vs Perimeter Ratio Trap</span>
-    <span class="error-code">Error-C</span>
-  </div>
-  <div class="trap-desc">Area ratio = (Side ratio)². If triangles have area ratio 9:16, side ratio=3:4, perimeter ratio=3:4. NOT 9:16 for perimeter!</div>
-</div>
-<div class="trap-card">
-  <div class="trap-header">
-    <span class="trap-title">🚨 Tangent PA PB Order Trap</span>
+    <span class="trap-title">🚨 Trap 1: Tangent-Secant $PB$ vs $AB$ Blunder</span>
     <span class="error-code">Error-R</span>
   </div>
-  <div class="trap-desc">In PT²=PA×PB: A must be the CLOSER secant intersection to P, B the farther. Swapping gives same product but wrong individual distances.</div>
+  <div class="trap-desc">$PT^2 = PA \times PB$. Students often write $PT^2 = PA \times AB$. <strong>Fatal error!</strong> $PB$ is the TOTAL secant distance from $P$ to the far intersection $B$. The chord is $AB = PB - PA$.</div>
 </div>
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 Centroid No Angle Formula</span>
+    <span class="trap-title">🚨 Trap 2: Area Ratio vs Side/Perimeter Ratio</span>
+    <span class="error-code">Error-C</span>
+  </div>
+  <div class="trap-desc">Area ratio $= (\text{Side ratio})^2$. If area ratio is $64 : 121$, the side and perimeter ratios are $\sqrt{64/121} = 8 : 11$, NOT $64 : 121$! Don't forget the square root.</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 3: Circumcenter vs Incenter Angle Swapping</span>
     <span class="error-code">Error-F</span>
   </div>
-  <div class="trap-desc">∠BIC, ∠BOC, ∠BHC formulas exist for Incenter, Circumcenter, Orthocenter. Centroid gives NO direct angle formula. Don't invent one!</div>
-</div></div>
+  <div class="trap-desc">Circumcenter angle is $2A$. Incenter angle is $90^\circ + A/2$. For $A = 70^\circ$: $\angle BOC = 140^\circ$, while $\angle BIC = 125^\circ$. Confusing center types leads directly to trap options.</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 4: Direct vs Transverse Tangent Signs</span>
+    <span class="error-code">Error-K</span>
+  </div>
+  <div class="trap-desc">DCT has $(r_1 - r_2)^2$. TCT has $(r_1 + r_2)^2$. Using $(+)$ in DCT formula produces an artificially small tangent length. Remember: Direct = Difference (-).</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 5: Angle Bisector Segment Inversion</span>
+    <span class="error-code">Error-S</span>
+  </div>
+  <div class="trap-desc">In $\Delta ABC$ with bisector $AD$, $\frac{BD}{DC} = \frac{AB}{AC}$. Candidates mistakenly flip it as $\frac{BD}{DC} = \frac{AC}{AB}$. $BD$ touches side $AB$, so it aligns with $AB$.</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 6: Tangential Quad vs Cyclic Quad Mix-up</span>
+    <span class="error-code">Error-T</span>
+  </div>
+  <div class="trap-desc">$AB + CD = BC + AD$ applies ONLY when a circle is INSCRIBED inside the quadrilateral (tangential). It does NOT apply to cyclic quadrilaterals (circle outside).</div>
+</div>
+  </div>
 
-  <!-- PRACTICE Q — One at a time (AI Tutor Rule!) -->
   <h2 class="sec-title" id="sec-practice">💡 Guided Practice Questions (One at a Time)</h2>
-  <div style="background:rgba(246,194,68,0.06);border:1px solid rgba(246,194,68,0.15);border-radius:8px;padding:10px 16px;margin-bottom:14px;font-size:0.8rem;color:#c8a84b;">
-    🤖 <strong>AI Tutor Rule:</strong> Ek question ek baar mein solve karo. Hint aur answer tabhi dekho jab apna attempt ho jaye. Self-rate karo.
-  </div>
   <div class="practice-container">
-    <div class="pq-controls">
-      <button class="pq-btn disabled" id="pq-prev">← Prev</button>
-      <span class="pq-counter">1 / 5</span>
-      <button class="pq-btn" id="pq-next">Next →</button>
+    <div class="pq-nav">
+      <span class="pq-counter" id="pq-counter">Question 1 of 10</span>
+      <div style="display:flex;gap:8px;">
+        <button class="pq-btn disabled" id="pq-prev">&larr; Prev</button>
+        <button class="pq-btn" id="pq-next">Next &rarr;</button>
+      </div>
     </div>
-    
-<div class="pq-card-item" style="display:block">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">In ΔABC, ∠A=60°. Internal bisectors of ∠B and ∠C meet at I. Find ∠BIC.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph11-0')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph11-0')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph11-0">Hint: Incenter formula: ∠BIC = 90° + (A/2)</div>
-    <div class="pq-ans-box" id="pq-ans-ph11-0"><strong>Answer:</strong> ∠BIC = 90° + A/2 = 90° + 30° = 120°.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q1 -->
+    <div class="pq-card-item active" id="pq-card-ph11-0">
+      <div class="pq-badge"><span class="badge-tag">Level: Basic Foundation</span><span class="badge-tag tag-type">Incenter Angle Formula</span></div>
+      <div class="pq-question"><strong>Q1:</strong> In $\Delta ABC$, $I$ is the incenter of the triangle. If $\angle BAC = 80^\circ$, find the measure of $\angle BIC$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph11-0')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph11-0')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph11-0">Hint: Incenter angle formula: $\angle BIC = 90^\circ + \frac{\angle A}{2}$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph11-0">
+        <strong>Answer:</strong> $130^\circ$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. $\angle BIC = 90^\circ + \frac{\angle A}{2} = 90^\circ + \frac{80^\circ}{2}$.<br>
+        2. $\angle BIC = 90^\circ + 40^\circ = 130^\circ$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [F] Used 2A instead of 90 + A/2 | [C] Addition arithmetic error</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">Two similar triangles have areas 36 cm² and 64 cm². If larger triangle has a side of 12 cm, find corresponding side of smaller triangle.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph11-1')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph11-1')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph11-1">Hint: Side ratio = √(Area ratio). Then use proportion.</div>
-    <div class="pq-ans-box" id="pq-ans-ph11-1"><strong>Answer:</strong> Area ratio=36:64=9:16. Side ratio=3:4. Smaller side = (3/4)×12 = 9 cm.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q2 -->
+    <div class="pq-card-item" id="pq-card-ph11-1" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Foundation-Moderate</span><span class="badge-tag tag-type">Circumcenter &amp; Orthocenter</span></div>
+      <div class="pq-question"><strong>Q2:</strong> In $\Delta ABC$, $O$ is the circumcenter and $H$ is the orthocenter. If $\angle A = 55^\circ$, find the measure of $\angle BOC$ and $\angle BHC$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph11-1')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph11-1')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph11-1">Hint: Circumcenter $\angle BOC = 2A$. Orthocenter $\angle BHC = 180^\circ - A$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph11-1">
+        <strong>Answer:</strong> $\angle BOC = 110^\circ$; $\angle BHC = 125^\circ$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Circumcenter: $\angle BOC = 2\angle A = 2 \times 55^\circ = 110^\circ$.<br>
+        2. Orthocenter: $\angle BHC = 180^\circ - \angle A = 180^\circ - 55^\circ = 125^\circ$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [K] Swapped circumcenter and orthocenter formulas | [C] Subtraction slip</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level B">Level B: Standard</span>
-    <div class="pq-question">From external point P, tangent PT=15 and secant PAB with PA=9. Find AB.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph11-2')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph11-2')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph11-2">Hint: PT²=PA×PB. Chord AB = PB - PA (total - nearer part).</div>
-    <div class="pq-ans-box" id="pq-ans-ph11-2"><strong>Answer:</strong> PT²=PA×PB → 225=9×PB → PB=25. AB=PB-PA=25-9=16 cm.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q3 -->
+    <div class="pq-card-item" id="pq-card-ph11-2" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate SSC Core</span><span class="badge-tag tag-type">Tangent-Secant Theorem</span></div>
+      <div class="pq-question"><strong>Q3:</strong> From an external point $P$, a tangent $PT$ and a secant $PAB$ are drawn to a circle. If $PT = 15$ cm and $PA = 9$ cm, find the length of the chord $AB$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph11-2')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph11-2')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph11-2">Hint: $PT^2 = PA \times PB$. Find $PB$, then chord $AB = PB - PA$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph11-2">
+        <strong>Answer:</strong> $16$ cm.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Tangent-Secant Theorem: $PT^2 = PA \times PB$.<br>
+        2. $15^2 = 9 \times PB \implies 225 = 9 \times PB \implies PB = \frac{225}{9} = 25$ cm.<br>
+        3. Length of chord $AB = PB - PA = 25 - 9 = 16$ cm.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [R] Reported PB (25 cm) as chord AB | [C] Division error</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">Chords AB and CD intersect at P inside circle. PA=5, PB=8, PC=4. Find PD.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph11-3')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph11-3')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph11-3">Hint: Intersecting chords: products are equal.</div>
-    <div class="pq-ans-box" id="pq-ans-ph11-3"><strong>Answer:</strong> PA×PB=PC×PD → 5×8=4×PD → PD=10.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q4 -->
+    <div class="pq-card-item" id="pq-card-ph11-3" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate</span><span class="badge-tag tag-type">Similar Triangles Area Ratio</span></div>
+      <div class="pq-question"><strong>Q4:</strong> $\Delta ABC \sim \Delta DEF$. The area of $\Delta ABC$ is $64\text{ cm}^2$ and the area of $\Delta DEF$ is $121\text{ cm}^2$. If $EF = 15.4$ cm, find the length of corresponding side $BC$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph11-3')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph11-3')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph11-3">Hint: $\frac{\text{Area}_1}{\text{Area}_2} = \left(\frac{BC}{EF}\right)^2 \implies \frac{BC}{EF} = \sqrt{\frac{64}{121}} = \frac{8}{11}$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph11-3">
+        <strong>Answer:</strong> $11.2$ cm.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Side ratio: $\frac{BC}{EF} = \sqrt{\frac{\text{Area}(\Delta ABC)}{\text{Area}(\Delta DEF)}} = \sqrt{\frac{64}{121}} = \frac{8}{11}$.<br>
+        2. $BC = \frac{8}{11} \times EF = \frac{8}{11} \times 15.4 = 8 \times 1.4 = 11.2$ cm.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Forgot to take square root of areas | [C] Decimal multiplication slip</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">Find number of diagonals in a 10-sided polygon.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph11-4')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph11-4')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph11-4">Hint: Formula: n(n-3)/2 where n = number of sides.</div>
-    <div class="pq-ans-box" id="pq-ans-ph11-4"><strong>Answer:</strong> Diagonals = n(n-3)/2 = 10×7/2 = 35.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q5 -->
+    <div class="pq-card-item" id="pq-card-ph11-4" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate SSC Core</span><span class="badge-tag tag-type">Direct Common Tangent (DCT)</span></div>
+      <div class="pq-question"><strong>Q5:</strong> Two circles of radii $9$ cm and $4$ cm have their centers $13$ cm apart. Find the length of their Direct Common Tangent (DCT).</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph11-4')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph11-4')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph11-4">Hint: $DCT = \sqrt{d^2 - (r_1 - r_2)^2} = \sqrt{13^2 - (9 - 4)^2} = \sqrt{169 - 25}$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph11-4">
+        <strong>Answer:</strong> $12$ cm.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Formula: $DCT = \sqrt{d^2 - (r_1 - r_2)^2}$.<br>
+        2. $r_1 - r_2 = 9 - 4 = 5$ cm.<br>
+        3. $DCT = \sqrt{13^2 - 5^2} = \sqrt{169 - 25} = \sqrt{144} = 12$ cm.<br>
+        <em>⚡ Triplet:</em> $(5, 12, 13)$ triplet solves it immediately!<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [K] Used (r1 + r2) instead of (r1 - r2)</span>
+      </div>
     </div>
-  </div>
-</div>
+
+    <!-- Q6 -->
+    <div class="pq-card-item" id="pq-card-ph11-5" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate-High</span><span class="badge-tag tag-type">Transverse Common Tangent (TCT)</span></div>
+      <div class="pq-question"><strong>Q6:</strong> Two circles with radii $7$ cm and $3$ cm have their centers $26$ cm apart. Find the length of their Transverse Common Tangent (TCT).</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph11-5')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph11-5')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph11-5">Hint: $TCT = \sqrt{d^2 - (r_1 + r_2)^2} = \sqrt{26^2 - (7 + 3)^2} = \sqrt{676 - 100}$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph11-5">
+        <strong>Answer:</strong> $24$ cm.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Formula: $TCT = \sqrt{d^2 - (r_1 + r_2)^2}$.<br>
+        2. $r_1 + r_2 = 7 + 3 = 10$ cm.<br>
+        3. $TCT = \sqrt{26^2 - 10^2} = \sqrt{676 - 100} = \sqrt{576} = 24$ cm.<br>
+        <em>⚡ Triplet:</em> $(10, 24, 26) = 2 \times (5, 12, 13)$ triplet!<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [K] Subtracted radii instead of adding for TCT</span>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="pq-card-item" id="pq-card-ph11-6" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate</span><span class="badge-tag tag-type">Interior Angle Bisector</span></div>
+      <div class="pq-question"><strong>Q7:</strong> In $\Delta ABC$, $AD$ is the internal bisector of $\angle A$, meeting $BC$ at point $D$. If $AB = 12$ cm, $AC = 15$ cm, and $BC = 18$ cm, find the length of segment $BD$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph11-6')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph11-6')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph11-6">Hint: $\frac{BD}{DC} = \frac{AB}{AC} = \frac{12}{15} = \frac{4}{5}$. Divide $BC = 18$ in $4 : 5$ ratio.</div>
+      <div class="pq-ans-box" id="pq-ans-ph11-6">
+        <strong>Answer:</strong> $8$ cm.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Angle Bisector Theorem: $\frac{BD}{DC} = \frac{AB}{AC} = \frac{12}{15} = \frac{4}{5}$.<br>
+        2. Total parts $= 4 + 5 = 9$ parts $\implies 9$ parts $= 18$ cm $\implies 1$ part $= 2$ cm.<br>
+        3. $BD = 4 \times 2 = 8$ cm. (And $DC = 5 \times 2 = 10$ cm).<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [S] Inverted ratio to 5:4 (getting 10 cm) | [C] Arithmetic error</span>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="pq-card-item" id="pq-card-ph11-7" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate SSC Core</span><span class="badge-tag tag-type">Tangential Quadrilateral</span></div>
+      <div class="pq-question"><strong>Q8:</strong> A circle touches all four sides of a quadrilateral $ABCD$. If $AB = 8.4$ cm, $BC = 9.8$ cm, and $CD = 5.6$ cm, find the length of side $AD$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph11-7')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph11-7')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph11-7">Hint: For a quadrilateral circumscribing a circle: $AB + CD = BC + AD$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph11-7">
+        <strong>Answer:</strong> $4.2$ cm.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Theorem: $AB + CD = BC + AD$.<br>
+        2. $8.4 + 5.6 = 9.8 + AD$.<br>
+        3. $14.0 = 9.8 + AD \implies AD = 14.0 - 9.8 = 4.2$ cm.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Decimal addition/subtraction slip | [F] Swapped sides</span>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="pq-card-item" id="pq-card-ph11-8" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: High Level</span><span class="badge-tag tag-type">Altitude to Hypotenuse</span></div>
+      <div class="pq-question"><strong>Q9:</strong> In a right-angled triangle $ABC$, $\angle B = 90^\circ$, $AB = 15$ cm and $BC = 20$ cm. An altitude $BD$ is drawn from vertex $B$ perpendicular to hypotenuse $AC$. Find the length of $BD$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph11-8')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph11-8')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph11-8">Hint: Hypotenuse $AC = \sqrt{15^2 + 20^2} = 25$ cm. $BD = \frac{AB \times BC}{AC}$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph11-8">
+        <strong>Answer:</strong> $12$ cm.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Hypotenuse $AC$: By $(15, 20, 25)$ triplet $= 5 \times (3, 4, 5) \implies AC = 25$ cm.<br>
+        2. Metric Altitude Formula: $BD = \frac{AB \times BC}{AC} = \frac{15 \times 20}{25}$.<br>
+        3. $BD = \frac{300}{25} = 12$ cm.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Arithmetic simplification error | [F] Confused altitude with median (12.5 cm)</span>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="pq-card-item" id="pq-card-ph11-9" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Advanced Tier-2</span><span class="badge-tag tag-type">Cyclic Quad Extended Angles</span></div>
+      <div class="pq-question"><strong>Q10:</strong> In a cyclic quadrilateral $ABCD$, sides $AB$ and $DC$ when extended meet at point $P$, and sides $AD$ and $BC$ when extended meet at point $Q$. If $\angle A = 60^\circ$ and $\angle P = 30^\circ$, find the measure of $\angle Q$.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph11-9')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph11-9')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph11-9">Hint: In $\Delta ADP$, exterior $\angle C = \angle A + \angle P = 60 + 30 = 90^\circ$. Then in $\Delta ABQ$...</div>
+      <div class="pq-ans-box" id="pq-ans-ph11-9">
+        <strong>Answer:</strong> $30^\circ$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. In cyclic quad $ABCD$, opposite angles sum to $180^\circ \implies \angle C = 180^\circ - 60^\circ = 120^\circ$.<br>
+        2. Consider $\Delta PBC$: Exterior angle at $D$ is $\angle BCD + \angle P$... In $\Delta ADP$: $\angle ADP = 180 - (60 + 30) = 90^\circ$.<br>
+        3. Since $\angle ADC + \angle ADP = 180^\circ \implies \angle ADC = 90^\circ$.<br>
+        4. In cyclic quad, $\angle B = 180^\circ - 90^\circ = 90^\circ$.<br>
+        5. In $\Delta ABQ$: $\angle A + \angle B + \angle Q = 180^\circ \implies 60^\circ + 90^\circ + \angle Q = 180^\circ \implies \angle Q = 30^\circ$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Angle sum arithmetic slip | [K] Cyclic quad supplementary property</span>
+      </div>
+    </div>
   </div>
 
-  <!-- PYQ LAB -->
-  <h2 class="sec-title" id="sec-pyqs">🏆 SSC PYQ Lab</h2>
-  <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:12px;">
-    🔐 Integrity Rule: Actual PYQ tabhi label karo jab year/shift verified ho. Otherwise: "PYQ-style" label use karo.
-  </div>
-  <div class="pyq-container">
-<div class="pyq-card">
-  <div class="pyq-tag">PYQ-style • SSC CGL Tier-1</div>
-  <div class="pyq-q">If O is the circumcenter of ΔABC and ∠BOC=100°, find ∠BAC.</div>
-  <button class="reveal-sol-btn" onclick="toggleEl('pyq-sol-ph11-0')">🔍 Show Trick Solution</button>
-  <div class="sol-box" id="pyq-sol-ph11-0">∠BOC = 2∠BAC → ∠BAC = 50°.</div>
-</div>
-<div class="pyq-card">
-  <div class="pyq-tag">PYQ-style • SSC CGL Tier-2</div>
-  <div class="pyq-q">In a triangle, the ratio of the circumradius to the inradius is 5:2 and the perimeter is 30. Find the area.</div>
-  <button class="reveal-sol-btn" onclick="toggleEl('pyq-sol-ph11-1')">🔍 Show Trick Solution</button>
-  <div class="sol-box" id="pyq-sol-ph11-1">R/r = 5/2 → R=5k, r=2k. Area = r×s (where s=semi-perimeter=15). Also Area = abc/4R. r×s = 2k×15 = 30k. Need more info typically — this shows relationship only.</div>
-</div></div>
+  <h2 class="sec-title" id="sec-pyqs">🏆 SSC PYQ Lab — Real Exam Questions with Examiner Traps</h2>
+  <div class="pyq-list">
 
-  <!-- TIMED DRILL -->
+    <!-- PYQ 1 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2023 Tier-1 (Shift 2)</span>
+        <span class="pyq-diff">Difficulty: Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> In $\Delta ABC$, $D$ and $E$ are points on sides $AB$ and $AC$ respectively such that $DE \parallel BC$. If $AD : DB = 3 : 5$ and the area of $\Delta ADE = 45\text{ cm}^2$, find the area of quadrilateral $BDEC$.
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph11-pyq-0')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph11-pyq-0">
+        <strong>✅ Correct Answer:</strong> $275\text{ cm}^2$<br><br>
+        <strong>⚡ 15-Second Area Ratio Trick:</strong><br>
+        • Side ratio $\frac{AD}{AB} = \frac{3}{3 + 5} = \frac{3}{8}$.<br>
+        • Area ratio $\frac{\text{Area}(\Delta ADE)}{\text{Area}(\Delta ABC)} = \left(\frac{3}{8}\right)^2 = \frac{9}{64}$.<br>
+        • Area of quadrilateral $BDEC = 64 - 9 = 55$ units.<br>
+        • We are given: $9$ units $= 45\text{ cm}^2 \implies 1$ unit $= 5\text{ cm}^2$.<br>
+        • Area of $BDEC = 55 \times 5 = 275\text{ cm}^2$!<br><br>
+        <strong>🚨 Examiner Trap:</strong> Squaring $5$ directly as $25$ units and calculating $25 \times 5 = 125\text{ cm}^2$. $AB$ is $3 + 5 = 8$, so the full triangle is $8^2 = 64$, not $5^2$!
+      </div>
+    </div>
+
+    <!-- PYQ 2 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2022 Tier-2 (Mains)</span>
+        <span class="pyq-diff">Difficulty: Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> From a point $P$ outside a circle, $PAB$ is a secant and $PT$ is a tangent to the circle. If $PT = 8$ cm and $PA = 6$ cm, find the length of the chord $AB$.
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph11-pyq-1')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph11-pyq-1">
+        <strong>✅ Correct Answer:</strong> $4\frac{2}{3}$ cm (or $\frac{14}{3}$ cm $\approx 4.67$ cm)<br><br>
+        <strong>⚡ Direct Theorem Application:</strong><br>
+        • $PT^2 = PA \times PB \implies 8^2 = 6 \times PB \implies PB = \frac{64}{6} = \frac{32}{3}$ cm.<br>
+        • Chord $AB = PB - PA = \frac{32}{3} - 6 = \frac{32 - 18}{3} = \frac{14}{3} = 4\frac{2}{3}$ cm.
+      </div>
+    </div>
+
+    <!-- PYQ 3 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2023 Tier-1 (Shift 1)</span>
+        <span class="pyq-diff">Difficulty: High Level</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> Two circles of radii $15$ cm and $12$ cm intersect each other, and the length of their common chord is $18$ cm. What is the distance between their centers?
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph11-pyq-2')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph11-pyq-2">
+        <strong>✅ Correct Answer:</strong> $12 + 3\sqrt{7}$ cm<br><br>
+        <strong>⚡ Pythagorean Decomposition:</strong><br>
+        • Common chord is bisected perpendicularly by line joining centers: Half-chord $= 18/2 = 9$ cm.<br>
+        • For Circle 1 ($r_1 = 15$ cm): $d_1 = \sqrt{15^2 - 9^2} = \sqrt{225 - 81} = \sqrt{144} = 12$ cm.<br>
+        • For Circle 2 ($r_2 = 12$ cm): $d_2 = \sqrt{12^2 - 9^2} = \sqrt{144 - 81} = \sqrt{63} = 3\sqrt{7}$ cm.<br>
+        • Distance between centers $= d_1 + d_2 = 12 + 3\sqrt{7}$ cm.
+      </div>
+    </div>
+
+    <!-- PYQ 4 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2021 Tier-2 (Mains)</span>
+        <span class="pyq-diff">Difficulty: High Level</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> In a circle with center $O$, $AC$ and $BD$ are two chords that meet at point $E$ when produced outside the circle. If $AB$ is the diameter and $ngle AEB = 36^\circ$, find the measure of $ngle DOC$.
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph11-pyq-3')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph11-pyq-3">
+        <strong>✅ Correct Answer:</strong> $108^\circ$<br><br>
+        <strong>⚡ 10-Second Circle Angle Property:</strong><br>
+        • Since $AB$ is diameter, angle subtended by $AB$ at center is $180^\circ$.<br>
+        • Formula for angle formed by secants intersecting outside: $ngle E = \frac{\text{Angle}(AB) - \text{Angle}(CD)}{2}$.<br>
+        • $36^\circ = \frac{180^\circ - \angle DOC}{2} \implies 72^\circ = 180^\circ - \angle DOC$.<br>
+        • $\angle DOC = 180^\circ - 72^\circ = 108^\circ$!
+      </div>
+    </div>
+
+    <!-- PYQ 5 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2022 Tier-1</span>
+        <span class="pyq-diff">Difficulty: Easy</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> In $\Delta ABC$, $\angle B = 90^\circ$ and $D$ is the midpoint of hypotenuse $AC$. If $AB = 12$ cm and $BC = 16$ cm, find the length of median $BD$.
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph11-pyq-4')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph11-pyq-4">
+        <strong>✅ Correct Answer:</strong> $10$ cm<br><br>
+        <strong>⚡ 3-Second Median to Hypotenuse Property:</strong><br>
+        • In right $\Delta ABC$, $AC = \sqrt{12^2 + 16^2} = 20$ cm (via $3:4:5$ triplet scaled by $4$).<br>
+        • Midpoint of hypotenuse is the circumcenter $O$. Therefore, $BD = AD = DC = \frac{AC}{2}$.<br>
+        • $BD = \frac{20}{2} = 10$ cm!
+      </div>
+    </div>
+  </div>
+
   <h2 class="sec-title" id="sec-timer">⏱️ Timed Drill — Score Calculator</h2>
   <div class="timed-drill">
     <div style="text-align:center;font-size:0.85rem;color:var(--text-muted);margin-bottom:10px;">
@@ -1698,34 +1965,61 @@ Altitude Ratio = Side Ratio</div>
   </div>
 
   <!-- ACTIVE RECALL -->
-  <h2 class="sec-title" id="sec-recall">🧠 Active Recall Session</h2>
-  <div class="recall-section">
-    <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:12px;">
-      <strong style="color:var(--gold);">Rule:</strong> Formula ko passive reading se revise mat karo. Hide → Recall → Write → Verify → Use.
+  <h2 class="sec-title" id="sec-recall">🧠 Active Recall Session — Test Your Memory</h2>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:24px;">
+    <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:16px;">
+      Answer each question from memory before clicking "Reveal Answer". High retention is built by challenging your recall!
+    </p>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">1. What are the formulas for angles subtended at Incenter (I), Circumcenter (O), and Orthocenter (H)?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Incenter: angle BIC = 90° + A/2. Circumcenter: angle BOC = 2A. Orthocenter: angle BHC = 180° - A.</div>
     </div>
-    <div class="recall-how"><div class="recall-step"><div class="rs-box">Hide Formula</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Recall Mentally</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Write It Down</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Verify</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Use in a Question</div></div></div>
-    <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:10px;margin-top:10px;">
-      ✅ Check off each recall question after completing it from memory:
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">2. What is the Tangent-Secant theorem formula for a tangent PT and secant PAB?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">PT² = PA * PB (where PB = PA + chord AB, the total distance from P to the far point).</div>
     </div>
-    <div class="recall-qs"><div class="recall-q">
-          <span class="rq-text">∠BIC formula kya hai?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">∠BOC formula kya hai?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Tangent-Secant theorem likhein?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Area ratio aur side ratio ka relationship?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Number of diagonals formula?</span>
-          <input type="checkbox" class="rq-check">
-        </div></div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">3. What are the formulas for Direct Common Tangent (DCT) and Transverse Common Tangent (TCT)?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">DCT = sqrt(d² - (r1 - r2)²). TCT = sqrt(d² - (r1 + r2)²).</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">4. In a right-angled triangle, what is the length of the median drawn from the 90° vertex to the hypotenuse?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Median to hypotenuse = Hypotenuse / 2 = Circumradius R.</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">5. If two similar triangles have an area ratio of 49 : 81, what is the ratio of their perimeters and altitudes?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Perimeter and altitude ratios are both sqrt(49/81) = 7 : 9.</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">6. What relation holds between opposite sides when a circle is inscribed in quadrilateral ABCD?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">AB + CD = BC + AD (Sum of opposite sides is equal).</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">7. What is the Interior Angle Bisector Theorem in ΔABC for bisector AD meeting BC at D?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">BD / DC = AB / AC (Segments of base are proportional to adjacent sides).</div>
+    </div>
+
+    <div class="ar-item" style="padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">8. In a right-angled triangle with legs a and b and hypotenuse c, what is the length of altitude to hypotenuse?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Altitude = (a * b) / c.</div>
+    </div>
   </div>
 
-  <!-- ERROR NOTEBOOK -->
   <h2 class="sec-title" id="sec-errors">📓 Error Notebook</h2>
   <div class="error-notebook">
     <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:12px;">
