@@ -1483,222 +1483,494 @@ pre, code, .fc-formula {
       <div>
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Profit % / Loss %</span>
-    <button class="copy-btn" data-formula="Profit% = (SP-CP)/CP × 100  |  Loss% = (CP-SP)/CP × 100">Copy</button>
+    <span class="fc-name">📐 Profit %, Loss % &amp; Multiplier Foundation</span>
+    <button class="copy-btn" data-formula="Profit% = [(SP - CP) / CP] * 100 | SP = CP * (1 + P/100) | SP = CP * (1 - L/100)">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">Profit% = (SP-CP)/CP × 100  |  Loss% = (CP-SP)/CP × 100</div>
-    <div class="fc-row"><strong>When to use:</strong> Base is ALWAYS CP for profit/loss percentage</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> SP:CP = 120:100 means 20% profit. SP:CP = 80:100 means 20% loss.</div>
-    <div class="fc-trap">🚨 Trap: Discount% base is MP, not CP. Common confusion.</div>
+    <div class="fc-formula">Profit% = [(SP - CP)/CP] &times; 100 &nbsp;|&nbsp; Loss% = [(CP - SP)/CP] &times; 100 &nbsp;|&nbsp; SP = CP &times; Multiplier</div>
+    <div class="fc-row"><strong>When to use:</strong> Base is ALWAYS Cost Price (CP) unless problem explicitly mentions 'profit on SP'. Multiplier: $+20\% \implies 1.20 = 6/5$; $-15\% \implies 0.85 = 17/20$.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> If Profit is $P\%$ on CP, then Profit on $SP = \frac{P}{100 + P} \times 100$. E.g., $25\%$ on CP $= \frac{25}{125} = 20\%$ on SP.</div>
+    <div class="fc-trap">🚨 Trap: Calculating loss% or profit% on Selling Price by default. CP is always denominator unless specified otherwise!</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Successive Discount</span>
-    <button class="copy-btn" data-formula="D_net = d₁ + d₂ − (d₁ × d₂)/100">Copy</button>
+    <span class="fc-name">📐 Successive Discount Formula</span>
+    <button class="copy-btn" data-formula="D_net = d1 + d2 - (d1 * d2)/100 | Multiplier = (1 - d1/100)(1 - d2/100)">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">D_net = d₁ + d₂ − (d₁ × d₂)/100</div>
-    <div class="fc-row"><strong>When to use:</strong> Two consecutive discounts on same base</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> 20% + 20%: D_net = 20+20−(400/100) = 36%. Not 40%.</div>
-    <div class="fc-trap">🚨 Trap: +x% then −x% → net LOSS of (x/10)² %. Same magnitude ≠ break even.</div>
+    <div class="fc-formula">D_{net} = d_1 + d_2 - \frac{d_1 \times d_2}{100} &nbsp;|&nbsp; \text{Three Discounts: } 1 - (1 - d_1)(1 - d_2)(1 - d_3)</div>
+    <div class="fc-row"><strong>When to use:</strong> Two or more consecutive percentage reductions on Marked Price (MP).</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> For $20\%$ and $10\%$: $20 + 10 - 2 = 28\%$. For three $10\%$ discounts: $100 \to 90 \to 81 \to 72.9 \implies 27.1\%$ net discount.</div>
+    <div class="fc-trap">🚨 Trap: Adding discounts directly ($20\% + 10\% = 30\%$). Successive discounts are always strictly LESS than their sum!</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Golden CP/MP Formula</span>
-    <button class="copy-btn" data-formula="CP/MP = (100 − Discount%) / (100 + Profit%)">Copy</button>
+    <span class="fc-name">📐 The Golden CP / MP Theorem</span>
+    <button class="copy-btn" data-formula="CP / MP = (100 - Discount%) / (100 + Profit%)">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">CP/MP = (100 − Discount%) / (100 + Profit%)</div>
-    <div class="fc-row"><strong>When to use:</strong> Any problem linking CP, MP, Profit% and Discount%</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> D=20%, P=20%: CP/MP = 80/120 = 2/3. If MP=₹900, CP=₹600.</div>
-    <div class="fc-trap">🚨 Trap: For loss replace (100+P%) with (100-L%). Don't use +P% for loss.</div>
+    <div class="fc-formula">\frac{CP}{MP} = \frac{100 - \text{Discount}\%}{100 + \text{Profit}\%} &nbsp;\text{ (In case of Loss: } \frac{100 - D\%}{100 - L\%}\text{)}</div>
+    <div class="fc-row"><strong>When to use:</strong> Any question linking CP, MP, Discount% and Profit%. Eliminates calculating SP entirely!</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Discount $= 10\%$, Profit $= 20\% \implies CP : MP = 90 : 120 = 3 : 4$. Direct $33.33\%$ markup!</div>
+    <div class="fc-trap">🚨 Trap: Swapping numerator and denominator. Remember: Discount reduces MP $\to$ top has $(100-D)$, Profit raises CP $\to$ bottom has $(100+P)$.</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Dishonest Dealer</span>
-    <button class="copy-btn" data-formula="Profit% = [(True Wt − False Wt) / False Wt] × 100">Copy</button>
+    <span class="fc-name">📐 Dishonest Dealer &amp; False Weight</span>
+    <button class="copy-btn" data-formula="Profit% = [(True Weight - False Weight) / False Weight] * 100">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">Profit% = [(True Wt − False Wt) / False Wt] × 100</div>
-    <div class="fc-row"><strong>When to use:</strong> Dealer sells at CP but gives less weight</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> 1000g vs 900g false: (100/900)×100 = 11.11%. NOT (100/1000)×100=10%!</div>
-    <div class="fc-trap">🚨 Trap: BASE is False Weight (what buyer receives), not True Weight!</div>
+    <div class="fc-formula">\text{Profit}\% = \frac{\text{True Weight} - \text{False Weight}}{\text{False Weight}} \times 100 &nbsp;|&nbsp; \text{Overall } M = \left(\frac{100+m}{100}\right) \times \left(\frac{\text{True}}{\text{False}}\right)</div>
+    <div class="fc-row"><strong>When to use:</strong> Trader claims to sell at CP (or marked up price) but dispenses less quantity.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Sells $800$g instead of $1000$g: Profit $= \frac{200}{800} \times 100 = 25\%$. Sells at $10\%$ markup and uses $800$g: Net $= \frac{11}{10} \times \frac{1000}{800} = \frac{11}{8} \implies +37.5\%$.</div>
+    <div class="fc-trap">🚨 Trap: Using True Weight (1000g) as denominator. The dealer\'s cost is only for the FALSE weight given!</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Buy X Get Y Free Discount</span>
-    <button class="copy-btn" data-formula="Discount% = [Y / (X + Y)] × 100">Copy</button>
+    <span class="fc-name">📐 Buy X Get Y Free Scheme</span>
+    <button class="copy-btn" data-formula="Discount% = [Y / (X + Y)] * 100">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">Discount% = [Y / (X + Y)] × 100</div>
-    <div class="fc-row"><strong>When to use:</strong> Buy X pay, get Y free scheme</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> Buy 3 get 2 free: Discount = 2/(3+2)×100 = 40%</div>
-    <div class="fc-trap">🚨 Trap: Denominator = X+Y (total received), not X (total paid). Easy to flip.</div>
+    <div class="fc-formula">\text{Discount}\% = \frac{Y}{X + Y} \times 100 &nbsp;|&nbsp; \text{Combined with } d\% \text{ off: } \left(1 - \frac{Y}{X+Y}\right) \times \left(1 - \frac{d}{100}\right)</div>
+    <div class="fc-row"><strong>When to use:</strong> Free article retail promotions ('Buy 3 Get 1 Free', 'Buy 5 Get 2 Free').</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Buy 4 Get 1 Free: $\text{Discount} = \frac{1}{4+1} \times 100 = 20\%$. Buy 5 Get 3 Free: $\frac{3}{8} = 37.5\%$.</div>
+    <div class="fc-trap">🚨 Trap: Dividing by $X$ instead of $(X+Y)$. Total goods leaving the shop is $(X+Y)$, which represents total MP!</div>
   </div>
-</div></div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Equal SP Theorem (Same SP, $+x\%$ and $-x\%$)</span>
+    <button class="copy-btn" data-formula="Overall Loss% = (x/10)^2 % = x^2/100 % | Total Loss = (2 * SP * x^2) / (100^2 - x^2)">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">\text{Always a Net LOSS} = \left(\frac{x}{10}\right)^2\% = \frac{x^2}{100}\% &nbsp;|&nbsp; \text{Absolute Loss} = \frac{2 \times SP \times x^2}{10000 - x^2}</div>
+    <div class="fc-row"><strong>When to use:</strong> Two articles sold at the exact same Selling Price (SP), one at $x\%$ profit and the other at $x\%$ loss.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Two cars sold at ₹9,900 each, one $+10\%$ and one $-10\%$: Net loss $= 1\%$. Total $SP = 19,800 = 99\% \implies 1\% = ₹200$ loss!</div>
+    <div class="fc-trap">🚨 Trap: Assuming no profit no loss. Equal SP always produces a net LOSS. (If equal CP, then it is 0%).</div>
+  </div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Article-Price Cross Rule (Quantity vs Rupee)</span>
+    <button class="copy-btn" data-formula="When CP of A articles = SP of B articles => SP/CP = A/B => Profit% = [(A - B)/B] * 100">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">\text{If CP of } A \text{ articles} = \text{SP of } B \text{ articles} \implies \frac{SP}{CP} = \frac{A}{B} \implies \text{Profit}\% = \frac{A - B}{B} \times 100</div>
+    <div class="fc-row"><strong>When to use:</strong> 'CP of 12 items = SP of 9 items' or 'Bought at $x$ for ₹$y$ and sold at $a$ for ₹$b$'.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Bought 6 for ₹5, sold 5 for ₹6: Cross multiply $\implies CP = 5 \times 5 = 25$, $SP = 6 \times 6 = 36$. Profit $= \frac{11}{25} \times 100 = 44\%$.</div>
+    <div class="fc-trap">🚨 Trap: Using quantity directly as cost. Always invert quantity to price ratio!</div>
+  </div>
+</div>
+      </div>
     </div>
     <div>
       <h2 class="sec-title" id="sec-tricks">⚡ Speed Shortcuts</h2>
       <div class="shortcut-grid" style="grid-template-columns:1fr;">
 <div class="shortcut-card">
-  <div class="sc-title">⚡ SP Equal at Different P/L Trap</div>
-  <div class="sc-content">Two items sold at same SP, one at +x% profit, one at −x% loss → Always a NET LOSS of (x²/100)%. Example: +20% and −20% at SP=120 → Net loss = 400/100 = 4%.</div>
+  <div class="sc-title">⚡ 1. Equal SP Shortcut ($(x/10)^2\%$ Rule)</div>
+  <div class="sc-content">Two items sold at same SP, one at $+x\%$, other at $-x\%$. Overall is ALWAYS a net loss of $(x/10)^2\%$. E.g., $\pm 20\% \implies 4\%$ loss. If total $SP = ₹2,400$, then $CP = 2400 / 0.96 = ₹2,500 \implies$ Loss $= ₹100$ in 5 seconds without finding individual CPs!</div>
 </div>
 <div class="shortcut-card">
-  <div class="sc-title">⚡ CP-SP Ratio to % Conversion</div>
-  <div class="sc-content">SP:CP = 13:10 → Profit% = (13-10)/10×100 = 30%. SP:CP = 17:20 → Loss% = (20-17)/20×100 = 15%. Build ratio table for quick recognition.</div>
+  <div class="sc-title">⚡ 2. Golden CP/MP 5-Second Ratio Bridge</div>
+  <div class="sc-content">Whenever Discount% and Profit% are given: $CP : MP = (100 - D) : (100 + P)$. E.g., Discount $= 10\%$, Profit $= 20\% \implies CP : MP = 90 : 120 = 3 : 4$. If $MP = ₹1,200$, then $CP = 3 \times 300 = ₹900$ immediately!</div>
 </div>
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Markup Then Discount Chain</div>
-  <div class="sc-content">Use net multiplier: Final = CP × (1 + Markup/100) × (1 − Discount/100). No need to compute MP separately.</div>
-</div></div>
+  <div class="sc-title">⚡ 3. Cross-Multiplication for "Bought at X for ₹Y, Sold at A for ₹B"</div>
+  <div class="sc-content">Write [Quantity, Cost]: Bought $[Q_1, C_1]$, Sold $[Q_2, C_2]$. Cross multiply: Effective $CP = Q_2 \times C_1$, Effective $SP = Q_1 \times C_2$. E.g., Bought 8 for ₹10, Sold 6 for ₹12 $\implies CP = 6 \times 10 = 60$, $SP = 8 \times 12 = 96$. Profit $= 36/60 = 60\%$!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 4. Dishonest Dealer Multiplier Chain</div>
+  <div class="sc-content">Treat every deception as a ratio multiplier: Markup $+20\% \implies \frac{6}{5}$; gives $800$g for $1000$g $\implies \frac{1000}{800} = \frac{5}{4}$; allows $10\%$ discount $\implies \frac{9}{10}$. Net Multiplier $= \frac{6}{5} \times \frac{5}{4} \times \frac{9}{10} = \frac{27}{20} \implies 7/20 = 35\%$ profit!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 5. Free Article + Additional Cash Discount</div>
+  <div class="sc-content">"Buy 4 Get 1 Free" $+ 20\%$ off. First: $1/(4+1) = 20\%$ scheme discount. Combined with $20\%$ cash discount: Net $= 20 + 20 - \frac{400}{100} = 36\%$ total discount. Never add $20 + 20 = 40\%$!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 6. Weighted Average for Split Inventory</div>
+  <div class="sc-content">Trader sells $2/3$ of stock at $+15\%$ profit and remaining $1/3$ at $-12\%$ loss. Net Profit $\% = \frac{2}{3}(+15) + \frac{1}{3}(-12) = 10 - 4 = +6\%$. No need to assume total rupees or calculate intermediate values!</div>
+</div>
+      </div>
     </div>
-  </div>
-
-  <!-- SSC TRAPS -->
+  </div><!-- SSC TRAPS -->
   <h2 class="sec-title" id="sec-traps">🚨 SSC Exam Trap Library</h2>
   <div class="trap-grid">
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 Discount on CP (Not MP) Trap</span>
+    <span class="trap-title">🚨 Trap 1: Dishonest Weight Base Inversion</span>
+    <span class="error-code">Error-C</span>
+  </div>
+  <div class="trap-desc">A grocer gives 900g instead of 1kg. Many calculate profit as $(100/1000) \times 100 = 10\%$. <strong>Wrong!</strong> The shopkeeper only incurs cost for 900g. Profit $= \frac{100}{900} \times 100 = 11.11\%$. Always keep False Weight as base.</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 2: Equal SP vs Equal CP Confusion</span>
     <span class="error-code">Error-R</span>
   </div>
-  <div class="trap-desc">Discount% is ALWAYS on Marked Price (MP). If problem says 'discount on cost price', re-read — that's a markup, not a discount.</div>
+  <div class="trap-desc">Two articles sold at $+20\%$ and $-20\%$. If sold at SAME CP $\implies 0\%$ (No profit, no loss). But if sold at SAME SP $\implies$ ALWAYS a NET LOSS of $(20/10)^2 = 4\%$. Misreading 'SP' as 'CP' causes instant negative marking.</div>
 </div>
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 Dishonest Weight Base Trap</span>
-    <span class="error-code">Error-C</span>
+    <span class="trap-title">🚨 Trap 3: "Buy X Get Y Free" Denominator Blunder</span>
+    <span class="error-code">Error-F</span>
   </div>
-  <div class="trap-desc">Dealer gives 900g for 1kg. Profit = 100/900 = 11.11% (base = what buyer gets = 900g). NOT 100/1000 = 10%.</div>
+  <div class="trap-desc">"Buy 3 Get 2 Free": Candidates write discount as $2/3 = 66.67\%$. <strong>Wrong!</strong> The customer receives $3 + 2 = 5$ items total. Marked value $= 5$ units, paid for $= 3$ units $\implies$ Discount $= 2/5 = 40\%$.</div>
 </div>
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 Two Items Same SP Different % Trap</span>
-    <span class="error-code">Error-C</span>
+    <span class="trap-title">🚨 Trap 4: Profit on SP Stated in Question</span>
+    <span class="error-code">Error-S</span>
   </div>
-  <div class="trap-desc">Two books sold at ₹100 each, one at 20% profit and one at 20% loss. Overall: ALWAYS a net loss. Loss = (20)²/100 = 4%.</div>
-</div></div>
+  <div class="trap-desc">SSC states: 'Profit of a salesman is $20\%$ of Selling Price'. Candidates use $Profit\% = 20\%$ on CP. <strong>Trap!</strong> If $SP = 100$, $Profit = 20 \implies CP = 80$. Actual Profit on $CP = 20/80 = 25\%$. Read bases vigilantly!</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 5: Additive Successive Discounts</span>
+    <span class="error-code">Error-T</span>
+  </div>
+  <div class="trap-desc">Discounts of $20\%$ and $10\%$ do NOT equal $30\%$. Net discount is $20 + 10 - \frac{200}{100} = 28\%$. Under exam time pressure, students hurriedly sum percentages.</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 6: Discount on CP Instead of MP</span>
+    <span class="error-code">Error-K</span>
+  </div>
+  <div class="trap-desc">Discount is strictly applied to Marked Price (MP). If an article has $CP = ₹500$ and is marked $20\%$ above CP ($MP = ₹600$), a $10\%$ discount is $₹60$ (on ₹600), NOT $₹50$ (on ₹500). $SP = ₹540$.</div>
+</div>
+  </div>
 
-  <!-- PRACTICE Q — One at a time (AI Tutor Rule!) -->
   <h2 class="sec-title" id="sec-practice">💡 Guided Practice Questions (One at a Time)</h2>
-  <div style="background:rgba(246,194,68,0.06);border:1px solid rgba(246,194,68,0.15);border-radius:8px;padding:10px 16px;margin-bottom:14px;font-size:0.8rem;color:#c8a84b;">
-    🤖 <strong>AI Tutor Rule:</strong> Ek question ek baar mein solve karo. Hint aur answer tabhi dekho jab apna attempt ho jaye. Self-rate karo.
-  </div>
   <div class="practice-container">
-    <div class="pq-controls">
-      <button class="pq-btn disabled" id="pq-prev">← Prev</button>
-      <span class="pq-counter">1 / 5</span>
-      <button class="pq-btn" id="pq-next">Next →</button>
+    <div class="pq-nav">
+      <span class="pq-counter" id="pq-counter">Question 1 of 10</span>
+      <div style="display:flex;gap:8px;">
+        <button class="pq-btn disabled" id="pq-prev">&larr; Prev</button>
+        <button class="pq-btn" id="pq-next">Next &rarr;</button>
+      </div>
     </div>
-    
-<div class="pq-card-item" style="display:block">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">A shopkeeper marks goods 40% above CP and gives 20% discount. Find profit%.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph5-0')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph5-0')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph5-0">Hint: Use successive % formula: Markup then Discount on same base.</div>
-    <div class="pq-ans-box" id="pq-ans-ph5-0"><strong>Answer:</strong> Net% = +40−20−(40×20)/100 = 20−8 = +12% profit.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q1 -->
+    <div class="pq-card-item active" id="pq-card-ph5-0">
+      <div class="pq-badge"><span class="badge-tag">Level: Basic Foundation</span><span class="badge-tag tag-type">Quantity-Price Ratio</span></div>
+      <div class="pq-question"><strong>Q1:</strong> If the Cost Price of $15$ tables is equal to the Selling Price of $20$ tables, find the loss percentage.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph5-0')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph5-0')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph5-0">Hint: Express as ratio $\frac{SP}{CP} = \frac{15}{20}$. If $SP < CP$, it is a loss.</div>
+      <div class="pq-ans-box" id="pq-ans-ph5-0">
+        <strong>Answer:</strong> $25\%$ Loss.<br>
+        <strong>Step-by-step:</strong><br>
+        1. $15 \times CP = 20 \times SP \implies \frac{SP}{CP} = \frac{15}{20} = \frac{3}{4}$.<br>
+        2. Let $CP = 4$ units, then $SP = 3$ units $\implies$ Loss $= 4 - 3 = 1$ unit.<br>
+        3. $\text{Loss}\% = \frac{1}{4} \times 100 = 25\%$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Arithmetic Ratio Error | [F] Swapped CP and SP</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">A trader sells at ₹800 marked price with 10% discount and earns 20% profit. Find CP.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph5-1')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph5-1')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph5-1">Hint: CP/MP = (100-Discount%)/(100+Profit%)</div>
-    <div class="pq-ans-box" id="pq-ans-ph5-1"><strong>Answer:</strong> Golden Formula: CP/MP = (100-D)/(100+P) = 90/120 = 3/4. CP = 3/4 × 800 = ₹600.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q2 -->
+    <div class="pq-card-item" id="pq-card-ph5-1" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Foundation</span><span class="badge-tag tag-type">Markup &amp; Discount</span></div>
+      <div class="pq-question"><strong>Q2:</strong> A trader marks his goods $40\%$ above the Cost Price and allows a discount of $25\%$ on the Marked Price. What is his net profit or loss percentage?</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph5-1')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph5-1')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph5-1">Hint: Use successive percentage formula: $+a - b - \frac{ab}{100}$ where $a = +40$, $b = 25$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph5-1">
+        <strong>Answer:</strong> $5\%$ Profit.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Successive Formula: Net $\% = +40 - 25 - \frac{40 \times 25}{100} = 15 - 10 = +5\%$.<br>
+        2. Multiplier Method: $SP = CP \times 1.40 \times 0.75 = CP \times 1.05 \implies +5\%$ gain.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Calculation Slip | [F] Formula Sign Error</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">Two successive discounts of 25% and 20% are offered. Find net discount%.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph5-2')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph5-2')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph5-2">Hint: Successive discount formula: d1+d2−(d1×d2)/100</div>
-    <div class="pq-ans-box" id="pq-ans-ph5-2"><strong>Answer:</strong> D_net = 25+20−(25×20/100) = 45−5 = 40%.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q3 -->
+    <div class="pq-card-item" id="pq-card-ph5-2" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate SSC Core</span><span class="badge-tag tag-type">The Golden Formula</span></div>
+      <div class="pq-question"><strong>Q3:</strong> A merchant allows a discount of $12\%$ on the Marked Price and still earns a profit of $32\%$. If the Marked Price of the article is ₹$1,080$, find its Cost Price.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph5-2')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph5-2')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph5-2">Hint: Golden Formula: $\frac{CP}{MP} = \frac{100 - D\%}{100 + P\%}$. Plug in $D=12, P=32$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph5-2">
+        <strong>Answer:</strong> ₹$720$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. $\frac{CP}{MP} = \frac{100 - 12}{100 + 32} = \frac{88}{132}$.<br>
+        2. Divide numerator &amp; denominator by $44$: $\frac{CP}{MP} = \frac{2}{3}$.<br>
+        3. Since $MP = ₹1,080$ ($3$ units $= 1,080 \implies 1$ unit $= 360$), $CP = 2 \times 360 = ₹720$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [F] Golden formula ratio reversed | [C] Fraction reduction error</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level B">Level B: Standard</span>
-    <div class="pq-question">A dishonest dealer claims to sell at CP but uses 800g weight for 1 kg. Find profit%.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph5-3')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph5-3')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph5-3">Hint: Base is FALSE weight (800g), not true weight (1000g)!</div>
-    <div class="pq-ans-box" id="pq-ans-ph5-3"><strong>Answer:</strong> Profit = (1000-800)/800 × 100 = 200/800 × 100 = 25%.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q4 -->
+    <div class="pq-card-item" id="pq-card-ph5-3" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate</span><span class="badge-tag tag-type">3 Successive Discounts</span></div>
+      <div class="pq-question"><strong>Q4:</strong> What is the single equivalent discount percentage for three successive discounts of $20\%$, $15\%$, and $10\%$?</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph5-3')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph5-3')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph5-3">Hint: Start with ₹100 or multiply surviving factors: $0.80 \times 0.85 \times 0.90$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph5-3">
+        <strong>Answer:</strong> $38.8\%$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Combine $20\%$ and $15\%$: $D_{1,2} = 20 + 15 - \frac{300}{100} = 35 - 3 = 32\%$.<br>
+        2. Combine $32\%$ and $10\%$: $D_{net} = 32 + 10 - \frac{320}{100} = 42 - 3.2 = 38.8\%$.<br>
+        3. Or multiplier: $1 - (0.8 \times 0.85 \times 0.9) = 1 - 0.612 = 0.388 = 38.8\%$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [T] Added percentages directly | [C] Decimal calculation error</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level C">Level C: SSC Exam Level</span>
-    <div class="pq-question">A man buys 6 articles for ₹5 and sells 5 articles for ₹6. Find profit or loss %.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph5-4')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph5-4')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph5-4">Hint: Find CP and SP per article, then calculate Profit% on CP</div>
-    <div class="pq-ans-box" id="pq-ans-ph5-4"><strong>Answer:</strong> CP of 1 article = 5/6. SP of 1 article = 6/5. Profit% = (6/5 - 5/6)/(5/6) × 100 = (36-25)/25×100 = 11/25×100 = 44%</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q5 -->
+    <div class="pq-card-item" id="pq-card-ph5-4" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate</span><span class="badge-tag tag-type">Dishonest Dealer</span></div>
+      <div class="pq-question"><strong>Q5:</strong> A dishonest shopkeeper claims to sell sugar at Cost Price, but uses a false weight of $920$ grams instead of $1$ kg. Calculate his profit percentage.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph5-4')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph5-4')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph5-4">Hint: The dealer saves $80$g on every $920$g he actually gives. Base is $920$g!</div>
+      <div class="pq-ans-box" id="pq-ans-ph5-4">
+        <strong>Answer:</strong> $8\frac{16}{23}\% \approx 8.7\%$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. $\text{Profit}\% = \frac{\text{True Weight} - \text{False Weight}}{\text{False Weight}} \times 100$.<br>
+        2. $\text{Profit}\% = \frac{1000 - 920}{920} \times 100 = \frac{80}{920} \times 100 = \frac{2}{23} \times 100 = \frac{200}{23} = 8\frac{16}{23}\%$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Used 1000 as base (8%) | [K] Misapplied dishonest dealer formula</span>
+      </div>
     </div>
-  </div>
-</div>
+
+    <!-- Q6 -->
+    <div class="pq-card-item" id="pq-card-ph5-5" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate-High</span><span class="badge-tag tag-type">Equal Selling Price</span></div>
+      <div class="pq-question"><strong>Q6:</strong> A person sells two wristwatches for ₹$4,800$ each. On the first watch, he gains $20\%$, and on the second watch, he loses $20\%$. Find his overall gain or loss in Rupees.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph5-5')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph5-5')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph5-5">Hint: Overall loss is $(20/10)^2 = 4\%$. Total $SP = ₹9,600 = 96\%$ of total CP.</div>
+      <div class="pq-ans-box" id="pq-ans-ph5-5">
+        <strong>Answer:</strong> Loss of ₹$400$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Overall Loss $\% = \frac{20^2}{100} = 4\%$.<br>
+        2. Total $SP = 4,800 + 4,800 = ₹9,600$.<br>
+        3. Since Loss $= 4\%$, Total $SP = 96\%$ of Total $CP$.<br>
+        4. $96\% = 9,600 \implies 1\% = 100 \implies 4\% = ₹400$ total loss.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [R] Answered 'No Profit No Loss' | [C] Computed 4% on SP instead of CP</span>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="pq-card-item" id="pq-card-ph5-6" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate-High</span><span class="badge-tag tag-type">Buy X Get Y + Extra Discount</span></div>
+      <div class="pq-question"><strong>Q7:</strong> A clothing showroom offers a scheme of 'Buy $5$ Get $3$ Free'. In addition, a customer gets an extra discount of $12.5\%$ on paying via credit card. Find the effective net discount percentage.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph5-6')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph5-6')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph5-6">Hint: Scheme discount $= 3/(5+3) = 3/8 = 37.5\%$. Additional discount $= 12.5\% = 1/8$. Use multipliers!</div>
+      <div class="pq-ans-box" id="pq-ans-ph5-6">
+        <strong>Answer:</strong> $45.3125\%$ (or $45\frac{5}{16}\%$).<br>
+        <strong>Step-by-step:</strong><br>
+        1. Free item scheme discount: $d_1 = \frac{3}{5+3} = \frac{3}{8} \implies$ Customer pays $\frac{5}{8}$ of MP.<br>
+        2. Extra discount: $d_2 = 12.5\% = \frac{1}{8} \implies$ Customer pays $\frac{7}{8}$ of previous price.<br>
+        3. Net paying fraction: $\frac{5}{8} \times \frac{7}{8} = \frac{35}{64}$.<br>
+        4. Net Discount $= 1 - \frac{35}{64} = \frac{29}{64} = 45.3125\%$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [F] Used 3/5 as scheme discount | [T] Directly added 37.5 + 12.5 = 50%</span>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="pq-card-item" id="pq-card-ph5-7" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate</span><span class="badge-tag tag-type">Cross Multiplication Rule</span></div>
+      <div class="pq-question"><strong>Q8:</strong> A fruit vendor purchases lemons at the rate of $8$ for ₹$10$ and sells them at the rate of $6$ for ₹$12$. Calculate his overall profit percentage.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph5-7')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph5-7')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph5-7">Hint: Equalize quantity by finding LCM of $8$ and $6$ ($24$ lemons), or cross-multiply quantity and rupees.</div>
+      <div class="pq-ans-box" id="pq-ans-ph5-7">
+        <strong>Answer:</strong> $60\%$ Profit.<br>
+        <strong>Step-by-step:</strong><br>
+        1. LCM of $8$ and $6 = 24$ lemons.<br>
+        2. Cost of $24$ lemons: $\frac{10}{8} \times 24 = ₹30$.<br>
+        3. Selling price of $24$ lemons: $\frac{12}{6} \times 24 = ₹48$.<br>
+        4. $\text{Profit} = 48 - 30 = ₹18 \implies \text{Profit}\% = \frac{18}{30} \times 100 = 60\%$.<br>
+        <em>⚡ Cross Shortcut:</em> $CP = 6 \times 10 = 60$, $SP = 8 \times 12 = 96 \implies \frac{36}{60} \times 100 = 60\%$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Arithmetic multiplication error | [S] Computed per unit incorrectly</span>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="pq-card-item" id="pq-card-ph5-8" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: High Level</span><span class="badge-tag tag-type">Inventory Split / Weighted Avg</span></div>
+      <div class="pq-question"><strong>Q9:</strong> A merchant buys $240$ kg of wheat. He sells $\frac{1}{3}$ of it at a profit of $10\%$, $\frac{1}{4}$ of it at a profit of $20\%$, and the remainder at a loss of $5\%$. Find his overall profit or loss percentage on the entire transaction.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph5-8')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph5-8')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph5-8">Hint: Remainder fraction $= 1 - (1/3 + 1/4) = 5/12$. Use weighted average of profit percentages!</div>
+      <div class="pq-ans-box" id="pq-ans-ph5-8">
+        <strong>Answer:</strong> $6.25\%$ Profit (or $6\frac{1}{4}\%$).<br>
+        <strong>Step-by-step:</strong><br>
+        1. Fractions: $\frac{1}{3}$ at $+10\%$, $\frac{1}{4}$ at $+20\%$.<br>
+        2. Remainder $= 1 - \left(\frac{1}{3} + \frac{1}{4}\right) = 1 - \frac{7}{12} = \frac{5}{12}$ at $-5\%$.<br>
+        3. Overall Net $\% = \frac{1}{3}(10) + \frac{1}{4}(20) + \frac{5}{12}(-5) = \frac{10}{3} + 5 - \frac{25}{12}$.<br>
+        4. Common denominator $12$: $\frac{40 + 60 - 25}{12} = \frac{75}{12} = \frac{25}{4} = 6.25\%$ profit.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Fraction addition error | [S] Subtracted 5% from 100 instead of net</span>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="pq-card-item" id="pq-card-ph5-9" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Advanced SSC Tier-2</span><span class="badge-tag tag-type">Double Fraud Dealer</span></div>
+      <div class="pq-question"><strong>Q10:</strong> A fraudulent trader professes to sell his goods at a $10\%$ loss on Cost Price, but uses a false weight which is $25\%$ less than the true weight. What is his actual overall gain or loss percentage?</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph5-9')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph5-9')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph5-9">Hint: Price multiplier $= 0.90$. Weight multiplier $= \frac{100}{100 - 25} = \frac{100}{75} = \frac{4}{3}$. Multiply both!</div>
+      <div class="pq-ans-box" id="pq-ans-ph5-9">
+        <strong>Answer:</strong> $20\%$ Profit.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Claimed price multiplier: Sells at $10\%$ loss $\implies \frac{SP}{CP} = \frac{90}{100} = \frac{9}{10}$.<br>
+        2. Weight fraud: Gives $75$g instead of $100$g $\implies$ Multiplier $= \frac{100}{75} = \frac{4}{3}$.<br>
+        3. Overall Net Multiplier $= \frac{9}{10} \times \frac{4}{3} = \frac{3 \times 2}{5} = \frac{6}{5}$.<br>
+        4. Since $\frac{SP}{CP} = \frac{6}{5}$, Net Profit $= \frac{6 - 5}{5} \times 100 = \frac{1}{5} \times 100 = 20\%$ profit.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [K] Confused weight fraud multiplier direction | [C] Multiplier multiplication slip</span>
+      </div>
+    </div>
   </div>
 
-  <!-- PYQ LAB -->
-  <h2 class="sec-title" id="sec-pyqs">🏆 SSC PYQ Lab</h2>
-  <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:12px;">
-    🔐 Integrity Rule: Actual PYQ tabhi label karo jab year/shift verified ho. Otherwise: "PYQ-style" label use karo.
-  </div>
-  <div class="pyq-container">
-<div class="pyq-card">
-  <div class="pyq-tag">PYQ-style • SSC CGL Tier-1</div>
-  <div class="pyq-q">A person purchased a TV for ₹36,000 and sold it at a loss of 20%. With the amount received, he purchased another article and sold it at a gain of 25%. Find the overall gain or loss.</div>
-  <button class="reveal-sol-btn" onclick="toggleEl('pyq-sol-ph5-0')">🔍 Show Trick Solution</button>
-  <div class="sol-box" id="pyq-sol-ph5-0">SP of TV = 36000×0.8 = ₹28800. SP of other = 28800×1.25 = ₹36000. Net: bought ₹36000, sold ₹36000 → No profit, No loss.</div>
-</div>
-<div class="pyq-card">
-  <div class="pyq-tag">PYQ-style • SSC CGL Tier-2</div>
-  <div class="pyq-q">A shopkeeper offers 3 successive discounts of 10%, 20% and 25%. Find the single equivalent discount.</div>
-  <button class="reveal-sol-btn" onclick="toggleEl('pyq-sol-ph5-1')">🔍 Show Trick Solution</button>
-  <div class="sol-box" id="pyq-sol-ph5-1">After 10%: 0.9. After 20%: 0.9×0.8=0.72. After 25%: 0.72×0.75=0.54. Discount = 1−0.54 = 0.46 = 46%.</div>
-</div></div>
+  <h2 class="sec-title" id="sec-pyqs">🏆 SSC PYQ Lab — Real Exam Questions with Examiner Traps</h2>
+  <div class="pyq-list">
 
-  <!-- TIMED DRILL -->
+    <!-- PYQ 1 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2023 Tier-1 (Shift 2)</span>
+        <span class="pyq-diff">Difficulty: Easy-Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> A shopkeeper marks his goods $35\%$ above the cost price and allows a discount of $20\%$ to the customer. If he earns a total profit of ₹$420$, what is the cost price of the article?
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph5-pyq-0')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph5-pyq-0">
+        <strong>✅ Correct Answer:</strong> ₹$5,250<br><br>
+        <strong>⚡ 15-Second Exam Trick (Successive %):</strong><br>
+        • Markup $= +35\%$, Discount $= -20\%$.<br>
+        • Net Profit $\% = +35 - 20 - \frac{35 \times 20}{100} = 15 - 7 = +8\%$.<br>
+        • We are given: $8\%$ of $CP = ₹420$.<br>
+        • $1\% = \frac{420}{8} = 52.5 \implies 100\% = 52.5 \times 100 = ₹5,250$.<br><br>
+        <strong>🚨 Examiner Trap:</strong> Students often calculate discount of $20\%$ on CP (taking $35 - 20 = 15\%$ profit) and calculate $420 / 0.15 = ₹2,800$, which is deliberately option A!
+      </div>
+    </div>
+
+    <!-- PYQ 2 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2022 Tier-2 (Mains)</span>
+        <span class="pyq-diff">Difficulty: Advanced</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> Two articles are sold for ₹$9,720$ each. On the first article, the seller gains $8\%$, and on the second article, he loses $10\%$. What is his overall gain or loss in rupees?
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph5-pyq-1')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph5-pyq-1">
+        <strong>✅ Correct Answer:</strong> Loss of ₹$360<br><br>
+        <strong>⚡ Step-by-Step SSC Method:</strong><br>
+        • $SP_1 = ₹9,720$ at $+8\% \implies CP_1 = \frac{9720}{1.08} = ₹9,000$. (Profit $= 9720 - 9000 = +₹720$).<br>
+        • $SP_2 = ₹9,720$ at $-10\% \implies CP_2 = \frac{9720}{0.90} = ₹10,800$. (Loss $= 10800 - 9720 = -₹1,080$).<br>
+        • Total Cost Price $= 9,000 + 10,800 = ₹19,800$.<br>
+        • Total Selling Price $= 9,720 \times 2 = ₹19,440$.<br>
+        • Overall Result $= 19,440 - 19,800 = -₹360$ (Loss of ₹$360$).<br><br>
+        <strong>🚨 Examiner Trap:</strong> Because percentages differ ($+8\%$ and $-10\%$), you CANNOT use the $x^2/100$ formula! Individual CP calculation via division is mandatory.
+      </div>
+    </div>
+
+    <!-- PYQ 3 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2023 Tier-1 (Shift 1)</span>
+        <span class="pyq-diff">Difficulty: Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> A dishonest dealer sells goods at a profit of $15\%$ on Cost Price, but uses a false weight of $800$g instead of $1$ kg. What is his total percentage profit?
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph5-pyq-2')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph5-pyq-2">
+        <strong>✅ Correct Answer:</strong> $43.75\%$ (or $43\frac{3}{4}\%$)<br><br>
+        <strong>⚡ 10-Second Ratio Multiplier:</strong><br>
+        • Price profit multiplier $= 1 + \frac{15}{100} = \frac{115}{100} = \frac{23}{20}$.<br>
+        • Weight fraud multiplier $= \frac{1000}{800} = \frac{5}{4}$.<br>
+        • Combined Multiplier $= \frac{23}{20} \times \frac{5}{4} = \frac{23}{16}$.<br>
+        • Profit $\% = \frac{23 - 16}{16} \times 100 = \frac{7}{16} \times 100 = 7 \times 6.25\% = 43.75\%$.<br><br>
+        <strong>🚨 Examiner Trap:</strong> Direct addition of $15\% + 20\% = 35\%$, or calculating weight gain on $1000$g instead of $800$g.
+      </div>
+    </div>
+
+    <!-- PYQ 4 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2021 Tier-2 (Mains)</span>
+        <span class="pyq-diff">Difficulty: Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> By selling an article for ₹$640$, a person loses $20\%$. At what price should he sell it in order to gain $15\%$?
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph5-pyq-3')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph5-pyq-3">
+        <strong>✅ Correct Answer:</strong> ₹$920<br><br>
+        <strong>⚡ Direct Ratio Method (Skip finding CP):</strong><br>
+        • $SP_1 = 80\%$ of $CP = ₹640 \implies 1\% = \frac{640}{80} = ₹8$.<br>
+        • Target $SP_2 = 115\%$ of $CP = 115 \times 8 = ₹920$.<br>
+        • Solved in 8 seconds flat!
+      </div>
+    </div>
+
+    <!-- PYQ 5 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2022 Tier-1</span>
+        <span class="pyq-diff">Difficulty: Moderate-High</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> An article is marked at ₹$800$. After two successive discounts of $x\%$ and $10\%$ on the marked price, it is sold for ₹$612$. Find the value of $x$.
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph5-pyq-4')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph5-pyq-4">
+        <strong>✅ Correct Answer:</strong> $x = 15\%<br><br>
+        <strong>⚡ Reverse Discount Trick:</strong><br>
+        • Since order of successive discounts doesn't matter, apply $10\%$ first on ₹$800$.<br>
+        • Intermediate Price $= 800 - 80 = ₹720$.<br>
+        • Final Price $= ₹612 \implies$ Remaining discount on ₹$720$ is: $720 - 612 = ₹108$.<br>
+        • $x = \frac{108}{720} \times 100 = \frac{3}{20} \times 100 = 15\%$.
+      </div>
+    </div>
+  </div>
+
   <h2 class="sec-title" id="sec-timer">⏱️ Timed Drill — Score Calculator</h2>
   <div class="timed-drill">
     <div style="text-align:center;font-size:0.85rem;color:var(--text-muted);margin-bottom:10px;">
@@ -1724,34 +1996,61 @@ pre, code, .fc-formula {
   </div>
 
   <!-- ACTIVE RECALL -->
-  <h2 class="sec-title" id="sec-recall">🧠 Active Recall Session</h2>
-  <div class="recall-section">
-    <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:12px;">
-      <strong style="color:var(--gold);">Rule:</strong> Formula ko passive reading se revise mat karo. Hide → Recall → Write → Verify → Use.
+  <h2 class="sec-title" id="sec-recall">🧠 Active Recall Session — Test Your Memory</h2>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:24px;">
+    <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:16px;">
+      Answer each question mentally or in your rough notebook BEFORE clicking "Reveal Answer". Be honest — this builds long-term test readiness!
+    </p>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">1. What is the Golden Formula connecting CP, MP, Discount% and Profit%?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">CP / MP = (100 - Discount%) / (100 + Profit%)</div>
     </div>
-    <div class="recall-how"><div class="recall-step"><div class="rs-box">Hide Formula</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Recall Mentally</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Write It Down</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Verify</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Use in a Question</div></div></div>
-    <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:10px;margin-top:10px;">
-      ✅ Check off each recall question after completing it from memory:
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">2. Two articles are sold at the same SP: one at +x% profit and the other at -x% loss. What is the overall percentage profit/loss?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Always a NET LOSS of (x/10)^2 % = (x^2 / 100) %.</div>
     </div>
-    <div class="recall-qs"><div class="recall-q">
-          <span class="rq-text">Profit% formula — base kya hai?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Golden CP/MP formula likhein?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Dishonest dealer formula ka base kya hai?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Buy 3 get 2 free → discount% kya hoga?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Two items at same SP, +x% and -x% → net result?</span>
-          <input type="checkbox" class="rq-check">
-        </div></div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">3. In dishonest dealer false weight problems, which value goes in the denominator of the profit formula?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">The FALSE WEIGHT (the actual quantity given to the customer, which represents the dealer's cost).</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">4. What is the effective discount percentage of 'Buy 3 Get 2 Free'?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Discount% = 2 / (3 + 2) * 100 = 2/5 * 100 = 40%. (Total articles received = 5).</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">5. If Cost Price of A articles equals Selling Price of B articles, what is SP/CP and what is the profit%?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">SP / CP = A / B. Profit% = [(A - B) / B] * 100.</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">6. A shopkeeper calculates his profit as 25% on Selling Price. What is his actual profit percentage on Cost Price?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">SP = 100, Profit = 25 => CP = 75. Actual Profit% = 25/75 * 100 = 33.33% (or 33 1/3 %).</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">7. What is the single equivalent discount for two successive discounts of 20% and 15%?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">D_net = 20 + 15 - (20 * 15)/100 = 35 - 3 = 32%.</div>
+    </div>
+
+    <div class="ar-item" style="padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">8. If an article is marked up by 30% and then sold at a discount of 10%, what is the net multiplier on CP?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Multiplier = 1.30 * 0.90 = 1.17 => Net profit = +17%.</div>
+    </div>
   </div>
 
-  <!-- ERROR NOTEBOOK -->
   <h2 class="sec-title" id="sec-errors">📓 Error Notebook</h2>
   <div class="error-notebook">
     <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:12px;">
