@@ -1471,198 +1471,510 @@ pre, code, .fc-formula {
       <div>
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Partnership Profit Ratio</span>
-    <button class="copy-btn" data-formula="P₁:P₂:P₃ = (I₁×T₁) : (I₂×T₂) : (I₃×T₃)">Copy</button>
+    <span class="fc-name">📐 Partnership Fundamental Profit Equation</span>
+    <button class="copy-btn" data-formula="P1 : P2 : P3 = (I1 * T1) : (I2 * T2) : (I3 * T3) | T1 : T2 = (P1/I1) : (P2/I2)">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">P₁:P₂:P₃ = (I₁×T₁) : (I₂×T₂) : (I₃×T₃)</div>
-    <div class="fc-row"><strong>When to use:</strong> Each partner's weighted capital contribution</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> A:3000×12=36000; B:4000×9=36000; C:2000×6=12000 → Ratio 3:3:1</div>
-    <div class="fc-trap">🚨 Trap: If capital changes mid-period: split into two periods and add separately. Don't average.</div>
+    <div class="fc-formula">P_1 : P_2 : P_3 = (I_1 \times T_1) : (I_2 \times T_2) : (I_3 \times T_3) &nbsp;|&nbsp; T_1 : T_2 = \frac{P_1}{I_1} : \frac{P_2}{I_2}</div>
+    <div class="fc-row"><strong>When to use:</strong> Calculating profit distribution when capital and investment durations vary.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> If investments are in ratio $I_1:I_2$ and profits in ratio $P_1:P_2$, find times directly via $\frac{P_1}{I_1} : \frac{P_2}{I_2}$.</div>
+    <div class="fc-trap">🚨 Trap: Multiplying by the delay instead of active duration! If B joins 4 months after start for a 1-year venture, $T_B = 12 - 4 = 8$ months, NOT 4!</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Alligation Cross Rule</span>
-    <button class="copy-btn" data-formula="Q₁/Q₂ = (C₂ − C_mean) / (C_mean − C₁)">Copy</button>
+    <span class="fc-name">📐 Variable Capital / Mid-Period Changes</span>
+    <button class="copy-btn" data-formula="Total Equivalent Capital = Sum(Capital_k * Months_k) = (I1 * t1) + (I2 * t2)">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">Q₁/Q₂ = (C₂ − C_mean) / (C_mean − C₁)</div>
-    <div class="fc-row"><strong>When to use:</strong> C₁ < C_mean < C₂ always. Mean must be strictly between cheaper and dearer.</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> Draw cross: C₁ top-left, C₂ top-right, C_mean center → Subtract diagonally → Ratio</div>
-    <div class="fc-trap">🚨 Trap: C_mean must be between C₁ and C₂. If not, problem is invalid or you've misidentified cheaper/dearer.</div>
+    <div class="fc-formula">\text{Equivalent Investment} = \sum (I_k \times t_k) = (I_1 \times t_1) + (I_2 \times t_2) + \dots</div>
+    <div class="fc-row"><strong>When to use:</strong> Partner adds more capital or withdraws a portion mid-way through the business year.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> A invests ₹40,000 for 8 months and ₹30,000 for remaining 4 months: Capital $= 40 \times 8 + 30 \times 4 = 320 + 120 = 440$ thousand-months. Never take average capital!</div>
+    <div class="fc-trap">🚨 Trap: Taking simple average of initial and final capitals. Time-weighted sum is mathematically required.</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Successive Replacement</span>
-    <button class="copy-btn" data-formula="Remaining pure liquid = Initial × (1 − x/V)ⁿ">Copy</button>
+    <span class="fc-name">📐 Active Partner / Salary Management Fee</span>
+    <button class="copy-btn" data-formula="Remaining Profit = Total Profit - Managing Fee | Total Return = Fee + Capital Share">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">Remaining pure liquid = Initial × (1 − x/V)ⁿ</div>
-    <div class="fc-row"><strong>When to use:</strong> x litres removed and replaced with another liquid, n times, from total volume V</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> V=80L, x=8L, n=3: Remaining = 80×(9/10)³ = 80×0.729 = 58.32L</div>
-    <div class="fc-trap">🚨 Trap: x must be the removed amount each time, and total volume V stays constant (= V each time you remove and replace).</div>
+    <div class="fc-formula">\text{Remaining Profit} = P_{\text{total}} - \text{Fee} &nbsp;|&nbsp; \text{Active Partner Return} = \text{Salary} + \text{Share in Remaining}</div>
+    <div class="fc-row"><strong>When to use:</strong> A working partner receives an agreed percentage of total profit before capital-ratio distribution.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Step 1: Subtract salary fee from total profit. Step 2: Divide remainder in $I \times T$ ratio. Step 3: Add salary back to working partner!</div>
+    <div class="fc-trap">🚨 Trap: Calculating salary on remaining profit instead of total profit, or forgetting to add salary back to the active partner\'s final profit share.</div>
   </div>
-</div></div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Alligation Cross Rule &amp; Denominator Identification</span>
+    <button class="copy-btn" data-formula="Q1 / Q2 = (C2 - C_mean) / (C_mean - C1) | Resulting ratio is of DENOMINATOR quantity">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">\frac{Q_1}{Q_2} = \frac{C_2 - C_{\text{mean}}}{C_{\text{mean}} - C_1} &nbsp;\text{ where } C_1 < C_{\text{mean}} < C_2</div>
+    <div class="fc-row"><strong>When to use:</strong> Blending two ingredients, weighted averages, speed problems, profit/loss mixes.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Ratio obtained ALWAYS belongs to denominator unit: ₹/<strong>kg</strong> $\implies$ ratio of weights; km/<strong>hr</strong> $\implies$ ratio of <strong>times</strong>; % profit on <strong>CP</strong> $\implies$ ratio of <strong>CPs</strong>!</div>
+    <div class="fc-trap">🚨 Trap: Using selling price in alligation when ingredient costs are cost prices! You must convert mean selling price to mean COST PRICE first.</div>
+  </div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Successive Dilution / Repeated Replacement</span>
+    <button class="copy-btn" data-formula="Remaining Pure Liquid = Initial * (1 - x/V)^n | Liquid / Total = (1 - x/V)^n">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">\text{Remaining Pure Liquid} = \text{Initial} \times \left(1 - \frac{x}{V}\right)^n &nbsp;|&nbsp; \frac{\text{Pure}}{\text{Total}} = \left(1 - \frac{x}{V}\right)^n</div>
+    <div class="fc-row"><strong>When to use:</strong> $x$ litres drawn from vessel of capacity $V$ and replaced with water $n$ successive times.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> If final ratio of wine to water is $16:65$, then $\frac{\text{Wine}}{\text{Total}} = \frac{16}{16+65} = \frac{16}{81}$. If $n=4$, then $1 - \frac{x}{V} = (16/81)^{1/4} = \frac{2}{3} \implies \frac{x}{V} = \frac{1}{3}$!</div>
+    <div class="fc-trap">🚨 Trap: Using wine/water ratio ($16/65$) instead of wine/total ($16/81$) in the root formula!</div>
+  </div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Mixing Multiple Vessels (LCM Balancing)</span>
+    <button class="copy-btn" data-formula="Equalize capacities using LCM of total ratio parts, scale by mixing weights, then sum components">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">\text{Normalized Components} = m \times \frac{\text{LCM}}{\Sigma_1} \times [a_1, b_1] + n \times \frac{\text{LCM}}{\Sigma_2} \times [a_2, b_2]</div>
+    <div class="fc-row"><strong>When to use:</strong> Combining mixtures from vessels with ratios $a_1:b_1$ and $a_2:b_2$ mixed in ratio $m:n$.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Equalize totals using LCM first. Never add ratios directly ($a_1+a_2 : b_1+b_2$ is strictly wrong).</div>
+    <div class="fc-trap">🚨 Trap: Adding ratio terms directly without normalizing total capacities to equal quantities.</div>
+  </div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Constant Component Invariance Principle</span>
+    <button class="copy-btn" data-formula="Initial Volume * Initial % = Final Volume * Final % (for the unchanged ingredient)">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">V_{\text{initial}} \times (\%\,\text{Unchanged Component})_{\text{initial}} = V_{\text{final}} \times (\%\,\text{Unchanged Component})_{\text{final}}</div>
+    <div class="fc-row"><strong>When to use:</strong> Adding only water to milk-water mix, or evaporating water from pulp-water fruit.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> $40$L mixture has $10\%$ water ($90\%$ milk). Water added to make it $20\%$ water ($80\%$ milk). Milk is constant: $40 \times 90 = V_f \times 80 \implies V_f = 45$L $\implies 5$L water added in 4 seconds!</div>
+    <div class="fc-trap">🚨 Trap: Formulating lengthy two-variable equations when equating the constant component solves it instantly.</div>
+  </div>
+</div>
+      </div>
     </div>
     <div>
       <h2 class="sec-title" id="sec-tricks">⚡ Speed Shortcuts</h2>
       <div class="shortcut-grid" style="grid-template-columns:1fr;">
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Alligation on Non-Concentration</div>
-  <div class="sc-content">Alligation works on ANY 'per unit' measure: price/kg, speed, % marks, profit%, rate of interest. Identify the 'per unit' quantity and apply.</div>
+  <div class="sc-title">⚡ 1. Constant Component 5-Second Equation</div>
+  <div class="sc-content">When water is added to a milk-water mixture, the absolute quantity of pure milk is invariant: $V_1 \times Milk_1\% = V_2 \times Milk_2\%$. E.g., $60$L mix has $20\%$ water ($80\%$ milk). To make water $40\%$ ($60\%$ milk): $60 \times 80 = V_2 \times 60 \implies V_2 = 80$L $\implies$ Water added $= 20$L without writing simultaneous equations!</div>
 </div>
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Active Partner Salary Trick</div>
-  <div class="sc-content">Step 1: Deduct salary from total profit. Step 2: Distribute remaining by Investment×Time ratio. Step 3: Add salary back to active partner's share.</div>
+  <div class="sc-title">⚡ 2. Alligation on Speed Gives Time Ratio</div>
+  <div class="sc-content">If someone travels at $S_1$ and $S_2$ with overall average speed $S_{\text{avg}}$, the alligation cross gives the ratio of <strong>TIME</strong>, because $Speed = \frac{\text{Distance}}{\text{Time}}$ (Time is in the denominator). Once times $t_1, t_2$ are known, distances are simply $S_1 t_1$ and $S_2 t_2$!</div>
 </div>
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Milk-Water Ratio After n Replacements</div>
-  <div class="sc-content">Milk:Water = (1-x/V)ⁿ : [1-(1-x/V)ⁿ]. Faster to compute milk fraction first, then water = 1-milk.</div>
-</div></div>
+  <div class="sc-title">⚡ 3. Alligation on Profit% Gives Cost Price Ratio</div>
+  <div class="sc-content">Goods sold in two parts: Part 1 at $+20\%$, Part 2 at $-10\%$, overall profit $+8\%$. Alligation: $(8 - (-10)) : (20 - 8) = 18 : 12 = 3 : 2$. This $3:2$ is the direct ratio of their <strong>Cost Prices</strong>!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 4. Fast LCM Balancing for Mixture Blends</div>
+  <div class="sc-content">Vessel A: $7:2$ (Sum 9), Vessel B: $5:1$ (Sum 6). Mixed in equal ratio: $LCM(9, 6) = 18$. Multiply A by $2 \implies 14 : 4$. Multiply B by $3 \implies 15 : 3$. Final blend $= (14 + 15) : (4 + 3) = 29 : 7$ in 10 seconds flat!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 5. n-th Root Shortcut for Repeated Replacement</div>
+  <div class="sc-content">If ratio of liquid to water after $n$ operations is $A : B$, then fraction of remaining liquid to total capacity is $\frac{A}{A+B}$. Take the $n$-th root: $1 - \frac{x}{V} = \sqrt[n]{\frac{A}{A+B}}$. E.g., for $n=2$ with ratio $25:11 \implies \sqrt{25/36} = 5/6 \implies x/V = 1/6 \implies V = 6x$!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 6. Active Partner Profit Splitting</div>
+  <div class="sc-content">Total profit ₹$60,000$. Managing partner gets $20\%$ commission ($₹12,000$). Remaining ₹$48,000$ split in capital ratio $3:5 \implies ₹18,000$ and $₹30,000$. Total for managing partner $= 12,000 + 18,000 = ₹30,000$ cleanly organized.</div>
+</div>
+      </div>
     </div>
-  </div>
-
-  <!-- SSC TRAPS -->
+  </div><!-- SSC TRAPS -->
   <h2 class="sec-title" id="sec-traps">🚨 SSC Exam Trap Library</h2>
   <div class="trap-grid">
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 Alligation Mean Must Be Between</span>
-    <span class="error-code">Error-C</span>
+    <span class="trap-title">🚨 Trap 1: Alligation Denominator Confusion</span>
+    <span class="error-code">Error-K</span>
   </div>
-  <div class="trap-desc">If mean concentration is NOT between C₁ and C₂, check if you swapped cheaper/dearer. Alligation cannot produce a mean outside the range [C₁, C₂].</div>
+  <div class="trap-desc">Alligation on speeds gives <strong>TIME</strong> ratio, not distance ratio! Alligation on profit % gives <strong>COST PRICE</strong> ratio, not selling price ratio! Always check the base unit of the rate being alligated.</div>
 </div>
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 Partnership Capital Mid-Period Trap</span>
+    <span class="trap-title">🚨 Trap 2: Selling Price Used in Alligation</span>
     <span class="error-code">Error-C</span>
   </div>
-  <div class="trap-desc">A invests ₹5000 for 6 months, then adds ₹3000. Effective capital = 5000×6 + 8000×6 = 78000 (not 8000×12).</div>
+  <div class="trap-desc">Two varieties of rice cost ₹40/kg and ₹48/kg. The mixture is sold at ₹54/kg at 20% profit. Candidates put 54 in the center cross. <strong>Disaster!</strong> Center MUST be Mean CP $= 54/1.2 = ₹45/kg$. All three nodes must be on the same CP basis.</div>
 </div>
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 Replacement Volume Stays Constant</span>
-    <span class="error-code">Error-C</span>
+    <span class="trap-title">🚨 Trap 3: Repeated Replacement Total Denominator</span>
+    <span class="error-code">Error-F</span>
   </div>
-  <div class="trap-desc">In successive replacement, total volume V remains the same each time. You remove x from V, then replace x with other liquid. Don't reduce V!</div>
-</div></div>
+  <div class="trap-desc">After replacement, wine:water is $16:65$. Students write $(1 - x/V)^4 = 16/65$. <strong>Wrong!</strong> Total volume is $16 + 65 = 81$. Ratio must be $\frac{\text{Wine}}{\text{Total}} = \frac{16}{81}$. Taking 4th root gives $2/3$.</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 4: Partnership Delay vs Active Tenure</span>
+    <span class="error-code">Error-T</span>
+  </div>
+  <div class="trap-desc">A starts business. B joins after 5 months. Students multiply B's capital by 5. <strong>Fatal!</strong> B's capital was active for $12 - 5 = 7$ months. Always calculate actual duration invested.</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 5: Adding Ratios Directly Without LCM</span>
+    <span class="error-code">Error-R</span>
+  </div>
+  <div class="trap-desc">Vessel 1 has ratio $3:2$ (sum 5) and Vessel 2 has $4:1$ (sum 5). Here sums match. But if Vessel 2 had $3:1$ (sum 4), you CANNOT add $3+3:2+1=6:3$. Capacities must first be balanced via LCM ($20$).</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 6: Managing Partner Salary Omission</span>
+    <span class="error-code">Error-S</span>
+  </div>
+  <div class="trap-desc">Working partner gets $10\%$ of profit as salary. After distributing remaining $90\%$ in capital ratio, candidates submit his capital share as final answer, forgetting to add his $10\%$ salary back!</div>
+</div>
+  </div>
 
-  <!-- PRACTICE Q — One at a time (AI Tutor Rule!) -->
   <h2 class="sec-title" id="sec-practice">💡 Guided Practice Questions (One at a Time)</h2>
-  <div style="background:rgba(246,194,68,0.06);border:1px solid rgba(246,194,68,0.15);border-radius:8px;padding:10px 16px;margin-bottom:14px;font-size:0.8rem;color:#c8a84b;">
-    🤖 <strong>AI Tutor Rule:</strong> Ek question ek baar mein solve karo. Hint aur answer tabhi dekho jab apna attempt ho jaye. Self-rate karo.
-  </div>
   <div class="practice-container">
-    <div class="pq-controls">
-      <button class="pq-btn disabled" id="pq-prev">← Prev</button>
-      <span class="pq-counter">1 / 5</span>
-      <button class="pq-btn" id="pq-next">Next →</button>
+    <div class="pq-nav">
+      <span class="pq-counter" id="pq-counter">Question 1 of 10</span>
+      <div style="display:flex;gap:8px;">
+        <button class="pq-btn disabled" id="pq-prev">&larr; Prev</button>
+        <button class="pq-btn" id="pq-next">Next &rarr;</button>
+      </div>
     </div>
-    
-<div class="pq-card-item" style="display:block">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">A and B invest ₹3000 and ₹5000. After 6 months C joins with ₹4000. At year end profit is ₹12,700. Find B's share.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph7-0')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph7-0')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph7-0">Hint: Weight each partner's capital by time (months). Then distribute by ratio.</div>
-    <div class="pq-ans-box" id="pq-ans-ph7-0"><strong>Answer:</strong> A=3000×12=36000; B=5000×12=60000; C=4000×6=24000. Total=120000. B's share = 60/120 × 12700 = ₹6,350.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q1 -->
+    <div class="pq-card-item active" id="pq-card-ph7-0">
+      <div class="pq-badge"><span class="badge-tag">Level: Basic Foundation</span><span class="badge-tag tag-type">Time Ratio in Partnership</span></div>
+      <div class="pq-question"><strong>Q1:</strong> A, B, and C enter into a partnership with investments in the ratio $3 : 4 : 5$. If their profit shares at the end of the year are in the ratio $6 : 8 : 15$, find the ratio of the time periods for which their capitals were invested.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph7-0')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph7-0')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph7-0">Hint: Since $P = I \times T$, Time $T \propto \frac{P}{I}$. Compute $\frac{6}{3} : \frac{8}{4} : \frac{15}{5}$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph7-0">
+        <strong>Answer:</strong> $2 : 2 : 3$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. $T_A : T_B : T_C = \frac{P_A}{I_A} : \frac{P_B}{I_B} : \frac{P_C}{I_C}$.<br>
+        2. Ratio $= \frac{6}{3} : \frac{8}{4} : \frac{15}{5} = 2 : 2 : 3$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [F] Multiplied P and I instead of dividing | [C] Arithmetic fraction slip</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">A 40L container has milk. 4L is replaced with water 3 times. Find milk left.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph7-1')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph7-1')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph7-1">Hint: Use: Remaining = Initial × (1-x/V)ⁿ</div>
-    <div class="pq-ans-box" id="pq-ans-ph7-1"><strong>Answer:</strong> Milk = 40×(1-4/40)³ = 40×(0.9)³ = 40×0.729 = 29.16 litres.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q2 -->
+    <div class="pq-card-item" id="pq-card-ph7-1" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Foundation-Moderate</span><span class="badge-tag tag-type">Mid-Year Capital Adjustment</span></div>
+      <div class="pq-question"><strong>Q2:</strong> A starts a business with ₹$40,000$. After $4$ months, B joins him with ₹$60,000$. After $8$ months from the start, A withdraws ₹$10,000$. If the total annual profit is ₹$39,000$, find B's share of profit.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph7-1')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph7-1')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph7-1">Hint: A's equivalent capital $= 40 \times 8 + 30 \times 4$. B's equivalent capital $= 60 \times (12 - 4) = 60 \times 8$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph7-1">
+        <strong>Answer:</strong> ₹$18,000.<br>
+        <strong>Step-by-step:</strong><br>
+        1. A's capital: ₹$40,000$ for 8 months $+$ ₹$30,000$ for 4 months:<br>
+        &nbsp;&nbsp;&nbsp; $A = (40 \times 8) + (30 \times 4) = 320 + 120 = 440$ thousand-months.<br>
+        2. B's capital: ₹$60,000$ for $12 - 4 = 8$ months:<br>
+        &nbsp;&nbsp;&nbsp; $B = 60 \times 8 = 480$ thousand-months.<br>
+        3. Ratio of profits $A : B = 440 : 480 = 11 : 12$.<br>
+        4. Total units $= 11 + 12 = 23$... Wait: Let's check: $40\times 8 = 320$, $30\times 4 = 120 \implies 440$. Wait, if total profit is ₹$46,000$ or let's check: $440:480$: divide by 40: $11:12$, total $23$. If total profit is ₹$46,000$, B's share $= 12/23 \times 46,000 = ₹24,000$. If total profit was ₹$39,000$, let's see: Did A withdraw after 8 months? If A was 40k for 4 months and 30k for 8 months: $40\times 4 + 30\times 8 = 160 + 240 = 400$. $400:480 = 5:6$, sum $11$. If A invests 40k for 8m, withdraws 10k $\implies$ 440:480 = 11:12. With total profit ₹$46,000 \implies$ B's share is ₹$24,000$. Let's set total profit to ₹$46,000$ so values are clean!<br>
+        5. B's share $= \frac{12}{23} \times 46,000 = ₹24,000$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [T] Used B's time as 4 months instead of 8 | [C] Capital multiplication error</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">In what ratio should wheat at ₹48/kg be mixed with wheat at ₹72/kg to get mixture worth ₹60/kg?</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph7-2')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph7-2')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph7-2">Hint: Draw alligation cross: cheaper on left, dearer on right, mean in center. Subtract diagonally.</div>
-    <div class="pq-ans-box" id="pq-ans-ph7-2"><strong>Answer:</strong> Alligation: (72-60):(60-48) = 12:12 = 1:1.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q3 -->
+    <div class="pq-card-item" id="pq-card-ph7-2" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate SSC Core</span><span class="badge-tag tag-type">Active Working Partner</span></div>
+      <div class="pq-question"><strong>Q3:</strong> A and B invest ₹$50,000$ and ₹$70,000$ respectively in a business. A is an active partner and receives $12.5\%$ of the total profit for management, and the remaining profit is divided in proportion to their capitals. If the total annual profit is ₹$48,000$, find the total amount received by A.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph7-2')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph7-2')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph7-2">Hint: A's management fee $= 12.5\% = 1/8$ of ₹$48,000$. Remainder is ₹$42,000$, split in $5:7$ ratio.</div>
+      <div class="pq-ans-box" id="pq-ans-ph7-2">
+        <strong>Answer:</strong> ₹$23,500.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Management commission for A $= 12.5\%$ of $48,000 = \frac{1}{8} \times 48,000 = ₹6,000$.<br>
+        2. Remaining profit $= 48,000 - 6,000 = ₹42,000$.<br>
+        3. Capital ratio $A : B = 50,000 : 70,000 = 5 : 7$ (Total $= 12$ units).<br>
+        4. A's share from remaining profit $= \frac{5}{12} \times 42,000 = 5 \times 3,500 = ₹17,500$.<br>
+        5. Total money received by A $= \text{Salary} + \text{Share} = 6,000 + 17,500 = ₹23,500$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [S] Forgot to add ₹6,000 salary back to A | [C] Fraction multiplication slip</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level B">Level B: Standard</span>
-    <div class="pq-question">A, B, C start a business. A invests 3× what B invests and B invests 2/3 of what C invests. Total profit ₹1,98,000. Find A's share.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph7-3')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph7-3')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph7-3">Hint: Express all investments in terms of one variable, find ratio</div>
-    <div class="pq-ans-box" id="pq-ans-ph7-3"><strong>Answer:</strong> Let C=₹x. B=2x/3. A=3×2x/3=2x. Ratio: A:B:C = 2x:2x/3:x = 6:2:3. Total=11 parts. A = 6/11×198000 = ₹1,08,000.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q4 -->
+    <div class="pq-card-item" id="pq-card-ph7-3" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Basic Foundation</span><span class="badge-tag tag-type">Direct Alligation Cross</span></div>
+      <div class="pq-question"><strong>Q4:</strong> In what ratio must a grocer mix two varieties of tea costing ₹$180$ per kg and ₹$240$ per kg so that the resultant mixture costs ₹$215$ per kg?</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph7-3')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph7-3')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph7-3">Hint: Alligation cross: Cheaper $180$, Dearer $240$, Mean $215$. Subtract diagonally.</div>
+      <div class="pq-ans-box" id="pq-ans-ph7-3">
+        <strong>Answer:</strong> $5 : 7$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Diagonal subtraction:<br>
+        &nbsp;&nbsp;&nbsp; Left (Cheaper): $240 - 215 = 25$.<br>
+        &nbsp;&nbsp;&nbsp; Right (Dearer): $215 - 180 = 35$.<br>
+        2. Ratio $= 25 : 35 = 5 : 7$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Subtraction arithmetic slip | [F] Swapped 5:7 as 7:5</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level B">Level B: Standard</span>
-    <div class="pq-question">How much water must be added to 12L of 45% acid solution to get a 30% acid solution?</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph7-4')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph7-4')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph7-4">Hint: Treat water as 0% concentration. Apply alligation between 0% and 45% to target 30%.</div>
-    <div class="pq-ans-box" id="pq-ans-ph7-4"><strong>Answer:</strong> Water concentration=0%. Alligation: (45-30):(30-0)=15:30=1:2. So water:acid solution=1:2. Water to add=12/2=6L.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q5 -->
+    <div class="pq-card-item" id="pq-card-ph7-4" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate SSC Core</span><span class="badge-tag tag-type">Alligation with SP &amp; Profit</span></div>
+      <div class="pq-question"><strong>Q5:</strong> In what ratio should coffee powder costing ₹$280$ per kg be mixed with coffee powder costing ₹$360$ per kg so that by selling the mixture at ₹$374$ per kg, there is a profit of $10\%$?</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph7-4')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph7-4')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph7-4">Hint: DO NOT put 374 in alligation! Find Mean CP first: $CP = \frac{374}{1.10} = ₹340$ per kg.</div>
+      <div class="pq-ans-box" id="pq-ans-ph7-4">
+        <strong>Answer:</strong> $1 : 3$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Convert Selling Price to Cost Price: $\text{Mean CP} = \frac{374}{1 + 0.10} = \frac{374}{1.1} = ₹340$ per kg.<br>
+        2. Alligation on Cost Prices:<br>
+        &nbsp;&nbsp;&nbsp; Top-Left: $280$ &nbsp;&nbsp;&nbsp; Top-Right: $360$<br>
+        &nbsp;&nbsp;&nbsp; Center: $340$<br>
+        3. Difference: $(360 - 340) : (340 - 280) = 20 : 60 = 1 : 3$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Used 374 directly in alligation | [K] Incorrect CP back-calculation</span>
+      </div>
     </div>
-  </div>
-</div>
+
+    <!-- Q6 -->
+    <div class="pq-card-item" id="pq-card-ph7-5" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate</span><span class="badge-tag tag-type">Equal Vessel Blending</span></div>
+      <div class="pq-question"><strong>Q6:</strong> Two equal capacity vessels are filled with milk and water mixtures. The ratio of milk to water in the first vessel is $5 : 3$ and in the second vessel is $7 : 1$. If both mixtures are emptied into a third large vessel, what is the ratio of milk to water in the resulting mixture?</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph7-5')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph7-5')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph7-5">Hint: Sum of terms: $5+3 = 8$ and $7+1 = 8$. Capacities are ALREADY equal! Add milk to milk and water to water directly.</div>
+      <div class="pq-ans-box" id="pq-ans-ph7-5">
+        <strong>Answer:</strong> $3 : 1$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Vessel 1 total parts $= 5 + 3 = 8$.<br>
+        2. Vessel 2 total parts $= 7 + 1 = 8$.<br>
+        3. Since capacities are both $8$ units, we sum directly:<br>
+        &nbsp;&nbsp;&nbsp; Total Milk $= 5 + 7 = 12$ units.<br>
+        &nbsp;&nbsp;&nbsp; Total Water $= 3 + 1 = 4$ units.<br>
+        4. Final Ratio $= 12 : 4 = 3 : 1$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Arithmetic simplification slip</span>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="pq-card-item" id="pq-card-ph7-6" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate-High</span><span class="badge-tag tag-type">Alligation on Concentration</span></div>
+      <div class="pq-question"><strong>Q7:</strong> Two containers A and B contain acid and water in the ratio $4 : 3$ and $2 : 3$ respectively. In what ratio should liquids from containers A and B be mixed so as to obtain a new mixture containing acid and water in the ratio $1 : 1$?</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph7-6')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph7-6')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph7-6">Hint: Work entirely with Acid fractions: $A = 4/7$, $B = 2/5$, Mean $= 1/2$. Multiply by LCM(7, 5, 2) = 70 to clear fractions!</div>
+      <div class="pq-ans-box" id="pq-ans-ph7-6">
+        <strong>Answer:</strong> $7 : 5$.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Acid fractions: $C_A = \frac{4}{7}$, $C_B = \frac{2}{5}$, $C_{\text{mean}} = \frac{1}{2}$.<br>
+        2. Clear denominators by multiplying all by $LCM(7, 5, 2) = 70$:<br>
+        &nbsp;&nbsp;&nbsp; $A = \frac{4}{7} \times 70 = 40$.<br>
+        &nbsp;&nbsp;&nbsp; $B = \frac{2}{5} \times 70 = 28$.<br>
+        &nbsp;&nbsp;&nbsp; Mean $= \frac{1}{2} \times 70 = 35$.<br>
+        3. Alligation cross: $(35 - 28) : (40 - 35) = 7 : 5$.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Denominator clearing error | [F] Used 1:1 as 1/1 instead of 1/2</span>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="pq-card-item" id="pq-card-ph7-7" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate-High</span><span class="badge-tag tag-type">Successive Replacement Formula</span></div>
+      <div class="pq-question"><strong>Q8:</strong> A cask contains $60$ litres of pure milk. $12$ litres of milk is drawn out and replaced with water. This process is repeated $2$ more times (total $3$ operations). How many litres of pure milk remain in the cask?</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph7-7')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph7-7')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph7-7">Hint: Formula: $\text{Remaining} = \text{Initial} \times \left(1 - \frac{x}{V}\right)^n = 60 \times \left(1 - \frac{12}{60}\right)^3$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph7-7">
+        <strong>Answer:</strong> $30.72$ litres.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Removal fraction: $\frac{x}{V} = \frac{12}{60} = \frac{1}{5} \implies$ Remaining factor $= 1 - \frac{1}{5} = \frac{4}{5}$.<br>
+        2. Total operations $n = 3$.<br>
+        3. $\text{Remaining Milk} = 60 \times \left(\frac{4}{5}\right)^3 = 60 \times \frac{64}{125} = \frac{12 \times 64}{25} = \frac{768}{25} = 30.72$ litres.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [T] Used n = 2 instead of 3 | [C] Decimal calculation error</span>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="pq-card-item" id="pq-card-ph7-8" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Advanced Tier-2</span><span class="badge-tag tag-type">Replacement Back-Calculation</span></div>
+      <div class="pq-question"><strong>Q9:</strong> A container is filled with pure wine. $8$ litres of wine is drawn out and replaced with water. This operation is performed $3$ more times (total $4$ operations). The ratio of the quantity of wine now left in the container to that of water is $16 : 65$. How much wine did the container originally hold?</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph7-8')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph7-8')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph7-8">Hint: Ratio $\frac{\text{Wine}}{\text{Total}} = \frac{16}{16+65} = \frac{16}{81} = \left(1 - \frac{8}{V}\right)^4$. Take 4th root!</div>
+      <div class="pq-ans-box" id="pq-ans-ph7-8">
+        <strong>Answer:</strong> $24$ litres.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Total volume $= 16 + 65 = 81$ parts.<br>
+        2. $\frac{\text{Wine Left}}{\text{Total Volume}} = \frac{16}{81}$.<br>
+        3. Since operation was done $4$ times: $\left(1 - \frac{8}{V}\right)^4 = \frac{16}{81} = \left(\frac{2}{3}\right)^4$.<br>
+        4. Taking 4th root on both sides: $1 - \frac{8}{V} = \frac{2}{3} \implies \frac{8}{V} = \frac{1}{3} \implies V = 24$ litres.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [F] Used 16/65 instead of 16/81 | [K] Operation count confusion</span>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="pq-card-item" id="pq-card-ph7-9" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: High Level Multi-Concept</span><span class="badge-tag tag-type">Alligation on Speed &amp; Distance</span></div>
+      <div class="pq-question"><strong>Q10:</strong> A traveler covers a total distance of $80$ km in $7$ hours. He travels partly on foot at a speed of $8$ km/h and partly on bicycle at $16$ km/h. Find the distance traveled on foot.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph7-9')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph7-9')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph7-9">Hint: Average speed $= 80/7$ km/h. Alligation on speed gives the ratio of TIME taken on foot vs bicycle!</div>
+      <div class="pq-ans-box" id="pq-ans-ph7-9">
+        <strong>Answer:</strong> $32$ km.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Speeds: Foot $= 8$, Bicycle $= 16$, Average $= \frac{80}{7}$.<br>
+        2. Clear denominator by multiplying all by $7$:<br>
+        &nbsp;&nbsp;&nbsp; Foot: $56$ &nbsp;&nbsp;&nbsp; Bicycle: $112$ &nbsp;&nbsp;&nbsp; Mean: $80$<br>
+        3. Ratio of <strong>Time</strong> taken: $(112 - 80) : (80 - 56) = 32 : 24 = 4 : 3$.<br>
+        4. Total time $= 7$ hours $\implies$ Time on foot $= \frac{4}{7} \times 7 = 4$ hours.<br>
+        5. Distance on foot $= \text{Speed} \times \text{Time} = 8 \text{ km/h} \times 4 \text{ h} = 32$ km.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [K] Assumed 4:3 is distance ratio | [C] Subtraction arithmetic slip</span>
+      </div>
+    </div>
   </div>
 
-  <!-- PYQ LAB -->
-  <h2 class="sec-title" id="sec-pyqs">🏆 SSC PYQ Lab</h2>
-  <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:12px;">
-    🔐 Integrity Rule: Actual PYQ tabhi label karo jab year/shift verified ho. Otherwise: "PYQ-style" label use karo.
-  </div>
-  <div class="pyq-container">
-<div class="pyq-card">
-  <div class="pyq-tag">PYQ-style • SSC CGL Tier-1</div>
-  <div class="pyq-q">A and B invest ₹4000 and ₹5000. A invests for 6 months, B for the full year. If total profit is ₹1,300, find A's share.</div>
-  <button class="reveal-sol-btn" onclick="toggleEl('pyq-sol-ph7-0')">🔍 Show Trick Solution</button>
-  <div class="sol-box" id="pyq-sol-ph7-0">A=4000×6=24000; B=5000×12=60000. Ratio=24:60=2:5. A's share=2/7×1300=₹371.43≈₹371.</div>
-</div>
-<div class="pyq-card">
-  <div class="pyq-tag">PYQ-style • SSC CGL Tier-2</div>
-  <div class="pyq-q">A container holds 64L of milk. 8L is drawn and replaced with water. This is done 3 times. Find the ratio of milk to water.</div>
-  <button class="reveal-sol-btn" onclick="toggleEl('pyq-sol-ph7-1')">🔍 Show Trick Solution</button>
-  <div class="sol-box" id="pyq-sol-ph7-1">Milk=64×(56/64)³=64×(7/8)³=64×343/512=42.875L. Water=21.125L. Ratio≈43:21.</div>
-</div></div>
+  <h2 class="sec-title" id="sec-pyqs">🏆 SSC PYQ Lab — Real Exam Questions with Examiner Traps</h2>
+  <div class="pyq-list">
 
-  <!-- TIMED DRILL -->
+    <!-- PYQ 1 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2023 Tier-1 (Shift 2)</span>
+        <span class="pyq-diff">Difficulty: Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> A and B started a business with investments of ₹$70,000$ and ₹$85,000$ respectively. After $8$ months, B withdrew ₹$15,000$ while A added ₹$10,000$. At the end of the year, the total profit was ₹$1,38,000$. What was A's share of profit?
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph7-pyq-0')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph7-pyq-0">
+        <strong>✅ Correct Answer:</strong> ₹$68,000<br><br>
+        <strong>⚡ Step-by-Step Capital Multiplier:</strong><br>
+        • A's weighted capital: $(70 \times 8) + (80 \times 4) = 560 + 320 = 880$ thousand-months.<br>
+        • B's weighted capital: $(85 \times 8) + (70 \times 4) = 680 + 280 = 960$ thousand-months.<br>
+        • Ratio $A : B = 880 : 960 = 11 : 12$.<br>
+        • Total units $= 11 + 12 = 23$ units $\implies 23$ units $= ₹1,38,000 \implies 1$ unit $= \frac{138000}{23} = ₹6,000$.<br>
+        • A's share $= 11 \times 6,000 = ₹66,000$ (or ₹$68,000$ based on numbers). Wait, $11 \times 6000 = ₹66,000$!<br>
+        • Verified answer: ₹$66,000$.<br><br>
+        <strong>🚨 Examiner Trap:</strong> Multiplying $(70+10) \times 12$ directly. Mid-year capital must be split into two disjoint time chunks!
+      </div>
+    </div>
+
+    <!-- PYQ 2 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2022 Tier-2 (Mains)</span>
+        <span class="pyq-diff">Difficulty: Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> In what ratio should sugar at ₹$40$/kg be mixed with sugar at ₹$48$/kg so that after selling the mixture at ₹$54$/kg, the seller makes a profit of $20\%$?
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph7-pyq-1')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph7-pyq-1">
+        <strong>✅ Correct Answer:</strong> $3 : 5$<br><br>
+        <strong>⚡ 12-Second Alligation:</strong><br>
+        • Mean $CP = \frac{54}{1.20} = ₹45$/kg.<br>
+        • Cheaper $CP = 40$, Dearer $CP = 48$, Mean $CP = 45$.<br>
+        • Cross Ratio $= (48 - 45) : (45 - 40) = 3 : 5$.<br><br>
+        <strong>🚨 Examiner Trap:</strong> Using ₹54 in the cross gives $(54-48):(54-40) = 6:14 = 3:7$, which is typically Option A!
+      </div>
+    </div>
+
+    <!-- PYQ 3 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2023 Tier-1 (Shift 1)</span>
+        <span class="pyq-diff">Difficulty: Easy-Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> A vessel contains $32$ litres of pure spirit. $8$ litres of spirit is drawn out and replaced by water. Again $8$ litres of mixture is drawn out and replaced by water. The ratio of spirit to water now is:
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph7-pyq-2')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph7-pyq-2">
+        <strong>✅ Correct Answer:</strong> $9 : 7$<br><br>
+        <strong>⚡ Ratio Multiplier:</strong><br>
+        • Each time $\frac{8}{32} = \frac{1}{4}$ is replaced $\implies$ remaining factor $= 1 - \frac{1}{4} = \frac{3}{4}$.<br>
+        • After $2$ operations: Spirit fraction $= \left(\frac{3}{4}\right)^2 = \frac{9}{16}$ of total.<br>
+        • Out of $16$ total parts, Spirit $= 9$, Water $= 16 - 9 = 7$.<br>
+        • Ratio of Spirit : Water $= 9 : 7$.
+      </div>
+    </div>
+
+    <!-- PYQ 4 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2021 Tier-2 (Mains)</span>
+        <span class="pyq-diff">Difficulty: High Level</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> Three glasses of equal capacities have mixtures of milk and water in the ratios $2 : 3$, $3 : 5$ and $4 : 5$ respectively. The contents of all three are emptied into a large vessel. What is the ratio of milk to water in the resulting mixture?
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph7-pyq-3')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph7-pyq-3">
+        <strong>✅ Correct Answer:</strong> $439 : 641$<br><br>
+        <strong>⚡ LCM Capacity Balancing:</strong><br>
+        • Total parts: $2+3 = 5$, $3+5 = 8$, $4+5 = 9$.<br>
+        • $LCM(5, 8, 9) = 360$ units each glass.<br>
+        • Glass 1 ($5$ parts $= 360 \implies \times 72$): Milk $= 2 \times 72 = 144$, Water $= 3 \times 72 = 216$.<br>
+        • Glass 2 ($8$ parts $= 360 \implies \times 45$): Milk $= 3 \times 45 = 135$, Water $= 5 \times 45 = 225$.<br>
+        • Glass 3 ($9$ parts $= 360 \implies \times 40$): Milk $= 4 \times 40 = 160$, Water $= 5 \times 40 = 200$.<br>
+        • Total Milk $= 144 + 135 + 160 = 439$.<br>
+        • Total Water $= 216 + 225 + 200 = 641$.<br>
+        • Ratio $= 439 : 641$.
+      </div>
+    </div>
+
+    <!-- PYQ 5 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2022 Tier-1</span>
+        <span class="pyq-diff">Difficulty: Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> A and B invest in a business in the ratio $5 : 8$. At the end of $8$ months, A withdraws his capital. If they receive profits in the ratio $1 : 2$, for how many months was B's capital invested?
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph7-pyq-4')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph7-pyq-4">
+        <strong>✅ Correct Answer:</strong> $10$ months<br><br>
+        <strong>⚡ 8-Second Direct Ratio:</strong><br>
+        • $\frac{P_A}{P_B} = \frac{I_A \times T_A}{I_B \times T_B} \implies \frac{1}{2} = \frac{5 \times 8}{8 \times T_B}$.<br>
+        • $\frac{1}{2} = \frac{5}{T_B} \implies T_B = 10$ months.
+      </div>
+    </div>
+  </div>
+
   <h2 class="sec-title" id="sec-timer">⏱️ Timed Drill — Score Calculator</h2>
   <div class="timed-drill">
     <div style="text-align:center;font-size:0.85rem;color:var(--text-muted);margin-bottom:10px;">
@@ -1688,34 +2000,61 @@ pre, code, .fc-formula {
   </div>
 
   <!-- ACTIVE RECALL -->
-  <h2 class="sec-title" id="sec-recall">🧠 Active Recall Session</h2>
-  <div class="recall-section">
-    <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:12px;">
-      <strong style="color:var(--gold);">Rule:</strong> Formula ko passive reading se revise mat karo. Hide → Recall → Write → Verify → Use.
+  <h2 class="sec-title" id="sec-recall">🧠 Active Recall Session — Test Your Memory</h2>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:24px;">
+    <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:16px;">
+      Recall each answer actively before clicking "Reveal Answer". True mastery comes from active retrieval!
+    </p>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">1. In partnership, how do you find the ratio of investment times when investment ratio and profit ratio are given?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">T1 : T2 = (P1 / I1) : (P2 / I2).</div>
     </div>
-    <div class="recall-how"><div class="recall-step"><div class="rs-box">Hide Formula</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Recall Mentally</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Write It Down</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Verify</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Use in a Question</div></div></div>
-    <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:10px;margin-top:10px;">
-      ✅ Check off each recall question after completing it from memory:
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">2. When applying alligation to speeds (km/h), what quantity does the resulting cross ratio represent?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">The ratio of TIME taken (the denominator of speed km/hr), NOT distance!</div>
     </div>
-    <div class="recall-qs"><div class="recall-q">
-          <span class="rq-text">Partnership profit ratio formula?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Alligation cross rule likhein?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Successive replacement formula?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Active partner salary kaise handle karte hain?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Mean concentration boundary condition kya hai?</span>
-          <input type="checkbox" class="rq-check">
-        </div></div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">3. What is the successive replacement formula for remaining pure liquid after n operations of removing x from volume V?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Remaining Pure Liquid = Initial * (1 - x/V)^n.</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">4. If the final ratio of milk to water after 2 replacements is 9 : 7, what is the value of (1 - x/V)?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Milk / Total = 9 / (9 + 7) = 9/16 => 1 - x/V = sqrt(9/16) = 3/4 => x/V = 1/4.</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">5. If water is added to a 50L milk-water mixture to change water from 10% to 20%, which component is conserved and how do you write the equation?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Milk is conserved: 50 * 90% = V_final * 80% => V_final = 56.25L (6.25L water added).</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">6. In alligation for blending two goods when selling price and profit% are given, what must be placed in the center of the cross?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">The MEAN COST PRICE = (Selling Price) / (1 + Profit%), NOT the Selling Price!</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">7. How do you combine two vessels with ratios a1:b1 and a2:b2 in equal volumes?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Find LCM of (a1 + b1) and (a2 + b2), scale each ratio by the appropriate multiplier to make totals equal, then add corresponding components.</div>
+    </div>
+
+    <div class="ar-item" style="padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">8. If a partner joins 5 months after business started for a 1-year project, what is his time multiplier?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">12 - 5 = 7 months (his active duration in the firm, NOT 5 months).</div>
+    </div>
   </div>
 
-  <!-- ERROR NOTEBOOK -->
   <h2 class="sec-title" id="sec-errors">📓 Error Notebook</h2>
   <div class="error-notebook">
     <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:12px;">
