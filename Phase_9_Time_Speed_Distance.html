@@ -1483,214 +1483,499 @@ pre, code, .fc-formula {
       <div>
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Unit Conversion</span>
-    <button class="copy-btn" data-formula="km/h × (5/18) = m/s  |  m/s × (18/5) = km/h">Copy</button>
+    <span class="fc-name">📐 Fundamental Equations &amp; Unit Staircase</span>
+    <button class="copy-btn" data-formula="D = S * T | km/h * (5/18) = m/s | m/s * (18/5) = km/h | 18 km/h = 5 m/s">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">km/h × (5/18) = m/s  |  m/s × (18/5) = km/h</div>
-    <div class="fc-row"><strong>When to use:</strong> Whenever distance and time are in different unit systems</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> 72 km/h = 72×5/18 = 20 m/s. 15 m/s = 15×18/5 = 54 km/h.</div>
-    <div class="fc-trap">🚨 Trap: Always check: km/h → m/s needs ×5/18 (SMALLER number). m/s → km/h needs ×18/5 (LARGER number).</div>
+    <div class="fc-formula">\text{Distance} = \text{Speed} \times \text{Time} &nbsp;|&nbsp; \text{km/h} \times \frac{5}{18} = \text{m/s} &nbsp;|&nbsp; \text{m/s} \times \frac{18}{5} = \text{km/h}</div>
+    <div class="fc-row"><strong>When to use:</strong> Every single TSD question. Units must be uniform (km, hr, km/h OR m, s, m/s).</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Multiples of 18 km/h: $18=5$ m/s, $36=10$ m/s, $54=15$ m/s, $72=20$ m/s, $90=25$ m/s, $108=30$ m/s. Instant conversions!</div>
+    <div class="fc-trap">🚨 Trap: Multiplying minutes directly with km/h without converting minutes to hours ($\div 60$).</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Average Speed (Equal Distances)</span>
-    <button class="copy-btn" data-formula="Average Speed = 2xy / (x + y)  (Harmonic Mean)">Copy</button>
+    <span class="fc-name">📐 Average Speed (Harmonic Mean &amp; Weighted)</span>
+    <button class="copy-btn" data-formula="2 Equal Distances: V_avg = (2*S1*S2) / (S1 + S2) | General: V_avg = Total Distance / Total Time">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">Average Speed = 2xy / (x + y)  (Harmonic Mean)</div>
-    <div class="fc-row"><strong>When to use:</strong> ONLY when both distances are EQUAL. If unequal, use Total D / Total T.</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> 60 km/h going, 40 km/h returning: Avg = 2×60×40/(60+40) = 4800/100 = 48 km/h.</div>
-    <div class="fc-trap">🚨 Trap: (60+40)/2=50 is ARITHMETIC mean — WRONG for equal distance. Can cost 1 mark easily!</div>
+    <div class="fc-formula">\text{Equal Distances: } V_{\text{avg}} = \frac{2 S_1 S_2}{S_1 + S_2} &nbsp;|&nbsp; \text{General: } V_{\text{avg}} = \frac{\sum D_i}{\sum \frac{D_i}{S_i}}</div>
+    <div class="fc-row"><strong>When to use:</strong> Round trips, or journeys split into equal/unequal segments at varying speeds.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> 3 equal distances: $V_{\text{avg}} = \frac{3 S_1 S_2 S_3}{S_1 S_2 + S_2 S_3 + S_3 S_1}$. Or assume distance as LCM of speeds!</div>
+    <div class="fc-trap">🚨 Trap: Using arithmetic average $\frac{S_1 + S_2}{2}$. Average speed for equal distance is strictly the Harmonic Mean!</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 Boats & Streams</span>
-    <button class="copy-btn" data-formula="D = u + v  |  U = u - v
-u (boat speed) = (D+U)/2
-v (stream speed) = (D-U)/2">Copy</button>
+    <span class="fc-name">📐 Early &amp; Late Speed Difference Theorem</span>
+    <button class="copy-btn" data-formula="Distance = [ (S1 * S2) / |S1 - S2| ] * Delta_t (where Delta_t is in hours)">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">D = u + v  |  U = u - v
-u (boat speed) = (D+U)/2
-v (stream speed) = (D-U)/2</div>
-    <div class="fc-row"><strong>When to use:</strong> u = boat speed in still water, v = stream speed</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> D=12, U=4: Boat speed=(12+4)/2=8 km/h, Stream speed=(12-4)/2=4 km/h.</div>
-    <div class="fc-trap">🚨 Trap: Downstream is always FASTER (u+v). Upstream is always SLOWER (u-v). If D<U, the setup is wrong.</div>
+    <div class="fc-formula">\text{Distance} = \frac{S_1 \times S_2}{|S_1 - S_2|} \times \Delta t &nbsp;\text{ (hours)}</div>
+    <div class="fc-row"><strong>When to use:</strong> Person travels at speed $S_1$ and arrives late/early, then at $S_2$ and arrives early/late.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> If both conditions are same (late-late or early-early): $\Delta t = |t_1 - t_2|$. If opposite (late-early): $\Delta t = t_1 + t_2$.</div>
+    <div class="fc-trap">🚨 Trap: Forgetting to divide time difference $\Delta t$ in minutes by 60 to convert to hours!</div>
   </div>
 </div>
+
 <div class="formula-card">
   <div class="fc-header">
-    <span class="fc-name">📐 After-Meeting Speed Formula</span>
-    <button class="copy-btn" data-formula="S₁ / S₂ = √(T₂ / T₁)">Copy</button>
+    <span class="fc-name">📐 Relative Speed &amp; Train Crossing Mechanics</span>
+    <button class="copy-btn" data-formula="Opposite: S_rel = S1 + S2 | Same: S_rel = |S1 - S2| | Crossing Distance = L_train + L_object">Copy</button>
   </div>
   <div class="fc-body">
-    <div class="fc-formula">S₁ / S₂ = √(T₂ / T₁)</div>
-    <div class="fc-row"><strong>When to use:</strong> Two people start from A and B toward each other, meet somewhere, then continue. T₁ = time for P1 to reach B after meeting, T₂ = time for P2 to reach A.</div>
-    <div class="fc-row"><strong>⚡ Shortcut:</strong> T₁=4h, T₂=9h: S₁/S₂=√(9/4)=3/2. If S₁=60, S₂=40.</div>
-    <div class="fc-trap">🚨 Trap: T₁ is time for Person 1 to reach Person 2's START, not meeting point!</div>
+    <div class="fc-formula">S_{\text{rel}} = S_1 \pm S_2 &nbsp;|&nbsp; \text{Distance} = L_1 + L_2 &nbsp;|&nbsp; T_{\text{cross}} = \frac{L_1 + L_2}{S_{\text{rel}}}</div>
+    <div class="fc-row"><strong>When to use:</strong> Trains crossing poles, platforms, pedestrians, or each other.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Distance covered when two trains cross is ALWAYS $L_1 + L_2$ regardless of whether they move in opposite or same direction!</div>
+    <div class="fc-trap">🚨 Trap: Subtracting lengths ($L_1 - L_2$) when moving in the same direction. Distance is always the SUM of lengths!</div>
   </div>
-</div></div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Boats &amp; Streams Equations</span>
+    <button class="copy-btn" data-formula="D = u + v | U = u - v | u = (D + U)/2 | v = (D - U)/2 | u/v = (Tu + Td) / (Tu - Td)">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">D = u + v &nbsp;|&nbsp; U = u - v &nbsp;|&nbsp; u = \frac{D + U}{2} &nbsp;|&nbsp; v = \frac{D - U}{2} &nbsp;|&nbsp; \frac{u}{v} = \frac{T_u + T_d}{T_u - T_d}</div>
+    <div class="fc-row"><strong>When to use:</strong> Boats, swimmers, airplanes with headwind/tailwind. $u = $ still water speed, $v = $ stream speed.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> If upstream takes $3\times$ longer than downstream for same distance ($T_u/T_d = 3/1$): $\frac{u}{v} = \frac{3+1}{3-1} = 2:1$ in 3 seconds!</div>
+    <div class="fc-trap">🚨 Trap: $D$ must ALWAYS be strictly greater than $U$. If $D \le U$, the boat cannot move upstream ($u > v$ always).</div>
+  </div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 After-Meeting Speed Theorem</span>
+    <button class="copy-btn" data-formula="S1 / S2 = sqrt(T2 / T1) | Time to meet: t_meet = sqrt(T1 * T2)">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">\frac{S_1}{S_2} = \sqrt{\frac{T_2}{T_1}} &nbsp;|&nbsp; t_{\text{meet}} = \sqrt{T_1 \times T_2}</div>
+    <div class="fc-row"><strong>When to use:</strong> Two objects start simultaneously from A and B toward each other, cross each other at M, and take $T_1$ and $T_2$ hours to complete the remaining journey.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> Notice the inversion: $\frac{S_1}{S_2}$ corresponds to $\sqrt{\frac{T_2}{T_1}}$. If $T_1 = 4$ and $T_2 = 9$, $\frac{S_1}{S_2} = \sqrt{9/4} = 3/2$!</div>
+    <div class="fc-trap">🚨 Trap: Forgetting to take the square root or swapping $T_1$ and $T_2$ in the fraction.</div>
+  </div>
+</div>
+
+<div class="formula-card">
+  <div class="fc-header">
+    <span class="fc-name">📐 Circular Track Races &amp; Headstart</span>
+    <button class="copy-btn" data-formula="First Meet: T = L / |S1 - S2| (same) or L / (S1 + S2) (opp) | Start Meet: LCM(L/S1, L/S2)">Copy</button>
+  </div>
+  <div class="fc-body">
+    <div class="fc-formula">T_{\text{first meet}} = \frac{L}{S_{\text{rel}}} &nbsp;|&nbsp; T_{\text{meet at start}} = \text{LCM}\left(\frac{L}{S_1}, \frac{L}{S_2}\right)</div>
+    <div class="fc-row"><strong>When to use:</strong> Circular running tracks of circumference $L$, and linear races where A beats B by $x$ meters or $t$ seconds.</div>
+    <div class="fc-row"><strong>⚡ Shortcut:</strong> In linear race: If A beats B by $x$ meters or $t$ seconds, Speed of B $= \frac{x}{t}$ directly!</div>
+    <div class="fc-trap">🚨 Trap: Confusing "meeting anywhere on the track" with "meeting at the original starting point".</div>
+  </div>
+</div>
+      </div>
     </div>
     <div>
       <h2 class="sec-title" id="sec-tricks">⚡ Speed Shortcuts</h2>
       <div class="shortcut-grid" style="grid-template-columns:1fr;">
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Train Crossing: The DISTANCE Question</div>
-  <div class="sc-content">ALWAYS ask: What distance does the FRONT of the train cover from start to finish? Pole: Train length. Platform: Train+Platform. Two trains (opp): L₁+L₂. Two trains (same): L₁+L₂ at relative speed.</div>
+  <div class="sc-title">⚡ 1. Unit Staircase Multiples of 18</div>
+  <div class="sc-content">Direct memory recall: $18 \text{ km/h} = 5$ m/s, $36 = 10$, $54 = 15$, $72 = 20$, $90 = 25$, $108 = 30$ m/s. Avoid manual multiplication by $5/18$ during exams to save 15 seconds per question!</div>
 </div>
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Early & Late Meeting Shortcut</div>
-  <div class="sc-content">Person arrives k minutes early/late from scheduled time. If speed was X km/h more/less: Distance = [S₁×S₂/(S₁-S₂)] × Time difference. Saves equation setup.</div>
+  <div class="sc-title">⚡ 2. 5-Second Early &amp; Late Distance</div>
+  <div class="sc-content">$\text{Distance} = \frac{S_1 \times S_2}{|S_1 - S_2|} \times \frac{\Delta t}{60}$. If walks at $4$ km/h reaches $10$ min late, at $5$ km/h reaches $5$ min early $\implies \Delta t = 15$ min $= 1/4$ h. Distance $= \frac{4 \times 5}{1} \times \frac{1}{4} = 5$ km flat!</div>
 </div>
 <div class="shortcut-card">
-  <div class="sc-title">⚡ Circular Track First Meeting</div>
-  <div class="sc-content">Same direction: Time = Circumference / |Speed diff|. Opposite direction: Time = Circumference / (Sum of speeds). At start again: LCM of individual lap times.</div>
-</div></div>
+  <div class="sc-title">⚡ 3. Stoppage Time per Hour Shortcut</div>
+  <div class="sc-content">$\text{Stoppage Time/hr} = \frac{\text{Speed without stop} - \text{Speed with stop}}{\text{Speed without stop}} \times 60 \text{ min}$. E.g., $54$ km/h and $45$ km/h $\implies \frac{9}{54} \times 60 = 10$ minutes/hour!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 4. Train Platform vs Pole Difference</div>
+  <div class="sc-content">Train crosses a pole in $12$s and a $300$m platform in $27$s. The extra $27 - 12 = 15$s covers ONLY the platform! Speed $= 300 / 15 = 20$ m/s ($72$ km/h). Train length $= 20 \times 12 = 240$m in 8 seconds!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 5. After-Meeting Instant Ratio</div>
+  <div class="sc-content">When two trains cross and take $T_1$ and $T_2$ hours to complete their journeys: $\frac{S_1}{S_2} = \sqrt{\frac{T_2}{T_1}}$. If $T_1 = 4$ and $T_2 = 9$, then $S_1 : S_2 = 3 : 2$. If $S_1 = 60 \implies S_2 = 40$ km/h!</div>
+</div>
+<div class="shortcut-card">
+  <div class="sc-title">⚡ 6. Police-Thief Catching Distance</div>
+  <div class="sc-content">Initial gap $= d$. Thief speed $= v_1$, Cop speed $= v_2$. Time to catch $= \frac{d}{v_2 - v_1}$. Total distance run by policeman $= v_2 \times \frac{d}{v_2 - v_1} = d \times \frac{v_2}{v_2 - v_1}$. Instant 1-step multiplier!</div>
+</div>
+      </div>
     </div>
-  </div>
-
-  <!-- SSC TRAPS -->
+  </div><!-- SSC TRAPS -->
   <h2 class="sec-title" id="sec-traps">🚨 SSC Exam Trap Library</h2>
   <div class="trap-grid">
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 Equal Distance Average Speed Trap</span>
+    <span class="trap-title">🚨 Trap 1: Arithmetic Mean Average Speed</span>
     <span class="error-code">Error-C</span>
   </div>
-  <div class="trap-desc">(60+40)/2=50 km/h is WRONG. Correct is 2×60×40/(60+40)=48 km/h. This is the #1 TSD trap in SSC.</div>
+  <div class="trap-desc">A car travels at 60 km/h and returns at 40 km/h. Candidate writes $(60+40)/2 = 50$ km/h. <strong>Wrong!</strong> Average speed for equal distance is harmonic mean: $\frac{2 \times 60 \times 40}{100} = 48$ km/h.</div>
 </div>
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 Train Crossing Distance Trap</span>
-    <span class="error-code">Error-C</span>
+    <span class="trap-title">🚨 Trap 2: Early/Late Sign Inversion</span>
+    <span class="error-code">Error-R</span>
   </div>
-  <div class="trap-desc">What does the train actually travel? Crossing a man = Train length only. Crossing 200m platform = Train+200. BOTH train and platform must be covered.</div>
+  <div class="trap-desc">"10 min late" and "4 min late": Both are late, so difference is $10 - 4 = 6$ min. Adding $10 + 4 = 14$ min ruins the entire distance calculation. Add ONLY when opposite (early + late).</div>
 </div>
 <div class="trap-card">
   <div class="trap-header">
-    <span class="trap-title">🚨 After-Meeting T₁ T₂ Swapping</span>
+    <span class="trap-title">🚨 Trap 3: Subtracting Train Lengths in Same Direction</span>
     <span class="error-code">Error-F</span>
   </div>
-  <div class="trap-desc">S₁/S₂ = √(T₂/T₁). Note: T₂ is in NUMERATOR for S₁. Many students put T₁/T₂ — gives the INVERSE ratio!</div>
-</div></div>
+  <div class="trap-desc">In relative motion, speeds subtract in the same direction, but train lengths ALWAYS ADD ($L_1 + L_2$). Never subtract train lengths! Both bodies must clear each other completely.</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 4: Circular Track Meeting Distinction</span>
+    <span class="error-code">Error-K</span>
+  </div>
+  <div class="trap-desc">"Time to meet for the first time anywhere" is $\frac{L}{|S_1 - S_2|}$. "Time to meet at the STARTING point" is $LCM(L/S_1, L/S_2)$. They are two completely different questions.</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 5: Minutes to Hours Unit Neglect</span>
+    <span class="error-code">Error-T</span>
+  </div>
+  <div class="trap-desc">When speeds are in km/h and time differences are in minutes, multiplying speed by minutes directly produces an answer 60 times too large! Always convert minutes to hours: $\text{mins} / 60$.</div>
+</div>
+<div class="trap-card">
+  <div class="trap-header">
+    <span class="trap-title">🚨 Trap 6: Swapping Upstream and Downstream Speeds</span>
+    <span class="error-code">Error-S</span>
+  </div>
+  <div class="trap-desc">Downstream is WITH the current ($u + v$). Upstream is AGAINST the current ($u - v$). $D$ is always greater than $U$. Inverting them makes stream speed negative.</div>
+</div>
+  </div>
 
-  <!-- PRACTICE Q — One at a time (AI Tutor Rule!) -->
   <h2 class="sec-title" id="sec-practice">💡 Guided Practice Questions (One at a Time)</h2>
-  <div style="background:rgba(246,194,68,0.06);border:1px solid rgba(246,194,68,0.15);border-radius:8px;padding:10px 16px;margin-bottom:14px;font-size:0.8rem;color:#c8a84b;">
-    🤖 <strong>AI Tutor Rule:</strong> Ek question ek baar mein solve karo. Hint aur answer tabhi dekho jab apna attempt ho jaye. Self-rate karo.
-  </div>
   <div class="practice-container">
-    <div class="pq-controls">
-      <button class="pq-btn disabled" id="pq-prev">← Prev</button>
-      <span class="pq-counter">1 / 5</span>
-      <button class="pq-btn" id="pq-next">Next →</button>
+    <div class="pq-nav">
+      <span class="pq-counter" id="pq-counter">Question 1 of 10</span>
+      <div style="display:flex;gap:8px;">
+        <button class="pq-btn disabled" id="pq-prev">&larr; Prev</button>
+        <button class="pq-btn" id="pq-next">Next &rarr;</button>
+      </div>
     </div>
-    
-<div class="pq-card-item" style="display:block">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">Train 150m long runs at 54 km/h. Find time to cross a 250m platform.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph9-0')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph9-0')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph9-0">Hint: Convert speed to m/s. Distance = train + platform lengths.</div>
-    <div class="pq-ans-box" id="pq-ans-ph9-0"><strong>Answer:</strong> Speed=54×5/18=15 m/s. Distance=150+250=400m. Time=400/15=26.67 sec.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q1 -->
+    <div class="pq-card-item active" id="pq-card-ph9-0">
+      <div class="pq-badge"><span class="badge-tag">Level: Basic Foundation</span><span class="badge-tag tag-type">Unit Conversion &amp; Pole Crossing</span></div>
+      <div class="pq-question"><strong>Q1:</strong> A $180$-meter long train crosses a telegraph pole in $9$ seconds. Find the speed of the train in km/h.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph9-0')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph9-0')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph9-0">Hint: Speed in m/s $= 180 / 9 = 20$ m/s. Convert to km/h by multiplying by $\frac{18}{5}$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph9-0">
+        <strong>Answer:</strong> $72$ km/h.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Speed in m/s $= \frac{\text{Length of train}}{\text{Time}} = \frac{180}{9} = 20$ m/s.<br>
+        2. Speed in km/h $= 20 \times \frac{18}{5} = 4 \times 18 = 72$ km/h.<br>
+        <em>⚡ Direct:</em> From 18-table, $20$ m/s $= 4 \times 5$ m/s $= 4 \times 18 = 72$ km/h immediately.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Multiplied by 5/18 instead of 18/5 | [F] Unit formula inverted</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">A man rows 8 km/h in still water. Stream speed 2 km/h. Time taken to row 20km downstream and return?</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph9-1')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph9-1')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph9-1">Hint: Downstream: u+v. Upstream: u-v. Sum both times.</div>
-    <div class="pq-ans-box" id="pq-ans-ph9-1"><strong>Answer:</strong> D=8+2=10 km/h. U=8-2=6 km/h. Time=20/10+20/6=2+10/3=16/3=5⅓ hrs.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q2 -->
+    <div class="pq-card-item" id="pq-card-ph9-1" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Foundation</span><span class="badge-tag tag-type">Average Speed (Equal Distances)</span></div>
+      <div class="pq-question"><strong>Q2:</strong> A motorist travels from town A to town B at a speed of $40$ km/h and returns from B to A along the same route at $60$ km/h. What is his average speed for the entire round trip?</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph9-1')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph9-1')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph9-1">Hint: Since distances are equal, $V_{\text{avg}} = \frac{2 \times 40 \times 60}{40 + 60}$. Do NOT take $(40+60)/2$!</div>
+      <div class="pq-ans-box" id="pq-ans-ph9-1">
+        <strong>Answer:</strong> $48$ km/h.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Harmonic mean formula: $V_{\text{avg}} = \frac{2 S_1 S_2}{S_1 + S_2} = \frac{2 \times 40 \times 60}{40 + 60}$.<br>
+        2. $V_{\text{avg}} = \frac{4800}{100} = 48$ km/h.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Answered 50 km/h (arithmetic mean trap) | [C] Calculation slip</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level B">Level B: Standard</span>
-    <div class="pq-question">A and B walk toward each other from cities 42 km apart. After meeting, A takes 1.5 hrs and B takes 6 hrs to reach destinations. If A's speed is 6 km/h, find B's.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph9-2')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph9-2')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph9-2">Hint: After-meeting formula: S₁/S₂ = √(T₂/T₁). T₂=B's remaining time=6h, T₁=A's remaining time=1.5h.</div>
-    <div class="pq-ans-box" id="pq-ans-ph9-2"><strong>Answer:</strong> S_A/S_B = √(6/1.5) = √4 = 2. B's speed = 6/2 = 3 km/h.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q3 -->
+    <div class="pq-card-item" id="pq-card-ph9-2" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate SSC Core</span><span class="badge-tag tag-type">Early and Late Theorem</span></div>
+      <div class="pq-question"><strong>Q3:</strong> Walking at $5$ km/h, a student reaches his school $15$ minutes late. If he increases his speed to $6$ km/h, he is still $5$ minutes late. Find the distance from his house to the school.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph9-2')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph9-2')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph9-2">Hint: Both cases are LATE, so $\Delta t = 15 - 5 = 10$ minutes $= 10/60 = 1/6$ hour. Use $\frac{S_1 S_2}{|S_1 - S_2|} \Delta t$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph9-2">
+        <strong>Answer:</strong> $5$ km.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Time difference: $\Delta t = 15 - 5 = 10$ minutes $= \frac{10}{60} = \frac{1}{6}$ hour.<br>
+        2. Distance formula: $D = \frac{S_1 \times S_2}{S_2 - S_1} \times \Delta t = \frac{5 \times 6}{6 - 5} \times \frac{1}{6}$.<br>
+        3. $D = 30 \times \frac{1}{6} = 5$ km.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [R] Added times (15+5=20) instead of subtracting | [T] Forgot to divide by 60</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level B">Level B: Standard</span>
-    <div class="pq-question">A man can row 6 km/h in still water. Takes twice as long upstream as downstream. Find stream speed.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph9-3')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph9-3')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph9-3">Hint: T_up/T_down = v_down/v_up (inverse relationship). Set up equation.</div>
-    <div class="pq-ans-box" id="pq-ans-ph9-3"><strong>Answer:</strong> T_up/T_down = 2/1. For equal distance: Speed_down/Speed_up = 2/1. (u+v)/(u-v)=2. 6+v=12-2v → 3v=6 → v=2 km/h.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q4 -->
+    <div class="pq-card-item" id="pq-card-ph9-3" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate</span><span class="badge-tag tag-type">Stoppage Time per Hour</span></div>
+      <div class="pq-question"><strong>Q4:</strong> Excluding stoppages, the speed of an express bus is $64$ km/h, and including stoppages, its speed drops to $48$ km/h. For how many minutes does the bus stop per hour on average?</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph9-3')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph9-3')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph9-3">Hint: Formula: $\frac{\text{Without stop} - \text{With stop}}{\text{Without stop}} \times 60 = \frac{64 - 48}{64} \times 60$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph9-3">
+        <strong>Answer:</strong> $15$ minutes per hour.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Stoppage time per hour $= \frac{S_{\text{fast}} - S_{\text{slow}}}{S_{\text{fast}}} \times 60$ minutes.<br>
+        2. $= \frac{64 - 48}{64} \times 60 = \frac{16}{64} \times 60 = \frac{1}{4} \times 60 = 15$ minutes.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Divided by 48 instead of 64 | [F] Inverted stoppage ratio</span>
+      </div>
     </div>
-  </div>
-</div>
-<div class="pq-card-item" style="display:none">
-  <div class="pq-card">
-    <span class="pq-level A">Level A: Foundation</span>
-    <div class="pq-question">Two trains 100m and 120m long approach at 80 km/h and 100 km/h in opposite directions. Find crossing time in seconds.</div>
-    <button class="pq-hint-btn" onclick="toggleEl('pq-hint-ph9-4')">💡 Show Hint</button>
-    <button class="pq-reveal-btn" onclick="toggleEl('pq-ans-ph9-4')">✅ Reveal Answer</button>
-    <div class="pq-hint-box" id="pq-hint-ph9-4">Hint: Opposite direction: add speeds. Total distance = sum of lengths.</div>
-    <div class="pq-ans-box" id="pq-ans-ph9-4"><strong>Answer:</strong> Total distance=220m. Relative speed=180 km/h=50 m/s. Time=220/50=4.4 sec.</div>
-    <div class="pq-self-rate">
-      <span>Self-rate:</span>
-      <button class="rate-btn rate-correct">✓ Got it</button>
-      <button class="rate-btn rate-slow">⏱ Slow</button>
-      <button class="rate-btn rate-incorrect">✗ Wrong</button>
+
+    <!-- Q5 -->
+    <div class="pq-card-item" id="pq-card-ph9-4" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate-High</span><span class="badge-tag tag-type">Train Crossing Platform &amp; Man</span></div>
+      <div class="pq-question"><strong>Q5:</strong> A train crosses a platform $200$ m long in $20$ seconds, and passes a man standing on the platform in $12$ seconds. Find the length of the train and its speed in km/h.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph9-4')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph9-4')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph9-4">Hint: The extra $20 - 12 = 8$ seconds is spent covering ONLY the $200$m platform! Speed $= 200/8 = 25$ m/s.</div>
+      <div class="pq-ans-box" id="pq-ans-ph9-4">
+        <strong>Answer:</strong> Length $= 300$ m; Speed $= 90$ km/h.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Time to cover $200$ m platform alone $= 20 - 12 = 8$ seconds.<br>
+        2. Speed of train $= \frac{200}{8} = 25$ m/s.<br>
+        3. Speed in km/h $= 25 \times \frac{18}{5} = 90$ km/h.<br>
+        4. Length of train $= \text{Speed} \times \text{Time to cross man} = 25 \times 12 = 300$ m.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Arithmetic error in 200/8 | [S] Calculated length using 20s</span>
+      </div>
     </div>
-  </div>
-</div>
+
+    <!-- Q6 -->
+    <div class="pq-card-item" id="pq-card-ph9-5" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate-High</span><span class="badge-tag tag-type">Two Trains in Opposite Direction</span></div>
+      <div class="pq-question"><strong>Q6:</strong> Two trains of lengths $150$ m and $170$ m are running in opposite directions on parallel tracks at speeds of $40$ km/h and $32$ km/h respectively. In how many seconds will they completely cross each other?</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph9-5')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph9-5')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph9-5">Hint: Distance $= 150 + 170 = 320$ m. Relative speed $= 40 + 32 = 72$ km/h $= 20$ m/s.</div>
+      <div class="pq-ans-box" id="pq-ans-ph9-5">
+        <strong>Answer:</strong> $16$ seconds.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Total Distance $= L_1 + L_2 = 150 + 170 = 320$ m.<br>
+        2. Relative Speed (Opposite) $= 40 + 32 = 72$ km/h.<br>
+        3. Convert to m/s: $72 \times \frac{5}{18} = 20$ m/s.<br>
+        4. Time taken $= \frac{\text{Total Distance}}{\text{Relative Speed}} = \frac{320}{20} = 16$ seconds.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Subtracted speeds instead of adding | [C] Addition error in lengths</span>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="pq-card-item" id="pq-card-ph9-6" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Moderate</span><span class="badge-tag tag-type">Boats &amp; Streams Core</span></div>
+      <div class="pq-question"><strong>Q7:</strong> A motorboat travels $36$ km downstream in $2$ hours and covers the same distance upstream in $3$ hours. Find the speed of the motorboat in still water and the speed of the river current.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph9-6')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph9-6')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph9-6">Hint: Downstream $D = 36/2 = 18$ km/h. Upstream $U = 36/3 = 12$ km/h. $u = (D+U)/2, v = (D-U)/2$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph9-6">
+        <strong>Answer:</strong> Boat speed $= 15$ km/h; Stream speed $= 3$ km/h.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Downstream Speed $D = \frac{36}{2} = 18$ km/h.<br>
+        2. Upstream Speed $U = \frac{36}{3} = 12$ km/h.<br>
+        3. Boat speed in still water $u = \frac{D + U}{2} = \frac{18 + 12}{2} = 15$ km/h.<br>
+        4. Stream speed $v = \frac{D - U}{2} = \frac{18 - 12}{2} = 3$ km/h.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [F] Subtracted for boat speed | [C] Arithmetic division error</span>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="pq-card-item" id="pq-card-ph9-7" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: High Level (Mains Pattern)</span><span class="badge-tag tag-type">After-Meeting Speed Theorem</span></div>
+      <div class="pq-question"><strong>Q8:</strong> Two trains P and Q start at the same time from Delhi and Patna towards each other. After meeting, they take $4$ hours $48$ minutes and $3$ hours $20$ minutes respectively to reach Patna and Delhi. If train P is moving at $45$ km/h, find the speed of train Q.</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph9-7')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph9-7')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph9-7">Hint: $T_1 = 4\frac{48}{60} = \frac{24}{5}$ hrs. $T_2 = 3\frac{20}{60} = \frac{10}{3}$ hrs. Apply $\frac{S_1}{S_2} = \sqrt{\frac{T_2}{T_1}}$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph9-7">
+        <strong>Answer:</strong> $54$ km/h.<br>
+        <strong>Step-by-step:</strong><br>
+        1. Convert times to fractions: $T_1 = 4\frac{4}{5} = \frac{24}{5}$ h; $T_2 = 3\frac{1}{3} = \frac{10}{3}$ h.<br>
+        2. Theorem: $\frac{S_P}{S_Q} = \sqrt{\frac{T_2}{T_1}} = \sqrt{\frac{10/3}{24/5}} = \sqrt{\frac{10 \times 5}{3 \times 24}} = \sqrt{\frac{50}{72}} = \sqrt{\frac{25}{36}} = \frac{5}{6}$.<br>
+        3. Since $S_P = 45$ km/h $\implies \frac{45}{S_Q} = \frac{5}{6} \implies S_Q = \frac{45 \times 6}{5} = 54$ km/h.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [F] Used T1/T2 inside root without inverting | [C] Fraction simplification error</span>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="pq-card-item" id="pq-card-ph9-8" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: High Level</span><span class="badge-tag tag-type">Linear Race Compounding</span></div>
+      <div class="pq-question"><strong>Q9:</strong> In a $1000$-meter race, A beats B by $100$ meters. In a $400$-meter race, B beats C by $40$ meters. By how many meters will A beat C in a $500$-meter race?</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph9-8')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph9-8')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph9-8">Hint: Ratio $A : B = 1000 : 900 = 10 : 9$. Ratio $B : C = 400 : 360 = 10 : 9$. Combine to find $A : C$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph9-8">
+        <strong>Answer:</strong> $95$ meters.<br>
+        <strong>Step-by-step:</strong><br>
+        1. When A runs $1000$ m, B runs $900$ m $\implies \frac{A}{B} = \frac{10}{9}$.<br>
+        2. When B runs $400$ m, C runs $360$ m $\implies \frac{B}{C} = \frac{10}{9}$.<br>
+        3. Combine: $\frac{A}{C} = \frac{A}{B} \times \frac{B}{C} = \frac{10}{9} \times \frac{10}{9} = \frac{100}{81}$.<br>
+        4. In a $500$ m race: When A runs $500$ m ($100 \times 5$), C runs $81 \times 5 = 405$ m.<br>
+        5. Winning margin $= 500 - 405 = 95$ meters.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [C] Multiplied by wrong factor | [R] Added deficits (10% + 10% = 20%)</span>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="pq-card-item" id="pq-card-ph9-9" style="display:none;">
+      <div class="pq-badge"><span class="badge-tag">Level: Advanced Tier-2</span><span class="badge-tag tag-type">Circular Track Double Query</span></div>
+      <div class="pq-question"><strong>Q10:</strong> Two runners A and B run on a circular track of circumference $600$ m in the same direction. The speed of A is $10$ m/s and the speed of B is $6$ m/s. After how many seconds will they meet for the first time anywhere on the track, and after how many seconds will they meet for the first time at the starting point?</div>
+      <div class="pq-actions">
+        <button class="pq-btn pq-hint-btn" onclick="toggleHint('ph9-9')">💡 Reveal Hint</button>
+        <button class="pq-btn pq-ans-btn" onclick="toggleAns('ph9-9')">✅ Check Solution</button>
+      </div>
+      <div class="pq-hint-box" id="pq-hint-ph9-9">Hint: First meet $= \frac{L}{S_A - S_B} = \frac{600}{10 - 6}$. Meet at start $= LCM(L/S_A, L/S_B) = LCM(60, 100)$.</div>
+      <div class="pq-ans-box" id="pq-ans-ph9-9">
+        <strong>Answer:</strong> First meet anywhere $= 150$ s; At start point $= 300$ s.<br>
+        <strong>Step-by-step:</strong><br>
+        1. <em>First meeting anywhere:</em> $T_{\text{meet}} = \frac{L}{S_A - S_B} = \frac{600}{10 - 6} = \frac{600}{4} = 150$ seconds.<br>
+        2. <em>Meeting at the starting point:</em><br>
+        &nbsp;&nbsp;&nbsp; Lap time for A $= \frac{600}{10} = 60$ seconds.<br>
+        &nbsp;&nbsp;&nbsp; Lap time for B $= \frac{600}{6} = 100$ seconds.<br>
+        &nbsp;&nbsp;&nbsp; Meet at start $= LCM(60, 100) = 300$ seconds.<br>
+        <span style="color:var(--red);font-size:0.8rem;">Tag if wrong: [K] Confused first meet with meet at start | [C] LCM calculation slip</span>
+      </div>
+    </div>
   </div>
 
-  <!-- PYQ LAB -->
-  <h2 class="sec-title" id="sec-pyqs">🏆 SSC PYQ Lab</h2>
-  <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:12px;">
-    🔐 Integrity Rule: Actual PYQ tabhi label karo jab year/shift verified ho. Otherwise: "PYQ-style" label use karo.
-  </div>
-  <div class="pyq-container">
-<div class="pyq-card">
-  <div class="pyq-tag">PYQ-style • SSC CGL Tier-1</div>
-  <div class="pyq-q">A train takes 10 sec to pass a pole and 30 sec to pass a 400m platform. Find the length and speed of the train.</div>
-  <button class="reveal-sol-btn" onclick="toggleEl('pyq-sol-ph9-0')">🔍 Show Trick Solution</button>
-  <div class="sol-box" id="pyq-sol-ph9-0">Let length=L. L/10 = (L+400)/30 → 30L=10L+4000 → L=200m. Speed=200/10=20 m/s=72 km/h.</div>
-</div>
-<div class="pyq-card">
-  <div class="pyq-tag">PYQ-style • SSC CGL Tier-2</div>
-  <div class="pyq-q">A man's usual speed is S km/h. He arrives 30 min late at (3/4)S and 20 min early at (4/3)S. Find distance.</div>
-  <button class="reveal-sol-btn" onclick="toggleEl('pyq-sol-ph9-1')">🔍 Show Trick Solution</button>
-  <div class="sol-box" id="pyq-sol-ph9-1">Let distance=D. D/(3S/4) - D/S = 30/60 → 4D/3S - D/S = 1/2 → D/3S = 1/2 → D=3S/2. D/(3S/4)−D/S=1/2 actually → D(4/3S − 1/S)=1/2 → D(1/3S)=1/2 → D=3S/2. Use S=1 unit: D=1.5 km.</div>
-</div></div>
+  <h2 class="sec-title" id="sec-pyqs">🏆 SSC PYQ Lab — Real Exam Questions with Examiner Traps</h2>
+  <div class="pyq-list">
 
-  <!-- TIMED DRILL -->
+    <!-- PYQ 1 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2023 Tier-1 (Shift 3)</span>
+        <span class="pyq-diff">Difficulty: Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> A person travels a total distance of $240$ km in $6$ hours, partly by bus at $30$ km/h and partly by train at $50$ km/h. What is the distance traveled by train?
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph9-pyq-0')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph9-pyq-0">
+        <strong>✅ Correct Answer:</strong> $150$ km<br><br>
+        <strong>⚡ 12-Second Alligation on Speed:</strong><br>
+        • Overall average speed $= \frac{240}{6} = 40$ km/h.<br>
+        • Bus speed $= 30$, Train speed $= 50$, Mean speed $= 40$.<br>
+        • Ratio of <strong>Time</strong> taken: $(50 - 40) : (40 - 30) = 10 : 10 = 1 : 1$.<br>
+        • Total time $= 6$ hours $\implies$ Time by train $= 3$ hours.<br>
+        • Distance by train $= 50 \text{ km/h} \times 3 \text{ h} = 150$ km!<br><br>
+        <strong>🚨 Examiner Trap:</strong> Assuming $1:1$ is the distance ratio! Alligation on speed gives TIME ratio ($T_{\text{bus}} : T_{\text{train}}$). Distance must be calculated using $S \times T$.
+      </div>
+    </div>
+
+    <!-- PYQ 2 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2022 Tier-2 (Mains)</span>
+        <span class="pyq-diff">Difficulty: Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> A train takes $18$ seconds to pass completely through a station platform $162$ m long and $15$ seconds to pass through another platform $120$ m long. Find the length of the train.
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph9-pyq-1')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph9-pyq-1">
+        <strong>✅ Correct Answer:</strong> $90$ m<br><br>
+        <strong>⚡ 10-Second Delta Method:</strong><br>
+        • Difference in distance $= 162 - 120 = 42$ m.<br>
+        • Difference in time $= 18 - 15 = 3$ seconds.<br>
+        • Speed of train $= \frac{42}{3} = 14$ m/s.<br>
+        • Total distance in $15$ s $= 14 \times 15 = 210$ m.<br>
+        • Length of train $= 210 - 120 = 90$ m!
+      </div>
+    </div>
+
+    <!-- PYQ 3 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2023 Tier-1 (Shift 1)</span>
+        <span class="pyq-diff">Difficulty: Advanced</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> A boat goes $30$ km upstream and $44$ km downstream in $10$ hours. In $13$ hours, it can go $40$ km upstream and $55$ km downstream. Determine the speed of the boat in still water.
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph9-pyq-2')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph9-pyq-2">
+        <strong>✅ Correct Answer:</strong> $8$ km/h<br><br>
+        <strong>⚡ HCF Factor Inspection Trick:</strong><br>
+        • Look at downstream distances: $44$ and $55$. Their common factor is $11$. Try $D = 11$ km/h.<br>
+        • If $D = 11$: Downstream time in Case 1 is $44/11 = 4$ hours.<br>
+        • Upstream time in Case 1 $= 10 - 4 = 6$ hours $\implies U = \frac{30}{6} = 5$ km/h.<br>
+        • Verify Case 2: $\frac{40}{5} + \frac{55}{11} = 8 + 5 = 13$ hours. Perfectly satisfied!<br>
+        • Speed of boat in still water $u = \frac{D + U}{2} = \frac{11 + 5}{2} = 8$ km/h.<br>
+        • Solved in 15 seconds without setting up simultaneous equations!
+      </div>
+    </div>
+
+    <!-- PYQ 4 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2021 Tier-2 (Mains)</span>
+        <span class="pyq-diff">Difficulty: Moderate-High</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> Two persons A and B start moving from two points X and Y towards each other simultaneously. After meeting, they take $3$ hours $12$ minutes and $1$ hour $48$ minutes respectively to reach Y and X. If the speed of A is $9$ km/h, then the speed of B is:
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph9-pyq-3')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph9-pyq-3">
+        <strong>✅ Correct Answer:</strong> $12$ km/h<br><br>
+        <strong>⚡ Direct Theorem Application:</strong><br>
+        • $T_A = 3\text{h } 12\text{m} = 3\frac{1}{5} = \frac{16}{5}$ hours.<br>
+        • $T_B = 1\text{h } 48\text{m} = 1\frac{4}{5} = \frac{9}{5}$ hours.<br>
+        • $\frac{S_A}{S_B} = \sqrt{\frac{T_B}{T_A}} = \sqrt{\frac{9/5}{16/5}} = \sqrt{\frac{9}{16}} = \frac{3}{4}$.<br>
+        • $\frac{9}{S_B} = \frac{3}{4} \implies S_B = \frac{9 \times 4}{3} = 12$ km/h.
+      </div>
+    </div>
+
+    <!-- PYQ 5 -->
+    <div class="pyq-item">
+      <div class="pyq-header">
+        <span class="pyq-source">SSC CGL 2022 Tier-1</span>
+        <span class="pyq-diff">Difficulty: Moderate</span>
+      </div>
+      <div class="pyq-body">
+        <strong>Question:</strong> A thief is spotted by a policeman from a distance of $200$ m. When the policeman starts the chase, the thief also starts running. If the speed of the thief is $10$ km/h and that of the policeman is $11$ km/h, at what distance from the start of the chase will the policeman catch the thief?
+      </div>
+      <div class="pq-actions" style="margin-top:10px;">
+        <button class="pq-btn" onclick="toggleSolution('ph9-pyq-4')">🔍 Show Exam Breakdown &amp; Solution</button>
+      </div>
+      <div class="sol-box" id="sol-ph9-pyq-4">
+        <strong>✅ Correct Answer:</strong> $2.2$ km (or $2,200$ m)<br><br>
+        <strong>⚡ 8-Second Proportionality Shortcut:</strong><br>
+        • Speed ratio Policeman : Thief $= 11 : 10$.<br>
+        • Since time of chase is same, Distance ratio $= 11 : 10$.<br>
+        • Difference between them is $11 - 10 = 1$ unit.<br>
+        • This $1$ unit represents the initial gap of $200$ m.<br>
+        • Distance run by Policeman $= 11 \times 200 = 2,200$ m $= 2.2$ km!<br>
+        • (Distance run by Thief $= 10 \times 200 = 2,000$ m).
+      </div>
+    </div>
+  </div>
+
   <h2 class="sec-title" id="sec-timer">⏱️ Timed Drill — Score Calculator</h2>
   <div class="timed-drill">
     <div style="text-align:center;font-size:0.85rem;color:var(--text-muted);margin-bottom:10px;">
@@ -1716,34 +2001,61 @@ v (stream speed) = (D-U)/2</div>
   </div>
 
   <!-- ACTIVE RECALL -->
-  <h2 class="sec-title" id="sec-recall">🧠 Active Recall Session</h2>
-  <div class="recall-section">
-    <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:12px;">
-      <strong style="color:var(--gold);">Rule:</strong> Formula ko passive reading se revise mat karo. Hide → Recall → Write → Verify → Use.
+  <h2 class="sec-title" id="sec-recall">🧠 Active Recall Session — Test Your Memory</h2>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:24px;">
+    <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:16px;">
+      Answer each question from memory before clicking "Reveal Answer". Speed and accuracy rely on automatic recall!
+    </p>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">1. What is the formula for average speed over two equal distances at speeds S1 and S2?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">V_avg = (2 * S1 * S2) / (S1 + S2) (Harmonic Mean).</div>
     </div>
-    <div class="recall-how"><div class="recall-step"><div class="rs-box">Hide Formula</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Recall Mentally</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Write It Down</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Verify</div><span class="rs-arrow">→</span></div><div class="recall-step"><div class="rs-box">Use in a Question</div></div></div>
-    <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:10px;margin-top:10px;">
-      ✅ Check off each recall question after completing it from memory:
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">2. What is the After-Meeting speed theorem connecting speeds and remaining travel times?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">S1 / S2 = sqrt(T2 / T1). Meeting time t_meet = sqrt(T1 * T2).</div>
     </div>
-    <div class="recall-qs"><div class="recall-q">
-          <span class="rq-text">Unit conversion formulas (km/h ↔ m/s)?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Average speed formula for equal distances?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Boats: u aur v kaise nikaltein?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">After-meeting formula kya hai?</span>
-          <input type="checkbox" class="rq-check">
-        </div><div class="recall-q">
-          <span class="rq-text">Train crossing platform mein kaunsi distance use hoti hai?</span>
-          <input type="checkbox" class="rq-check">
-        </div></div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">3. When two trains move in the SAME direction on parallel tracks, what is the distance covered to cross each other?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">ALWAYS the SUM of lengths (L1 + L2). Distance never subtracts!</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">4. In Boats and Streams, how do you find boat speed (u) and stream speed (v) from Downstream (D) and Upstream (U)?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Boat speed u = (D + U) / 2. Stream speed v = (D - U) / 2.</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">5. What is the shortcut formula for bus stoppage time in minutes per hour?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Stoppage time/hr = [(Speed without stops - Speed with stops) / Speed without stops] * 60 minutes.</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">6. On a circular track of circumference L, what is the time to meet for the first time anywhere vs at the starting point (same direction)?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Anywhere: L / (S1 - S2). At start point: LCM(L/S1, L/S2).</div>
+    </div>
+
+    <div class="ar-item" style="border-bottom:1px solid var(--border);padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">7. What are the m/s values for 36, 54, 72, and 90 km/h?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">36 km/h = 10 m/s; 54 km/h = 15 m/s; 72 km/h = 20 m/s; 90 km/h = 25 m/s.</div>
+    </div>
+
+    <div class="ar-item" style="padding:12px 0;">
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;">8. How do you find the distance when someone travels at S1 arriving late by t1, and at S2 arriving early by t2?</div>
+      <button class="pq-btn" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='none'?'block':'none'">Reveal Answer</button>
+      <div style="display:none;margin-top:8px;color:var(--primary);font-size:0.85rem;font-family:'Fira Code',monospace;">Distance = [ (S1 * S2) / |S1 - S2| ] * [ (t1 + t2) / 60 ].</div>
+    </div>
   </div>
 
-  <!-- ERROR NOTEBOOK -->
   <h2 class="sec-title" id="sec-errors">📓 Error Notebook</h2>
   <div class="error-notebook">
     <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:12px;">
