@@ -1377,104 +1377,263 @@ pre, code, .fc-formula {
   </div>
 
   <!-- DAY PLAN -->
-  <h2 class="sec-title" id="sec-plan">📅 Days 60–67 (8 Days) — Day-by-Day Plan</h2>
+    <!-- DAY PLAN (Detailed Syllabus & Conceptual Breakdown) -->
+  <h2 class="sec-title" id="sec-plan">📅 Days 60–67 (8 Days) — Day-by-Day Conceptual Master Plan</h2>
   <div class="day-cards">
-<div class="day-card">
-  <div class="day-label">
-    <div class="day-tag">Day 60</div>
-    <div class="day-name" style="font-size:0.72rem">S-D-T Basics + Unit Conversi...</div>
-    <div class="day-drill" style="font-size:0.65rem; margin-top:4px;">📝 15 basic S-D-T questions</div>
+
+    <!-- Day 60 -->
+    <div class="day-card">
+      <div class="day-label">
+        <div class="day-tag">Day 60</div>
+        <div class="day-name">S-D-T Basics &amp; Proportionality Laws</div>
+        <div class="day-drill">📝 25 Unit/Ratio Drills</div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:8px;">Core Formulas, Unit Conversions (5/18 &amp; 18/5) &amp; Constancy Relations</div>
+        <ul class="day-topics">
+          <li><strong>The Fundamental TSD Triad:</strong>
+            $$\mathbf{\text{Speed } (S) = \frac{\text{Distance } (D)}{\text{Time } (T)}} \quad \Big| \quad \mathbf{D = S \times T} \quad \Big| \quad \mathbf{T = \frac{D}{S}}$$
+          </li>
+          <li><strong>The 5/18 and 18/5 Unit Conversion Engine:</strong>
+            &bull; $\mathbf{\text{km/h} \to \text{m/s}}$: Multiply by $\mathbf{\frac{5}{18}}$. (e.g. $72\text{ km/h} = 72 \times \frac{5}{18} = 20\text{ m/s}$).<br>
+            &bull; $\mathbf{\text{m/s} \to \text{km/h}}$: Multiply by $\mathbf{\frac{18}{5}}$. (e.g. $25\text{ m/s} = 25 \times \frac{18}{5} = 90\text{ km/h}$).<br>
+            ⚡ <em>Anchor Multiple:</em> Multiples of $18\text{ km/h}$ match multiples of $5\text{ m/s}$ ($18 \leftrightarrow 5, 36 \leftrightarrow 10, 54 \leftrightarrow 15, 72 \leftrightarrow 20, 90 \leftrightarrow 25$).
+          </li>
+          <li><strong>The Three Constancy Principles:</strong>
+            &bull; <strong>When Distance is Constant:</strong> $\mathbf{S \propto \frac{1}{T}} \implies \frac{S_1}{S_2} = \frac{T_2}{T_1}$. (Speed ratio is inverse of time ratio!).<br>
+            &bull; <strong>When Time is Constant:</strong> $\mathbf{D \propto S} \implies \frac{D_1}{D_2} = \frac{S_1}{S_2}$. (Distance covered is directly proportional to speed).<br>
+            &bull; <strong>When Speed is Constant:</strong> $\mathbf{D \propto T} \implies \frac{D_1}{D_2} = \frac{T_1}{T_2}$.
+          </li>
+          <li><strong>Worked Micro-Example (Inverse Ratio):</strong> A student walks to school at $4\text{ km/h}$ and arrives in 30 minutes. If he walks at $5\text{ km/h}$, how long will he take?<br>
+            Distance is constant $\implies \frac{T_2}{T_1} = \frac{S_1}{S_2} = \frac{4}{5}$.<br>
+            $T_2 = \frac{4}{5} \times 30 = 24\text{ minutes}$. Solved without calculating distance!
+          </li>
+        </ul>
+        <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
+          🎯 <strong>Day 60 Focus:</strong> Before calculating, check whether Distance is constant or Time is constant to apply direct ratio inversion.
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 61 -->
+    <div class="day-card">
+      <div class="day-label">
+        <div class="day-tag">Day 61</div>
+        <div class="day-name">Average Speed &amp; Harmonic Mean</div>
+        <div class="day-drill">📝 20 Average Speed Drills</div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:8px;">Equal Distances, Harmonic Mean &amp; Multi-Leg Journey Averaging</div>
+        <ul class="day-topics">
+          <li><strong>The True Universal Average Speed Formula:</strong>
+            $$\mathbf{S_{\text{avg}} = \frac{\text{Total Distance}}{\text{Total Time}} = \frac{D_1 + D_2 + \dots}{\frac{D_1}{S_1} + \frac{D_2}{S_2} + \dots}}$$
+            🚨 <em>CRITICAL TRAP:</em> Never take simple arithmetic mean $\frac{S_1 + S_2}{2}$ unless the TIME spent at each speed is explicitly equal!
+          </li>
+          <li><strong>Equal Distance Formulas (Harmonic Means):</strong>
+            &bull; <strong>Two Equal Distances:</strong> $\mathbf{S_{\text{avg}} = \frac{2 S_1 S_2}{S_1 + S_2}}$.<br>
+            Example: A car goes from A to B at $60\text{ km/h}$ and returns at $40\text{ km/h}$:<br>
+            $S_{\text{avg}} = \frac{2 \times 60 \times 40}{60 + 40} = \frac{4800}{100} = 48\text{ km/h}$ (NOT $50\text{ km/h}$).<br>
+            &bull; <strong>Three Equal Distances:</strong> $\mathbf{S_{\text{avg}} = \frac{3 S_1 S_2 S_3}{S_1 S_2 + S_2 S_3 + S_3 S_1}}$.
+          </li>
+          <li><strong>The LCM Distance Assumption Method:</strong>
+            A person covers 3 equal parts of a journey at $20, 30, 60\text{ km/h}$. Find average speed:<br>
+            Assume each part distance $=\text{LCM}(20, 30, 60) = 60\text{ km}$.<br>
+            $T_1 = 60/20 = 3\text{ h}$, $T_2 = 60/30 = 2\text{ h}$, $T_3 = 60/60 = 1\text{ h}$.<br>
+            Total Distance $= 60 \times 3 = 180\text{ km}$. Total Time $= 3 + 2 + 1 = 6\text{ h}$.<br>
+            $S_{\text{avg}} = \frac{180}{6} = 30\text{ km/h}$! Clean and fast.
+          </li>
+        </ul>
+        <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
+          🎯 <strong>Day 61 Focus:</strong> For equal distances, always use $\frac{2xy}{x+y}$ or assume the distance as LCM to avoid large fraction inversions.
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 62 -->
+    <div class="day-card">
+      <div class="day-label">
+        <div class="day-tag">Day 62</div>
+        <div class="day-name">Early/Late Model &amp; Stoppage Time</div>
+        <div class="day-drill">📝 25 Formula Drills</div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:8px;">The Speed-Product Distance Shortcut &amp; Bus Stoppage Time per Hour</div>
+        <ul class="day-topics">
+          <li><strong>The Universal Early / Late Distance Formula:</strong>
+            If a person travels at speed $S_1$ and is $t_1$ minutes late, and at speed $S_2$ is $t_2$ minutes early:<br>
+            $$\mathbf{\text{Distance } D = \frac{S_1 \times S_2}{|S_1 - S_2|} \times \Delta t_{\text{hours}}}$$
+            &bull; <em>Time Difference ($\Delta t$):</em><br>
+            - One Late and One Early $\implies \mathbf{\Delta t = t_1 + t_2}$ (Add!).<br>
+            - Both Late OR Both Early $\implies \mathbf{\Delta t = |t_1 - t_2|}$ (Subtract!).<br>
+            Always divide $\Delta t$ in minutes by $60$ to convert to hours!
+          </li>
+          <li><strong>Worked Micro-Example (Early/Late):</strong> Walking at $5\text{ km/h}$, a boy is 10 min late. Walking at $6\text{ km/h}$, he is 5 min early. Find distance:<br>
+            $\Delta t = 10 + 5 = 15\text{ min} = \frac{15}{60} = \frac{1}{4}\text{ hr}$.<br>
+            $D = \frac{5 \times 6}{|6 - 5|} \times \frac{1}{4} = \frac{30}{1} \times \frac{1}{4} = 7.5\text{ km}$. Solved in 6 seconds!
+          </li>
+          <li><strong>Bus Stoppage Time per Hour:</strong>
+            $$\mathbf{\text{Stoppage Time (min/hr)} = \frac{S_{\text{without}} - S_{\text{with}}}{S_{\text{without}}} \times 60}$$
+            Example: Speed excluding stoppages is $60\text{ km/h}$, including stoppages is $45\text{ km/h}$:<br>
+            $\text{Stoppage Time} = \frac{60 - 45}{60} \times 60 = 15\text{ minutes/hour}$.
+          </li>
+        </ul>
+        <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
+          🎯 <strong>Day 62 Focus:</strong> In stoppage time, the denominator is ALWAYS the non-stop speed ($S_{\text{without}}$).
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 63 -->
+    <div class="day-card">
+      <div class="day-label">
+        <div class="day-tag">Day 63</div>
+        <div class="day-name">Relative Speed &amp; Meeting Points</div>
+        <div class="day-drill">📝 25 Relative Motion Qs</div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:8px;">Opposite vs Same Direction Vectors &amp; Staggered Start Synchronization</div>
+        <ul class="day-topics">
+          <li><strong>Relative Speed Fundamentals:</strong>
+            &bull; <strong>Opposite Direction (Moving Towards / Away):</strong> $\mathbf{S_{\text{rel}} = S_1 + S_2}$.<br>
+            &bull; <strong>Same Direction (Overtaking / Chasing):</strong> $\mathbf{S_{\text{rel}} = |S_1 - S_2|}$.<br>
+            $$\mathbf{\text{Time to Meet / Catch} = \frac{\text{Initial Distance Separation}}{\text{Relative Speed}}}$$
+          </li>
+          <li><strong>Police and Thief Model:</strong>
+            Thief is spotted $200\text{ m}$ ahead, runs at $10\text{ km/h}$. Policeman chases at $12\text{ km/h}$.<br>
+            $S_{\text{rel}} = 12 - 10 = 2\text{ km/h} = 2 \times \frac{5}{18} = \frac{5}{9}\text{ m/s}$.<br>
+            $\text{Time to catch} = \frac{200}{5/9} = 200 \times \frac{9}{5} = 360\text{ seconds} = 6\text{ minutes}$.<br>
+            Distance run by thief $= 10\text{ km/h} \times \frac{6}{60}\text{ h} = 1\text{ km} = 1000\text{ m}$.
+          </li>
+          <li><strong>Staggered Start Times (Train Meeting Protocol):</strong>
+            Two trains leave Stations A and B $400\text{ km}$ apart. Train 1 leaves A at 7:00 AM at $50\text{ km/h}$. Train 2 leaves B at 8:00 AM at $60\text{ km/h}$ towards A.<br>
+            Step 1: Synchronize clocks to 8:00 AM. In 1 hour, Train 1 covers $50\text{ km}$.<br>
+            Step 2: Remaining distance at 8:00 AM $= 400 - 50 = 350\text{ km}$.<br>
+            Step 3: Relative speed $= 50 + 60 = 110\text{ km/h}$. Time $= \frac{350}{110} = \frac{35}{11}\text{ hours}$.
+          </li>
+        </ul>
+        <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
+          🎯 <strong>Day 63 Focus:</strong> Never apply relative speed until BOTH bodies are simultaneously in motion! Synchronize the clock first.
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 64 -->
+    <div class="day-card">
+      <div class="day-label">
+        <div class="day-tag">Day 64</div>
+        <div class="day-name">Trains — Poles, Platforms &amp; Crossings</div>
+        <div class="day-drill">📝 25 Train Problems</div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:8px;">Crossing Geometries, Platform Distance &amp; Moving Train Overtakes</div>
+        <ul class="day-topics">
+          <li><strong>The Distance Covered Rule in Trains:</strong>
+            Always ask: <em>"What total distance is traversed during the crossing?"</em><br>
+            &bull; Crossing a <strong>Point Object</strong> (Pole, Tree, Standing Man): $\mathbf{D = L_{\text{train}}}$.<br>
+            &bull; Crossing a <strong>Length Object</strong> (Platform, Bridge, Tunnel): $\mathbf{D = L_{\text{train}} + L_{\text{platform}}}$.<br>
+            &bull; Crossing <strong>Another Train</strong>: $\mathbf{D = L_1 + L_2}$. (Speed is $S_1 \pm S_2$).<br>
+            &bull; Crossing a <strong>Man sitting inside another train</strong>: $\mathbf{D = L_{\text{crossing train}}}$ (Length of train carrying the man is completely ignored!).
+          </li>
+          <li><strong>Universal Train Equation:</strong>
+            $$\mathbf{\text{Time } (t) = \frac{L_1 + L_2}{S_{\text{rel}}}}$$
+            Ensure length is in meters, speed converted to m/s ($\times 5/18$), and time in seconds!
+          </li>
+          <li><strong>Worked Micro-Example (Finding Train Length &amp; Speed):</strong>
+            A train crosses a pole in 12 seconds and a $300\text{ m}$ platform in 27 seconds. Find speed and length:<br>
+            In extra $(27 - 12) = 15$ seconds, train covers the platform ($300\text{ m}$).<br>
+            $\text{Speed} = \frac{300}{15} = 20\text{ m/s} = 20 \times \frac{18}{5} = 72\text{ km/h}$.<br>
+            $\text{Length} = \text{Speed} \times 12\text{ s} = 20 \times 12 = 240\text{ meters}$. Solved in 8 seconds!
+          </li>
+        </ul>
+        <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
+          🎯 <strong>Day 64 Focus:</strong> Difference in time between pole and platform crossing gives the exact speed over the platform length!
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 65 -->
+    <div class="day-card">
+      <div class="day-label">
+        <div class="day-tag">Day 65</div>
+        <div class="day-name">Boats &amp; Streams</div>
+        <div class="day-drill">📝 20 River Navigation Qs</div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:8px;">Downstream, Upstream &amp; The Boat-to-Stream Ratio Shortcut</div>
+        <ul class="day-topics">
+          <li><strong>Core River Navigation Definitions:</strong>
+            Let boat speed in still water $= u\text{ km/h}$, and stream/current speed $= v\text{ km/h}$ ($u > v$):<br>
+            &bull; <strong>Downstream Speed (धारा के अनुकूल):</strong> $\mathbf{D = u + v}$.<br>
+            &bull; <strong>Upstream Speed (धारा के प्रतिकूल):</strong> $\mathbf{U = u - v}$.
+          </li>
+          <li><strong>Extracting Boat and Stream Speeds:</strong>
+            $$\mathbf{u = \frac{D + U}{2}} \quad \Big| \quad \mathbf{v = \frac{D - U}{2}}$$
+          </li>
+          <li><strong>The Super Boat-to-Stream Ratio Formula:</strong>
+            If a boat takes $k$ times as long to go upstream as to go downstream over the same distance ($t_{\text{up}} : t_{\text{down}} = k : 1$):<br>
+            $$\mathbf{\frac{u}{v} = \frac{t_{\text{up}} + t_{\text{down}}}{t_{\text{up}} - t_{\text{down}}} = \frac{k + 1}{k - 1}}$$
+            Example: A boat takes thrice as long upstream as downstream ($k=3$):<br>
+            $\frac{u}{v} = \frac{3 + 1}{3 - 1} = \frac{4}{2} = \frac{2}{1}$. If stream $v = 4\text{ km/h} \implies u = 8\text{ km/h}$! Solved in 3 seconds.
+          </li>
+        </ul>
+        <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
+          🎯 <strong>Day 65 Focus:</strong> In still water speed, ADD downstream and upstream and divide by 2. In stream speed, SUBTRACT and divide by 2.
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 66 -->
+    <div class="day-card">
+      <div class="day-label">
+        <div class="day-tag">Day 66</div>
+        <div class="day-name">Races, Circular Tracks &amp; Meeting After Crossing</div>
+        <div class="day-drill">📝 25 Advanced Drills</div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:8px;">Linear Races, Circular Laps &amp; The $\sqrt{T_2/T_1}$ Meeting Formula</div>
+        <ul class="day-topics">
+          <li><strong>The Famous "Meeting After Crossing" Theorem:</strong>
+            Two travelers A and B start simultaneously from X and Y towards each other. After meeting, A takes $T_1$ hours to reach Y, and B takes $T_2$ hours to reach X:<br>
+            $$\mathbf{\frac{S_1}{S_2} = \sqrt{\frac{T_2}{T_1}}}$$
+            Example: $T_1 = 4\text{ hours}, T_2 = 9\text{ hours} \implies \frac{S_1}{S_2} = \sqrt{\frac{9}{4}} = \frac{3}{2}$. If $S_1 = 45\text{ km/h} \implies S_2 = 30\text{ km/h}$.
+          </li>
+          <li><strong>Linear Races Terminology:</strong>
+            &bull; <em>"A gives B a start of $50\text{ m}$ in a $1000\text{ m}$ race":</em> A runs $1000\text{ m}$, B runs $950\text{ m}$ in the same time.<br>
+            &bull; <em>"A beats B by $10\text{ seconds}$":</em> When A finishes, B still needs 10 seconds.
+          </li>
+          <li><strong>Circular Track Meetings:</strong>
+            Track length $L$. Speeds $S_1 > S_2$:<br>
+            &bull; Time for 1st meeting anywhere: $\mathbf{T = \frac{L}{S_1 \pm S_2}}$ ($+$ opposite, $-$ same).<br>
+            &bull; Time for 1st meeting at STARTING POINT: $\mathbf{\text{LCM}\left(\frac{L}{S_1}, \frac{L}{S_2}\right)}$.
+          </li>
+        </ul>
+        <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
+          🎯 <strong>Day 66 Focus:</strong> In "after crossing" formula, remember the square root and inverse time positions: $S_1/S_2 = \sqrt{T_2/T_1}$.
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 67 -->
+    <div class="day-card">
+      <div class="day-label">
+        <div class="day-tag">Day 67</div>
+        <div class="day-name">Mixed PYQ Lab &amp; Phase 9 Timed Test</div>
+        <div class="day-drill">📝 25 Qs in 22 Minutes</div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:8px;">Tier-1 &amp; Tier-2 Complete Speed, Distance &amp; Motion Synthesis</div>
+        <ul class="day-topics">
+          <li><strong>Integrated Speed Mechanics:</strong> Combining train crossings with platform lengths, boat ratio shortcuts, race distance deficits, and circular track lap counts.</li>
+          <li><strong>Target Timings:</strong> Stoppage time $\le 10$s; Early/late $\le 20$s; Meeting after crossing $\le 15$s; Trains over bridge $\le 30$s.</li>
+          <li><strong>Phase 9 Timed Mastery Protocol:</strong> 25 mixed questions under 22-minute timer. Target: $\ge 85\%$ accuracy. Classify any errors into Error Notebook!</li>
+        </ul>
+        <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
+          🎯 <strong>Day 67 Focus:</strong> Log all errors into Error Notebook under $[C], [F], [K], [S], [R], [T]$ before advancing to Phase 10 (Algebra)!
+        </div>
+      </div>
+    </div>
+
   </div>
-  <div>
-    <div style="font-weight:600;color:#e2e8f0;font-size:0.88rem;margin-bottom:6px;">S-D-T Basics + Unit Conversion</div>
-    <ul class="day-topics"><li>Speed = Distance / Time</li><li>1 km/h = 5/18 m/s (×5/18 to convert)</li><li>1 m/s = 18/5 km/h (×18/5 to convert)</li><li>Distance proportional to speed at constant time</li></ul>
-    <div style="margin-top:8px;font-size:0.78rem;color:var(--gold);">📝 Drill: 15 basic S-D-T questions</div>
-  </div>
-</div>
-<div class="day-card">
-  <div class="day-label">
-    <div class="day-tag">Day 61</div>
-    <div class="day-name" style="font-size:0.72rem">Average Speed...</div>
-    <div class="day-drill" style="font-size:0.65rem; margin-top:4px;">📝 15 average speed questions</div>
-  </div>
-  <div>
-    <div style="font-weight:600;color:#e2e8f0;font-size:0.88rem;margin-bottom:6px;">Average Speed</div>
-    <ul class="day-topics"><li>Equal distance: harmonic mean = 2xy/(x+y)</li><li>Unequal distance: total D / total T</li><li>Why arithmetic mean is WRONG for equal distances</li></ul>
-    <div style="margin-top:8px;font-size:0.78rem;color:var(--gold);">📝 Drill: 15 average speed questions</div>
-  </div>
-</div>
-<div class="day-card">
-  <div class="day-label">
-    <div class="day-tag">Day 62</div>
-    <div class="day-name" style="font-size:0.72rem">Relative Speed...</div>
-    <div class="day-drill" style="font-size:0.65rem; margin-top:4px;">📝 20 relative speed questions</div>
-  </div>
-  <div>
-    <div style="font-weight:600;color:#e2e8f0;font-size:0.88rem;margin-bottom:6px;">Relative Speed</div>
-    <ul class="day-topics"><li>Same direction: |u-v| (slower relative to faster)</li><li>Opposite direction: u+v (approaching)</li><li>Time to meet = Distance / Relative Speed</li><li>Catch-up problems</li></ul>
-    <div style="margin-top:8px;font-size:0.78rem;color:var(--gold);">📝 Drill: 20 relative speed questions</div>
-  </div>
-</div>
-<div class="day-card">
-  <div class="day-label">
-    <div class="day-tag">Day 63</div>
-    <div class="day-name" style="font-size:0.72rem">Trains — Basic Crossing Case...</div>
-    <div class="day-drill" style="font-size:0.65rem; margin-top:4px;">📝 15 train crossing questions</div>
-  </div>
-  <div>
-    <div style="font-weight:600;color:#e2e8f0;font-size:0.88rem;margin-bottom:6px;">Trains — Basic Crossing Cases</div>
-    <ul class="day-topics"><li>Crossing a pole/standing man: distance = Train length</li><li>Crossing a platform: distance = Train + Platform length</li><li>Passing another STATIONARY train: L₁+L₂</li></ul>
-    <div style="margin-top:8px;font-size:0.78rem;color:var(--gold);">📝 Drill: 15 train crossing questions</div>
-  </div>
-</div>
-<div class="day-card">
-  <div class="day-label">
-    <div class="day-tag">Day 64</div>
-    <div class="day-name" style="font-size:0.72rem">Trains — Moving Train Cases...</div>
-    <div class="day-drill" style="font-size:0.65rem; margin-top:4px;">📝 15 moving train questions</div>
-  </div>
-  <div>
-    <div style="font-weight:600;color:#e2e8f0;font-size:0.88rem;margin-bottom:6px;">Trains — Moving Train Cases</div>
-    <ul class="day-topics"><li>Crossing moving train (same dir): L₁+L₂ at |v₁-v₂|</li><li>Crossing moving train (opp dir): L₁+L₂ at v₁+v₂</li><li>Finding train length from two crossing scenarios</li></ul>
-    <div style="margin-top:8px;font-size:0.78rem;color:var(--gold);">📝 Drill: 15 moving train questions</div>
-  </div>
-</div>
-<div class="day-card">
-  <div class="day-label">
-    <div class="day-tag">Day 65</div>
-    <div class="day-name" style="font-size:0.72rem">Boats & Streams...</div>
-    <div class="day-drill" style="font-size:0.65rem; margin-top:4px;">📝 20 boats & streams questions</div>
-  </div>
-  <div>
-    <div style="font-weight:600;color:#e2e8f0;font-size:0.88rem;margin-bottom:6px;">Boats & Streams</div>
-    <ul class="day-topics"><li>Downstream speed D = u+v</li><li>Upstream speed U = u-v</li><li>Boat speed u = (D+U)/2</li><li>Stream speed v = (D-U)/2</li></ul>
-    <div style="margin-top:8px;font-size:0.78rem;color:var(--gold);">📝 Drill: 20 boats & streams questions</div>
-  </div>
-</div>
-<div class="day-card">
-  <div class="day-label">
-    <div class="day-tag">Day 66</div>
-    <div class="day-name" style="font-size:0.72rem">Races + Circular Tracks...</div>
-    <div class="day-drill" style="font-size:0.65rem; margin-top:4px;">📝 15 race questions</div>
-  </div>
-  <div>
-    <div style="font-weight:600;color:#e2e8f0;font-size:0.88rem;margin-bottom:6px;">Races + Circular Tracks</div>
-    <ul class="day-topics"><li>Head start in distance vs time</li><li>Dead heat conditions</li><li>First meeting on circular track: LCM of individual times</li><li>Meeting at starting point time</li></ul>
-    <div style="margin-top:8px;font-size:0.78rem;color:var(--gold);">📝 Drill: 15 race questions</div>
-  </div>
-</div>
-<div class="day-card">
-  <div class="day-label">
-    <div class="day-tag">Day 67</div>
-    <div class="day-name" style="font-size:0.72rem">After-Meeting Formula + Phas...</div>
-    <div class="day-drill" style="font-size:0.65rem; margin-top:4px;">📝 25 questions in 25 minutes</div>
-  </div>
-  <div>
-    <div style="font-weight:600;color:#e2e8f0;font-size:0.88rem;margin-bottom:6px;">After-Meeting Formula + Phase Test</div>
-    <ul class="day-topics"><li>S₁/S₂ = √(T₂/T₁) — speeds inversely proportional to post-meeting times</li><li>Early/Late shortcut formula</li><li>Timed 25-question test</li></ul>
-    <div style="margin-top:8px;font-size:0.78rem;color:var(--gold);">📝 Drill: 25 questions in 25 minutes</div>
-  </div>
-</div></div>
 
   <!-- FORMULA VAULT + SHORTCUTS side by side -->
   <div class="two-col">

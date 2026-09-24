@@ -1377,68 +1377,176 @@ pre, code, .fc-formula {
   </div>
 
   <!-- DAY PLAN -->
-  <h2 class="sec-title" id="sec-plan">📅 Days 68–72 (5 Days) — Day-by-Day Plan</h2>
+    <!-- DAY PLAN (Detailed Syllabus & Conceptual Breakdown) -->
+  <h2 class="sec-title" id="sec-plan">📅 Days 68–72 (5 Days) — Day-by-Day Conceptual Master Plan</h2>
   <div class="day-cards">
-<div class="day-card">
-  <div class="day-label">
-    <div class="day-tag">Day 68</div>
-    <div class="day-name" style="font-size:0.72rem">Core Algebraic Identities...</div>
-    <div class="day-drill" style="font-size:0.65rem; margin-top:4px;">📝 20 identity questions</div>
+
+    <!-- Day 68 -->
+    <div class="day-card">
+      <div class="day-label">
+        <div class="day-tag">Day 68</div>
+        <div class="day-name">Core Identities &amp; Expansions</div>
+        <div class="day-drill">📝 25 Identity Drills</div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:8px;">Quadratic Expansions, The 4ab Relation &amp; Three-Variable Squares</div>
+        <ul class="day-topics">
+          <li><strong>Fundamental 2-Variable Identities:</strong>
+            $$\mathbf{(a + b)^2 = a^2 + 2ab + b^2} \quad \Big| \quad \mathbf{(a - b)^2 = a^2 - 2ab + b^2}$$
+            $$\mathbf{(a + b)^2 + (a - b)^2 = 2(a^2 + b^2)} \quad \Big| \quad \mathbf{(a + b)^2 - (a - b)^2 = 4ab}$$
+            &bull; Difference of Squares: $\mathbf{a^2 - b^2 = (a - b)(a + b)}$.
+          </li>
+          <li><strong>The Three-Variable Square Expansion:</strong>
+            $$\mathbf{(a + b + c)^2 = a^2 + b^2 + c^2 + 2(ab + bc + ca)}$$
+            Rearrangement: $\mathbf{a^2 + b^2 + c^2 = (a + b + c)^2 - 2(ab + bc + ca)}$.<br>
+            If $(a + b + c) = 10$ and $(ab + bc + ca) = 25 \implies a^2 + b^2 + c^2 = 100 - 2(25) = 50$.
+          </li>
+          <li><strong>Sum of Squares Equal to Zero Theorem:</strong>
+            If $A^2 + B^2 + C^2 = 0$ for real numbers, then EACH term must individually equal zero:
+            $$\mathbf{A = 0, \quad B = 0, \quad C = 0}$$
+            Example: $(x - 3)^2 + (y - 4)^2 + (z + 2)^2 = 0 \implies x = 3, y = 4, z = -2$.
+          </li>
+          <li><strong>Worked Micro-Example (SSC Tier-1 Favorite):</strong> If $x + y = 12$ and $xy = 27$, find $x^3 + y^3$ or $x - y$:<br>
+            $(x - y)^2 = (x + y)^2 - 4xy = 12^2 - 4(27) = 144 - 108 = 36 \implies x - y = 6$.
+          </li>
+        </ul>
+        <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
+          🎯 <strong>Day 68 Focus:</strong> Use $(a+b)^2 - (a-b)^2 = 4ab$ to toggle between $(a+b)$ and $(a-b)$ in 5 seconds.
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 69 -->
+    <div class="day-card">
+      <div class="day-label">
+        <div class="day-tag">Day 69</div>
+        <div class="day-name">The $x + 1/x = k$ Master Chain</div>
+        <div class="day-drill">📝 30 Power Chains</div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:8px;">Power Chains ($x^2, x^3, x^4, x^5, x^6, x^7$) &amp; Reverse Root Reductions</div>
+        <ul class="day-topics">
+          <li><strong>The Positive Base Chain ($x + \frac{1}{x} = k$):</strong>
+            &bull; $\mathbf{x^2 + \frac{1}{x^2} = k^2 - 2}$<br>
+            &bull; $\mathbf{x^3 + \frac{1}{x^3} = k^3 - 3k}$<br>
+            &bull; $\mathbf{x^4 + \frac{1}{x^4} = (k^2 - 2)^2 - 2}$<br>
+            &bull; $\mathbf{x^5 + \frac{1}{x^5} = \left(x^2 + \frac{1}{x^2}\right)\left(x^3 + \frac{1}{x^3}\right) - \left(x + \frac{1}{x}\right)}$<br>
+            &bull; $\mathbf{x^6 + \frac{1}{x^6} = \left(x^3 + \frac{1}{x^3}\right)^2 - 2 = \left(x^2 + \frac{1}{x^2}\right)^3 - 3\left(x^2 + \frac{1}{x^2}\right)}$
+          </li>
+          <li><strong>The Negative Base Chain ($x - \frac{1}{x} = k$):</strong>
+            &bull; $\mathbf{x^2 + \frac{1}{x^2} = k^2 + 2}$ &nbsp;|&nbsp; $\mathbf{x^3 - \frac{1}{x^3} = k^3 + 3k}$<br>
+            &bull; $\mathbf{x^5 - \frac{1}{x^5} = \left(x^2 + \frac{1}{x^2}\right)\left(x^3 - \frac{1}{x^3}\right) + \left(x - \frac{1}{x}\right)}$
+          </li>
+          <li><strong>Reverse Reduction (Square Root Protocol):</strong>
+            Given $x^4 + \frac{1}{x^4} = 194$:<br>
+            Step 1: Add 2 and take square root $\implies x^2 + \frac{1}{x^2} = \sqrt{194 + 2} = \sqrt{196} = 14$.<br>
+            Step 2: To find $x + \frac{1}{x}$, add 2 and root $\implies \sqrt{14 + 2} = \sqrt{16} = 4$.<br>
+            Step 3: To find $x - \frac{1}{x}$, subtract 2 and root $\implies \sqrt{14 - 2} = \sqrt{12} = 2\sqrt{3}$.
+          </li>
+          <li><strong>Special Trigonometric / Cyclotomic Values:</strong>
+            &bull; If $x + \frac{1}{x} = 2 \implies \mathbf{x = 1}$. &nbsp;|&nbsp; If $x + \frac{1}{x} = -2 \implies \mathbf{x = -1}$.<br>
+            &bull; If $x + \frac{1}{x} = 1 \implies \mathbf{x^3 = -1}$ ($x^3 + 1 = 0$).<br>
+            &bull; If $x + \frac{1}{x} = \sqrt{3} \implies \mathbf{x^6 = -1}$ ($x^6 + 1 = 0$). (Powers differing by 6 cancel to 0!).
+          </li>
+        </ul>
+        <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
+          🎯 <strong>Day 69 Focus:</strong> Memorize $x+1/x=1 \implies x^3=-1$ and $x+1/x=\sqrt{3} \implies x^6=-1$ for instant Tier-1 cancellation.
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 70 -->
+    <div class="day-card">
+      <div class="day-label">
+        <div class="day-tag">Day 70</div>
+        <div class="day-name">Cubic Identities &amp; The $a^3+b^3+c^3-3abc$ Theorem</div>
+        <div class="day-drill">📝 25 Cubic Identities</div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:8px;">The 4 Forms of $a^3+b^3+c^3-3abc$ &amp; Strategic Value Substitution</div>
+        <ul class="day-topics">
+          <li><strong>The 4 Equivalent Forms of $a^3 + b^3 + c^3 - 3abc$:</strong>
+            1. $\mathbf{(a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)}$<br>
+            2. $\mathbf{\frac{1}{2}(a + b + c)[(a - b)^2 + (b - c)^2 + (c - a)^2]}$ (Best when $a, b, c$ are in AP or close!).<br>
+            3. $\mathbf{(a + b + c)[(a + b + c)^2 - 3(ab + bc + ca)]}$<br>
+            4. $\mathbf{\frac{1}{2}(a + b + c)[3(a^2 + b^2 + c^2) - (a + b + c)^2]}$
+          </li>
+          <li><strong>The Conditional Zero Theorem:</strong>
+            $$\mathbf{\text{If } a + b + c = 0 \implies a^3 + b^3 + c^3 = 3abc}$$
+            $$\mathbf{\text{Also if } a^3 + b^3 + c^3 = 3abc \implies a + b + c = 0 \quad \text{OR} \quad a = b = c}$$
+          </li>
+          <li><strong>Worked Micro-Example (Arithmetic Progression Shortcut):</strong>
+            Find $a^3 + b^3 + c^3 - 3abc$ when $a = 997, b = 998, c = 999$ (Common difference $d = 1$):<br>
+            Use Form 2: $(a - b)^2 = 1, (b - c)^2 = 1, (c - a)^2 = 4$. Sum of squares $= 1 + 1 + 4 = 6 = 6d^2$.<br>
+            $\text{Result} = \frac{1}{2}(a + b + c)(6d^2) = 3(a + b + c)d^2$.<br>
+            $a + b + c = 3 \times 998 = 2994 \implies 3 \times 2994 \times 1^2 = 8982$! Solved in 8 seconds.
+          </li>
+          <li><strong>Strategic Value Substitution:</strong> In cyclic symmetrical questions where $a+b+c=0$, plug $a=1, b=1, c=-2$ to reduce 8 lines of algebra to elementary arithmetic.</li>
+        </ul>
+        <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
+          🎯 <strong>Day 70 Focus:</strong> When $a, b, c$ form an AP with difference $d$, $a^3+b^3+c^3-3abc = 9 \times (\text{Middle Term}) \times d^2$.
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 71 -->
+    <div class="day-card">
+      <div class="day-label">
+        <div class="day-tag">Day 71</div>
+        <div class="day-name">Quadratic Equations, Surds &amp; Indices</div>
+        <div class="day-drill">📝 25 Surd/Root Drills</div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:8px;">Vieta's Formulas, Surd Square Roots &amp; Infinite Nested Series</div>
+        <ul class="day-topics">
+          <li><strong>Quadratic Equations &amp; Vieta's Relations:</strong>
+            For $ax^2 + bx + c = 0$ with roots $\alpha, \beta$:<br>
+            $$\mathbf{\text{Sum of Roots } (\alpha + \beta) = -\frac{b}{a}} \quad \Big| \quad \mathbf{\text{Product of Roots } (\alpha\beta) = \frac{c}{a}}$$
+            Discriminant $D = b^2 - 4ac$: $D > 0$ (real, distinct); $D = 0$ (real, equal); $D < 0$ (imaginary).
+          </li>
+          <li><strong>Square Root of a Surd ($\sqrt{a \pm 2\sqrt{b}}$):</strong>
+            Find two numbers $x$ and $y$ such that $x + y = a$ and $xy = b$. Then $\sqrt{a \pm 2\sqrt{b}} = \sqrt{x} \pm \sqrt{y}$.<br>
+            Example: Find $\sqrt{7 + 2\sqrt{10}}$: Two numbers with sum 7 and product 10 are 5 and 2.<br>
+            $\sqrt{7 + 2\sqrt{10}} = \sqrt{5} + \sqrt{2}$!
+          </li>
+          <li><strong>Infinite Nested Surds Shortcuts:</strong>
+            &bull; $\mathbf{\sqrt{x + \sqrt{x + \sqrt{x \dots \infty}}}}$: Split $x = n(n + 1)$ (consecutive factors) $\implies \mathbf{\text{Result} = n + 1}$ (Larger factor).<br>
+            Example: $\sqrt{12 + \sqrt{12 + \dots}} = 4$ (since $12 = 3 \times 4$).<br>
+            &bull; $\mathbf{\sqrt{x - \sqrt{x - \sqrt{x \dots \infty}}}}$: Result is smaller factor $n$ $\implies \sqrt{12 - \sqrt{12 - \dots}} = 3$.<br>
+            &bull; $\mathbf{\sqrt{x \cdot \sqrt{x \cdot \sqrt{x \dots \infty}}}} = \mathbf{x}$.<br>
+            &bull; Finite $n$ roots: $\mathbf{x^{\frac{2^n - 1}{2^n}}}$.
+          </li>
+        </ul>
+        <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
+          🎯 <strong>Day 71 Focus:</strong> Always ensure the inner surd has a coefficient of 2 ($\sqrt{a \pm 2\sqrt{b}}$) before splitting into sum and product factors.
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 72 -->
+    <div class="day-card">
+      <div class="day-label">
+        <div class="day-tag">Day 72</div>
+        <div class="day-name">Mixed PYQ Lab &amp; Phase 10 Timed Test</div>
+        <div class="day-drill">📝 25 Qs in 20 Minutes</div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:8px;">Tier-1 &amp; Tier-2 Complete Advanced Algebraic Mastery</div>
+        <ul class="day-topics">
+          <li><strong>Rapid Triage Discipline:</strong>
+            &bull; Value substitution eligible $\to$ plug in 10s.<br>
+            &bull; Power 5 or 7 chain $\to$ apply $(k^2-2)(k^3-3k) - k$ formula in 20s.<br>
+            &bull; Symmetrical $a^3+b^3+c^3-3abc \to$ check if $a+b+c=0$ or AP difference.
+          </li>
+          <li><strong>Phase 10 Timed Mastery Protocol:</strong> 25 mixed questions under 20-minute timer. Target: $\ge 85\%$ accuracy with zero sign mistakes!</li>
+        </ul>
+        <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
+          🎯 <strong>Day 72 Focus:</strong> Log all errors into Error Notebook under $[C], [F], [K], [S], [R], [T]$ before starting Phase 11 (Geometry)!
+        </div>
+      </div>
+    </div>
+
   </div>
-  <div>
-    <div style="font-weight:600;color:#e2e8f0;font-size:0.88rem;margin-bottom:6px;">Core Algebraic Identities</div>
-    <ul class="day-topics"><li>(a±b)² = a²±2ab+b²</li><li>(a+b+c)² = a²+b²+c²+2(ab+bc+ca)</li><li>(a+b)³ and (a-b)³</li><li>a²-b² = (a+b)(a-b)</li></ul>
-    <div style="margin-top:8px;font-size:0.78rem;color:var(--gold);">📝 Drill: 20 identity questions</div>
-  </div>
-</div>
-<div class="day-card">
-  <div class="day-label">
-    <div class="day-tag">Day 69</div>
-    <div class="day-name" style="font-size:0.72rem">x+1/x Master Chain...</div>
-    <div class="day-drill" style="font-size:0.65rem; margin-top:4px;">📝 20 chain transformation questi</div>
-  </div>
-  <div>
-    <div style="font-weight:600;color:#e2e8f0;font-size:0.88rem;margin-bottom:6px;">x+1/x Master Chain</div>
-    <ul class="day-topics"><li>x+1/x=k → x²+1/x²=k²-2</li><li>x³+1/x³=k³-3k chain</li><li>x⁴+1/x⁴=(x²+1/x²)²-2</li><li>x⁵+1/x⁵=(x²+1/x²)(x³+1/x³)-(x+1/x)</li></ul>
-    <div style="margin-top:8px;font-size:0.78rem;color:var(--gold);">📝 Drill: 20 chain transformation questions</div>
-  </div>
-</div>
-<div class="day-card">
-  <div class="day-label">
-    <div class="day-tag">Day 70</div>
-    <div class="day-name" style="font-size:0.72rem">a³+b³+c³-3abc Four Forms...</div>
-    <div class="day-drill" style="font-size:0.65rem; margin-top:4px;">📝 15 cubic identity questions</div>
-  </div>
-  <div>
-    <div style="font-weight:600;color:#e2e8f0;font-size:0.88rem;margin-bottom:6px;">a³+b³+c³-3abc Four Forms</div>
-    <ul class="day-topics"><li>(a+b+c)(a²+b²+c²-ab-bc-ca)</li><li>= ½(a+b+c)[(a-b)²+(b-c)²+(c-a)²]</li><li>If a+b+c=0 → a³+b³+c³=3abc</li><li>Application to consecutive/near-value numbers</li></ul>
-    <div style="margin-top:8px;font-size:0.78rem;color:var(--gold);">📝 Drill: 15 cubic identity questions</div>
-  </div>
-</div>
-<div class="day-card">
-  <div class="day-label">
-    <div class="day-tag">Day 71</div>
-    <div class="day-name" style="font-size:0.72rem">Value Putting + Surds & Indi...</div>
-    <div class="day-drill" style="font-size:0.65rem; margin-top:4px;">📝 20 value putting + surds quest</div>
-  </div>
-  <div>
-    <div style="font-weight:600;color:#e2e8f0;font-size:0.88rem;margin-bottom:6px;">Value Putting + Surds & Indices</div>
-    <ul class="day-topics"><li>When to put 0, 1, -1, 2 as substitution</li><li>Conditions that forbid certain values (denominator=0)</li><li>Surds: rationalization, nested radicals</li><li>Indices: laws of exponents, negative powers</li></ul>
-    <div style="margin-top:8px;font-size:0.78rem;color:var(--gold);">📝 Drill: 20 value putting + surds questions</div>
-  </div>
-</div>
-<div class="day-card">
-  <div class="day-label">
-    <div class="day-tag">Day 72</div>
-    <div class="day-name" style="font-size:0.72rem">Mixed PYQ Drill + Timed Test...</div>
-    <div class="day-drill" style="font-size:0.65rem; margin-top:4px;">📝 25 questions in 20 minutes</div>
-  </div>
-  <div>
-    <div style="font-weight:600;color:#e2e8f0;font-size:0.88rem;margin-bottom:6px;">Mixed PYQ Drill + Timed Test</div>
-    <ul class="day-topics"><li>All Algebra PYQ patterns</li><li>Identity vs substitution selection</li><li>Timed 25-question test</li></ul>
-    <div style="margin-top:8px;font-size:0.78rem;color:var(--gold);">📝 Drill: 25 questions in 20 minutes</div>
-  </div>
-</div></div>
 
   <!-- FORMULA VAULT + SHORTCUTS side by side -->
   <div class="two-col">

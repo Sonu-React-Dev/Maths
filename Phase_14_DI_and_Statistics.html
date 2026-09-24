@@ -1377,56 +1377,128 @@ pre, code, .fc-formula {
   </div>
 
   <!-- DAY PLAN -->
-  <h2 class="sec-title" id="sec-plan">📅 Day 88 (1 Intensive Day) — Day-by-Day Plan</h2>
+    <!-- DAY PLAN (Detailed Syllabus & Conceptual Breakdown) -->
+  <h2 class="sec-title" id="sec-plan">📅 Day 88 (Intensive) — Day-by-Day Conceptual Master Plan</h2>
   <div class="day-cards">
-<div class="day-card">
-  <div class="day-label">
-    <div class="day-tag">Day 88 — Part 1</div>
-    <div class="day-name" style="font-size:0.72rem">Data Interpretation Strategy...</div>
-    <div class="day-drill" style="font-size:0.65rem; margin-top:4px;">📝 1 full DI set (Table + Bar + P</div>
+
+    <!-- Day 88A -->
+    <div class="day-card">
+      <div class="day-label">
+        <div class="day-tag">Day 88-A</div>
+        <div class="day-name">Central Tendency &amp; Empirical Mode</div>
+        <div class="day-drill">📝 25 Mean/Median Drills</div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:8px;">Mean, Median, Mode, Grouped Data Formulations &amp; Pearson's Relation</div>
+        <ul class="day-topics">
+          <li><strong>The Three Measures of Central Tendency:</strong>
+            &bull; <strong>Arithmetic Mean (माध्य / $\bar{x}$):</strong> $\mathbf{\bar{x} = \frac{\sum x_i}{N}}$. (Assumed mean method: $\bar{x} = A + \frac{\sum d_i}{N}$).<br>
+            &bull; <strong>Median (माध्यिका / $M$):</strong> Middle value of ordered data. For odd $N$: $\left(\frac{N+1}{2}\right)$-th term. For even $N$: average of $\left(\frac{N}{2}\right)$-th and $\left(\frac{N}{2} + 1\right)$-th terms.<br>
+            &bull; <strong>Mode (बहुलक / $M_o$):</strong> The observation having the highest frequency in the data set.
+          </li>
+          <li><strong>Pearson's Empirical Asymmetry Relationship:</strong>
+            For moderately skewed unimodal distributions:
+            $$\mathbf{\text{Mode} = 3\text{ Median} - 2\text{ Mean}}$$
+            $$\mathbf{\text{Mean} - \text{Mode} = 3(\text{Mean} - \text{Median})}$$
+            Example: If Mean $= 24$ and Median $= 26 \implies \text{Mode} = 3(26) - 2(24) = 78 - 48 = 30$.
+          </li>
+          <li><strong>Grouped Continuous Data Formulations:</strong>
+            &bull; $\mathbf{\text{Grouped Median} = L + \left(\frac{\frac{N}{2} - CF}{f}\right) \times h}$ ($L$: lower limit of median class, $CF$: preceding cumulative frequency).<br>
+            &bull; $\mathbf{\text{Grouped Mode} = L + \left(\frac{f_1 - f_0}{2f_1 - f_0 - f_2}\right) \times h}$.
+          </li>
+        </ul>
+        <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
+          🎯 <strong>Module 88A Focus:</strong> Always sort data in ascending order before finding the median. Remember $3\text{ Median} = \text{Mode} + 2\text{ Mean}$.
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 88B -->
+    <div class="day-card">
+      <div class="day-label">
+        <div class="day-tag">Day 88-B</div>
+        <div class="day-name">Measures of Dispersion &amp; Variation</div>
+        <div class="day-drill">📝 25 Variance/SD Drills</div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:8px;">Range, Variance ($\sigma^2$), Standard Deviation ($\sigma$) &amp; Coefficient of Variation</div>
+        <ul class="day-topics">
+          <li><strong>Range (परास):</strong>
+            $$\mathbf{\text{Range} = \text{Maximum Value} - \text{Minimum Value}}$$
+            Coefficient of Range $= \frac{\text{Max} - \text{Min}}{\text{Max} + \text{Min}}$.
+          </li>
+          <li><strong>Variance &amp; Standard Deviation (प्रसरण एवं मानक विचलन):</strong>
+            $$\mathbf{\text{Variance } (\sigma^2) = \frac{\sum (x_i - \bar{x})^2}{N} = \frac{\sum x_i^2}{N} - (\bar{x})^2} \quad \Big| \quad \mathbf{\text{SD } (\sigma) = \sqrt{\text{Variance}}}$$
+          </li>
+          <li><strong>Coefficient of Variation (विdiffण गुणांक / CV):</strong>
+            $$\mathbf{\text{CV} = \frac{\sigma}{\bar{x}} \times 100\%}$$
+            A distribution with smaller CV is more consistent and stable.
+          </li>
+          <li><strong>The Invariance &amp; Scaling Laws (100% SSC Favorite):</strong>
+            &bull; <strong>Adding a Constant $k$:</strong> Mean becomes $\bar{x} + k$, but $\mathbf{\text{SD and Variance REMAIN UNCHANGED}}$! Dispersion measures the spread, not the shift.<br>
+            &bull; <strong>Multiplying by Constant $c$:</strong> $\mathbf{\sigma_{\text{new}} = |c| \cdot \sigma}$ &nbsp;|&nbsp; $\mathbf{\text{Variance}_{\text{new}} = c^2 \cdot \text{Variance}}$.<br>
+            Example: If data has $\text{SD} = 5$ and each observation is multiplied by 3, new $\text{SD} = 15$ and new Variance $= 3^2 \times 25 = 225$.
+          </li>
+        </ul>
+        <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
+          🎯 <strong>Module 88B Focus:</strong> Adding or subtracting a constant NEVER changes Standard Deviation or Variance!
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 88C -->
+    <div class="day-card">
+      <div class="day-label">
+        <div class="day-tag">Day 88-C</div>
+        <div class="day-name">Graphical Data Interpretation</div>
+        <div class="day-drill">📝 20 Chart Reading Drills</div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:8px;">Pie Charts (Degree to %), Multi-Bar Graphs, Line Charts &amp; Tabular DI</div>
+        <ul class="day-topics">
+          <li><strong>Pie Chart Master Multipliers:</strong>
+            $$\mathbf{360^\circ = 100\% \iff 1\% = 3.6^\circ \iff 1^\circ = \frac{5}{18}\%}$$
+            &bull; $10\% = 36^\circ$ &nbsp;|&nbsp; $25\% = 90^\circ$ &nbsp;|&nbsp; $50\% = 180^\circ$ &nbsp;|&nbsp; $15\% = 54^\circ$ &nbsp;|&nbsp; $20\% = 72^\circ$.<br>
+            &bull; To find ratio of sector values: $\mathbf{\frac{\text{Value}_1}{\text{Value}_2} = \frac{\theta_1}{\theta_2}}$ (Total value is completely irrelevant!).
+          </li>
+          <li><strong>Growth Rate &amp; Percentage Change:</strong>
+            $$\mathbf{\% \text{ Growth} = \frac{\text{Current Value} - \text{Base Value}}{\text{Base Value}} \times 100\%}$$
+          </li>
+          <li><strong>Double Bar &amp; Mixed DI:</strong>
+            Read axis units carefully (thousands vs crores). When comparing production vs sales, calculate ratios directly from bar heights before multiplying by scale multipliers.
+          </li>
+        </ul>
+        <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
+          🎯 <strong>Module 88C Focus:</strong> In pie charts, never convert degrees to actual rupees/units if the question only asks for ratios or percentages!
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 88D -->
+    <div class="day-card">
+      <div class="day-label">
+        <div class="day-tag">Day 88-D</div>
+        <div class="day-name">Speed DI Tactics &amp; Phase 14 Timed Test</div>
+        <div class="day-drill">📝 25 Qs in 20 Minutes</div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:8px;">Range Bounding, Option Elimination &amp; Full DI + Stats Speed Protocol</div>
+        <ul class="day-topics">
+          <li><strong>The 4-Step Speed DI Discipline:</strong>
+            Step 1: Read the graph title, footnotes, and units (e.g. ₹ in lakhs vs kg in tonnes).<br>
+            Step 2: Read the question and look at the options before picking up your pen.<br>
+            Step 3: If options are spaced $\ge 5\%$ apart, round large figures to the nearest tens/hundreds.<br>
+            Step 4: Cancel common zeros in ratios before dividing.
+          </li>
+          <li><strong>Phase 14 Timed Mastery Protocol:</strong> 25 mixed Data Interpretation and Statistics questions under a 20-minute timer. Target: $\ge 85\%$ accuracy.</li>
+        </ul>
+        <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
+          🎯 <strong>Module 88D Focus:</strong> Check options first — if options are distinct, estimation saves $70\%$ of calculation time in DI.
+        </div>
+      </div>
+    </div>
+
   </div>
-  <div>
-    <div style="font-weight:600;color:#e2e8f0;font-size:0.88rem;margin-bottom:6px;">Data Interpretation Strategy</div>
-    <ul class="day-topics"><li>Step 1: Read title & units carefully</li><li>Step 2: Identify what is asked (%, ratio, absolute)</li><li>Step 3: Estimate first before calculating</li><li>Step 4: Use only necessary cells — ignore rest</li><li>Step 5: Eliminate options using approximation</li></ul>
-    <div style="margin-top:8px;font-size:0.78rem;color:var(--gold);">📝 Drill: 1 full DI set (Table + Bar + Pie) = 10 questions</div>
-  </div>
-</div>
-<div class="day-card">
-  <div class="day-label">
-    <div class="day-tag">Day 88 — Part 2</div>
-    <div class="day-name" style="font-size:0.72rem">Graph Types: Tables, Bar, Hi...</div>
-    <div class="day-drill" style="font-size:0.65rem; margin-top:4px;">📝 10 graph-reading questions</div>
-  </div>
-  <div>
-    <div style="font-weight:600;color:#e2e8f0;font-size:0.88rem;margin-bottom:6px;">Graph Types: Tables, Bar, Histogram</div>
-    <ul class="day-topics"><li>Data tables: reading row vs column correctly</li><li>Bar charts: comparing heights for relative values</li><li>Multiple bar charts: identifying the right bar</li><li>Histograms: frequency density vs frequency</li></ul>
-    <div style="margin-top:8px;font-size:0.78rem;color:var(--gold);">📝 Drill: 10 graph-reading questions</div>
-  </div>
-</div>
-<div class="day-card">
-  <div class="day-label">
-    <div class="day-tag">Day 88 — Part 3</div>
-    <div class="day-name" style="font-size:0.72rem">Pie Charts + Line Graphs...</div>
-    <div class="day-drill" style="font-size:0.65rem; margin-top:4px;">📝 10 pie/line questions</div>
-  </div>
-  <div>
-    <div style="font-weight:600;color:#e2e8f0;font-size:0.88rem;margin-bottom:6px;">Pie Charts + Line Graphs</div>
-    <ul class="day-topics"><li>360°=100%. Central angle=(%)×3.6</li><li>Converting between angle and percentage</li><li>Line graphs: slope = rate of change</li><li>Mixed DI: combining two graphs for one answer</li></ul>
-    <div style="margin-top:8px;font-size:0.78rem;color:var(--gold);">📝 Drill: 10 pie/line questions</div>
-  </div>
-</div>
-<div class="day-card">
-  <div class="day-label">
-    <div class="day-tag">Day 88 — Part 4</div>
-    <div class="day-name" style="font-size:0.72rem">Statistics Formulas...</div>
-    <div class="day-drill" style="font-size:0.65rem; margin-top:4px;">📝 10 statistics questions</div>
-  </div>
-  <div>
-    <div style="font-weight:600;color:#e2e8f0;font-size:0.88rem;margin-bottom:6px;">Statistics Formulas</div>
-    <ul class="day-topics"><li>Mean: Σ(fx)/Σ(f) for grouped data</li><li>Median: middle value (sort first)</li><li>Mode: most frequent value</li><li>Empirical: Mode=3Median-2Mean</li><li>Variance=SD². SD=√Variance. Range=Max-Min</li></ul>
-    <div style="margin-top:8px;font-size:0.78rem;color:var(--gold);">📝 Drill: 10 statistics questions</div>
-  </div>
-</div></div>
 
   <!-- FORMULA VAULT + SHORTCUTS side by side -->
   <div class="two-col">

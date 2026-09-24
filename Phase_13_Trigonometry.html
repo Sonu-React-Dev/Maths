@@ -1377,56 +1377,146 @@ pre, code, .fc-formula {
   </div>
 
   <!-- DAY PLAN -->
-  <h2 class="sec-title" id="sec-plan">📅 Days 84–87 (4 Days) — Day-by-Day Plan</h2>
+    <!-- DAY PLAN (Detailed Syllabus & Conceptual Breakdown) -->
+  <h2 class="sec-title" id="sec-plan">📅 Days 84–87 (4 Days) — Day-by-Day Conceptual Master Plan</h2>
   <div class="day-cards">
-<div class="day-card">
-  <div class="day-label">
-    <div class="day-tag">Day 84</div>
-    <div class="day-name" style="font-size:0.72rem">Trig Ratios + Standard Angle...</div>
-    <div class="day-drill" style="font-size:0.65rem; margin-top:4px;">📝 20 basic ratio questions</div>
+
+    <!-- Day 84 -->
+    <div class="day-card">
+      <div class="day-label">
+        <div class="day-tag">Day 84</div>
+        <div class="day-name">Trigonometric Ratios &amp; Special Triangles</div>
+        <div class="day-drill">📝 25 Ratio/Angle Drills</div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:8px;">Right Triangle Ratios, Angle Matrix &amp; The 30°-60°-90° and 45°-45°-90° Ratios</div>
+        <ul class="day-topics">
+          <li><strong>The Six Trigonometric Ratios (P-B-H):</strong>
+            $$\mathbf{\sin\theta = \frac{P}{H}, \quad \cos\theta = \frac{B}{H}, \quad \tan\theta = \frac{P}{B}}$$
+            $$\mathbf{\csc\theta = \frac{H}{P}, \quad \sec\theta = \frac{H}{B}, \quad \cot\theta = \frac{B}{P}}$$
+            Mnemonic: Pandit Badri Prasad / Har Har Bhole ($P/H, B/H, P/B$).
+          </li>
+          <li><strong>Standard Angle Matrix (Exact Values):</strong>
+            &bull; $0^\circ$: $\sin 0, \cos 1, \tan 0$.<br>
+            &bull; $30^\circ$: $\sin \frac{1}{2}, \cos \frac{\sqrt{3}}{2}, \tan \frac{1}{\sqrt{3}}$.<br>
+            &bull; $45^\circ$: $\sin \frac{1}{\sqrt{2}}, \cos \frac{1}{\sqrt{2}}, \tan 1$.<br>
+            &bull; $60^\circ$: $\sin \frac{\sqrt{3}}{2}, \cos \frac{1}{2}, \tan \sqrt{3}$.<br>
+            &bull; $90^\circ$: $\sin 1, \cos 0, \tan \text{undefined}$.
+          </li>
+          <li><strong>The Special Triangle Scale Ratios (TCS Lightning Shortcuts):</strong>
+            &bull; $\mathbf{30^\circ - 60^\circ - 90^\circ \text{ Triangle:}}$ Side ratio opposite angles is $\mathbf{1 : \sqrt{3} : 2}$.<br>
+            (Side opposite $30^\circ$ is $1$, opposite $60^\circ$ is $\sqrt{3}$, hypotenuse is $2$).<br>
+            &bull; $\mathbf{45^\circ - 45^\circ - 90^\circ \text{ Triangle:}}$ Side ratio is $\mathbf{1 : 1 : \sqrt{2}}$.
+          </li>
+          <li><strong>Worked Micro-Example:</strong> If $\tan\theta = \frac{3}{4}$, find $\frac{2\sin\theta + 3\cos\theta}{2\sin\theta - 3\cos\theta}$:<br>
+            Since numerator and denominator are homogeneous of degree 1 in $\sin$ and $\cos$, divide throughout by $\cos\theta$:<br>
+            $\frac{2\tan\theta + 3}{2\tan\theta - 3} = \frac{2(3/4) + 3}{2(3/4) - 3} = \frac{1.5 + 3}{1.5 - 3} = \frac{4.5}{-1.5} = -3$. Solved in 5 seconds without finding $H$!
+          </li>
+        </ul>
+        <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
+          🎯 <strong>Day 84 Focus:</strong> In homogeneous fractional ratio expressions like $\frac{a\sin\theta + b\cos\theta}{c\sin\theta + d\cos\theta}$, directly replace $\sin\theta \to P$ and $\cos\theta \to B$.
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 85 -->
+    <div class="day-card">
+      <div class="day-label">
+        <div class="day-tag">Day 85</div>
+        <div class="day-name">Fundamental Identities &amp; Complementary Pairs</div>
+        <div class="day-drill">📝 25 Identity Drills</div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:8px;">The 3 Pythagorean Identities, Conjugate Inversion &amp; Complementary 90° Cancellations</div>
+        <ul class="day-topics">
+          <li><strong>The Three Core Pythagorean Identities:</strong>
+            $$\mathbf{\sin^2\theta + \cos^2\theta = 1}$$
+            $$\mathbf{1 + \tan^2\theta = \sec^2\theta \implies \sec^2\theta - \tan^2\theta = 1}$$
+            $$\mathbf{1 + \cot^2\theta = \csc^2\theta \implies \csc^2\theta - \cot^2\theta = 1}$$
+          </li>
+          <li><strong>The Reciprocal Conjugate Theorem (100% Guaranteed SSC Pattern):</strong>
+            Since $\sec^2\theta - \tan^2\theta = (\sec\theta + \tan\theta)(\sec\theta - \tan\theta) = 1$:<br>
+            $$\mathbf{\text{If } \sec\theta + \tan\theta = x \implies \sec\theta - \tan\theta = \frac{1}{x}}$$
+            Adding both: $\mathbf{\sec\theta = \frac{x^2 + 1}{2x}}$ &nbsp;|&nbsp; Subtracting: $\mathbf{\tan\theta = \frac{x^2 - 1}{2x}}$.<br>
+            &bull; Similarly: $\mathbf{\text{If } \csc\theta + \cot\theta = x \implies \csc\theta - \cot\theta = \frac{1}{x}}$.
+          </li>
+          <li><strong>Complementary Angle Pairs ($\alpha + \beta = 90^\circ$):</strong>
+            &bull; $\mathbf{\sin\alpha = \cos\beta} \iff \sin(90^\circ - \theta) = \cos\theta$.<br>
+            &bull; $\mathbf{\tan\alpha \times \tan\beta = 1} \iff \tan(90^\circ - \theta) = \cot\theta$. (e.g. $\tan 10^\circ \times \tan 80^\circ = 1$).<br>
+            &bull; $\mathbf{\sin^2\alpha + \sin^2\beta = 1}$ &nbsp;|&nbsp; $\mathbf{\cos^2\alpha + \cos^2\beta = 1}$.
+          </li>
+        </ul>
+        <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
+          🎯 <strong>Day 85 Focus:</strong> In long series like $\tan 1^\circ \tan 2^\circ \dots \tan 89^\circ$, pair terms summing to $90^\circ$ to equal $1$.
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 86 -->
+    <div class="day-card">
+      <div class="day-label">
+        <div class="day-tag">Day 86</div>
+        <div class="day-name">Maxima, Minima &amp; Angle Formulas</div>
+        <div class="day-drill">📝 20 Extrema Problems</div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:8px;">Extreme Values of Trig Functions, AM &ge; GM Theorem &amp; Compound Angles</div>
+        <ul class="day-topics">
+          <li><strong>Linear Form: $a\sin\theta + b\cos\theta$:</strong>
+            $$\mathbf{\text{Maximum} = +\sqrt{a^2 + b^2}} \quad \Big| \quad \mathbf{\text{Minimum} = -\sqrt{a^2 + b^2}}$$
+            Example: $3\sin\theta + 4\cos\theta \implies \text{Max} = +\sqrt{3^2 + 4^2} = +5$, $\text{Min} = -5$.
+          </li>
+          <li><strong>Reciprocal Squared Forms (via $\text{AM} \ge \text{GM}$):</strong>
+            &bull; $a\sin^2\theta + b\csc^2\theta \implies \mathbf{\text{Minimum} = 2\sqrt{ab}}$.<br>
+            &bull; $a\cos^2\theta + b\sec^2\theta \implies \mathbf{\text{Minimum} = 2\sqrt{ab}}$.<br>
+            &bull; $a\tan^2\theta + b\cot^2\theta \implies \mathbf{\text{Minimum} = 2\sqrt{ab}}$.<br>
+            Example: Find minimum of $9\tan^2\theta + 16\cot^2\theta$: $\text{Min} = 2\sqrt{9 \times 16} = 2 \times 12 = 24$.
+          </li>
+          <li><strong>Compound Angle Essentials:</strong>
+            &bull; $\mathbf{\sin(A \pm B) = \sin A\cos B \pm \cos A\sin B}$<br>
+            &bull; $\mathbf{\cos(A \pm B) = \cos A\cos B \mp \sin A\sin B}$<br>
+            &bull; $\mathbf{\tan(A \pm B) = \frac{\tan A \pm \tan B}{1 \mp \tan A\tan B}}$
+          </li>
+          <li><strong>Value Substitution Fallback:</strong> If an identity contains only $\tan, \cot$, plug $\theta = 45^\circ$. If it contains $\sin, \cos$, plug $\theta = 0^\circ$ or $90^\circ$ or $45^\circ$ to test options in 10 seconds.</li>
+        </ul>
+        <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
+          🎯 <strong>Day 86 Focus:</strong> Use $2\sqrt{ab}$ for reciprocal square minima ($a\tan^2\theta + b\cot^2\theta$) and $\sqrt{a^2+b^2}$ for linear sums.
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 87 -->
+    <div class="day-card">
+      <div class="day-label">
+        <div class="day-tag">Day 87</div>
+        <div class="day-name">Heights &amp; Distances + Phase 13 Timed Test</div>
+        <div class="day-drill">📝 25 Qs in 20 Minutes</div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:8px;">Angles of Elevation/Depression &amp; The 3 Canonical Tower Templates</div>
+        <ul class="day-topics">
+          <li><strong>Elevation vs Depression:</strong>
+            Angle of elevation from observer below $=$ Angle of depression from observer above (Alternate interior angles are equal!).
+          </li>
+          <li><strong>The 3 Canonical Heights &amp; Distances Templates (Zero Trig Required!):</strong>
+            Let tower height be $h$ and distance moved between observations be $d$:<br>
+            &bull; <strong>Template 1 ($30^\circ \to 60^\circ$):</strong> Distance moved $d = \frac{2h}{\sqrt{3}} \implies \mathbf{h = \frac{d\sqrt{3}}{2}}$. (The distance moved is double the distance from second point to tower base!).<br>
+            &bull; <strong>Template 2 ($30^\circ \to 45^\circ$):</strong> $\mathbf{d = h(\sqrt{3} - 1)} \implies \mathbf{h = \frac{d}{\sqrt{3} - 1} = \frac{d(\sqrt{3} + 1)}{2}}$.<br>
+            &bull; <strong>Template 3 ($45^\circ \to 60^\circ$):</strong> $\mathbf{d = h\left(1 - \frac{1}{\sqrt{3}}\right)} \implies \mathbf{h = \frac{d\sqrt{3}}{\sqrt{3} - 1}}$.
+          </li>
+          <li><strong>Two Points on Opposite Sides of Tower:</strong>
+            If tower height is $h$, with angles $30^\circ$ and $60^\circ$ on opposite sides:<br>
+            $\text{Total Distance} = h\sqrt{3} + \frac{h}{\sqrt{3}} = h\left(\frac{4}{\sqrt{3}}\right)$.
+          </li>
+          <li><strong>Phase 13 Timed Mastery Protocol:</strong> 25 mixed Trigonometry and Heights &amp; Distances questions under a strict 20-minute timer. Target: $\ge 85\%$ accuracy.</li>
+        </ul>
+        <div style="margin-top:10px;font-size:0.8rem;color:var(--gold);background:rgba(246,194,68,0.06);padding:6px 12px;border-radius:6px;">
+          🎯 <strong>Day 87 Focus:</strong> In $30^\circ \to 60^\circ$ approach, the distance moved $d$ equals $2 \times (\text{distance to base})$.
+        </div>
+      </div>
+    </div>
+
   </div>
-  <div>
-    <div style="font-weight:600;color:#e2e8f0;font-size:0.88rem;margin-bottom:6px;">Trig Ratios + Standard Angles Table</div>
-    <ul class="day-topics"><li>sinθ=P/H, cosθ=B/H, tanθ=P/B</li><li>cosecθ=H/P, secθ=H/B, cotθ=B/P</li><li>Values at 0°,30°,45°,60°,90°</li><li>ASTC quadrant sign rule (All, Sin, Tan, Cos)</li></ul>
-    <div style="margin-top:8px;font-size:0.78rem;color:var(--gold);">📝 Drill: 20 basic ratio questions</div>
-  </div>
-</div>
-<div class="day-card">
-  <div class="day-label">
-    <div class="day-tag">Day 85</div>
-    <div class="day-name" style="font-size:0.72rem">Pythagorean Identities + Com...</div>
-    <div class="day-drill" style="font-size:0.65rem; margin-top:4px;">📝 20 identity questions</div>
-  </div>
-  <div>
-    <div style="font-weight:600;color:#e2e8f0;font-size:0.88rem;margin-bottom:6px;">Pythagorean Identities + Complementary</div>
-    <ul class="day-topics"><li>sin²θ+cos²θ=1</li><li>1+tan²θ=sec²θ</li><li>1+cot²θ=cosec²θ</li><li>sin(90°-θ)=cosθ, tan(90°-θ)=cotθ (co-function pairs)</li><li>secθ+tanθ=x → secθ-tanθ=1/x</li></ul>
-    <div style="margin-top:8px;font-size:0.78rem;color:var(--gold);">📝 Drill: 20 identity questions</div>
-  </div>
-</div>
-<div class="day-card">
-  <div class="day-label">
-    <div class="day-tag">Day 86</div>
-    <div class="day-name" style="font-size:0.72rem">Max-Min Values + Transformat...</div>
-    <div class="day-drill" style="font-size:0.65rem; margin-top:4px;">📝 20 max-min questions</div>
-  </div>
-  <div>
-    <div style="font-weight:600;color:#e2e8f0;font-size:0.88rem;margin-bottom:6px;">Max-Min Values + Transformations</div>
-    <ul class="day-topics"><li>Max/Min of (a sinθ + b cosθ) = ±√(a²+b²)</li><li>Min of (a sin²θ + b cosec²θ) = 2√(ab)</li><li>Min of (a tan²θ + b cot²θ) = 2√(ab) → at a=b</li><li>Expressing in single trig function</li></ul>
-    <div style="margin-top:8px;font-size:0.78rem;color:var(--gold);">📝 Drill: 20 max-min questions</div>
-  </div>
-</div>
-<div class="day-card">
-  <div class="day-label">
-    <div class="day-tag">Day 87</div>
-    <div class="day-name" style="font-size:0.72rem">Height & Distance + Phase Te...</div>
-    <div class="day-drill" style="font-size:0.65rem; margin-top:4px;">📝 20 questions in 20 minutes</div>
-  </div>
-  <div>
-    <div style="font-weight:600;color:#e2e8f0;font-size:0.88rem;margin-bottom:6px;">Height & Distance + Phase Test</div>
-    <ul class="day-topics"><li>Angle of elevation & depression</li><li>30-60-90 ratio: 1:√3:2 (avoid tan formula)</li><li>45-45-90 ratio: 1:1:√2</li><li>Two observer problems</li><li>Timed 20-question test</li></ul>
-    <div style="margin-top:8px;font-size:0.78rem;color:var(--gold);">📝 Drill: 20 questions in 20 minutes</div>
-  </div>
-</div></div>
 
   <!-- FORMULA VAULT + SHORTCUTS side by side -->
   <div class="two-col">
